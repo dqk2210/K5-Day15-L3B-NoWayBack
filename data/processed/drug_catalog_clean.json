@@ -1,0 +1,4444 @@
+[
+  {
+    "drug_id": "DRUG-001",
+    "canonical_name": "Amlodipine",
+    "active_ingredient": "Amlodipine",
+    "aliases": [
+      "Amlodipin",
+      "Amlodipin besylat",
+      "Amlodipine"
+    ],
+    "component_ingredients": [
+      "Amlodipine"
+    ],
+    "drug_class": "CCB",
+    "strength_dosage": "5mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "AMLODAC 5",
+      "AMLODIPINE STELLA",
+      "AMLODIPINE STELLA 5MG",
+      "Amlodac 5",
+      "Amlodipine 5 mg",
+      "Amlor cap 5mg",
+      "Kavasdin 5",
+      "Normodipine 5mg"
+    ],
+    "typical_frequency": 1,
+    "typical_meal_timing": "Sau ăn sáng hoặc bất kỳ lúc nào cố định trong ngày",
+    "verified_indications_icd10": [
+      "I10"
+    ],
+    "contraindications": [
+      "Dị ứng với nhóm dihydropyridin",
+      "Hạ huyết áp nặng / sốc tim",
+      "Hẹp van động mạch chủ nặng"
+    ],
+    "contraindication_tags": [
+      "ccb_allergy",
+      "severe_hypotension",
+      "cardiogenic_shock"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "Simvastatin",
+        "severity": "moderate",
+        "mechanism_and_risk": "Tăng nồng độ Simvastatin, nguy cơ bệnh cơ (không vượt quá 20mg Simvastatin/ngày)",
+        "action": "WARN"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 10,
+      "unit": "mg",
+      "display": "10 mg/ngày"
+    },
+    "unit_price_vnd_synthetic": 19500,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
+  },
+  {
+    "drug_id": "DRUG-002",
+    "canonical_name": "Losartan",
+    "active_ingredient": "Losartan potassium",
+    "aliases": [
+      "Losartan",
+      "Losartan kali",
+      "Losartan potassium"
+    ],
+    "component_ingredients": [
+      "Losartan"
+    ],
+    "drug_class": "ARB",
+    "strength_dosage": "50mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "Cozaar",
+      "Losartan 50mg",
+      "Rotalzon 50mg"
+    ],
+    "typical_frequency": 1,
+    "typical_meal_timing": "Sáng (trước hoặc sau ăn)",
+    "verified_indications_icd10": [
+      "I10"
+    ],
+    "contraindications": [
+      "Phụ nữ có thai hoặc nghi ngờ mang thai",
+      "Tăng kali máu nặng",
+      "Hẹp động mạch thận hai bên",
+      "Dị ứng với Losartan"
+    ],
+    "contraindication_tags": [
+      "pregnancy",
+      "hyperkalemia",
+      "bilateral_renal_artery_stenosis"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "ACEi",
+        "severity": "major",
+        "mechanism_and_risk": "Chống chỉ định phối hợp kép ACEi + ARB: tăng nguy cơ suy thận cấp, tăng kali máu, tụt huyết áp",
+        "action": "BLOCK"
+      },
+      {
+        "with_ingredient_or_class": "Spironolactone",
+        "severity": "major",
+        "mechanism_and_risk": "Tăng nguy cơ tăng kali máu nặng, cần theo dõi điện giải chặt chẽ",
+        "action": "WARN"
+      },
+      {
+        "with_ingredient_or_class": "Kali clorid",
+        "severity": "major",
+        "mechanism_and_risk": "Nguy cơ tăng kali máu khi dùng kèm bổ sung kali",
+        "action": "WARN"
+      },
+      {
+        "with_ingredient_or_class": "NSAID",
+        "severity": "moderate",
+        "mechanism_and_risk": "Giảm hiệu quả hạ huyết áp và tăng nguy cơ suy thận cấp",
+        "action": "WARN"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 100,
+      "unit": "mg",
+      "display": "100 mg/ngày"
+    },
+    "unit_price_vnd_synthetic": 13000,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
+  },
+  {
+    "drug_id": "DRUG-003",
+    "canonical_name": "Valsartan",
+    "active_ingredient": "Valsartan",
+    "aliases": [
+      "Valsartan"
+    ],
+    "component_ingredients": [
+      "Valsartan"
+    ],
+    "drug_class": "ARB",
+    "strength_dosage": "80mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "Diovan",
+      "Diovan 80"
+    ],
+    "typical_frequency": 1,
+    "typical_meal_timing": "Sáng (sau ăn hoặc xa bữa ăn cố định)",
+    "verified_indications_icd10": [
+      "I10"
+    ],
+    "contraindications": [
+      "Phụ nữ có thai hoặc nghi ngờ mang thai",
+      "Suy gan nặng / xơ gan ứ mật",
+      "Tăng kali máu nặng",
+      "Dị ứng với Valsartan"
+    ],
+    "contraindication_tags": [
+      "pregnancy",
+      "severe_liver_disease",
+      "hyperkalemia"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "ACEi",
+        "severity": "major",
+        "mechanism_and_risk": "Chống chỉ định phối hợp kép ACEi + ARB: tăng nguy cơ suy thận cấp và tăng kali máu",
+        "action": "BLOCK"
+      },
+      {
+        "with_ingredient_or_class": "Spironolactone",
+        "severity": "major",
+        "mechanism_and_risk": "Tăng nguy cơ tăng kali máu nặng",
+        "action": "WARN"
+      },
+      {
+        "with_ingredient_or_class": "NSAID",
+        "severity": "moderate",
+        "mechanism_and_risk": "Giảm hiệu quả hạ huyết áp và tăng nguy cơ tổn thương thận",
+        "action": "WARN"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 320,
+      "unit": "mg",
+      "display": "320 mg/ngày"
+    },
+    "unit_price_vnd_synthetic": 19000,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
+  },
+  {
+    "drug_id": "DRUG-004",
+    "canonical_name": "Telmisartan",
+    "active_ingredient": "Telmisartan",
+    "aliases": [
+      "Telmisartan"
+    ],
+    "component_ingredients": [
+      "Telmisartan"
+    ],
+    "drug_class": "ARB",
+    "strength_dosage": "40mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "HYPERTEL 40",
+      "Micardis 40mg",
+      "Telmida 40mg",
+      "Telmisartan 40mg",
+      "Telroto-40mg"
+    ],
+    "typical_frequency": 1,
+    "typical_meal_timing": "Sáng hoặc chiều cố định hàng ngày",
+    "verified_indications_icd10": [
+      "I10"
+    ],
+    "contraindications": [
+      "Phụ nữ có thai hoặc nghi ngờ mang thai",
+      "Tắc mật / suy gan nặng",
+      "Tăng kali máu nặng"
+    ],
+    "contraindication_tags": [
+      "pregnancy",
+      "severe_liver_disease",
+      "hyperkalemia"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "ACEi",
+        "severity": "major",
+        "mechanism_and_risk": "Chống chỉ định phối hợp kép ACEi + ARB: tăng nguy cơ suy thận cấp và tăng kali máu",
+        "action": "BLOCK"
+      },
+      {
+        "with_ingredient_or_class": "Spironolactone",
+        "severity": "major",
+        "mechanism_and_risk": "Tăng nguy cơ tăng kali máu nặng",
+        "action": "WARN"
+      },
+      {
+        "with_ingredient_or_class": "NSAID",
+        "severity": "moderate",
+        "mechanism_and_risk": "Giảm tác dụng hạ huyết áp, nguy cơ suy thận cấp",
+        "action": "WARN"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 80,
+      "unit": "mg",
+      "display": "80 mg/ngày"
+    },
+    "unit_price_vnd_synthetic": 4000,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
+  },
+  {
+    "drug_id": "DRUG-005",
+    "canonical_name": "Perindopril",
+    "active_ingredient": "Perindopril arginine",
+    "aliases": [
+      "Perindopril",
+      "Perindopril arginine"
+    ],
+    "component_ingredients": [
+      "Perindopril"
+    ],
+    "drug_class": "ACEi",
+    "strength_dosage": "5mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "Coversyl 5mg"
+    ],
+    "typical_frequency": 1,
+    "typical_meal_timing": "Trước ăn sáng",
+    "verified_indications_icd10": [
+      "I10"
+    ],
+    "contraindications": [
+      "Phụ nữ có thai hoặc nghi ngờ mang thai",
+      "Tiền sử phù mạch liên quan ACEi",
+      "Hẹp động mạch thận hai bên"
+    ],
+    "contraindication_tags": [
+      "pregnancy",
+      "angioedema_history",
+      "bilateral_renal_artery_stenosis"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "ARB",
+        "severity": "major",
+        "mechanism_and_risk": "Chống chỉ định phối hợp kép ACEi + ARB: tăng nguy cơ suy thận cấp, tăng kali máu, tụt huyết áp",
+        "action": "BLOCK"
+      },
+      {
+        "with_ingredient_or_class": "Sacubitril + Valsartan",
+        "severity": "major",
+        "mechanism_and_risk": "Nguy cơ phù mạch đe dọa tính mạng (cần cách nhau ít nhất 36 giờ)",
+        "action": "BLOCK"
+      },
+      {
+        "with_ingredient_or_class": "Spironolactone",
+        "severity": "major",
+        "mechanism_and_risk": "Tăng nguy cơ tăng kali máu nặng",
+        "action": "WARN"
+      },
+      {
+        "with_ingredient_or_class": "NSAID",
+        "severity": "moderate",
+        "mechanism_and_risk": "Giảm hiệu quả hạ huyết áp và tăng nguy cơ suy thận cấp",
+        "action": "WARN"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 10,
+      "unit": "mg",
+      "display": "10 mg/ngày"
+    },
+    "unit_price_vnd_synthetic": 7000,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
+  },
+  {
+    "drug_id": "DRUG-006",
+    "canonical_name": "Amlodipine + Losartan",
+    "active_ingredient": "Amlodipine + Losartan",
+    "aliases": [
+      "Amlodipin + Losartan",
+      "Amlodipine + Losartan"
+    ],
+    "component_ingredients": [
+      "Amlodipine",
+      "Losartan"
+    ],
+    "drug_class": "CCB+ARB",
+    "strength_dosage": "5mg + 50mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "Troysar AM"
+    ],
+    "typical_frequency": 1,
+    "typical_meal_timing": "Sáng",
+    "verified_indications_icd10": [
+      "I10"
+    ],
+    "contraindications": [
+      "Phụ nữ có thai hoặc nghi ngờ mang thai",
+      "Sốc tim / hạ huyết áp nặng",
+      "Tăng kali máu nặng"
+    ],
+    "contraindication_tags": [
+      "pregnancy",
+      "severe_hypotension",
+      "hyperkalemia"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "ACEi",
+        "severity": "major",
+        "mechanism_and_risk": "Chứa thành phần ARB (Losartan): chống chỉ định phối hợp với ACEi",
+        "action": "BLOCK"
+      },
+      {
+        "with_ingredient_or_class": "Spironolactone",
+        "severity": "major",
+        "mechanism_and_risk": "Tăng nguy cơ tăng kali máu",
+        "action": "WARN"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 1,
+      "unit": "viên (10mg/100mg tối đa)",
+      "display": "1–2 viên/ngày (tối đa 10mg Amlodipine / 100mg Losartan)"
+    },
+    "unit_price_vnd_synthetic": 15000,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
+  },
+  {
+    "drug_id": "DRUG-007",
+    "canonical_name": "Amlodipine + Valsartan",
+    "active_ingredient": "Amlodipine + Valsartan",
+    "aliases": [
+      "Amlodipin + Valsartan",
+      "Amlodipine + Valsartan"
+    ],
+    "component_ingredients": [
+      "Amlodipine",
+      "Valsartan"
+    ],
+    "drug_class": "CCB+ARB",
+    "strength_dosage": "5mg + 80mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "Exforge 5/80",
+      "Exforge 5mg + 80mg"
+    ],
+    "typical_frequency": 1,
+    "typical_meal_timing": "Sau ăn sáng",
+    "verified_indications_icd10": [
+      "I10"
+    ],
+    "contraindications": [
+      "Phụ nữ có thai hoặc nghi ngờ mang thai",
+      "Suy gan nặng / tắc mật",
+      "Hạ huyết áp nặng"
+    ],
+    "contraindication_tags": [
+      "pregnancy",
+      "severe_liver_disease",
+      "severe_hypotension"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "ACEi",
+        "severity": "major",
+        "mechanism_and_risk": "Chứa thành phần ARB (Valsartan): chống chỉ định phối hợp với ACEi",
+        "action": "BLOCK"
+      },
+      {
+        "with_ingredient_or_class": "Spironolactone",
+        "severity": "major",
+        "mechanism_and_risk": "Tăng nguy cơ tăng kali máu",
+        "action": "WARN"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 1,
+      "unit": "viên",
+      "display": "1 viên/ngày (tối đa 10mg/320mg)"
+    },
+    "unit_price_vnd_synthetic": 15000,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
+  },
+  {
+    "drug_id": "DRUG-008",
+    "canonical_name": "Amlodipine + Valsartan + Hydrochlorothiazide",
+    "active_ingredient": "Amlodipine + Valsartan + Hydrochlorothiazide",
+    "aliases": [
+      "Amlodipin + Valsartan + Hydrochlorothiazide",
+      "Amlodipine + Valsartan + Hydrochlorothiazide"
+    ],
+    "component_ingredients": [
+      "Amlodipine",
+      "Valsartan",
+      "Hydrochlorothiazide"
+    ],
+    "drug_class": "CCB+ARB+Thiazide",
+    "strength_dosage": "5mg + 160mg + 12.5mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "Exforge HCT"
+    ],
+    "typical_frequency": 1,
+    "typical_meal_timing": "Sáng",
+    "verified_indications_icd10": [
+      "I10"
+    ],
+    "contraindications": [
+      "Phụ nữ có thai",
+      "Suy thận nặng (eGFR < 30 mL/phút) hoặc vô niệu",
+      "Hạ kali/natri máu kháng trị",
+      "Dị ứng sulfonamid"
+    ],
+    "contraindication_tags": [
+      "pregnancy",
+      "severe_renal_impairment",
+      "sulfonamide_allergy"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "ACEi",
+        "severity": "major",
+        "mechanism_and_risk": "Chứa ARB: chống chỉ định phối hợp kép với ACEi",
+        "action": "BLOCK"
+      },
+      {
+        "with_ingredient_or_class": "NSAID",
+        "severity": "moderate",
+        "mechanism_and_risk": "Giảm tác dụng lợi tiểu/hạ áp và tăng nguy cơ tổn thương thận cấp",
+        "action": "WARN"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 1,
+      "unit": "viên",
+      "display": "1 viên/ngày"
+    },
+    "unit_price_vnd_synthetic": 14500,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
+  },
+  {
+    "drug_id": "DRUG-009",
+    "canonical_name": "Losartan + Hydrochlorothiazide",
+    "active_ingredient": "Losartan + Hydrochlorothiazide",
+    "aliases": [
+      "Losartan + Hydrochlorothiazide"
+    ],
+    "component_ingredients": [
+      "Losartan",
+      "Hydrochlorothiazide"
+    ],
+    "drug_class": "ARB+Thiazide",
+    "strength_dosage": "50mg + 12.5mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "Savi Losartan plus HCT 50/12.5"
+    ],
+    "typical_frequency": 1,
+    "typical_meal_timing": "Sau ăn sáng",
+    "verified_indications_icd10": [
+      "I10"
+    ],
+    "contraindications": [
+      "Phụ nữ có thai",
+      "Suy thận nặng (eGFR < 30 mL/phút) / vô niệu",
+      "Dị ứng sulfonamid"
+    ],
+    "contraindication_tags": [
+      "pregnancy",
+      "severe_renal_impairment",
+      "sulfonamide_allergy"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "ACEi",
+        "severity": "major",
+        "mechanism_and_risk": "Chứa ARB: chống chỉ định phối hợp với ACEi",
+        "action": "BLOCK"
+      },
+      {
+        "with_ingredient_or_class": "NSAID",
+        "severity": "moderate",
+        "mechanism_and_risk": "Giảm hiệu quả hạ áp, nguy cơ suy thận cấp",
+        "action": "WARN"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 2,
+      "unit": "viên",
+      "display": "2 viên/ngày (100mg/25mg)"
+    },
+    "unit_price_vnd_synthetic": 17500,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
+  },
+  {
+    "drug_id": "DRUG-010",
+    "canonical_name": "Valsartan + Hydrochlorothiazide",
+    "active_ingredient": "Valsartan + Hydrochlorothiazide",
+    "aliases": [
+      "Valsartan + Hydrochlorothiazide"
+    ],
+    "component_ingredients": [
+      "Valsartan",
+      "Hydrochlorothiazide"
+    ],
+    "drug_class": "ARB+Thiazide",
+    "strength_dosage": "80mg + 12.5mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "Tronistat 80/12.5mg"
+    ],
+    "typical_frequency": 1,
+    "typical_meal_timing": "Sáng",
+    "verified_indications_icd10": [
+      "I10"
+    ],
+    "contraindications": [
+      "Phụ nữ có thai",
+      "Suy thận nặng (eGFR < 30 mL/phút)",
+      "Suy gan nặng",
+      "Dị ứng sulfonamid"
+    ],
+    "contraindication_tags": [
+      "pregnancy",
+      "severe_renal_impairment",
+      "severe_liver_disease",
+      "sulfonamide_allergy"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "ACEi",
+        "severity": "major",
+        "mechanism_and_risk": "Chứa ARB: chống chỉ định phối hợp với ACEi",
+        "action": "BLOCK"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 1,
+      "unit": "viên",
+      "display": "1 viên/ngày (tối đa 320mg/25mg)"
+    },
+    "unit_price_vnd_synthetic": 7500,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
+  },
+  {
+    "drug_id": "DRUG-011",
+    "canonical_name": "Candesartan + Hydrochlorothiazide",
+    "active_ingredient": "Candesartan + Hydrochlorothiazide",
+    "aliases": [
+      "Candesartan + Hydrochlorothiazide",
+      "Candesartan + hydrochlorothiazid"
+    ],
+    "component_ingredients": [
+      "Candesartan",
+      "Hydrochlorothiazide"
+    ],
+    "drug_class": "ARB+Thiazide",
+    "strength_dosage": "8mg + 12.5mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "Acantan HTZ"
+    ],
+    "typical_frequency": 1,
+    "typical_meal_timing": "Sáng",
+    "verified_indications_icd10": [
+      "I10"
+    ],
+    "contraindications": [
+      "Phụ nữ có thai",
+      "Suy thận nặng (eGFR < 30 mL/phút)",
+      "Gút tiến triển",
+      "Dị ứng sulfonamid"
+    ],
+    "contraindication_tags": [
+      "pregnancy",
+      "severe_renal_impairment",
+      "sulfonamide_allergy"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "ACEi",
+        "severity": "major",
+        "mechanism_and_risk": "Chứa ARB: chống chỉ định phối hợp với ACEi",
+        "action": "BLOCK"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 2,
+      "unit": "viên",
+      "display": "1–2 viên/ngày (tối đa 32mg/25mg)"
+    },
+    "unit_price_vnd_synthetic": 13500,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
+  },
+  {
+    "drug_id": "DRUG-012",
+    "canonical_name": "Perindopril + Amlodipine",
+    "active_ingredient": "Perindopril arginine + Amlodipine",
+    "aliases": [
+      "Perindopril + Amlodipine",
+      "Perindopril arginine + Amlodipine"
+    ],
+    "component_ingredients": [
+      "Perindopril",
+      "Amlodipine"
+    ],
+    "drug_class": "ACEi+CCB",
+    "strength_dosage": "7mg + 5mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "Viacoram 7mg/5mg"
+    ],
+    "typical_frequency": 1,
+    "typical_meal_timing": "Trước ăn sáng",
+    "verified_indications_icd10": [
+      "I10"
+    ],
+    "contraindications": [
+      "Phụ nữ có thai",
+      "Tiền sử phù mạch với ACEi",
+      "Hạ huyết áp nặng / sốc tim"
+    ],
+    "contraindication_tags": [
+      "pregnancy",
+      "angioedema_history",
+      "severe_hypotension"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "ARB",
+        "severity": "major",
+        "mechanism_and_risk": "Chứa ACEi: chống chỉ định phối hợp với ARB",
+        "action": "BLOCK"
+      },
+      {
+        "with_ingredient_or_class": "Spironolactone",
+        "severity": "major",
+        "mechanism_and_risk": "Tăng nguy cơ tăng kali máu",
+        "action": "WARN"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 1,
+      "unit": "viên",
+      "display": "1 viên/ngày (tối đa 14mg/10mg)"
+    },
+    "unit_price_vnd_synthetic": 7000,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
+  },
+  {
+    "drug_id": "DRUG-013",
+    "canonical_name": "Amlodipine + Lisinopril",
+    "active_ingredient": "Amlodipine + Lisinopril",
+    "aliases": [
+      "Amlodipine + Lisinopril"
+    ],
+    "component_ingredients": [
+      "Amlodipine",
+      "Lisinopril"
+    ],
+    "drug_class": "CCB+ACEi",
+    "strength_dosage": "5mg + 10mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "Lisonorm"
+    ],
+    "typical_frequency": 1,
+    "typical_meal_timing": "Sau ăn sáng",
+    "verified_indications_icd10": [
+      "I10"
+    ],
+    "contraindications": [
+      "Phụ nữ có thai",
+      "Tiền sử phù mạch với ACEi",
+      "Hẹp động mạch thận hai bên"
+    ],
+    "contraindication_tags": [
+      "pregnancy",
+      "angioedema_history",
+      "bilateral_renal_artery_stenosis"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "ARB",
+        "severity": "major",
+        "mechanism_and_risk": "Chứa ACEi (Lisinopril): chống chỉ định phối hợp với ARB",
+        "action": "BLOCK"
+      },
+      {
+        "with_ingredient_or_class": "Spironolactone",
+        "severity": "major",
+        "mechanism_and_risk": "Tăng nguy cơ tăng kali máu",
+        "action": "WARN"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 1,
+      "unit": "viên",
+      "display": "1 viên/ngày (tối đa 10mg/20mg)"
+    },
+    "unit_price_vnd_synthetic": 20500,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
+  },
+  {
+    "drug_id": "DRUG-014",
+    "canonical_name": "Bisoprolol",
+    "active_ingredient": "Bisoprolol fumarate",
+    "aliases": [
+      "Bisoprolol",
+      "Bisoprolol fumarate"
+    ],
+    "component_ingredients": [
+      "Bisoprolol"
+    ],
+    "drug_class": "Beta-blocker",
+    "strength_dosage": "2.5mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "Concor",
+      "Concor Cor 2.5 mg",
+      "Concor Cor 2.5mg",
+      "Concor cor tab 2,5mg",
+      "Vacorolol 2,5"
+    ],
+    "typical_frequency": 1,
+    "typical_meal_timing": "Sau ăn sáng",
+    "verified_indications_icd10": [
+      "I10"
+    ],
+    "contraindications": [
+      "Hen phế quản nặng / COPD nặng",
+      "Nhịp tim chậm nặng (< 50 lần/phút) hoặc block nhĩ thất độ II-III",
+      "Suy tim cấp mất bù"
+    ],
+    "contraindication_tags": [
+      "severe_asthma",
+      "severe_bradycardia_av_block",
+      "acute_heart_failure"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "Verapamil / Diltiazem",
+        "severity": "major",
+        "mechanism_and_risk": "Nguy cơ nhịp tim chậm nặng, block nhĩ thất và tụt huyết áp",
+        "action": "BLOCK"
+      },
+      {
+        "with_ingredient_or_class": "Sulfonylurea",
+        "severity": "moderate",
+        "mechanism_and_risk": "Có thể che lấp triệu chứng nhịp tim nhanh khi hạ đường huyết",
+        "action": "WARN"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 10,
+      "unit": "mg",
+      "display": "10 mg/ngày (tối đa 20 mg/ngày ở THA)"
+    },
+    "unit_price_vnd_synthetic": 13500,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
+  },
+  {
+    "drug_id": "DRUG-015",
+    "canonical_name": "Bisoprolol",
+    "active_ingredient": "Bisoprolol fumarate",
+    "aliases": [
+      "Bisoprolol",
+      "Bisoprolol fumarate"
+    ],
+    "component_ingredients": [
+      "Bisoprolol"
+    ],
+    "drug_class": "Beta-blocker",
+    "strength_dosage": "5mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "Bisoprolol"
+    ],
+    "typical_frequency": 1,
+    "typical_meal_timing": "Sau ăn sáng",
+    "verified_indications_icd10": [
+      "I10"
+    ],
+    "contraindications": [
+      "Hen phế quản nặng / COPD nặng",
+      "Nhịp tim chậm nặng hoặc block nhĩ thất độ II-III",
+      "Suy tim cấp mất bù"
+    ],
+    "contraindication_tags": [
+      "severe_asthma",
+      "severe_bradycardia_av_block",
+      "acute_heart_failure"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "Verapamil / Diltiazem",
+        "severity": "major",
+        "mechanism_and_risk": "Nguy cơ nhịp tim chậm nặng và block nhĩ thất",
+        "action": "BLOCK"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 10,
+      "unit": "mg",
+      "display": "10 mg/ngày (tối đa 20 mg/ngày ở THA)"
+    },
+    "unit_price_vnd_synthetic": 25000,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
+  },
+  {
+    "drug_id": "DRUG-016",
+    "canonical_name": "Nebivolol",
+    "active_ingredient": "Nebivolol",
+    "aliases": [
+      "Nebivolol"
+    ],
+    "component_ingredients": [
+      "Nebivolol"
+    ],
+    "drug_class": "Beta-blocker",
+    "strength_dosage": "2.5mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "Nebicard 2.5mg"
+    ],
+    "typical_frequency": 1,
+    "typical_meal_timing": "Sau ăn sáng",
+    "verified_indications_icd10": [
+      "I10"
+    ],
+    "contraindications": [
+      "Suy gan nặng",
+      "Hen phế quản nặng",
+      "Nhịp tim chậm nặng / block nhĩ thất độ II-III"
+    ],
+    "contraindication_tags": [
+      "severe_liver_disease",
+      "severe_asthma",
+      "severe_bradycardia_av_block"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "Verapamil / Diltiazem",
+        "severity": "major",
+        "mechanism_and_risk": "Nguy cơ block nhĩ thất và tụt huyết áp nặng",
+        "action": "BLOCK"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 10,
+      "unit": "mg",
+      "display": "10 mg/ngày (thường dùng 5 mg/ngày)"
+    },
+    "unit_price_vnd_synthetic": 17500,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
+  },
+  {
+    "drug_id": "DRUG-017",
+    "canonical_name": "Metoprolol",
+    "active_ingredient": "Metoprolol succinate",
+    "aliases": [
+      "Metoprolol",
+      "Metoprolol succinat",
+      "Metoprolol succinate"
+    ],
+    "component_ingredients": [
+      "Metoprolol"
+    ],
+    "drug_class": "Beta-blocker",
+    "strength_dosage": "25mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "Betaloc Zok 25mg"
+    ],
+    "typical_frequency": 1,
+    "typical_meal_timing": "Sau ăn sáng",
+    "verified_indications_icd10": [
+      "I10"
+    ],
+    "contraindications": [
+      "Hen phế quản nặng",
+      "Nhịp tim chậm nặng / block nhĩ thất độ II-III",
+      "Sốc tim"
+    ],
+    "contraindication_tags": [
+      "severe_asthma",
+      "severe_bradycardia_av_block",
+      "cardiogenic_shock"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "Verapamil / Diltiazem",
+        "severity": "major",
+        "mechanism_and_risk": "Nguy cơ nhịp tim chậm nặng và suy tim cấp",
+        "action": "BLOCK"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 200,
+      "unit": "mg",
+      "display": "200 mg/ngày"
+    },
+    "unit_price_vnd_synthetic": 23000,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
+  },
+  {
+    "drug_id": "DRUG-018",
+    "canonical_name": "Metoprolol",
+    "active_ingredient": "Metoprolol succinate",
+    "aliases": [
+      "Metoprolol",
+      "Metoprolol succinat",
+      "Metoprolol succinate"
+    ],
+    "component_ingredients": [
+      "Metoprolol"
+    ],
+    "drug_class": "Beta-blocker",
+    "strength_dosage": "50mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "Betaloc Zok 50mg"
+    ],
+    "typical_frequency": 1,
+    "typical_meal_timing": "Sau ăn sáng",
+    "verified_indications_icd10": [
+      "I10"
+    ],
+    "contraindications": [
+      "Hen phế quản nặng",
+      "Nhịp tim chậm nặng / block nhĩ thất độ II-III",
+      "Sốc tim"
+    ],
+    "contraindication_tags": [
+      "severe_asthma",
+      "severe_bradycardia_av_block",
+      "cardiogenic_shock"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "Verapamil / Diltiazem",
+        "severity": "major",
+        "mechanism_and_risk": "Nguy cơ nhịp tim chậm nặng và block nhĩ thất",
+        "action": "BLOCK"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 200,
+      "unit": "mg",
+      "display": "200 mg/ngày"
+    },
+    "unit_price_vnd_synthetic": 14500,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
+  },
+  {
+    "drug_id": "DRUG-019",
+    "canonical_name": "Carvedilol",
+    "active_ingredient": "Carvedilol",
+    "aliases": [
+      "Carvedilol"
+    ],
+    "component_ingredients": [
+      "Carvedilol"
+    ],
+    "drug_class": "Beta-blocker",
+    "strength_dosage": "6.25mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "Carvestad 6.25"
+    ],
+    "typical_frequency": 1,
+    "typical_meal_timing": "Sau ăn sáng",
+    "verified_indications_icd10": [
+      "I10"
+    ],
+    "contraindications": [
+      "Hen phế quản / co thắt phế quản",
+      "Suy gan nặng",
+      "Block nhĩ thất độ II-III / nhịp tim chậm nặng"
+    ],
+    "contraindication_tags": [
+      "severe_asthma",
+      "severe_liver_disease",
+      "severe_bradycardia_av_block"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "Verapamil / Diltiazem",
+        "severity": "major",
+        "mechanism_and_risk": "Nguy cơ rối loạn dẫn truyền và tụt huyết áp",
+        "action": "BLOCK"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 50,
+      "unit": "mg",
+      "display": "50 mg/ngày"
+    },
+    "unit_price_vnd_synthetic": 5000,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
+  },
+  {
+    "drug_id": "DRUG-020",
+    "canonical_name": "Methyldopa",
+    "active_ingredient": "Methyldopa",
+    "aliases": [
+      "Methyldopa"
+    ],
+    "component_ingredients": [
+      "Methyldopa"
+    ],
+    "drug_class": "Central_Alpha2_Agonist",
+    "strength_dosage": "500mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "Thyperopa forte"
+    ],
+    "typical_frequency": 2,
+    "typical_meal_timing": "Sáng và chiều (có thể dùng trong thai kỳ khi bác sĩ chỉ định)",
+    "verified_indications_icd10": [
+      "I10"
+    ],
+    "contraindications": [
+      "Bệnh gan tiến triển (viêm gan cấp, xơ gan hoạt động)",
+      "Đang dùng thuốc ức chế MAO",
+      "Trầm cảm nặng"
+    ],
+    "contraindication_tags": [
+      "active_liver_disease",
+      "maoi_use"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "Sắt đường uống",
+        "severity": "moderate",
+        "mechanism_and_risk": "Giảm hấp thu Methyldopa, cần uống cách nhau ít nhất 2 giờ",
+        "action": "WARN"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 3000,
+      "unit": "mg",
+      "display": "3000 mg/ngày (thường dùng 500–2000 mg/ngày)"
+    },
+    "unit_price_vnd_synthetic": 12000,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
+  },
+  {
+    "drug_id": "DRUG-021",
+    "canonical_name": "Atorvastatin",
+    "active_ingredient": "Atorvastatin",
+    "aliases": [
+      "Atorvastatin"
+    ],
+    "component_ingredients": [
+      "Atorvastatin"
+    ],
+    "drug_class": "Statin",
+    "strength_dosage": "10mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "Atorvastatin 10 mg",
+      "Lipitor"
+    ],
+    "typical_frequency": 1,
+    "typical_meal_timing": "Sau ăn tối",
+    "verified_indications_icd10": [
+      "E78"
+    ],
+    "contraindications": [
+      "Bệnh gan tiến triển hoặc tăng men gan kéo dài không rõ nguyên nhân",
+      "Phụ nữ có thai hoặc đang cho con bú",
+      "Dị ứng với Statin"
+    ],
+    "contraindication_tags": [
+      "active_liver_disease",
+      "pregnancy",
+      "lactation"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "Clarithromycin",
+        "severity": "major",
+        "mechanism_and_risk": "Ức chế CYP3A4 làm tăng nồng độ Atorvastatin, tăng nguy cơ tiêu cơ vân",
+        "action": "BLOCK"
+      },
+      {
+        "with_ingredient_or_class": "Itraconazole",
+        "severity": "major",
+        "mechanism_and_risk": "Ức chế mạnh CYP3A4, tăng nguy cơ tiêu cơ vân",
+        "action": "BLOCK"
+      },
+      {
+        "with_ingredient_or_class": "Fenofibrate",
+        "severity": "moderate",
+        "mechanism_and_risk": "Tăng nguy cơ đau cơ / bệnh cơ, cần theo dõi CK và triệu chứng cơ",
+        "action": "WARN"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 80,
+      "unit": "mg",
+      "display": "80 mg/ngày"
+    },
+    "unit_price_vnd_synthetic": 8000,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
+  },
+  {
+    "drug_id": "DRUG-022",
+    "canonical_name": "Atorvastatin",
+    "active_ingredient": "Atorvastatin",
+    "aliases": [
+      "Atorvastatin"
+    ],
+    "component_ingredients": [
+      "Atorvastatin"
+    ],
+    "drug_class": "Statin",
+    "strength_dosage": "20mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "Assovas 20mg",
+      "Atorvastatin 20",
+      "Lipitor 20mg",
+      "Lipitor Tab 20mg",
+      "Lipitor tab 20mg"
+    ],
+    "typical_frequency": 1,
+    "typical_meal_timing": "Sau ăn tối",
+    "verified_indications_icd10": [
+      "E78"
+    ],
+    "contraindications": [
+      "Bệnh gan tiến triển hoặc men gan tăng > 3 lần giới hạn trên",
+      "Phụ nữ có thai hoặc cho con bú"
+    ],
+    "contraindication_tags": [
+      "active_liver_disease",
+      "pregnancy",
+      "lactation"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "Clarithromycin",
+        "severity": "major",
+        "mechanism_and_risk": "Ức chế CYP3A4 làm tăng nồng độ Atorvastatin, tăng nguy cơ tiêu cơ vân",
+        "action": "BLOCK"
+      },
+      {
+        "with_ingredient_or_class": "Itraconazole",
+        "severity": "major",
+        "mechanism_and_risk": "Tăng nguy cơ tiêu cơ vân",
+        "action": "BLOCK"
+      },
+      {
+        "with_ingredient_or_class": "Fenofibrate",
+        "severity": "moderate",
+        "mechanism_and_risk": "Tăng nguy cơ bệnh cơ, theo dõi triệu chứng đau cơ",
+        "action": "WARN"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 80,
+      "unit": "mg",
+      "display": "80 mg/ngày"
+    },
+    "unit_price_vnd_synthetic": 25000,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
+  },
+  {
+    "drug_id": "DRUG-023",
+    "canonical_name": "Atorvastatin",
+    "active_ingredient": "Atorvastatin",
+    "aliases": [
+      "Atorvastatin"
+    ],
+    "component_ingredients": [
+      "Atorvastatin"
+    ],
+    "drug_class": "Statin",
+    "strength_dosage": "40mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "Lipitor 40mg"
+    ],
+    "typical_frequency": 1,
+    "typical_meal_timing": "Sau ăn tối",
+    "verified_indications_icd10": [
+      "E78"
+    ],
+    "contraindications": [
+      "Bệnh gan tiến triển",
+      "Phụ nữ có thai hoặc cho con bú"
+    ],
+    "contraindication_tags": [
+      "active_liver_disease",
+      "pregnancy",
+      "lactation"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "Clarithromycin",
+        "severity": "major",
+        "mechanism_and_risk": "Tăng mạnh nồng độ Atorvastatin liều cao, nguy cơ tiêu cơ vân",
+        "action": "BLOCK"
+      },
+      {
+        "with_ingredient_or_class": "Fenofibrate",
+        "severity": "moderate",
+        "mechanism_and_risk": "Tăng nguy cơ tiêu cơ vân khi phối hợp với Statin liều cao",
+        "action": "WARN"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 80,
+      "unit": "mg",
+      "display": "80 mg/ngày"
+    },
+    "unit_price_vnd_synthetic": 2000,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
+  },
+  {
+    "drug_id": "DRUG-024",
+    "canonical_name": "Rosuvastatin",
+    "active_ingredient": "Rosuvastatin calcium",
+    "aliases": [
+      "Rosuvastatin",
+      "Rosuvastatin calci",
+      "Rosuvastatin calcium"
+    ],
+    "component_ingredients": [
+      "Rosuvastatin"
+    ],
+    "drug_class": "Statin",
+    "strength_dosage": "5mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "Crestor",
+      "Crestor 5mg",
+      "Crestor Tab 5mg"
+    ],
+    "typical_frequency": 1,
+    "typical_meal_timing": "Sau ăn tối",
+    "verified_indications_icd10": [
+      "E78"
+    ],
+    "contraindications": [
+      "Bệnh gan tiến triển",
+      "Suy thận nặng (ClCr < 30 mL/phút)",
+      "Phụ nữ có thai hoặc cho con bú",
+      "Bệnh cơ"
+    ],
+    "contraindication_tags": [
+      "active_liver_disease",
+      "severe_renal_impairment",
+      "pregnancy",
+      "lactation"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "Fenofibrate",
+        "severity": "moderate",
+        "mechanism_and_risk": "Tăng nguy cơ đau cơ / tiêu cơ vân",
+        "action": "WARN"
+      },
+      {
+        "with_ingredient_or_class": "Antacid",
+        "severity": "moderate",
+        "mechanism_and_risk": "Thuốc kháng acid chứa nhôm/magnesi làm giảm hấp thu Rosuvastatin; uống cách nhau ít nhất 2 giờ",
+        "action": "WARN"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 40,
+      "unit": "mg",
+      "display": "40 mg/ngày (người châu Á thận trọng liều > 20 mg/ngày)"
+    },
+    "unit_price_vnd_synthetic": 13500,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
+  },
+  {
+    "drug_id": "DRUG-025",
+    "canonical_name": "Rosuvastatin",
+    "active_ingredient": "Rosuvastatin calcium",
+    "aliases": [
+      "Rosuvastatin",
+      "Rosuvastatin calci",
+      "Rosuvastatin calcium"
+    ],
+    "component_ingredients": [
+      "Rosuvastatin"
+    ],
+    "drug_class": "Statin",
+    "strength_dosage": "10mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "Crestor 10mg",
+      "Lipiroz-10",
+      "Rosutrox",
+      "Ultrox 10mg"
+    ],
+    "typical_frequency": 1,
+    "typical_meal_timing": "Sau ăn tối",
+    "verified_indications_icd10": [
+      "E78"
+    ],
+    "contraindications": [
+      "Bệnh gan tiến triển",
+      "Suy thận nặng (ClCr < 30 mL/phút)",
+      "Phụ nữ có thai hoặc cho con bú"
+    ],
+    "contraindication_tags": [
+      "active_liver_disease",
+      "severe_renal_impairment",
+      "pregnancy",
+      "lactation"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "Fenofibrate",
+        "severity": "moderate",
+        "mechanism_and_risk": "Tăng nguy cơ đau cơ / tiêu cơ vân",
+        "action": "WARN"
+      },
+      {
+        "with_ingredient_or_class": "Antacid",
+        "severity": "moderate",
+        "mechanism_and_risk": "Giảm hấp thu Rosuvastatin nếu uống cùng thuốc kháng acid chứa nhôm/magnesi (cách nhau 2 giờ)",
+        "action": "WARN"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 40,
+      "unit": "mg",
+      "display": "40 mg/ngày (người châu Á thận trọng liều > 20 mg/ngày)"
+    },
+    "unit_price_vnd_synthetic": 8000,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
+  },
+  {
+    "drug_id": "DRUG-026",
+    "canonical_name": "Rosuvastatin",
+    "active_ingredient": "Rosuvastatin calcium",
+    "aliases": [
+      "Rosuvastatin",
+      "Rosuvastatin calci",
+      "Rosuvastatin calcium"
+    ],
+    "component_ingredients": [
+      "Rosuvastatin"
+    ],
+    "drug_class": "Statin",
+    "strength_dosage": "20mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "Crestor 20mg",
+      "Sterolow 20"
+    ],
+    "typical_frequency": 1,
+    "typical_meal_timing": "Sau ăn tối",
+    "verified_indications_icd10": [
+      "E78"
+    ],
+    "contraindications": [
+      "Bệnh gan tiến triển",
+      "Suy thận nặng (ClCr < 30 mL/phút)",
+      "Phụ nữ có thai hoặc cho con bú"
+    ],
+    "contraindication_tags": [
+      "active_liver_disease",
+      "severe_renal_impairment",
+      "pregnancy",
+      "lactation"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "Fenofibrate",
+        "severity": "moderate",
+        "mechanism_and_risk": "Tăng nguy cơ tiêu cơ vân",
+        "action": "WARN"
+      },
+      {
+        "with_ingredient_or_class": "Antacid",
+        "severity": "moderate",
+        "mechanism_and_risk": "Giảm hấp thu Rosuvastatin; uống cách nhau ít nhất 2 giờ",
+        "action": "WARN"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 40,
+      "unit": "mg",
+      "display": "40 mg/ngày (người châu Á thận trọng liều > 20 mg/ngày)"
+    },
+    "unit_price_vnd_synthetic": 16000,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
+  },
+  {
+    "drug_id": "DRUG-027",
+    "canonical_name": "Pitavastatin",
+    "active_ingredient": "Pitavastatin calcium",
+    "aliases": [
+      "Pitavastatin",
+      "Pitavastatin calci",
+      "Pitavastatin calcium"
+    ],
+    "component_ingredients": [
+      "Pitavastatin"
+    ],
+    "drug_class": "Statin",
+    "strength_dosage": "2mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "Pitator Tablets 2mg"
+    ],
+    "typical_frequency": 1,
+    "typical_meal_timing": "Sau ăn tối",
+    "verified_indications_icd10": [
+      "E78"
+    ],
+    "contraindications": [
+      "Bệnh gan tiến triển",
+      "Phụ nữ có thai hoặc cho con bú",
+      "Dùng đồng thời Cyclosporin"
+    ],
+    "contraindication_tags": [
+      "active_liver_disease",
+      "pregnancy",
+      "lactation"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "Fenofibrate",
+        "severity": "moderate",
+        "mechanism_and_risk": "Tăng nguy cơ bệnh cơ / đau cơ",
+        "action": "WARN"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 4,
+      "unit": "mg",
+      "display": "4 mg/ngày"
+    },
+    "unit_price_vnd_synthetic": 14500,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
+  },
+  {
+    "drug_id": "DRUG-028",
+    "canonical_name": "Simvastatin",
+    "active_ingredient": "Simvastatin",
+    "aliases": [
+      "Simvastatin"
+    ],
+    "component_ingredients": [
+      "Simvastatin"
+    ],
+    "drug_class": "Statin",
+    "strength_dosage": "20mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "Simvastatin Savi 20"
+    ],
+    "typical_frequency": 1,
+    "typical_meal_timing": "Buổi tối",
+    "verified_indications_icd10": [
+      "E78"
+    ],
+    "contraindications": [
+      "Bệnh gan tiến triển",
+      "Phụ nữ có thai hoặc cho con bú",
+      "Dùng đồng thời chất ức chế mạnh CYP3A4 (Clarithromycin, Itraconazole)"
+    ],
+    "contraindication_tags": [
+      "active_liver_disease",
+      "pregnancy",
+      "lactation"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "Clarithromycin",
+        "severity": "major",
+        "mechanism_and_risk": "CHỐNG CHỈ ĐỊNH: ức chế mạnh CYP3A4 gây nguy cơ tiêu cơ vân nặng",
+        "action": "BLOCK"
+      },
+      {
+        "with_ingredient_or_class": "Itraconazole",
+        "severity": "major",
+        "mechanism_and_risk": "CHỐNG CHỈ ĐỊNH: nguy cơ tiêu cơ vân nặng",
+        "action": "BLOCK"
+      },
+      {
+        "with_ingredient_or_class": "Amlodipine",
+        "severity": "moderate",
+        "mechanism_and_risk": "Không vượt quá 20mg Simvastatin/ngày khi dùng cùng Amlodipine",
+        "action": "WARN"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 40,
+      "unit": "mg",
+      "display": "40 mg/ngày (tối đa 20 mg/ngày nếu dùng cùng Amlodipine)"
+    },
+    "unit_price_vnd_synthetic": 2500,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
+  },
+  {
+    "drug_id": "DRUG-029",
+    "canonical_name": "Atorvastatin + Ezetimibe",
+    "active_ingredient": "Atorvastatin + Ezetimibe",
+    "aliases": [
+      "Atorvastatin + Ezetimib",
+      "Atorvastatin + Ezetimibe"
+    ],
+    "component_ingredients": [
+      "Atorvastatin",
+      "Ezetimibe"
+    ],
+    "drug_class": "Statin+Ezetimibe",
+    "strength_dosage": "20mg + 10mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "Ezecept 20mg/10mg"
+    ],
+    "typical_frequency": 1,
+    "typical_meal_timing": "Sau ăn chiều hoặc tối",
+    "verified_indications_icd10": [
+      "E78"
+    ],
+    "contraindications": [
+      "Bệnh gan tiến triển",
+      "Phụ nữ có thai hoặc cho con bú"
+    ],
+    "contraindication_tags": [
+      "active_liver_disease",
+      "pregnancy",
+      "lactation"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "Clarithromycin",
+        "severity": "major",
+        "mechanism_and_risk": "Tăng nồng độ Atorvastatin qua CYP3A4, nguy cơ tiêu cơ vân",
+        "action": "BLOCK"
+      },
+      {
+        "with_ingredient_or_class": "Fenofibrate",
+        "severity": "moderate",
+        "mechanism_and_risk": "Tăng nguy cơ sỏi mật và bệnh cơ",
+        "action": "WARN"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 1,
+      "unit": "viên",
+      "display": "1 viên/ngày (tối đa 80mg/10mg)"
+    },
+    "unit_price_vnd_synthetic": 7000,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
+  },
+  {
+    "drug_id": "DRUG-030",
+    "canonical_name": "Fenofibrate",
+    "active_ingredient": "Fenofibrate",
+    "aliases": [
+      "Fenofibrat",
+      "Fenofibrate"
+    ],
+    "component_ingredients": [
+      "Fenofibrate"
+    ],
+    "drug_class": "Fibrate",
+    "strength_dosage": "160mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "Lipanthyl"
+    ],
+    "typical_frequency": 1,
+    "typical_meal_timing": "Trong hoặc ngay sau bữa ăn chính",
+    "verified_indications_icd10": [
+      "E78"
+    ],
+    "contraindications": [
+      "Suy thận nặng (eGFR < 30 mL/phút)",
+      "Bệnh gan nặng / bệnh túi mật",
+      "Viêm tụy cấp hoặc mạn không do tăng triglycerid nặng",
+      "Phụ nữ có thai"
+    ],
+    "contraindication_tags": [
+      "severe_renal_impairment",
+      "active_liver_disease",
+      "gallbladder_disease",
+      "pregnancy"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "Statin",
+        "severity": "moderate",
+        "mechanism_and_risk": "Tăng nguy cơ bệnh cơ / tiêu cơ vân khi phối hợp Statin + Fibrate",
+        "action": "WARN"
+      },
+      {
+        "with_ingredient_or_class": "Acenocoumarol",
+        "severity": "major",
+        "mechanism_and_risk": "Tăng tác dụng chống đông, nguy cơ xuất huyết (cần theo dõi INR)",
+        "action": "WARN"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 200,
+      "unit": "mg",
+      "display": "160–200 mg/ngày (tùy dạng vi hạt)"
+    },
+    "unit_price_vnd_synthetic": 17000,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
+  },
+  {
+    "drug_id": "DRUG-031",
+    "canonical_name": "Metformin",
+    "active_ingredient": "Metformin hydrochloride",
+    "aliases": [
+      "Metformin",
+      "Metformin hydrochlorid",
+      "Metformin hydrochloride",
+      "Metformin hydroclorid"
+    ],
+    "component_ingredients": [
+      "Metformin"
+    ],
+    "drug_class": "Biguanide",
+    "strength_dosage": "500mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "Glucophage XR 500mg",
+      "Glumeform XR"
+    ],
+    "typical_frequency": 2,
+    "typical_meal_timing": "Trong hoặc ngay sau bữa ăn",
+    "verified_indications_icd10": [
+      "E11"
+    ],
+    "contraindications": [
+      "Suy thận nặng (eGFR < 30 mL/phút/1.73m2)",
+      "Nhiễm toan chuyển hóa cấp hoặc mạn (bao gồm nhiễm toan ceton)",
+      "Suy gan nặng / nghiện rượu nặng",
+      "Thiếu oxy mô cấp (suy tim mất bù, sốc)"
+    ],
+    "contraindication_tags": [
+      "severe_renal_impairment",
+      "metabolic_acidosis",
+      "severe_liver_disease"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "Thuốc cản quang chứa iod",
+        "severity": "major",
+        "mechanism_and_risk": "Nguy cơ tổn thương thận cấp và nhiễm toan lactic; cần tạm ngưng Metformin theo phác đồ",
+        "action": "WARN"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 2550,
+      "unit": "mg",
+      "display": "2000–2550 mg/ngày (dạng XR tối đa 2000 mg/ngày)"
+    },
+    "unit_price_vnd_synthetic": 24000,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
+  },
+  {
+    "drug_id": "DRUG-032",
+    "canonical_name": "Metformin",
+    "active_ingredient": "Metformin hydrochloride",
+    "aliases": [
+      "Metformin",
+      "Metformin hydrochlorid",
+      "Metformin hydrochloride",
+      "Metformin hydroclorid"
+    ],
+    "component_ingredients": [
+      "Metformin"
+    ],
+    "drug_class": "Biguanide",
+    "strength_dosage": "1000mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "DH-Metglu XR 1000",
+      "Haplon 1g"
+    ],
+    "typical_frequency": 1,
+    "typical_meal_timing": "Trong hoặc ngay sau bữa ăn tối",
+    "verified_indications_icd10": [
+      "E11"
+    ],
+    "contraindications": [
+      "Suy thận nặng (eGFR < 30 mL/phút/1.73m2)",
+      "Nhiễm toan chuyển hóa",
+      "Suy gan nặng"
+    ],
+    "contraindication_tags": [
+      "severe_renal_impairment",
+      "metabolic_acidosis",
+      "severe_liver_disease"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "Thuốc cản quang chứa iod",
+        "severity": "major",
+        "mechanism_and_risk": "Nguy cơ nhiễm toan lactic",
+        "action": "WARN"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 2000,
+      "unit": "mg",
+      "display": "2000 mg/ngày (dạng XR)"
+    },
+    "unit_price_vnd_synthetic": 7500,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
+  },
+  {
+    "drug_id": "DRUG-033",
+    "canonical_name": "Dapagliflozin",
+    "active_ingredient": "Dapagliflozin",
+    "aliases": [
+      "Dapagliflozin"
+    ],
+    "component_ingredients": [
+      "Dapagliflozin"
+    ],
+    "drug_class": "SGLT2i",
+    "strength_dosage": "10mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "Dapzin 10mg",
+      "FORXIGA 10mg",
+      "Forxiga 10",
+      "Forxiga 10 mg",
+      "Forxiga 10mg",
+      "Zandyrine 10mg"
+    ],
+    "typical_frequency": 1,
+    "typical_meal_timing": "Sáng (uống đủ nước, không phụ thuộc bữa ăn)",
+    "verified_indications_icd10": [
+      "E11"
+    ],
+    "contraindications": [
+      "Đái tháo đường typ 1 hoặc tiền sử nhiễm toan ceton đái tháo đường",
+      "Đang lọc máu",
+      "Phụ nữ có thai 3 tháng giữa/cuối hoặc cho con bú"
+    ],
+    "contraindication_tags": [
+      "t1dm_dka",
+      "dialysis",
+      "pregnancy",
+      "lactation"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "Furosemide",
+        "severity": "moderate",
+        "mechanism_and_risk": "Tăng nguy cơ mất nước và hạ huyết áp tư thế",
+        "action": "WARN"
+      },
+      {
+        "with_ingredient_or_class": "Sulfonylurea",
+        "severity": "moderate",
+        "mechanism_and_risk": "Tăng nguy cơ hạ đường huyết, cân nhắc giảm liều Sulfonylurea",
+        "action": "WARN"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 10,
+      "unit": "mg",
+      "display": "10 mg/ngày"
+    },
+    "unit_price_vnd_synthetic": 10000,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
+  },
+  {
+    "drug_id": "DRUG-034",
+    "canonical_name": "Empagliflozin",
+    "active_ingredient": "Empagliflozin",
+    "aliases": [
+      "Empagliflozin"
+    ],
+    "component_ingredients": [
+      "Empagliflozin"
+    ],
+    "drug_class": "SGLT2i",
+    "strength_dosage": "25mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "Jardiance 25",
+      "Jardiance 25mg"
+    ],
+    "typical_frequency": 1,
+    "typical_meal_timing": "Sáng (uống đủ nước)",
+    "verified_indications_icd10": [
+      "E11"
+    ],
+    "contraindications": [
+      "Đái tháo đường typ 1 / nhiễm toan ceton",
+      "Suy thận giai đoạn cuối / lọc máu",
+      "Phụ nữ có thai hoặc cho con bú"
+    ],
+    "contraindication_tags": [
+      "t1dm_dka",
+      "dialysis",
+      "pregnancy",
+      "lactation"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "Furosemide",
+        "severity": "moderate",
+        "mechanism_and_risk": "Tăng nguy cơ giảm thể tích tuần hoàn và tụt huyết áp",
+        "action": "WARN"
+      },
+      {
+        "with_ingredient_or_class": "Sulfonylurea",
+        "severity": "moderate",
+        "mechanism_and_risk": "Tăng nguy cơ hạ đường huyết",
+        "action": "WARN"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 25,
+      "unit": "mg",
+      "display": "25 mg/ngày"
+    },
+    "unit_price_vnd_synthetic": 18000,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
+  },
+  {
+    "drug_id": "DRUG-035",
+    "canonical_name": "Sitagliptin",
+    "active_ingredient": "Sitagliptin",
+    "aliases": [
+      "Sitagliptin"
+    ],
+    "component_ingredients": [
+      "Sitagliptin"
+    ],
+    "drug_class": "DPP-4i",
+    "strength_dosage": "50mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "Bividia 50"
+    ],
+    "typical_frequency": 1,
+    "typical_meal_timing": "Sau ăn sáng",
+    "verified_indications_icd10": [
+      "E11"
+    ],
+    "contraindications": [
+      "Dị ứng nghiêm trọng với Sitagliptin (phù mạch, phản vệ)",
+      "Đái tháo đường typ 1 / nhiễm toan ceton",
+      "Thận trọng tiền sử viêm tụy cấp"
+    ],
+    "contraindication_tags": [
+      "t1dm_dka",
+      "pancreatitis_history"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "Sulfonylurea",
+        "severity": "moderate",
+        "mechanism_and_risk": "Tăng nguy cơ hạ đường huyết khi phối hợp",
+        "action": "WARN"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 100,
+      "unit": "mg",
+      "display": "100 mg/ngày (giảm liều còn 50mg hoặc 25mg nếu suy thận)"
+    },
+    "unit_price_vnd_synthetic": 8500,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
+  },
+  {
+    "drug_id": "DRUG-036",
+    "canonical_name": "Linagliptin",
+    "active_ingredient": "Linagliptin",
+    "aliases": [
+      "Linagliptin"
+    ],
+    "component_ingredients": [
+      "Linagliptin"
+    ],
+    "drug_class": "DPP-4i",
+    "strength_dosage": "5mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "Trajenta"
+    ],
+    "typical_frequency": 1,
+    "typical_meal_timing": "Sáng (không cần chỉnh liều theo chức năng thận)",
+    "verified_indications_icd10": [
+      "E11"
+    ],
+    "contraindications": [
+      "Dị ứng với Linagliptin",
+      "Đái tháo đường typ 1 / nhiễm toan ceton",
+      "Thận trọng tiền sử viêm tụy cấp"
+    ],
+    "contraindication_tags": [
+      "t1dm_dka",
+      "pancreatitis_history"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "Sulfonylurea",
+        "severity": "moderate",
+        "mechanism_and_risk": "Tăng nguy cơ hạ đường huyết",
+        "action": "WARN"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 5,
+      "unit": "mg",
+      "display": "5 mg/ngày"
+    },
+    "unit_price_vnd_synthetic": 3000,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
+  },
+  {
+    "drug_id": "DRUG-037",
+    "canonical_name": "Sitagliptin + Metformin",
+    "active_ingredient": "Sitagliptin + Metformin hydrochloride",
+    "aliases": [
+      "Sitagliptin + Metformin",
+      "Sitagliptin + Metformin HCl",
+      "Sitagliptin + Metformin Hydrochloride",
+      "Sitagliptin + Metformin hydrochloride"
+    ],
+    "component_ingredients": [
+      "Sitagliptin",
+      "Metformin"
+    ],
+    "drug_class": "DPP-4i+Biguanide",
+    "strength_dosage": "50mg + 500mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "Janumet 50mg/500mg",
+      "SITA-MET TABLETS 50/500"
+    ],
+    "typical_frequency": 2,
+    "typical_meal_timing": "Sau ăn sáng và chiều",
+    "verified_indications_icd10": [
+      "E11"
+    ],
+    "contraindications": [
+      "Suy thận nặng (eGFR < 30 mL/phút/1.73m2)",
+      "Nhiễm toan chuyển hóa / nhiễm toan ceton",
+      "Suy gan nặng"
+    ],
+    "contraindication_tags": [
+      "severe_renal_impairment",
+      "metabolic_acidosis",
+      "severe_liver_disease"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "Metformin",
+        "severity": "major",
+        "mechanism_and_risk": "Trùng lặp hoạt chất Metformin gây nguy cơ quá liều và nhiễm toan lactic",
+        "action": "BLOCK"
+      },
+      {
+        "with_ingredient_or_class": "Sitagliptin",
+        "severity": "major",
+        "mechanism_and_risk": "Trùng lặp hoạt chất Sitagliptin",
+        "action": "BLOCK"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 2,
+      "unit": "viên",
+      "display": "2 viên/ngày (100mg Sitagliptin / 2000mg Metformin tối đa)"
+    },
+    "unit_price_vnd_synthetic": 24500,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
+  },
+  {
+    "drug_id": "DRUG-038",
+    "canonical_name": "Sitagliptin + Metformin",
+    "active_ingredient": "Sitagliptin + Metformin hydrochloride",
+    "aliases": [
+      "Sitagliptin + Metformin",
+      "Sitagliptin + Metformin HCl",
+      "Sitagliptin + Metformin hydrochloride"
+    ],
+    "component_ingredients": [
+      "Sitagliptin",
+      "Metformin"
+    ],
+    "drug_class": "DPP-4i+Biguanide",
+    "strength_dosage": "50mg + 1000mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "JANUMET 50mg/1000mg",
+      "Janumet 50/1000"
+    ],
+    "typical_frequency": 2,
+    "typical_meal_timing": "Sau ăn sáng và chiều",
+    "verified_indications_icd10": [
+      "E11"
+    ],
+    "contraindications": [
+      "Suy thận nặng (eGFR < 30 mL/phút/1.73m2)",
+      "Nhiễm toan chuyển hóa",
+      "Suy gan nặng"
+    ],
+    "contraindication_tags": [
+      "severe_renal_impairment",
+      "metabolic_acidosis",
+      "severe_liver_disease"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "Metformin",
+        "severity": "major",
+        "mechanism_and_risk": "Trùng lặp hoạt chất Metformin",
+        "action": "BLOCK"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 2,
+      "unit": "viên",
+      "display": "2 viên/ngày (100mg Sitagliptin / 2000mg Metformin)"
+    },
+    "unit_price_vnd_synthetic": 11500,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
+  },
+  {
+    "drug_id": "DRUG-039",
+    "canonical_name": "Gliclazide + Metformin",
+    "active_ingredient": "Gliclazide + Metformin",
+    "aliases": [
+      "Gliclazid + metformin",
+      "Gliclazide + Metformin"
+    ],
+    "component_ingredients": [
+      "Gliclazide",
+      "Metformin"
+    ],
+    "drug_class": "Sulfonylurea+Biguanide",
+    "strength_dosage": "80mg + 500mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "Glizym-M"
+    ],
+    "typical_frequency": 2,
+    "typical_meal_timing": "Ngay trước hoặc trong bữa ăn",
+    "verified_indications_icd10": [
+      "E11"
+    ],
+    "contraindications": [
+      "Suy thận nặng (eGFR < 30 mL/phút)",
+      "Suy gan nặng",
+      "Nhiễm toan ceton",
+      "Dị ứng sulfonamid",
+      "Phụ nữ có thai"
+    ],
+    "contraindication_tags": [
+      "severe_renal_impairment",
+      "severe_liver_disease",
+      "t1dm_dka",
+      "sulfonamide_allergy",
+      "pregnancy"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "Metformin",
+        "severity": "major",
+        "mechanism_and_risk": "Trùng lặp hoạt chất Metformin, kiểm tra tổng liều tối đa",
+        "action": "BLOCK"
+      },
+      {
+        "with_ingredient_or_class": "Glimepiride",
+        "severity": "major",
+        "mechanism_and_risk": "Trùng nhóm Sulfonylurea: nguy cơ hạ đường huyết nặng",
+        "action": "BLOCK"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 4,
+      "unit": "viên",
+      "display": "Tối đa 320mg Gliclazide / 2000mg Metformin mỗi ngày"
+    },
+    "unit_price_vnd_synthetic": 2000,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
+  },
+  {
+    "drug_id": "DRUG-040",
+    "canonical_name": "Glimepiride",
+    "active_ingredient": "Glimepiride",
+    "aliases": [
+      "Glimepirid",
+      "Glimepiride"
+    ],
+    "component_ingredients": [
+      "Glimepiride"
+    ],
+    "drug_class": "Sulfonylurea",
+    "strength_dosage": "2mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "Gregory -2"
+    ],
+    "typical_frequency": 1,
+    "typical_meal_timing": "Ngay trước bữa ăn sáng",
+    "verified_indications_icd10": [
+      "E11"
+    ],
+    "contraindications": [
+      "Đái tháo đường typ 1 / nhiễm toan ceton",
+      "Suy gan hoặc suy thận nặng",
+      "Dị ứng sulfonamid",
+      "Phụ nữ có thai"
+    ],
+    "contraindication_tags": [
+      "t1dm_dka",
+      "severe_liver_disease",
+      "severe_renal_impairment",
+      "sulfonamide_allergy",
+      "pregnancy"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "Gliclazide",
+        "severity": "major",
+        "mechanism_and_risk": "Trùng nhóm Sulfonylurea gây hạ đường huyết nặng",
+        "action": "BLOCK"
+      },
+      {
+        "with_ingredient_or_class": "Clarithromycin",
+        "severity": "major",
+        "mechanism_and_risk": "Tăng nguy cơ hạ đường huyết nặng",
+        "action": "WARN"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 8,
+      "unit": "mg",
+      "display": "8 mg/ngày (thường dùng 1–4 mg/ngày)"
+    },
+    "unit_price_vnd_synthetic": 5500,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
+  },
+  {
+    "drug_id": "DRUG-041",
+    "canonical_name": "Esomeprazole",
+    "active_ingredient": "Esomeprazole",
+    "aliases": [
+      "Esomeprazol",
+      "Esomeprazole"
+    ],
+    "component_ingredients": [
+      "Esomeprazole"
+    ],
+    "drug_class": "PPI",
+    "strength_dosage": "20mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "Esomeprazol 20 mg"
+    ],
+    "typical_frequency": 1,
+    "typical_meal_timing": "Trước ăn sáng 30 phút",
+    "verified_indications_icd10": [
+      "K21"
+    ],
+    "contraindications": [
+      "Dị ứng với dẫn chất benzimidazol / nhóm PPI",
+      "Dùng đồng thời Nelfinavir"
+    ],
+    "contraindication_tags": [
+      "ppi_allergy"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "Clopidogrel",
+        "severity": "major",
+        "mechanism_and_risk": "Ức chế CYP2C19 làm giảm hoạt tính chống kết tập tiểu cầu của Clopidogrel; ưu tiên chuyển sang Pantoprazole hoặc Rabeprazole",
+        "action": "BLOCK"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 80,
+      "unit": "mg",
+      "display": "40 mg/ngày (tối đa 80 mg/ngày trong một số chỉ định)"
+    },
+    "unit_price_vnd_synthetic": 15000,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
+  },
+  {
+    "drug_id": "DRUG-042",
+    "canonical_name": "Esomeprazole",
+    "active_ingredient": "Esomeprazole",
+    "aliases": [
+      "Esomeprazol",
+      "Esomeprazole"
+    ],
+    "component_ingredients": [
+      "Esomeprazole"
+    ],
+    "drug_class": "PPI",
+    "strength_dosage": "40mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "Esapbe 40",
+      "Esomeprazol 40mg",
+      "INOLUCK 40",
+      "MEPILORI",
+      "NEXIUM MUPS",
+      "Nexipraz 40",
+      "Nexium MUPS 40mg"
+    ],
+    "typical_frequency": 1,
+    "typical_meal_timing": "Trước ăn sáng 30 phút",
+    "verified_indications_icd10": [
+      "K21"
+    ],
+    "contraindications": [
+      "Dị ứng với dẫn chất benzimidazol / nhóm PPI"
+    ],
+    "contraindication_tags": [
+      "ppi_allergy"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "Clopidogrel",
+        "severity": "major",
+        "mechanism_and_risk": "Ức chế CYP2C19 làm giảm hiệu quả bảo vệ tim mạch của Clopidogrel; chuyển sang Pantoprazole hoặc Rabeprazole",
+        "action": "BLOCK"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 80,
+      "unit": "mg",
+      "display": "40 mg/ngày (tối đa 80 mg/ngày)"
+    },
+    "unit_price_vnd_synthetic": 14500,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
+  },
+  {
+    "drug_id": "DRUG-043",
+    "canonical_name": "Omeprazole",
+    "active_ingredient": "Omeprazole",
+    "aliases": [
+      "Omeprazol",
+      "Omeprazole"
+    ],
+    "component_ingredients": [
+      "Omeprazole"
+    ],
+    "drug_class": "PPI",
+    "strength_dosage": "40mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "Medoome 40mg"
+    ],
+    "typical_frequency": 1,
+    "typical_meal_timing": "Trước ăn sáng 30 phút",
+    "verified_indications_icd10": [
+      "K21"
+    ],
+    "contraindications": [
+      "Dị ứng với Omeprazole / nhóm PPI"
+    ],
+    "contraindication_tags": [
+      "ppi_allergy"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "Clopidogrel",
+        "severity": "major",
+        "mechanism_and_risk": "CHỐNG CHỈ ĐỊNH tương đối: ức chế mạnh CYP2C19 làm giảm hiệu quả Clopidogrel; chuyển sang Pantoprazole hoặc Rabeprazole",
+        "action": "BLOCK"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 40,
+      "unit": "mg",
+      "display": "20–40 mg/ngày"
+    },
+    "unit_price_vnd_synthetic": 19000,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
+  },
+  {
+    "drug_id": "DRUG-044",
+    "canonical_name": "Pantoprazole",
+    "active_ingredient": "Pantoprazole",
+    "aliases": [
+      "Pantoprazol",
+      "Pantoprazole"
+    ],
+    "component_ingredients": [
+      "Pantoprazole"
+    ],
+    "drug_class": "PPI",
+    "strength_dosage": "40mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "Axitan 40mg",
+      "Pantoprazol",
+      "Pantoprazol 40mg",
+      "SaVi Pantoprazole 40"
+    ],
+    "typical_frequency": 1,
+    "typical_meal_timing": "Trước ăn sáng 30 phút",
+    "verified_indications_icd10": [
+      "K21"
+    ],
+    "contraindications": [
+      "Dị ứng với Pantoprazole / dẫn chất benzimidazol"
+    ],
+    "contraindication_tags": [
+      "ppi_allergy"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "Methotrexate liều cao",
+        "severity": "moderate",
+        "mechanism_and_risk": "Có thể làm chậm thải trừ Methotrexate liều cao",
+        "action": "WARN"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 80,
+      "unit": "mg",
+      "display": "40 mg/ngày (tối đa 80 mg/ngày)"
+    },
+    "unit_price_vnd_synthetic": 24000,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
+  },
+  {
+    "drug_id": "DRUG-045",
+    "canonical_name": "Rabeprazole",
+    "active_ingredient": "Rabeprazole sodium",
+    "aliases": [
+      "Rabeprazol",
+      "Rabeprazol Sodium",
+      "Rabeprazol natri",
+      "Rabeprazole",
+      "Rabeprazole sodium"
+    ],
+    "component_ingredients": [
+      "Rabeprazole"
+    ],
+    "drug_class": "PPI",
+    "strength_dosage": "20mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "Orzemole tablet",
+      "Pariet",
+      "Rabeprazol 20mg KH",
+      "Rapeed 20"
+    ],
+    "typical_frequency": 1,
+    "typical_meal_timing": "Trước ăn sáng 30 phút",
+    "verified_indications_icd10": [
+      "K21"
+    ],
+    "contraindications": [
+      "Dị ứng với Rabeprazole / nhóm PPI",
+      "Phụ nữ có thai hoặc đang cho con bú (thận trọng theo HDSD)"
+    ],
+    "contraindication_tags": [
+      "ppi_allergy"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "Ketoconazole",
+        "severity": "moderate",
+        "mechanism_and_risk": "Giảm hấp thu các thuốc phụ thuộc pH acid dạ dày",
+        "action": "WARN"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 40,
+      "unit": "mg",
+      "display": "20 mg/ngày (tối đa 40 mg/ngày)"
+    },
+    "unit_price_vnd_synthetic": 21000,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
+  },
+  {
+    "drug_id": "DRUG-046",
+    "canonical_name": "Lansoprazole",
+    "active_ingredient": "Lansoprazole",
+    "aliases": [
+      "Lansoprazol",
+      "Lansoprazole"
+    ],
+    "component_ingredients": [
+      "Lansoprazole"
+    ],
+    "drug_class": "PPI",
+    "strength_dosage": "30mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "GASTEVIN 30MG",
+      "Scolanzo 30mg"
+    ],
+    "typical_frequency": 1,
+    "typical_meal_timing": "Trước ăn sáng 30 phút",
+    "verified_indications_icd10": [
+      "K21"
+    ],
+    "contraindications": [
+      "Dị ứng với Lansoprazole / nhóm PPI"
+    ],
+    "contraindication_tags": [
+      "ppi_allergy"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "Sucralfate",
+        "severity": "moderate",
+        "mechanism_and_risk": "Sucralfate làm giảm hấp thu Lansoprazole; uống Lansoprazole trước Sucralfate ít nhất 30 phút",
+        "action": "WARN"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 60,
+      "unit": "mg",
+      "display": "30 mg/ngày (tối đa 60 mg/ngày)"
+    },
+    "unit_price_vnd_synthetic": 11500,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
+  },
+  {
+    "drug_id": "DRUG-047",
+    "canonical_name": "Dexlansoprazole",
+    "active_ingredient": "Dexlansoprazole",
+    "aliases": [
+      "Dexlansoprazol",
+      "Dexlansoprazole"
+    ],
+    "component_ingredients": [
+      "Dexlansoprazole"
+    ],
+    "drug_class": "PPI",
+    "strength_dosage": "60mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "Prolandex 60mg"
+    ],
+    "typical_frequency": 1,
+    "typical_meal_timing": "Trước ăn sáng 30 phút (hoặc không phụ thuộc bữa ăn)",
+    "verified_indications_icd10": [
+      "K21"
+    ],
+    "contraindications": [
+      "Dị ứng với Dexlansoprazole / nhóm PPI"
+    ],
+    "contraindication_tags": [
+      "ppi_allergy"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "Methotrexate liều cao",
+        "severity": "moderate",
+        "mechanism_and_risk": "Có thể làm tăng nồng độ Methotrexate liều cao",
+        "action": "WARN"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 60,
+      "unit": "mg",
+      "display": "60 mg/ngày"
+    },
+    "unit_price_vnd_synthetic": 19500,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
+  },
+  {
+    "drug_id": "DRUG-048",
+    "canonical_name": "Sodium Alginate + Antacid",
+    "active_ingredient": "Natri alginate + Natri bicarbonate + Calci carbonate",
+    "aliases": [
+      "Alginate / Antacid",
+      "Natri alginate + Natri bicarbonate + Calci Carbonate",
+      "Natri alginate + Natri bicarbonate + Calci carbonate",
+      "Sodium Alginate + Antacid"
+    ],
+    "component_ingredients": [
+      "Sodium Alginate",
+      "Sodium Bicarbonate",
+      "Calcium Carbonate"
+    ],
+    "drug_class": "Antacid/Alginate",
+    "strength_dosage": "500mg + 213mg + 325mg",
+    "route_of_administration": "Uống",
+    "unit": "Gói",
+    "sample_brand_names": [
+      "Gaviscon Dual Action",
+      "Gaviscon suspension sac"
+    ],
+    "typical_frequency": 2,
+    "typical_meal_timing": "Sau ăn 1–2 giờ và trước khi đi ngủ",
+    "verified_indications_icd10": [
+      "K21"
+    ],
+    "contraindications": [
+      "Tăng calci máu / sỏi thận chứa calci",
+      "Thận trọng ở bệnh nhân cần hạn chế natri (tăng huyết áp, suy tim)"
+    ],
+    "contraindication_tags": [
+      "hypercalcemia",
+      "sodium_restriction_caution"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "Rosuvastatin",
+        "severity": "moderate",
+        "mechanism_and_risk": "Làm giảm hấp thu nhiều thuốc uống cùng (kháng sinh, sắt, statin); uống cách nhau ít nhất 2 giờ",
+        "action": "WARN"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 4,
+      "unit": "gói",
+      "display": "Tối đa 4 gói/ngày"
+    },
+    "unit_price_vnd_synthetic": 14500,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
+  },
+  {
+    "drug_id": "DRUG-049",
+    "canonical_name": "Aluminium Hydroxide + Magnesium Hydroxide + Simethicone",
+    "active_ingredient": "Nhôm hydroxyd + Magnesi hydroxyd + Simethicon",
+    "aliases": [
+      "Aluminium Hydroxide + Magnesium Hydroxide + Simethicone",
+      "Antacid",
+      "Magnesi hydroxyd + nhôm hydroxyd + simethicon",
+      "Nhôm hydroxyd + Magnesi hydroxyd + Simethicon"
+    ],
+    "component_ingredients": [
+      "Aluminium Hydroxide",
+      "Magnesium Hydroxide",
+      "Simethicone"
+    ],
+    "drug_class": "Antacid",
+    "strength_dosage": "10ml",
+    "route_of_administration": "Uống",
+    "unit": "Gói",
+    "sample_brand_names": [
+      "Apigel-plus",
+      "Aquima"
+    ],
+    "typical_frequency": 2,
+    "typical_meal_timing": "Sau ăn 1–2 giờ",
+    "verified_indications_icd10": [
+      "K21"
+    ],
+    "contraindications": [
+      "Suy thận nặng (nguy cơ tích lũy nhôm và tăng magnesi máu)",
+      "Giảm phosphat máu"
+    ],
+    "contraindication_tags": [
+      "severe_renal_impairment",
+      "hypophosphatemia"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "Rosuvastatin",
+        "severity": "moderate",
+        "mechanism_and_risk": "Giảm hấp thu Rosuvastatin; uống cách nhau ít nhất 2 giờ",
+        "action": "WARN"
+      },
+      {
+        "with_ingredient_or_class": "Ciprofloxacin / Levofloxacin",
+        "severity": "major",
+        "mechanism_and_risk": "Tạo phức chelat làm giảm mạnh hấp thu kháng sinh quinolon; uống cách nhau ít nhất 2–4 giờ",
+        "action": "WARN"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 6,
+      "unit": "gói",
+      "display": "Tối đa 6 gói/ngày"
+    },
+    "unit_price_vnd_synthetic": 15000,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
+  },
+  {
+    "drug_id": "DRUG-050",
+    "canonical_name": "Itopride",
+    "active_ingredient": "Itopride hydrochloride",
+    "aliases": [
+      "Itoprid",
+      "Itopride",
+      "Itopride hydrochloride"
+    ],
+    "component_ingredients": [
+      "Itopride"
+    ],
+    "drug_class": "Prokinetic",
+    "strength_dosage": "50mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "Elthon",
+      "Ibutop 50mg"
+    ],
+    "typical_frequency": 3,
+    "typical_meal_timing": "Trước ăn 30 phút",
+    "verified_indications_icd10": [
+      "K21"
+    ],
+    "contraindications": [
+      "Xuất huyết tiêu hóa, tắc ruột cơ học hoặc thủng đường tiêu hóa",
+      "Dị ứng với Itopride"
+    ],
+    "contraindication_tags": [
+      "gi_bleeding_obstruction"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "Thuốc kháng cholinergic",
+        "severity": "moderate",
+        "mechanism_and_risk": "Làm giảm tác dụng tăng nhu động tiêu hóa của Itopride",
+        "action": "WARN"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 150,
+      "unit": "mg",
+      "display": "150 mg/ngày (50mg x 3 lần/ngày)"
+    },
+    "unit_price_vnd_synthetic": 5500,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
+  },
+  {
+    "drug_id": "DRUG-051",
+    "canonical_name": "Rebamipide",
+    "active_ingredient": "Rebamipide",
+    "aliases": [
+      "Rebamipid",
+      "Rebamipide"
+    ],
+    "component_ingredients": [
+      "Rebamipide"
+    ],
+    "drug_class": "Mucosal_Protectant",
+    "strength_dosage": "100mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "Ayite",
+      "Boxorfen 100mg",
+      "MUCOSTA"
+    ],
+    "typical_frequency": 3,
+    "typical_meal_timing": "Trước ăn 30 phút hoặc sau ăn (theo hướng dẫn bác sĩ)",
+    "verified_indications_icd10": [
+      "K21"
+    ],
+    "contraindications": [
+      "Dị ứng với Rebamipide",
+      "Thận trọng phụ nữ có thai và cho con bú"
+    ],
+    "contraindication_tags": [
+      "rebamipide_allergy"
+    ],
+    "interactions": [],
+    "max_daily_dose": {
+      "value": 300,
+      "unit": "mg",
+      "display": "300 mg/ngày (100mg x 3 lần/ngày)"
+    },
+    "unit_price_vnd_synthetic": 9000,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
+  },
+  {
+    "drug_id": "DRUG-052",
+    "canonical_name": "Sucralfate",
+    "active_ingredient": "Sucralfate",
+    "aliases": [
+      "Sucralfat",
+      "Sucralfate"
+    ],
+    "component_ingredients": [
+      "Sucralfate"
+    ],
+    "drug_class": "Mucosal_Protectant",
+    "strength_dosage": "1g",
+    "route_of_administration": "Uống",
+    "unit": "Gói",
+    "sample_brand_names": [
+      "Gellux"
+    ],
+    "typical_frequency": 2,
+    "typical_meal_timing": "Khi đói (trước ăn 1 giờ hoặc trước ngủ)",
+    "verified_indications_icd10": [
+      "K21"
+    ],
+    "contraindications": [
+      "Dị ứng với Sucralfate",
+      "Thận trọng suy thận nặng (tích lũy nhôm)"
+    ],
+    "contraindication_tags": [
+      "severe_renal_impairment"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "PPI / Kháng sinh / Digoxin",
+        "severity": "moderate",
+        "mechanism_and_risk": "Bao phủ niêm mạc làm giảm hấp thu thuốc uống cùng; uống cách nhau ít nhất 2 giờ",
+        "action": "WARN"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 4,
+      "unit": "g",
+      "display": "4 g/ngày"
+    },
+    "unit_price_vnd_synthetic": 19000,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
+  },
+  {
+    "drug_id": "DRUG-053",
+    "canonical_name": "Amoxicillin + Clavulanic acid",
+    "active_ingredient": "Amoxicillin + Clavulanic acid",
+    "aliases": [
+      "Amoxicilin + acid clavulanic",
+      "Amoxicilline + Clavulanic acid",
+      "Augmentin",
+      "Klamentin"
+    ],
+    "component_ingredients": [
+      "Amoxicillin",
+      "Clavulanic acid"
+    ],
+    "drug_class": "Beta-lactam",
+    "strength_dosage": "875mg + 125mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "Augmentin 1g",
+      "Klamentin 875/125"
+    ],
+    "typical_frequency": 2,
+    "typical_meal_timing": "Ngay trước bữa ăn hoặc đầu bữa ăn",
+    "verified_indications_icd10": [
+      "J01",
+      "J02"
+    ],
+    "contraindications": [
+      "Dị ứng với Penicillin hoặc nhóm Beta-lactam",
+      "Tiền sử vàng da / rối loạn chức năng gan liên quan đến Amoxicillin-Clavulanate"
+    ],
+    "contraindication_tags": [
+      "penicillin_allergy",
+      "beta_lactam_allergy",
+      "severe_liver_disease"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "Warfarin",
+        "severity": "moderate",
+        "mechanism_and_risk": "Có thể làm tăng chỉ số INR khi phối hợp thuốc chống đông",
+        "action": "WARN"
+      },
+      {
+        "with_ingredient_or_class": "Methotrexate",
+        "severity": "moderate",
+        "mechanism_and_risk": "Giảm thanh thải thận của Methotrexate, tăng độc tính",
+        "action": "WARN"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 2000,
+      "unit": "mg",
+      "display": "2 viên/ngày (1750mg Amoxicillin + 250mg Clavulanic)"
+    },
+    "unit_price_vnd_synthetic": 3500,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Data thường gặp.xlsx"
+  },
+  {
+    "drug_id": "DRUG-054",
+    "canonical_name": "Amoxicillin + Clavulanic acid",
+    "active_ingredient": "Amoxicillin + Clavulanic acid",
+    "aliases": [
+      "Amoxicilin + acid clavulanic 500/125",
+      "Augmentin 625mg"
+    ],
+    "component_ingredients": [
+      "Amoxicillin",
+      "Clavulanic acid"
+    ],
+    "drug_class": "Beta-lactam",
+    "strength_dosage": "500mg + 125mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "Augmentin 625mg",
+      "Klamentin 500/125"
+    ],
+    "typical_frequency": 3,
+    "typical_meal_timing": "Đầu bữa ăn",
+    "verified_indications_icd10": [
+      "J01",
+      "J02"
+    ],
+    "contraindications": [
+      "Dị ứng với Penicillin hoặc nhóm Beta-lactam",
+      "Tiền sử tổn thương gan do Amoxicillin-Clavulanate"
+    ],
+    "contraindication_tags": [
+      "penicillin_allergy",
+      "beta_lactam_allergy",
+      "severe_liver_disease"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "Warfarin",
+        "severity": "moderate",
+        "mechanism_and_risk": "Có thể làm tăng INR",
+        "action": "WARN"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 1875,
+      "unit": "mg",
+      "display": "3 viên/ngày (1500mg Amoxicillin + 375mg Clavulanic)"
+    },
+    "unit_price_vnd_synthetic": 20000,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Data thường gặp.xlsx"
+  },
+  {
+    "drug_id": "DRUG-055",
+    "canonical_name": "Cefuroxime",
+    "active_ingredient": "Cefuroxime axetil",
+    "aliases": [
+      "Cefuroxim",
+      "Zinnat"
+    ],
+    "component_ingredients": [
+      "Cefuroxime"
+    ],
+    "drug_class": "Cephalosporin",
+    "strength_dosage": "500mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "Zinnat 500mg",
+      "Cefuroxim 500mg"
+    ],
+    "typical_frequency": 2,
+    "typical_meal_timing": "Sau ăn",
+    "verified_indications_icd10": [
+      "J01",
+      "J02"
+    ],
+    "contraindications": [
+      "Dị ứng với Cephalosporin hoặc tiền sử phản vệ với Penicillin"
+    ],
+    "contraindication_tags": [
+      "cephalosporin_allergy",
+      "beta_lactam_allergy"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "Antacid",
+        "severity": "moderate",
+        "mechanism_and_risk": "Thuốc giảm acid dạ dày làm giảm sinh khả dụng Cefuroxime",
+        "action": "WARN"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 1000,
+      "unit": "mg",
+      "display": "1000 mg/ngày"
+    },
+    "unit_price_vnd_synthetic": 17000,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Data thường gặp.xlsx"
+  },
+  {
+    "drug_id": "DRUG-056",
+    "canonical_name": "Azithromycin",
+    "active_ingredient": "Azithromycin",
+    "aliases": [
+      "Azithromycin",
+      "Zithromax"
+    ],
+    "component_ingredients": [
+      "Azithromycin"
+    ],
+    "drug_class": "Macrolide",
+    "strength_dosage": "250mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "Zithromax 250mg",
+      "Azithromycin 250mg"
+    ],
+    "typical_frequency": 1,
+    "typical_meal_timing": "Trước ăn 1 giờ hoặc sau ăn 2 giờ",
+    "verified_indications_icd10": [
+      "J01",
+      "J02"
+    ],
+    "contraindications": [
+      "Dị ứng với Azithromycin hoặc Macrolide",
+      "Bệnh gan nặng hoặc tiền sử kéo dài khoảng QT nặng"
+    ],
+    "contraindication_tags": [
+      "macrolide_allergy",
+      "severe_liver_disease"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "Warfarin",
+        "severity": "moderate",
+        "mechanism_and_risk": "Có thể làm tăng tác dụng chống đông của Warfarin",
+        "action": "WARN"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 500,
+      "unit": "mg",
+      "display": "500 mg/ngày"
+    },
+    "unit_price_vnd_synthetic": 12000,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Data thường gặp.xlsx"
+  },
+  {
+    "drug_id": "DRUG-057",
+    "canonical_name": "Budesonide (xịt mũi)",
+    "active_ingredient": "Budesonide",
+    "aliases": [
+      "Budesonid",
+      "Rhinocort"
+    ],
+    "component_ingredients": [
+      "Budesonide"
+    ],
+    "drug_class": "Intranasal_Corticosteroid",
+    "strength_dosage": "64mcg/liều",
+    "route_of_administration": "Xịt mũi",
+    "unit": "Lọ",
+    "sample_brand_names": [
+      "Rhinocort Aqua 64mcg"
+    ],
+    "typical_frequency": 2,
+    "typical_meal_timing": "Sáng và tối, mỗi bên mũi 1-2 nhát",
+    "verified_indications_icd10": [
+      "J30",
+      "J01"
+    ],
+    "contraindications": [
+      "Dị ứng với Budesonide",
+      "Nhiễm nấm/virus tại mũi chưa điều trị"
+    ],
+    "contraindication_tags": [
+      "corticosteroid_allergy"
+    ],
+    "interactions": [],
+    "max_daily_dose": {
+      "value": 400,
+      "unit": "mcg",
+      "display": "400 mcg/ngày (xịt mũi)"
+    },
+    "unit_price_vnd_synthetic": 11500,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022)"
+  },
+  {
+    "drug_id": "DRUG-058",
+    "canonical_name": "Fexofenadine",
+    "active_ingredient": "Fexofenadine HCl",
+    "aliases": [
+      "Fexofenadin",
+      "Telfast"
+    ],
+    "component_ingredients": [
+      "Fexofenadine"
+    ],
+    "drug_class": "Antihistamine_H1",
+    "strength_dosage": "180mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "Telfast HD 180mg",
+      "Fexofenadin 180mg"
+    ],
+    "typical_frequency": 1,
+    "typical_meal_timing": "Uống với nước lọc, tránh nước ép hoa quả",
+    "verified_indications_icd10": [
+      "J30",
+      "J01"
+    ],
+    "contraindications": [
+      "Dị ứng với Fexofenadine"
+    ],
+    "contraindication_tags": [
+      "antihistamine_allergy"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "Antacid",
+        "severity": "moderate",
+        "mechanism_and_risk": "Antacid chứa nhôm/magnesi làm giảm hấp thu Fexofenadine (uống cách >= 2 giờ)",
+        "action": "WARN"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 180,
+      "unit": "mg",
+      "display": "180 mg/ngày"
+    },
+    "unit_price_vnd_synthetic": 22000,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Data thường gặp.xlsx"
+  },
+  {
+    "drug_id": "DRUG-059",
+    "canonical_name": "Desloratadine",
+    "active_ingredient": "Desloratadine",
+    "aliases": [
+      "Desloratadin",
+      "Aerius"
+    ],
+    "component_ingredients": [
+      "Desloratadine"
+    ],
+    "drug_class": "Antihistamine_H1",
+    "strength_dosage": "5mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "Aerius 5mg",
+      "Desloratadine 5mg"
+    ],
+    "typical_frequency": 1,
+    "typical_meal_timing": "Không phụ thuộc bữa ăn",
+    "verified_indications_icd10": [
+      "J30"
+    ],
+    "contraindications": [
+      "Dị ứng với Desloratadine hoặc Loratadine"
+    ],
+    "contraindication_tags": [
+      "antihistamine_allergy"
+    ],
+    "interactions": [],
+    "max_daily_dose": {
+      "value": 5,
+      "unit": "mg",
+      "display": "5 mg/ngày"
+    },
+    "unit_price_vnd_synthetic": 3500,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Data thường gặp.xlsx"
+  },
+  {
+    "drug_id": "DRUG-060",
+    "canonical_name": "Methylprednisolone",
+    "active_ingredient": "Methylprednisolone",
+    "aliases": [
+      "Methylprednisolon",
+      "Medrol"
+    ],
+    "component_ingredients": [
+      "Methylprednisolone"
+    ],
+    "drug_class": "Systemic_Corticosteroid",
+    "strength_dosage": "16mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "Medrol 16mg",
+      "Methylprednisolon 16mg"
+    ],
+    "typical_frequency": 1,
+    "typical_meal_timing": "Sau ăn sáng",
+    "verified_indications_icd10": [
+      "J01",
+      "J30",
+      "J02"
+    ],
+    "contraindications": [
+      "Nhiễm nấm toàn thân chưa kiểm soát",
+      "Loét dạ dày - tá tràng tiến triển",
+      "Dị ứng với Methylprednisolone"
+    ],
+    "contraindication_tags": [
+      "corticosteroid_allergy",
+      "active_gi_ulcer"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "NSAID",
+        "severity": "moderate",
+        "mechanism_and_risk": "Tăng nguy cơ loét và xuất huyết tiêu hóa khi phối hợp Corticoid + NSAID",
+        "action": "WARN"
+      },
+      {
+        "with_ingredient_or_class": "Warfarin",
+        "severity": "moderate",
+        "mechanism_and_risk": "Thay đổi đáp ứng chống đông của Warfarin",
+        "action": "WARN"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 48,
+      "unit": "mg",
+      "display": "48 mg/ngày (đợt ngắn ngoại trú)"
+    },
+    "unit_price_vnd_synthetic": 18000,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022)"
+  },
+  {
+    "drug_id": "DRUG-061",
+    "canonical_name": "Acetylcysteine",
+    "active_ingredient": "Acetylcysteine",
+    "aliases": [
+      "Acetylcystein",
+      "Acemuc",
+      "Fluimucil"
+    ],
+    "component_ingredients": [
+      "Acetylcysteine"
+    ],
+    "drug_class": "Mucolytic",
+    "strength_dosage": "200mg",
+    "route_of_administration": "Uống",
+    "unit": "Gói",
+    "sample_brand_names": [
+      "Acemuc 200mg",
+      "Mitux 200mg"
+    ],
+    "typical_frequency": 3,
+    "typical_meal_timing": "Sau ăn",
+    "verified_indications_icd10": [
+      "R05",
+      "J01",
+      "J02"
+    ],
+    "contraindications": [
+      "Dị ứng với Acetylcysteine",
+      "Tiền sử hen phế quản (nguy cơ co thắt phế quản)"
+    ],
+    "contraindication_tags": [
+      "severe_asthma"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "Antitussive",
+        "severity": "moderate",
+        "mechanism_and_risk": "Không phối hợp thuốc long đờm với thuốc ức chế phản xạ ho gây ứ đọng đờm",
+        "action": "WARN"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 600,
+      "unit": "mg",
+      "display": "600 mg/ngày"
+    },
+    "unit_price_vnd_synthetic": 6000,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Data thường gặp.xlsx"
+  },
+  {
+    "drug_id": "DRUG-062",
+    "canonical_name": "Ambroxol",
+    "active_ingredient": "Ambroxol HCl",
+    "aliases": [
+      "Ambroxol",
+      "Mucosolvan"
+    ],
+    "component_ingredients": [
+      "Ambroxol"
+    ],
+    "drug_class": "Mucolytic",
+    "strength_dosage": "30mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "Mucosolvan 30mg",
+      "Ambroxol 30mg"
+    ],
+    "typical_frequency": 3,
+    "typical_meal_timing": "Sau ăn",
+    "verified_indications_icd10": [
+      "R05",
+      "J02"
+    ],
+    "contraindications": [
+      "Dị ứng với Ambroxol",
+      "Loét dạ dày - tá tràng tiến triển"
+    ],
+    "contraindication_tags": [
+      "active_gi_ulcer"
+    ],
+    "interactions": [],
+    "max_daily_dose": {
+      "value": 120,
+      "unit": "mg",
+      "display": "120 mg/ngày"
+    },
+    "unit_price_vnd_synthetic": 3500,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Data thường gặp.xlsx"
+  },
+  {
+    "drug_id": "DRUG-063",
+    "canonical_name": "Paracetamol",
+    "active_ingredient": "Paracetamol",
+    "aliases": [
+      "Acetaminophen",
+      "Efferalgan",
+      "Hapacol",
+      "Panadol"
+    ],
+    "component_ingredients": [
+      "Paracetamol"
+    ],
+    "drug_class": "Analgesic_Antipyretic",
+    "strength_dosage": "500mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "Hapacol 500mg",
+      "Panadol 500mg",
+      "Efferalgan 500mg"
+    ],
+    "typical_frequency": 3,
+    "typical_meal_timing": "Sau ăn hoặc khi sốt/đau (cách nhau >= 4-6 giờ)",
+    "verified_indications_icd10": [
+      "J01",
+      "J02",
+      "A04",
+      "M54",
+      "M17",
+      "M75",
+      "B02",
+      "J09"
+    ],
+    "contraindications": [
+      "Dị ứng với Paracetamol",
+      "Suy gan nặng hoặc bệnh gan tiến triển",
+      "Thiếu hụt men G6PD nặng"
+    ],
+    "contraindication_tags": [
+      "paracetamol_allergy",
+      "severe_liver_disease",
+      "active_liver_disease"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "Warfarin",
+        "severity": "moderate",
+        "mechanism_and_risk": "Dùng Paracetamol liều cao kéo dài (> 2g/ngày) có thể làm tăng INR",
+        "action": "WARN"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 4000,
+      "unit": "mg",
+      "display": "4000 mg/ngày (người lớn chức năng gan bình thường)"
+    },
+    "unit_price_vnd_synthetic": 14000,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Data thường gặp.xlsx"
+  },
+  {
+    "drug_id": "DRUG-064",
+    "canonical_name": "Paracetamol",
+    "active_ingredient": "Paracetamol",
+    "aliases": [
+      "Acetaminophen 650mg",
+      "Hapacol 650"
+    ],
+    "component_ingredients": [
+      "Paracetamol"
+    ],
+    "drug_class": "Analgesic_Antipyretic",
+    "strength_dosage": "650mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "Hapacol 650mg",
+      "Tylenol 650mg"
+    ],
+    "typical_frequency": 3,
+    "typical_meal_timing": "Sau ăn hoặc khi sốt/đau",
+    "verified_indications_icd10": [
+      "J01",
+      "J02",
+      "M54",
+      "M17",
+      "B02",
+      "J09"
+    ],
+    "contraindications": [
+      "Dị ứng Paracetamol",
+      "Suy gan nặng / bệnh gan tiến triển"
+    ],
+    "contraindication_tags": [
+      "paracetamol_allergy",
+      "severe_liver_disease",
+      "active_liver_disease"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "Warfarin",
+        "severity": "moderate",
+        "mechanism_and_risk": "Có thể làm tăng INR nếu dùng liều cao nhiều ngày",
+        "action": "WARN"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 3900,
+      "unit": "mg",
+      "display": "6 viên/ngày (3900 mg/ngày, không quá 4000 mg/ngày)"
+    },
+    "unit_price_vnd_synthetic": 24500,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022)"
+  },
+  {
+    "drug_id": "DRUG-065",
+    "canonical_name": "Cefixime",
+    "active_ingredient": "Cefixime",
+    "aliases": [
+      "Cefixim",
+      "Fixef"
+    ],
+    "component_ingredients": [
+      "Cefixime"
+    ],
+    "drug_class": "Cephalosporin",
+    "strength_dosage": "200mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "Cefixim 200mg",
+      "Fixef 200mg"
+    ],
+    "typical_frequency": 2,
+    "typical_meal_timing": "Sau ăn",
+    "verified_indications_icd10": [
+      "A04",
+      "J02"
+    ],
+    "contraindications": [
+      "Dị ứng Cephalosporin hoặc phản vệ với Penicillin"
+    ],
+    "contraindication_tags": [
+      "cephalosporin_allergy",
+      "beta_lactam_allergy"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "Warfarin",
+        "severity": "moderate",
+        "mechanism_and_risk": "Có thể làm kéo dài thời gian prothrombin",
+        "action": "WARN"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 400,
+      "unit": "mg",
+      "display": "400 mg/ngày"
+    },
+    "unit_price_vnd_synthetic": 19000,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Data thường gặp.xlsx"
+  },
+  {
+    "drug_id": "DRUG-066",
+    "canonical_name": "Alverine citrate + Simethicone",
+    "active_ingredient": "Alverine citrate + Simethicone",
+    "aliases": [
+      "Alverin citrat + simethicon",
+      "Meteospasmyl"
+    ],
+    "component_ingredients": [
+      "Alverine citrate",
+      "Simethicone"
+    ],
+    "drug_class": "Antispasmodic",
+    "strength_dosage": "60mg + 300mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "Meteospasmyl",
+      "Alverin Simethicon"
+    ],
+    "typical_frequency": 2,
+    "typical_meal_timing": "Trước ăn",
+    "verified_indications_icd10": [
+      "A04",
+      "K59"
+    ],
+    "contraindications": [
+      "Liệt ruột, tắc ruột",
+      "Dị ứng với thành phần thuốc"
+    ],
+    "contraindication_tags": [
+      "gi_bleeding_obstruction"
+    ],
+    "interactions": [],
+    "max_daily_dose": {
+      "value": 3,
+      "unit": "viên",
+      "display": "3 viên/ngày"
+    },
+    "unit_price_vnd_synthetic": 19500,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022)"
+  },
+  {
+    "drug_id": "DRUG-067",
+    "canonical_name": "Diosmectite",
+    "active_ingredient": "Diosmectite",
+    "aliases": [
+      "Smecta",
+      "Diosmectit"
+    ],
+    "component_ingredients": [
+      "Diosmectite"
+    ],
+    "drug_class": "Antidiarrheal_Adsorbent",
+    "strength_dosage": "3g",
+    "route_of_administration": "Uống",
+    "unit": "Gói",
+    "sample_brand_names": [
+      "Smecta 3g"
+    ],
+    "typical_frequency": 3,
+    "typical_meal_timing": "Pha nước uống cách các thuốc khác >= 2 giờ",
+    "verified_indications_icd10": [
+      "A04",
+      "K59"
+    ],
+    "contraindications": [
+      "Dị ứng với Diosmectite",
+      "Tắc ruột"
+    ],
+    "contraindication_tags": [
+      "gi_bleeding_obstruction"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "Thuốc uống khác",
+        "severity": "moderate",
+        "mechanism_and_risk": "Đặc tính hấp phụ làm giảm hấp thu thuốc uống cùng (uống cách >= 2 giờ)",
+        "action": "WARN"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 18,
+      "unit": "g",
+      "display": "6 gói/ngày (18 g/ngày giai đoạn đầu tiêu chảy cấp)"
+    },
+    "unit_price_vnd_synthetic": 18500,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Data thường gặp.xlsx"
+  },
+  {
+    "drug_id": "DRUG-068",
+    "canonical_name": "Bacillus subtilis",
+    "active_ingredient": "Bacillus subtilis",
+    "aliases": [
+      "Men vi sinh",
+      "Biolactovin"
+    ],
+    "component_ingredients": [
+      "Bacillus subtilis"
+    ],
+    "drug_class": "Probiotic",
+    "strength_dosage": "10^8 CFU",
+    "route_of_administration": "Uống",
+    "unit": "Gói",
+    "sample_brand_names": [
+      "Bacillus subtilis gói"
+    ],
+    "typical_frequency": 2,
+    "typical_meal_timing": "Sau ăn (uống cách kháng sinh 2 giờ nếu dùng kèm)",
+    "verified_indications_icd10": [
+      "A04",
+      "K59"
+    ],
+    "contraindications": [
+      "Dị ứng với chế phẩm probiotic",
+      "Suy giảm miễn dịch nặng (thận trọng)"
+    ],
+    "contraindication_tags": [],
+    "interactions": [],
+    "max_daily_dose": {
+      "value": 4,
+      "unit": "gói",
+      "display": "4 gói/ngày"
+    },
+    "unit_price_vnd_synthetic": 20000,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Data thường gặp.xlsx & Tờ HDSD chế phẩm Probiotic"
+  },
+  {
+    "drug_id": "DRUG-069",
+    "canonical_name": "Oresol (ORS)",
+    "active_ingredient": "Glucose + Natri clorid + Kali clorid + Natri citrat",
+    "aliases": [
+      "Oresol",
+      "ORS"
+    ],
+    "component_ingredients": [
+      "ORS"
+    ],
+    "drug_class": "Electrolyte_Replacement",
+    "strength_dosage": "1 gói (pha 200mL)",
+    "route_of_administration": "Uống",
+    "unit": "Gói",
+    "sample_brand_names": [
+      "Oresol 245"
+    ],
+    "typical_frequency": 3,
+    "typical_meal_timing": "Uống từng ngụm bù nước sau mỗi lần đi ngoài",
+    "verified_indications_icd10": [
+      "A04",
+      "K59"
+    ],
+    "contraindications": [
+      "Vô niệu, tắc ruột, nôn ói không kiểm soát"
+    ],
+    "contraindication_tags": [
+      "gi_bleeding_obstruction"
+    ],
+    "interactions": [],
+    "max_daily_dose": {
+      "value": 10,
+      "unit": "gói",
+      "display": "Theo mức độ mất nước"
+    },
+    "unit_price_vnd_synthetic": 13500,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Bộ Y tế"
+  },
+  {
+    "drug_id": "DRUG-070",
+    "canonical_name": "Celecoxib",
+    "active_ingredient": "Celecoxib",
+    "aliases": [
+      "Celebrex",
+      "Celecoxib"
+    ],
+    "component_ingredients": [
+      "Celecoxib"
+    ],
+    "drug_class": "NSAID_COX2",
+    "strength_dosage": "100mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "Celebrex 100mg",
+      "Celecoxib 100mg"
+    ],
+    "typical_frequency": 2,
+    "typical_meal_timing": "Sau ăn no",
+    "verified_indications_icd10": [
+      "M75",
+      "M54",
+      "M17"
+    ],
+    "contraindications": [
+      "Dị ứng với NSAID, Aspirin hoặc Sulfonamid",
+      "Loét dạ dày - tá tràng tiến triển / xuất huyết tiêu hóa",
+      "Suy thận nặng (ClCr < 30), suy gan nặng, suy tim nặng, 3 tháng cuối thai kỳ"
+    ],
+    "contraindication_tags": [
+      "nsaid_allergy",
+      "sulfonamide_allergy",
+      "active_gi_ulcer",
+      "severe_renal_impairment",
+      "ckd_stage3_caution",
+      "severe_liver_disease",
+      "pregnancy"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "Warfarin",
+        "severity": "high",
+        "mechanism_and_risk": "Tăng mạnh nguy cơ xuất huyết tiêu hóa và xuất huyết toàn thân",
+        "action": "BLOCK"
+      },
+      {
+        "with_ingredient_or_class": "ACEi",
+        "severity": "moderate",
+        "mechanism_and_risk": "Giảm hiệu quả hạ áp và tăng nguy cơ tổn thương thận cấp",
+        "action": "WARN"
+      },
+      {
+        "with_ingredient_or_class": "ARB",
+        "severity": "moderate",
+        "mechanism_and_risk": "Giảm hiệu quả hạ áp và tăng nguy cơ suy giảm chức năng thận",
+        "action": "WARN"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 400,
+      "unit": "mg",
+      "display": "400 mg/ngày"
+    },
+    "unit_price_vnd_synthetic": 4500,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Data thường gặp.xlsx"
+  },
+  {
+    "drug_id": "DRUG-071",
+    "canonical_name": "Meloxicam",
+    "active_ingredient": "Meloxicam",
+    "aliases": [
+      "Mobic",
+      "Meloxicam"
+    ],
+    "component_ingredients": [
+      "Meloxicam"
+    ],
+    "drug_class": "NSAID",
+    "strength_dosage": "7.5mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "Mobic 7.5mg",
+      "Meloxicam 7.5mg"
+    ],
+    "typical_frequency": 1,
+    "typical_meal_timing": "Sau ăn no",
+    "verified_indications_icd10": [
+      "M75",
+      "M54",
+      "M17"
+    ],
+    "contraindications": [
+      "Dị ứng với NSAID / Aspirin",
+      "Loét dạ dày - tá tràng tiến triển, xuất huyết tiêu hóa",
+      "Suy thận nặng không lọc máu, suy gan nặng, phụ nữ có thai"
+    ],
+    "contraindication_tags": [
+      "nsaid_allergy",
+      "active_gi_ulcer",
+      "severe_renal_impairment",
+      "ckd_stage3_caution",
+      "severe_liver_disease",
+      "pregnancy"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "Warfarin",
+        "severity": "high",
+        "mechanism_and_risk": "Tăng nghiêm trọng nguy cơ xuất huyết tiêu hóa và chảy máu",
+        "action": "BLOCK"
+      },
+      {
+        "with_ingredient_or_class": "ACEi",
+        "severity": "moderate",
+        "mechanism_and_risk": "Giảm tác dụng hạ áp và tăng nguy cơ suy thận cấp",
+        "action": "WARN"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 15,
+      "unit": "mg",
+      "display": "15 mg/ngày"
+    },
+    "unit_price_vnd_synthetic": 21500,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Data thường gặp.xlsx"
+  },
+  {
+    "drug_id": "DRUG-072",
+    "canonical_name": "Ketoprofen (gel bôi ngoài)",
+    "active_ingredient": "Ketoprofen",
+    "aliases": [
+      "Fastum gel",
+      "Ketoprofen 2.5%"
+    ],
+    "component_ingredients": [
+      "Ketoprofen"
+    ],
+    "drug_class": "Topical_NSAID",
+    "strength_dosage": "2.5% (tuýp 30g)",
+    "route_of_administration": "Bôi ngoài da",
+    "unit": "Tuýp",
+    "sample_brand_names": [
+      "Fastum gel 2.5%"
+    ],
+    "typical_frequency": 2,
+    "typical_meal_timing": "Bôi mỏng vùng đau 2 lần/ngày (tránh vùng da tổn thương và ánh nắng)",
+    "verified_indications_icd10": [
+      "M75",
+      "M54",
+      "M17"
+    ],
+    "contraindications": [
+      "Dị ứng với Ketoprofen / NSAID",
+      "Vùng da trầy xước/nhiễm trùng",
+      "3 tháng cuối thai kỳ"
+    ],
+    "contraindication_tags": [
+      "nsaid_allergy",
+      "pregnancy"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "Warfarin",
+        "severity": "high",
+        "mechanism_and_risk": "NSAID vẫn có thể hấp thu toàn thân khi bôi diện rộng, tránh dùng ở người dị ứng NSAID / dùng Warfarin",
+        "action": "BLOCK"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 15,
+      "unit": "g",
+      "display": "15 g gel/ngày"
+    },
+    "unit_price_vnd_synthetic": 12000,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Data thường gặp.xlsx"
+  },
+  {
+    "drug_id": "DRUG-073",
+    "canonical_name": "Eperisone",
+    "active_ingredient": "Eperisone HCl",
+    "aliases": [
+      "Eperison",
+      "Myonal"
+    ],
+    "component_ingredients": [
+      "Eperisone"
+    ],
+    "drug_class": "Muscle_Relaxant",
+    "strength_dosage": "50mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "Myonal 50mg",
+      "Eperisone 50mg"
+    ],
+    "typical_frequency": 3,
+    "typical_meal_timing": "Sau ăn",
+    "verified_indications_icd10": [
+      "M54",
+      "M75"
+    ],
+    "contraindications": [
+      "Dị ứng với Eperisone",
+      "Thận trọng ở bệnh nhân suy gan nặng"
+    ],
+    "contraindication_tags": [
+      "severe_liver_disease"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "Tolperisone",
+        "severity": "moderate",
+        "mechanism_and_risk": "Tránh phối hợp hai thuốc giãn cơ trung ương",
+        "action": "WARN"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 150,
+      "unit": "mg",
+      "display": "150 mg/ngày"
+    },
+    "unit_price_vnd_synthetic": 13500,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Tờ HDSD Eperisone 50mg & Data thường gặp.xlsx"
+  },
+  {
+    "drug_id": "DRUG-074",
+    "canonical_name": "Vitamin B1 + B6 + B12",
+    "active_ingredient": "Thiamine + Pyridoxine + Cyanocobalamin",
+    "aliases": [
+      "3B",
+      "Neurobion",
+      "Vitamin 3B"
+    ],
+    "component_ingredients": [
+      "Vitamin B1",
+      "Vitamin B6",
+      "Vitamin B12"
+    ],
+    "drug_class": "Neurotropic_Vitamin",
+    "strength_dosage": "100mg + 100mg + 150mcg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "Neurobion",
+      "Vitamin 3B"
+    ],
+    "typical_frequency": 2,
+    "typical_meal_timing": "Sau ăn",
+    "verified_indications_icd10": [
+      "M75",
+      "M54",
+      "B02"
+    ],
+    "contraindications": [
+      "Dị ứng với bất kỳ thành phần vitamin nhóm B",
+      "Khối u ác tính (với B12)"
+    ],
+    "contraindication_tags": [],
+    "interactions": [],
+    "max_daily_dose": {
+      "value": 3,
+      "unit": "viên",
+      "display": "3 viên/ngày"
+    },
+    "unit_price_vnd_synthetic": 10000,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022)"
+  },
+  {
+    "drug_id": "DRUG-075",
+    "canonical_name": "Diosmin + Hesperidin",
+    "active_ingredient": "Diosmin + Hesperidin",
+    "aliases": [
+      "Daflon 500mg",
+      "Diosmin"
+    ],
+    "component_ingredients": [
+      "Diosmin",
+      "Hesperidin"
+    ],
+    "drug_class": "Venotonic",
+    "strength_dosage": "450mg + 50mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "Daflon 500mg",
+      "Venrutin"
+    ],
+    "typical_frequency": 2,
+    "typical_meal_timing": "Trong hoặc sau bữa ăn",
+    "verified_indications_icd10": [
+      "I83"
+    ],
+    "contraindications": [
+      "Dị ứng với Diosmin/Hesperidin",
+      "Phụ nữ đang cho con bú (thận trọng)"
+    ],
+    "contraindication_tags": [
+      "lactation"
+    ],
+    "interactions": [],
+    "max_daily_dose": {
+      "value": 1000,
+      "unit": "mg",
+      "display": "1000 mg/ngày (2 viên/ngày trong suy tĩnh mạch mạn)"
+    },
+    "unit_price_vnd_synthetic": 5500,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Data thường gặp.xlsx & Tờ HDSD Daflon 500mg"
+  },
+  {
+    "drug_id": "DRUG-076",
+    "canonical_name": "Rutin + Vitamin C",
+    "active_ingredient": "Rutin + Ascorbic acid",
+    "aliases": [
+      "Rutin C",
+      "Rutin + Vitamin C"
+    ],
+    "component_ingredients": [
+      "Rutin",
+      "Vitamin C"
+    ],
+    "drug_class": "Venotonic",
+    "strength_dosage": "50mg + 50mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "Rutin Vitamin C 50/50"
+    ],
+    "typical_frequency": 2,
+    "typical_meal_timing": "Sau ăn",
+    "verified_indications_icd10": [
+      "I83"
+    ],
+    "contraindications": [
+      "Dị ứng thành phần thuốc",
+      "Tiền sử sỏi thận oxalat (với Vitamin C liều cao)"
+    ],
+    "contraindication_tags": [],
+    "interactions": [],
+    "max_daily_dose": {
+      "value": 6,
+      "unit": "viên",
+      "display": "6 viên/ngày"
+    },
+    "unit_price_vnd_synthetic": 23500,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Data thường gặp.xlsx & Dược thư Quốc gia Việt Nam (2022)"
+  },
+  {
+    "drug_id": "DRUG-077",
+    "canonical_name": "Clotrimazole (kem bôi)",
+    "active_ingredient": "Clotrimazole",
+    "aliases": [
+      "Clotrimazol",
+      "Canesten"
+    ],
+    "component_ingredients": [
+      "Clotrimazole"
+    ],
+    "drug_class": "Topical_Antifungal",
+    "strength_dosage": "1% (tuýp 10g)",
+    "route_of_administration": "Bôi ngoài da",
+    "unit": "Tuýp",
+    "sample_brand_names": [
+      "Canesten 1%",
+      "Clotrimazole 1%"
+    ],
+    "typical_frequency": 2,
+    "typical_meal_timing": "Rửa sạch lau khô, bôi mỏng 2 lần/ngày (sáng, tối) trong 2-4 tuần",
+    "verified_indications_icd10": [
+      "B35"
+    ],
+    "contraindications": [
+      "Dị ứng với Clotrimazole hoặc nhóm Azol"
+    ],
+    "contraindication_tags": [
+      "azole_allergy"
+    ],
+    "interactions": [],
+    "max_daily_dose": {
+      "value": 3,
+      "unit": "lần bôi",
+      "display": "Bôi ngoài da 2-3 lần/ngày"
+    },
+    "unit_price_vnd_synthetic": 20000,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Bài LL 5. Thuốc kháng nấm virus lao sốt rét.pdf & Dược thư Quốc gia Việt Nam (2022)"
+  },
+  {
+    "drug_id": "DRUG-078",
+    "canonical_name": "Terbinafine (kem bôi)",
+    "active_ingredient": "Terbinafine HCl",
+    "aliases": [
+      "Lamisil",
+      "Terbinafin"
+    ],
+    "component_ingredients": [
+      "Terbinafine"
+    ],
+    "drug_class": "Topical_Antifungal",
+    "strength_dosage": "1% (tuýp 15g)",
+    "route_of_administration": "Bôi ngoài da",
+    "unit": "Tuýp",
+    "sample_brand_names": [
+      "Lamisil 1%",
+      "Terbinafine 1%"
+    ],
+    "typical_frequency": 2,
+    "typical_meal_timing": "Bôi mỏng vùng da nhiễm nấm 1-2 lần/ngày",
+    "verified_indications_icd10": [
+      "B35"
+    ],
+    "contraindications": [
+      "Dị ứng với Terbinafine"
+    ],
+    "contraindication_tags": [],
+    "interactions": [],
+    "max_daily_dose": {
+      "value": 2,
+      "unit": "lần bôi",
+      "display": "Bôi ngoài da 1-2 lần/ngày"
+    },
+    "unit_price_vnd_synthetic": 16500,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Bài LL 5. Thuốc kháng nấm virus lao sốt rét.pdf & Dược thư Quốc gia Việt Nam (2022)"
+  },
+  {
+    "drug_id": "DRUG-079",
+    "canonical_name": "Itraconazole",
+    "active_ingredient": "Itraconazole",
+    "aliases": [
+      "Sporal",
+      "Itraconazol"
+    ],
+    "component_ingredients": [
+      "Itraconazole"
+    ],
+    "drug_class": "Systemic_Antifungal",
+    "strength_dosage": "100mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "Sporal 100mg",
+      "Itraconazol 100mg"
+    ],
+    "typical_frequency": 1,
+    "typical_meal_timing": "Ngay sau bữa ăn chính để tăng hấp thu",
+    "verified_indications_icd10": [
+      "B35"
+    ],
+    "contraindications": [
+      "Dị ứng với Itraconazole / Azol",
+      "Suy tim sung huyết hoặc tiền sử rối loạn chức năng thất",
+      "Phụ nữ có thai; bệnh gan tiến triển"
+    ],
+    "contraindication_tags": [
+      "azole_allergy",
+      "pregnancy",
+      "active_liver_disease",
+      "severe_liver_disease"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "Simvastatin",
+        "severity": "high",
+        "mechanism_and_risk": "Ức chế mạnh CYP3A4 gây tiêu cơ vân nặng (CHỐNG CHỈ ĐỊNH)",
+        "action": "BLOCK"
+      },
+      {
+        "with_ingredient_or_class": "Atorvastatin",
+        "severity": "high",
+        "mechanism_and_risk": "Ức chế CYP3A4 làm tăng nồng độ Atorvastatin và nguy cơ tiêu cơ vân",
+        "action": "BLOCK"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 400,
+      "unit": "mg",
+      "display": "400 mg/ngày"
+    },
+    "unit_price_vnd_synthetic": 11000,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Bài LL 5. Thuốc kháng nấm virus lao sốt rét.pdf & Dược thư Quốc gia Việt Nam (2022)"
+  },
+  {
+    "drug_id": "DRUG-080",
+    "canonical_name": "Acyclovir",
+    "active_ingredient": "Acyclovir",
+    "aliases": [
+      "Aciclovir",
+      "Zovirax"
+    ],
+    "component_ingredients": [
+      "Acyclovir"
+    ],
+    "drug_class": "Antiviral",
+    "strength_dosage": "800mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "Acyclovir 800mg",
+      "Zovirax 800mg"
+    ],
+    "typical_frequency": 5,
+    "typical_meal_timing": "Uống đều 5 lần/ngày (cách ~4 giờ, bỏ cữ đêm) + uống nhiều nước",
+    "verified_indications_icd10": [
+      "B02"
+    ],
+    "contraindications": [
+      "Dị ứng với Acyclovir hoặc Valacyclovir",
+      "Thận trọng hiệu chỉnh liều khi suy thận (nguy cơ kết tinh ống thận nếu thiếu nước)"
+    ],
+    "contraindication_tags": [
+      "renal_dose_adjust"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "NSAID",
+        "severity": "moderate",
+        "mechanism_and_risk": "Tăng nguy cơ độc tính trên thận khi phối hợp thuốc độc thận",
+        "action": "WARN"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 4000,
+      "unit": "mg",
+      "display": "4000 mg/ngày (800mg x 5 lần/ngày trong Zona)"
+    },
+    "unit_price_vnd_synthetic": 21000,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Bài LL 5. Thuốc kháng nấm virus lao sốt rét.pdf & Data thường gặp.xlsx"
+  },
+  {
+    "drug_id": "DRUG-081",
+    "canonical_name": "Valacyclovir",
+    "active_ingredient": "Valacyclovir",
+    "aliases": [
+      "Valaciclovir",
+      "Valtrex"
+    ],
+    "component_ingredients": [
+      "Valacyclovir"
+    ],
+    "drug_class": "Antiviral",
+    "strength_dosage": "500mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "Valtrex 500mg",
+      "Valacyclovir 500mg"
+    ],
+    "typical_frequency": 3,
+    "typical_meal_timing": "Uống với nhiều nước, không phụ thuộc bữa ăn",
+    "verified_indications_icd10": [
+      "B02"
+    ],
+    "contraindications": [
+      "Dị ứng với Valacyclovir hoặc Acyclovir",
+      "Thận trọng hiệu chỉnh liều ở người suy thận"
+    ],
+    "contraindication_tags": [
+      "renal_dose_adjust"
+    ],
+    "interactions": [],
+    "max_daily_dose": {
+      "value": 3000,
+      "unit": "mg",
+      "display": "3000 mg/ngày (1000mg x 3 lần/ngày trong Zona)"
+    },
+    "unit_price_vnd_synthetic": 14500,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Bài LL 5. Thuốc kháng nấm virus lao sốt rét.pdf & Dược thư Quốc gia Việt Nam (2022)"
+  },
+  {
+    "drug_id": "DRUG-082",
+    "canonical_name": "Oseltamivir",
+    "active_ingredient": "Oseltamivir phosphate",
+    "aliases": [
+      "Tamiflu",
+      "Oseltamivir"
+    ],
+    "component_ingredients": [
+      "Oseltamivir"
+    ],
+    "drug_class": "Antiviral",
+    "strength_dosage": "75mg",
+    "route_of_administration": "Uống",
+    "unit": "Viên",
+    "sample_brand_names": [
+      "Tamiflu 75mg",
+      "Flustad 75mg"
+    ],
+    "typical_frequency": 2,
+    "typical_meal_timing": "Uống cùng thức ăn để giảm buồn nôn",
+    "verified_indications_icd10": [
+      "J09"
+    ],
+    "contraindications": [
+      "Dị ứng với Oseltamivir",
+      "Thận trọng hiệu chỉnh liều khi suy thận (ClCr < 60 mL/phút) và đánh giá kỹ ở phụ nữ có thai"
+    ],
+    "contraindication_tags": [
+      "renal_dose_adjust"
+    ],
+    "interactions": [],
+    "max_daily_dose": {
+      "value": 150,
+      "unit": "mg",
+      "display": "150 mg/ngày (75mg x 2 lần/ngày trong 5 ngày)"
+    },
+    "unit_price_vnd_synthetic": 12000,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Bài LL 5. Thuốc kháng nấm virus lao sốt rét.pdf & Hướng dẫn chẩn đoán điều trị Cúm - Bộ Y tế"
+  },
+  {
+    "drug_id": "DRUG-083",
+    "canonical_name": "Glucosamine sulfate",
+    "active_ingredient": "Glucosamine sulfate",
+    "aliases": [
+      "Glucosamin",
+      "Viartril-S"
+    ],
+    "component_ingredients": [
+      "Glucosamine"
+    ],
+    "drug_class": "Chondroprotective",
+    "strength_dosage": "1500mg",
+    "route_of_administration": "Uống",
+    "unit": "Gói",
+    "sample_brand_names": [
+      "Viartril-S 1500mg",
+      "Glucosamine 1500mg"
+    ],
+    "typical_frequency": 1,
+    "typical_meal_timing": "Sau ăn",
+    "verified_indications_icd10": [
+      "M17"
+    ],
+    "contraindications": [
+      "Dị ứng với động vật giáp xác (tôm, cua)",
+      "Phụ nữ có thai hoặc cho con bú"
+    ],
+    "contraindication_tags": [
+      "shellfish_allergy",
+      "pregnancy"
+    ],
+    "interactions": [
+      {
+        "with_ingredient_or_class": "Warfarin",
+        "severity": "moderate",
+        "mechanism_and_risk": "Có thể làm tăng INR khi phối hợp Warfarin",
+        "action": "WARN"
+      }
+    ],
+    "max_daily_dose": {
+      "value": 1500,
+      "unit": "mg",
+      "display": "1500 mg/ngày"
+    },
+    "unit_price_vnd_synthetic": 12000,
+    "price_is_synthetic": true,
+    "verification_status": "VERIFIED_FOR_SIMULATION",
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn Cơ xương khớp Bộ Y tế"
+  }
+]

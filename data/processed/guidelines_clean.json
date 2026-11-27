@@ -1,0 +1,476 @@
+[
+  {
+    "guideline_id": "BYT-I10-01",
+    "icd10_prefix": "I10",
+    "disease_name_vi": "Tăng huyết áp vô căn (nguyên phát)",
+    "first_line_ingredients": [
+      "Amlodipine",
+      "Losartan",
+      "Valsartan",
+      "Telmisartan",
+      "Perindopril",
+      "Amlodipine + Losartan",
+      "Amlodipine + Valsartan",
+      "Losartan + Hydrochlorothiazide",
+      "Valsartan + Hydrochlorothiazide",
+      "Perindopril + Amlodipine",
+      "Amlodipine + Lisinopril"
+    ],
+    "second_line_or_special_ingredients": [
+      "Bisoprolol",
+      "Nebivolol",
+      "Metoprolol",
+      "Carvedilol",
+      "Candesartan + Hydrochlorothiazide",
+      "Amlodipine + Valsartan + Hydrochlorothiazide",
+      "Methyldopa"
+    ],
+    "avoid_combinations": [
+      "Không phối hợp kép ACEi + ARB (nguy cơ suy thận cấp, tăng kali máu, tụt huyết áp)",
+      "Không kê trùng hai thuốc cùng nhóm ARB hoặc cùng nhóm CCB / Beta-blocker"
+    ],
+    "safety_red_flags": [
+      "Chống chỉ định ACEi/ARB ở phụ nữ có thai hoặc nghi ngờ mang thai (cân nhắc Methyldopa trong thai kỳ)",
+      "Kiểm tra tiền sử phù mạch trước khi kê nhóm ACEi (Perindopril, Lisinopril)",
+      "Kiểm tra tiền sử hen phế quản nặng / nhịp tim chậm trước khi kê Beta-blocker",
+      "Thận trọng tăng kali máu khi phối hợp ACEi/ARB với Spironolactone hoặc bổ sung Kali"
+    ],
+    "missing_info_checks": [
+      "allergies",
+      "age",
+      "weight_kg",
+      "pregnancy_status_if_female_childbearing",
+      "renal_function_status"
+    ],
+    "content_excerpt": "Khởi trị đơn trị liệu hoặc phối hợp liều thấp cố định (CCB, ACEi/ARB, lợi tiểu thiazide) tùy mức huyết áp và nguy cơ tim mạch. Ưu tiên viên phối hợp để tăng tuân thủ; tuyệt đối không phối hợp kép ACEi + ARB.",
+    "official_source_url": "https://kcb.vn/"
+  },
+  {
+    "guideline_id": "BYT-E78-01",
+    "icd10_prefix": "E78",
+    "disease_name_vi": "Rối loạn chuyển hóa lipoprotein và tình trạng tăng lipid máu",
+    "first_line_ingredients": [
+      "Atorvastatin",
+      "Rosuvastatin",
+      "Pitavastatin",
+      "Simvastatin"
+    ],
+    "second_line_or_special_ingredients": [
+      "Atorvastatin + Ezetimibe",
+      "Fenofibrate"
+    ],
+    "avoid_combinations": [
+      "Không kê trùng hai thuốc cùng nhóm Statin",
+      "Không phối hợp Simvastatin/Atorvastatin với chất ức chế mạnh CYP3A4 (Clarithromycin, Itraconazole)"
+    ],
+    "safety_red_flags": [
+      "Chống chỉ định Statin ở bệnh gan tiến triển (men gan tăng > 3 lần ULN) hoặc phụ nữ có thai/cho con bú",
+      "Theo dõi triệu chứng đau cơ / yếu cơ và men gan (AST/ALT), đặc biệt khi phối hợp Statin + Fenofibrate",
+      "Chú ý giới hạn liều Simvastatin ≤ 20mg/ngày khi dùng cùng Amlodipine"
+    ],
+    "missing_info_checks": [
+      "allergies",
+      "age",
+      "liver_function_status",
+      "concurrent_medications"
+    ],
+    "content_excerpt": "Statin là lựa chọn đầu tay để hạ LDL-C và giảm biến cố tim mạch; phối hợp Ezetimibe khi chưa đạt mục tiêu LDL-C; cân nhắc Fenofibrate khi triglycerid tăng rất cao có nguy cơ viêm tụy cấp.",
+    "official_source_url": "https://kcb.vn/"
+  },
+  {
+    "guideline_id": "BYT-E11-01",
+    "icd10_prefix": "E11",
+    "disease_name_vi": "Đái tháo đường không phụ thuộc insulin (typ 2)",
+    "first_line_ingredients": [
+      "Metformin",
+      "Dapagliflozin",
+      "Empagliflozin",
+      "Sitagliptin",
+      "Linagliptin",
+      "Sitagliptin + Metformin"
+    ],
+    "second_line_or_special_ingredients": [
+      "Glimepiride",
+      "Gliclazide + Metformin"
+    ],
+    "avoid_combinations": [
+      "Không kê trùng hoạt chất Metformin (ví dụ vừa kê Metformin đơn vừa kê viên phối hợp có Metformin)",
+      "Không phối hợp hai thuốc cùng nhóm Sulfonylurea (Glimepiride + Gliclazide) hoặc hai thuốc cùng nhóm DPP-4i / SGLT2i"
+    ],
+    "safety_red_flags": [
+      "Chống chỉ định Metformin khi eGFR < 30 mL/phút/1.73m2 do nguy cơ nhiễm toan lactic",
+      "Cảnh báo nguy cơ hạ đường huyết với nhóm Sulfonylurea (Glimepiride, Gliclazide), nhất là ở người cao tuổi",
+      "SGLT2i (Dapagliflozin, Empagliflozin) không dùng cho ĐTĐ typ 1; hướng dẫn uống đủ nước và theo dõi dấu hiệu nhiễm toan ceton"
+    ],
+    "missing_info_checks": [
+      "allergies",
+      "age",
+      "weight_kg",
+      "renal_function_status"
+    ],
+    "content_excerpt": "Metformin là thuốc đầu tay nếu không có chống chỉ định và eGFR >= 30; phối hợp SGLT2i (Dapagliflozin/Empagliflozin) hoặc DPP-4i (Sitagliptin/Linagliptin) tùy bệnh đồng mắc tim mạch - thận và nguy cơ hạ đường huyết.",
+    "official_source_url": "https://kcb.vn/"
+  },
+  {
+    "guideline_id": "BYT-K21-01",
+    "icd10_prefix": "K21",
+    "disease_name_vi": "Bệnh trào ngược dạ dày - thực quản (GERD)",
+    "first_line_ingredients": [
+      "Esomeprazole",
+      "Pantoprazole",
+      "Rabeprazole",
+      "Omeprazole",
+      "Lansoprazole",
+      "Dexlansoprazole"
+    ],
+    "second_line_or_special_ingredients": [
+      "Sodium Alginate + Antacid",
+      "Aluminium Hydroxide + Magnesium Hydroxide + Simethicone",
+      "Itopride",
+      "Rebamipide",
+      "Sucralfate"
+    ],
+    "avoid_combinations": [
+      "Không kê trùng hai thuốc cùng nhóm PPI trong cùng một đơn",
+      "Tránh phối hợp Omeprazole hoặc Esomeprazole với Clopidogrel (ưu tiên chuyển sang Pantoprazole hoặc Rabeprazole)"
+    ],
+    "safety_red_flags": [
+      "Kiểm tra thuốc chống kết tập tiểu cầu đang dùng (Clopidogrel) trước khi chọn Omeprazole/Esomeprazole",
+      "Đánh giá triệu chứng báo động (nuốt khó, sụt cân, nôn ra máu, thiếu máu) trước khi điều trị kéo dài",
+      "Uống PPI trước bữa ăn sáng 30 phút; uống Antacid/Sucralfate cách các thuốc khác ít nhất 2 giờ"
+    ],
+    "missing_info_checks": [
+      "allergies",
+      "age",
+      "concurrent_medications"
+    ],
+    "content_excerpt": "Ưu tiên PPI liều chuẩn uống trước bữa ăn sáng 30 phút trong 4–8 tuần; có thể phối hợp alginate/antacid, prokinetic (Itopride) hoặc thuốc bảo vệ niêm mạc (Rebamipide/Sucralfate) để hỗ trợ kiểm soát triệu chứng.",
+    "official_source_url": "https://kcb.vn/"
+  },
+  {
+    "guideline_id": "BYT-J01-01",
+    "icd10_prefix": "J01",
+    "disease_name_vi": "Viêm xoang cấp",
+    "first_line_ingredients": [
+      "Amoxicillin + Clavulanic acid",
+      "Budesonide",
+      "Paracetamol",
+      "Fexofenadine"
+    ],
+    "second_line_or_special_ingredients": [
+      "Cefuroxime",
+      "Azithromycin",
+      "Methylprednisolone",
+      "Acetylcysteine"
+    ],
+    "avoid_combinations": [
+      "Không phối hợp hai kháng sinh cùng nhóm Beta-lactam",
+      "Kiểm tra tiền sử dị ứng Penicillin/Beta-lactam trước khi kê"
+    ],
+    "safety_red_flags": [
+      "Đau đầu dữ dội, sưng nề quanh mắt, sốt cao kéo dài -> chuyển chuyên khoa Tai Mũi Họng"
+    ],
+    "missing_info_checks": [
+      "allergies",
+      "age",
+      "weight_kg"
+    ],
+    "content_excerpt": "Điều trị triệu chứng (rửa mũi, corticoid xịt mũi, giảm đau hạ sốt Paracetamol) và cân nhắc kháng sinh Amoxicillin + Clavulanic acid khi nghi ngờ bội nhiễm vi khuẩn.",
+    "official_source_url": "https://kcb.vn/"
+  },
+  {
+    "guideline_id": "BYT-J30-01",
+    "icd10_prefix": "J30",
+    "disease_name_vi": "Viêm mũi dị ứng",
+    "first_line_ingredients": [
+      "Fexofenadine",
+      "Desloratadine",
+      "Budesonide"
+    ],
+    "second_line_or_special_ingredients": [
+      "Methylprednisolone"
+    ],
+    "avoid_combinations": [
+      "Không kê trùng hai thuốc kháng histamin H1 thế hệ 2 trong cùng đơn"
+    ],
+    "safety_red_flags": [
+      "Thận trọng corticoid toàn thân kéo dài; ưu tiên corticoid xịt mũi tại chỗ"
+    ],
+    "missing_info_checks": [
+      "allergies",
+      "age"
+    ],
+    "content_excerpt": "Kháng histamin H1 không gây buồn ngủ (Fexofenadine/Desloratadine) kết hợp corticoid xịt mũi (Budesonide) là lựa chọn đầu tay kiểm soát triệu chứng viêm mũi dị ứng.",
+    "official_source_url": "https://kcb.vn/"
+  },
+  {
+    "guideline_id": "BYT-J02-01",
+    "icd10_prefix": "J02",
+    "disease_name_vi": "Viêm họng cấp",
+    "first_line_ingredients": [
+      "Paracetamol",
+      "Amoxicillin + Clavulanic acid",
+      "Cefuroxime"
+    ],
+    "second_line_or_special_ingredients": [
+      "Azithromycin",
+      "Ambroxol",
+      "Acetylcysteine"
+    ],
+    "avoid_combinations": [
+      "Kiểm tra dị ứng Penicillin/Cephalosporin trước khi kê kháng sinh"
+    ],
+    "safety_red_flags": [
+      "Khó thở, nuốt nghẹn hoàn toàn, áp xe quanh amidan -> cấp cứu/chuyên khoa"
+    ],
+    "missing_info_checks": [
+      "allergies",
+      "age"
+    ],
+    "content_excerpt": "Hạ sốt giảm đau bằng Paracetamol; chỉ định kháng sinh (Amoxicillin + Clavulanic acid, Cefuroxime hoặc Azithromycin nếu dị ứng beta-lactam) khi có bằng chứng viêm họng do vi khuẩn.",
+    "official_source_url": "https://kcb.vn/"
+  },
+  {
+    "guideline_id": "BYT-R05-01",
+    "icd10_prefix": "R05",
+    "disease_name_vi": "Ho có đờm cấp tính",
+    "first_line_ingredients": [
+      "Acetylcysteine",
+      "Ambroxol"
+    ],
+    "second_line_or_special_ingredients": [],
+    "avoid_combinations": [
+      "Không phối hợp thuốc tiêu đờm (Acetylcysteine/Ambroxol) với thuốc ức chế ho (Codein/Dextromethorphan)"
+    ],
+    "safety_red_flags": [
+      "Ho ra máu, sốt cao > 3 ngày, khó thở, đau tức ngực -> chuyển khám chuyên khoa ngay"
+    ],
+    "missing_info_checks": [
+      "allergies",
+      "age",
+      "asthma_history"
+    ],
+    "content_excerpt": "Sử dụng thuốc tiêu đờm (Acetylcysteine 200mg hoặc Ambroxol 30mg) uống nhiều nước để làm loãng dịch tiết đường hô hấp.",
+    "official_source_url": "https://kcb.vn/"
+  },
+  {
+    "guideline_id": "BYT-A04-01",
+    "icd10_prefix": "A04",
+    "disease_name_vi": "Nhiễm trùng tiêu hóa và tiêu chảy cấp",
+    "first_line_ingredients": [
+      "Oresol (ORS)",
+      "Diosmectite",
+      "Bacillus subtilis",
+      "Alverine citrate + Simethicone"
+    ],
+    "second_line_or_special_ingredients": [
+      "Cefixime",
+      "Paracetamol"
+    ],
+    "avoid_combinations": [
+      "Uống Diosmectite cách các thuốc khác >= 2 giờ để tránh giảm hấp thu"
+    ],
+    "safety_red_flags": [
+      "Mất nước nặng, phân có máu, sốt cao liên tục -> chuyển tuyến cấp cứu/nội trú"
+    ],
+    "missing_info_checks": [
+      "allergies",
+      "age",
+      "dehydration_status"
+    ],
+    "content_excerpt": "Bù nước điện giải (Oresol) là nền tảng; phối hợp chất hấp phụ (Diosmectite), men vi sinh (Bacillus subtilis), chống co thắt (Alverine+Simethicone) và kháng sinh (Cefixime) khi có chỉ định nhiễm khuẩn.",
+    "official_source_url": "https://kcb.vn/"
+  },
+  {
+    "guideline_id": "BYT-M75-01",
+    "icd10_prefix": "M75",
+    "disease_name_vi": "Hội chứng bao gân xoay / Viêm gân vai",
+    "first_line_ingredients": [
+      "Paracetamol",
+      "Celecoxib",
+      "Meloxicam",
+      "Ketoprofen"
+    ],
+    "second_line_or_special_ingredients": [
+      "Eperisone",
+      "Vitamin B1 + B6 + B12",
+      "Pantoprazole",
+      "Esomeprazole"
+    ],
+    "avoid_combinations": [
+      "Không phối hợp hai NSAID cùng lúc; tránh NSAID khi dị ứng NSAID hoặc dùng Warfarin/suy thận nặng"
+    ],
+    "safety_red_flags": [
+      "Khi dùng NSAID đường uống cần đánh giá nguy cơ tiêu hóa và cân nhắc PPI bảo vệ dạ dày"
+    ],
+    "missing_info_checks": [
+      "allergies",
+      "age",
+      "renal_function_status",
+      "gi_ulcer_history"
+    ],
+    "content_excerpt": "Giảm đau kháng viêm (Celecoxib/Meloxicam kèm PPI bảo vệ dạ dày nếu có nguy cơ, hoặc Ketoprofen bôi ngoài) phối hợp giãn cơ (Eperisone) và vitamin nhóm B.",
+    "official_source_url": "https://kcb.vn/"
+  },
+  {
+    "guideline_id": "BYT-M54-01",
+    "icd10_prefix": "M54",
+    "disease_name_vi": "Đau cơ vùng thắt lưng cấp",
+    "first_line_ingredients": [
+      "Paracetamol",
+      "Eperisone",
+      "Celecoxib",
+      "Meloxicam"
+    ],
+    "second_line_or_special_ingredients": [
+      "Vitamin B1 + B6 + B12",
+      "Pantoprazole"
+    ],
+    "avoid_combinations": [
+      "Không dùng quá 4000mg Paracetamol/ngày; không phối hợp 2 NSAID"
+    ],
+    "safety_red_flags": [
+      "Hội chứng chùm đuôi ngựa, yếu liệt chi dưới, rối loạn cơ tròn -> chuyển cấp cứu ngoại thần kinh"
+    ],
+    "missing_info_checks": [
+      "allergies",
+      "age",
+      "gi_ulcer_history",
+      "renal_function_status"
+    ],
+    "content_excerpt": "Phối hợp giảm đau (Paracetamol hoặc NSAID uống sau ăn no) cùng thuốc giãn cơ trung ương (Eperisone 50mg) trong đợt cấp.",
+    "official_source_url": "https://kcb.vn/"
+  },
+  {
+    "guideline_id": "BYT-M17-01",
+    "icd10_prefix": "M17",
+    "disease_name_vi": "Thoái hóa khớp gối",
+    "first_line_ingredients": [
+      "Paracetamol",
+      "Glucosamine sulfate"
+    ],
+    "second_line_or_special_ingredients": [
+      "Celecoxib",
+      "Meloxicam",
+      "Ketoprofen"
+    ],
+    "avoid_combinations": [
+      "TUYỆT ĐỐI KHÔNG kê bất kỳ NSAID nào (kể cả bôi ngoài) nếu bệnh nhân dị ứng NSAID hoặc đang dùng Warfarin"
+    ],
+    "safety_red_flags": [
+      "Tương tác xuất huyết nặng giữa NSAID và thuốc chống đông Warfarin",
+      "Chống chỉ định NSAID ở bệnh nhân suy thận mạn giai đoạn 3 trở lên / tiền sử dị ứng NSAID"
+    ],
+    "missing_info_checks": [
+      "allergies",
+      "age",
+      "concurrent_medications",
+      "renal_function_status"
+    ],
+    "content_excerpt": "Ưu tiên Paracetamol và thuốc tác dụng chậm (Glucosamine sulfate) cùng biện pháp không dùng thuốc; chỉ dùng NSAID khi không dị ứng, không dùng chống đông và chức năng thận cho phép.",
+    "official_source_url": "https://kcb.vn/"
+  },
+  {
+    "guideline_id": "BYT-I83-01",
+    "icd10_prefix": "I83",
+    "disease_name_vi": "Suy giãn tĩnh mạch chi dưới mạn tính",
+    "first_line_ingredients": [
+      "Diosmin + Hesperidin",
+      "Rutin + Vitamin C"
+    ],
+    "second_line_or_special_ingredients": [],
+    "avoid_combinations": [
+      "Không phối hợp trùng lặp nhiều chế phẩm cùng nhóm trợ tĩnh mạch không cần thiết"
+    ],
+    "safety_red_flags": [
+      "Sưng nóng đỏ đau đột ngột một bên chân (nghi huyết khối tĩnh mạch sâu DVT) -> siêu âm cấp cứu"
+    ],
+    "missing_info_checks": [
+      "allergies",
+      "age",
+      "lactation_status"
+    ],
+    "content_excerpt": "Thuốc trợ tĩnh mạch flavonoid (Diosmin + Hesperidin 450mg+50mg hoặc Rutin + Vitamin C) kết hợp mang vớ áp lực và thay đổi lối sống.",
+    "official_source_url": "https://kcb.vn/"
+  },
+  {
+    "guideline_id": "BLL5-B35-01",
+    "icd10_prefix": "B35",
+    "disease_name_vi": "Nhiễm nấm da nông",
+    "first_line_ingredients": [
+      "Clotrimazole",
+      "Terbinafine"
+    ],
+    "second_line_or_special_ingredients": [
+      "Itraconazole"
+    ],
+    "avoid_combinations": [
+      "TUYỆT ĐỐI KHÔNG phối hợp Itraconazole đường uống với Simvastatin/Atorvastatin (nguy cơ tiêu cơ vân)"
+    ],
+    "safety_red_flags": [
+      "Kiểm tra men gan và tương tác CYP3A4 nếu cân nhắc thuốc kháng nấm azol đường uống"
+    ],
+    "missing_info_checks": [
+      "allergies",
+      "age",
+      "liver_function_status",
+      "concurrent_medications"
+    ],
+    "content_excerpt": "Theo Bài LL 5: ưu tiên thuốc kháng nấm bôi tại chỗ (Clotrimazole 1% hoặc Terbinafine 1%) cho nấm da nông khu trú; chỉ dùng Itraconazole đường uống khi tổn thương lan rộng và không có chống chỉ định.",
+    "official_source_url": "data/Bài LL 5. Thuốc kháng nấm virus lao sốt rét.pdf"
+  },
+  {
+    "guideline_id": "BLL5-B02-01",
+    "icd10_prefix": "B02",
+    "disease_name_vi": "Zona thần kinh (Herpes zoster)",
+    "first_line_ingredients": [
+      "Acyclovir",
+      "Valacyclovir",
+      "Paracetamol"
+    ],
+    "second_line_or_special_ingredients": [
+      "Vitamin B1 + B6 + B12"
+    ],
+    "avoid_combinations": [
+      "Hiệu chỉnh liều Acyclovir/Valacyclovir theo chức năng thận; tránh phối hợp NSAID độc thận"
+    ],
+    "safety_red_flags": [
+      "Zona vùng mắt / trán mũi (Hutchinson), suy giảm miễn dịch nặng -> hội chẩn chuyên khoa ngay"
+    ],
+    "missing_info_checks": [
+      "allergies",
+      "age",
+      "renal_function_status",
+      "onset_within_72h"
+    ],
+    "content_excerpt": "Theo Bài LL 5: khởi trị sớm thuốc kháng virus trong vòng 48-72 giờ (Acyclovir 800mg x 5 lần/ngày hoặc Valacyclovir 500mg-1000mg x 3 lần/ngày) kết hợp giảm đau và uống đủ nước.",
+    "official_source_url": "data/Bài LL 5. Thuốc kháng nấm virus lao sốt rét.pdf"
+  },
+  {
+    "guideline_id": "BLL5-J09-01",
+    "icd10_prefix": "J09",
+    "disease_name_vi": "Cúm A / Nhiễm virus cúm mùa",
+    "first_line_ingredients": [
+      "Oseltamivir",
+      "Paracetamol"
+    ],
+    "second_line_or_special_ingredients": [
+      "Amoxicillin + Clavulanic acid",
+      "Cefuroxime"
+    ],
+    "avoid_combinations": [
+      "Tránh Aspirin ở trẻ em/thanh thiếu niên (hội chứng Reye); kiểm tra dị ứng trước khi dùng kháng sinh bội nhiễm"
+    ],
+    "safety_red_flags": [
+      "Phụ nữ mang thai (đặc biệt tam cá nguyệt 3) mắc cúm A bội nhiễm là nhóm nguy cơ cao -> cần bác sĩ chuyên khoa đánh giá lợi ích/nguy cơ kỹ và xác nhận dị ứng trước khi duyệt"
+    ],
+    "missing_info_checks": [
+      "allergies",
+      "age",
+      "pregnancy_status",
+      "renal_function_status"
+    ],
+    "content_excerpt": "Theo Bài LL 5: Oseltamivir 75mg x 2 lần/ngày trong 5 ngày hiệu quả nhất khi dùng trong 48 giờ đầu; thận trọng cân nhắc nguy cơ-lợi ích ở phụ nữ mang thai và chỉnh liều khi suy thận.",
+    "official_source_url": "data/Bài LL 5. Thuốc kháng nấm virus lao sốt rét.pdf"
+  }
+]

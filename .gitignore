@@ -32,7 +32,14 @@ traces/simulate-error.jsonl
 traces/simulate-stopped.jsonl
 # Export khảo sát còn tên / email / SĐT: chỉ commit bản đã ẩn danh
 evidence/**/raw-*
-# Nguyên file data BTC cấp (data/preclass, data/training-ops… của repo đề): để ở đây, không commit
+# Nguyên file data BTC cấp / dữ liệu thô chưa ẩn danh: không commit
 data-btc
 data-btc/
-data
+data/raw/
+data/*.csv
+data/*.xlsx
+data/*.pdf
+data/processed/drug_catalog.json
+data/processed/case_base_synthetic.json
+data/processed/guidelines_template.json
+data/processed/DATA_CLEANING_REPORT.md
