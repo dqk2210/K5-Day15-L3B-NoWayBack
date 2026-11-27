@@ -7,23 +7,23 @@
 
 | Nguồn | Đạt ngưỡng? | File |
 |---|---|---|
-| Đào data (x/N, %, cách đếm chạy lại được, ≥5 ví dụ) | ☐ | `evidence/data-mining.md` |
-| Phỏng vấn (≥3 người ngoài nhóm, đúng người dùng) | ☐ | `evidence/interviews/P1.md`… |
-| Khảo sát (≥20 người ngoài nhóm, đúng người dùng) | ☐ | `evidence/survey/` |
+| Phỏng vấn (3–5 dược sĩ đứng quầy GPP, ngoài nhóm) | ☐ | `evidence/interviews/P1.md`… |
+| Quan sát + bấm giờ (10 lượt tư vấn tại 1–2 nhà thuốc) & đối chiếu Dược thư / TT 07/2017 / TT 26/2025 | ☐ | `evidence/data-mining.md` *(hoặc ghi chép quan sát)* |
+| Khảo sát (≥20 người ngoài nhóm, nếu triển khai thêm) | ☐ | `evidence/survey/` |
 
 ## 2. Số chính
 
-- Đào data: __/__ (__%) …
-- Phỏng vấn: __/3 người gặp *(n nhỏ không ghi %)* · số lần / tháng: P1 __, P2 __, P3 __ · mỗi lần mất __–__ phút
-- Khảo sát: n = __ · __/__ (__%) …
+- Quan sát / bấm giờ: __/__ lượt mất ≥ [X] phút tra cứu · __/__ lượt có yếu tố rủi ro Cao
+- Phỏng vấn: __/3 dược sĩ gặp pain *(n nhỏ không ghi %)* · số lượt rủi ro Cao / 1 tháng qua: P1 __, P2 __, P3 __ · mỗi lần tra cứu mất __–__ phút
+- Khảo sát (nếu có): n = __ · __/__ (__%) …
 
 Phỏng vấn nhiều vai thì đếm theo từng vai, không cộng chung.
 
 | | Vai | Gặp pain? | Số lần / 1 tháng qua | Lần gần nhất mất | Đang xoay xở bằng |
 |---|---|---|---|---|---|
-| P1 | | | | | |
-| P2 | | | | | |
-| P3 | | | | | |
+| P1 | Dược sĩ đứng quầy nhà thuốc GPP | | | | |
+| P2 | Dược sĩ đứng quầy nhà thuốc GPP | | | | |
+| P3 | Dược sĩ đứng quầy nhà thuốc GPP | | | | |
 
 ## 3. ≥5 trích dẫn hoặc ví dụ nguyên văn (có nguồn, bỏ tên)
 
@@ -45,4 +45,6 @@ Giả thuyết ở `evidence/hypothesis.md`: **đúng / sai / phải đổi** �
 
 | Vai | Giờ hẹn | Đã xong? |
 |---|---|---|
-| | | |
+| Dược sĩ đứng quầy nhà thuốc GPP (P1) | __ | ☐ |
+| Dược sĩ đứng quầy nhà thuốc GPP (P2) | __ | ☐ |
+| Dược sĩ đứng quầy nhà thuốc GPP (P3) | __ | ☐ |

@@ -1,4 +1,4 @@
-# Canvas — [tên nhóm] · Track [A–F]
+# Canvas — NoWayBack · Track B
 
 > Điền ở guide bước 1.4. CP1 17:00 Thứ Sáu 27/11: nộp bản đầu, đủ 7 dòng (dòng 4 được ghi giả thuyết + nguồn sẽ kiểm).
 > CP2 19:30 Thứ Sáu 27/11: cập nhật (số bằng chứng đầu, lát cắt đã chốt) và điền dòng "Đã đổi gì so với CP1".
@@ -6,11 +6,13 @@
 
 | # | Dòng | Nhóm điền |
 |---|---|---|
-| 1 | Track + lát cắt dự kiến | |
-| 2 | Người dùng chính (một vai cụ thể — không phải "học viên nói chung") | |
-| 3 | Pain một câu: ai — đang làm gì — vướng đâu — hậu quả | |
-| 4 | Bằng chứng đầu — CP1: giả thuyết + nguồn sẽ kiểm · CP2: số đầu tiên + 1 trích dẫn | |
-| 5 | **Lát cắt MỘT CÂU** (1 người dùng · 1 việc · 1 quyết định AI · 1 kết quả) | |
-| 6 | AI tự làm đến đâu + 1 dòng lý do: sai thì ai chịu gì | |
-| 7 | Phân công có tên | |
-| — | *(CP2)* Đã đổi gì so với CP1 | |
+| 1 | Track + lát cắt dự kiến | **Track:** B <br>**Lát cắt dự kiến:** AI Agent nhận triệu chứng + thể trạng khách, phân loại rủi ro và soạn đơn thuốc không kê đơn (OTC) nháp cho dược sĩ nhà thuốc. Đơn rủi ro Cao bắt buộc dược sĩ duyệt (human-in-the-loop). |
+| 2 | Người dùng chính (một vai cụ thể — không phải "học viên nói chung") | Dược sĩ đứng quầy tại nhà thuốc bán lẻ đạt GPP. Dược sĩ tư vấn và bán thuốc OTC cho khách tự đến mua với triệu chứng nhẹ (cảm cúm, ho, sốt, đau đầu, rối loạn tiêu hóa).<br>[Giả định: chọn nhà thuốc bán lẻ. Nếu người dùng là dược sĩ lâm sàng bệnh viện → sửa dòng 2–6.] |
+| 3 | Pain một câu: ai — đang làm gì — vướng đâu — hậu quả | **Ai:** dược sĩ đứng quầy nhà thuốc GPP — **đang làm gì:** hỏi triệu chứng, thể trạng rồi chọn thuốc và liều cho từng khách — **vướng đâu:** tự tra tương tác thuốc và chống chỉ định theo thể trạng (trẻ em, thai kỳ, người cao tuổi, bệnh nền) bằng trí nhớ hoặc tra cứu thủ công — **hậu quả:** khách chờ lâu giờ cao điểm, dễ bỏ sót tương tác hoặc chống chỉ định dẫn đến sai thuốc, sai liều.<br>[Giả thuyết — kiểm ở dòng 4] |
+| 4 | Bằng chứng đầu — CP1: giả thuyết + nguồn sẽ kiểm · CP2: số đầu tiên + 1 trích dẫn | **CP1 — Giả thuyết** (nhóm chốt ngưỡng X, Y, Z trước khi đo):<br>• H1: Mỗi lượt tư vấn, dược sĩ mất ≥ [X] phút để tra tương tác, chống chỉ định, liều.<br>• H2: ≥ [Y]% lượt tư vấn có ≥ 1 yếu tố rủi ro Cao (định nghĩa ở dòng 6).<br>• H3: Dược sĩ duyệt đơn nháp nhanh hơn tự soạn ≥ [Z]%.<br>**Nguồn sẽ kiểm:**<br>• Phỏng vấn [đề xuất: 3–5] dược sĩ đứng quầy (gọi điện hoặc gặp trực tiếp).<br>• Quan sát + bấm giờ [đề xuất: 10] lượt tư vấn tại [đề xuất: 1–2] nhà thuốc.<br>• Đối chiếu tài liệu: Dược thư Quốc gia Việt Nam; Danh mục thuốc không kê đơn (Thông tư 07/2017/TT-BYT); Thông tư 26/2025/TT-BYT (phạm vi kê đơn).<br>**CP2:** Số đầu tiên: [CP2: ...] · Trích dẫn: "[CP2: câu nguyên văn của dược sĩ]" — [vai, nơi phỏng vấn] |
+| 5 | **Lát cắt MỘT CÂU** (1 người dùng · 1 việc · 1 quyết định AI · 1 kết quả) | **Dược sĩ đứng quầy nhập triệu chứng + thể trạng khách (tuổi, cân nặng, thai kỳ, dị ứng, bệnh nền, thuốc đang dùng), AI phân loại đơn rủi ro Thấp/Cao và soạn đơn OTC nháp kèm lý do, dược sĩ chốt đơn Thấp bằng 1 lần xác nhận và đơn Cao bị khóa đến khi dược sĩ duyệt từng dòng hoặc chuyển bác sĩ.**<br>• 1 người dùng: dược sĩ đứng quầy<br>• 1 việc: lập đơn OTC cho 1 khách<br>• 1 quyết định AI: phân loại rủi ro Thấp/Cao (+ đơn nháp)<br>• 1 kết quả: mọi đơn ra quầy đều có dược sĩ chốt; không đơn Cao nào ra quầy khi chưa duyệt<br>[Phạm vi: "dự đoán" trong lát cắt này = dự đoán mức rủi ro của đơn, KHÔNG phải chẩn đoán bệnh.] |
+| 6 | AI tự làm đến đâu + 1 dòng lý do: sai thì ai chịu gì | **AI tự làm:**<br>1. Chuẩn hóa input; báo thiếu trường bắt buộc.<br>2. Kiểm tương tác thuốc và chống chỉ định theo hồ sơ khách.<br>3. Soạn đơn nháp chỉ gồm thuốc trong Danh mục OTC, liều theo tuổi/cân nặng.<br>4. Gắn nhãn rủi ro + lý do + nguồn tham chiếu.<br>**AI KHÔNG ĐƯỢC:** chẩn đoán bệnh; đề xuất thuốc kê đơn; tự in hoặc giao đơn cho khách.<br>**Gắn nhãn Cao khi có ≥ 1 điều kiện** [đề xuất — dược sĩ/bác sĩ cố vấn PHẢI duyệt danh sách]: trẻ em dưới [CẦN ĐIỀN: ngưỡng tuổi]; đang mang thai hoặc cho con bú; người cao tuổi đang dùng nhiều thuốc; suy gan hoặc suy thận; tiền sử dị ứng thuốc; có tương tác mức nghiêm trọng; có triệu chứng cảnh báo (khó thở, đau ngực, sốt cao kéo dài, xuất huyết, lơ mơ); thiếu trường bắt buộc; triệu chứng nằm ngoài danh mục lát cắt.<br>**Lý do — sai thì ai chịu gì:** đơn sai → bệnh nhân chịu tác dụng có hại, tương tác, sai liều hoặc chậm phát hiện bệnh nặng; dược sĩ và nhà thuốc chịu trách nhiệm chuyên môn, pháp lý (AI không chịu trách nhiệm) → mọi đơn PHẢI có dược sĩ xác nhận. |
+| 7 | Phân công có tên | • [Tên 1] — Bằng chứng: phỏng vấn dược sĩ, số liệu dòng 4, trích dẫn CP2<br>• [Tên 2] — Bộ quy tắc rủi ro + dữ liệu thuốc OTC, tương tác thuốc<br>• [Tên 3] — Agent: prompt, pipeline input → phân loại rủi ro → đơn nháp<br>• [Tên 4] — Giao diện duyệt đơn cho dược sĩ (luồng Thấp / Cao)<br>• [Tên 5] — Bộ ca kiểm thử, đo kết quả, slide demo<br>[CẦN ĐIỀN tên; gộp vai nếu nhóm dưới 5 người] |
+| — | *(CP2)* Đã đổi gì so với CP1 | [CP2 19:30 — điền sau: đổi gì · vì sao · dựa trên bằng chứng nào] |
+
+> **Ghi chú phạm vi:** Thông tư 26/2025/TT-BYT (hiệu lực 01/07/2025) quy định kê đơn thuốc ngoại trú tại cơ sở khám bệnh, chữa bệnh, do người hành nghề khám bệnh, chữa bệnh thực hiện. [Suy luận] Dược sĩ nhà thuốc không kê thuốc kê đơn → lát cắt chỉ soạn đơn thuốc trong Danh mục thuốc không kê đơn (Thông tư 07/2017/TT-BYT). Nhóm PHẢI kiểm lại điểm này với giảng viên hoặc chuyên gia pháp lý dược.
