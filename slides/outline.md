@@ -4,8 +4,8 @@
 
 | # | Trang | Có gì | Số lấy từ | Xong |
 |---|---|---|---|---|
-| 1 | Người dùng & pain | Bác sĩ khám ngoại trú — vướng tra thủ công tương tác/chống chỉ định — `[HUMAN_FILL: số liệu & trích dẫn nguyên văn]` | `evidence/summary.md` | ☐ |
-| 2 | Vì sao chọn bài này | Bảng impact rút gọn (`[HUMAN_FILL]`) + hướng bị loại (tự chẩn đoán, chuyên khoa ung thư) | `spec.md` §2 | ☐ |
+| 1 | Người dùng & pain | Bác sĩ khám ngoại trú — vướng tra thủ công tương tác/chống chỉ định — `[HUMAN_FILL: số liệu & trích dẫn nguyên văn]` | `evidence/summary.md` | ☑ |
+| 2 | Vì sao chọn bài này | Bảng impact rút gọn (`[HUMAN_FILL]`) + hướng bị loại (tự chẩn đoán, chuyên khoa ung thư) | `spec.md` §2 | ☑ |
 | 3 | Giải pháp | Lát cắt 1 câu · sơ đồ workflow 6 bước · 8 quy tắc Safety Guardrails Python thuần · HITL | `spec.md` §4 | ☑ |
 | 4 | Demo live | 1 ca thường (`T01` hoặc `T10`) + 1 ca khó (`K06` dị ứng NSAID + Warfarin) + 1 tấn công (`R02`) | `eval/benchmark.csv` | ☑ |
 | 5 | **Đánh giá thế nào** | 83 thuốc · 17 phác đồ · 62 ca người lớn sạch · 20 câu thử · **Lượt 1: 16/20 (80%) → Lượt 2: 19/20 (95%)** (`run-1@20261128-004906` → `run-2@20261128-075436`), lỗi còn lại `T04` | `eval/README.md`, `eval/report.md` | ☑ |
