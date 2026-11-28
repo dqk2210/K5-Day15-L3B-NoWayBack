@@ -6,6 +6,15 @@
 
 ---
 
+## Hồ sơ nộp CP3
+
+| Mục | Hiện vật |
+|---|---|
+| Bằng chứng từ dữ liệu BTC | [52 ca đã làm sạch và 5 trích đoạn đã ẩn danh](evidence/summary.md). Chạy `python evidence/count.py` để kiểm lại. |
+| Bộ câu thử | [20 câu đã chốt](eval/benchmark.csv), gồm 7 câu khó và 3 câu từ chối. |
+| Kết quả Lượt 1 | **16/20 (80%)** · `run-1@20261128-004906` · `gemini-3.5-flash-lite`. [Báo cáo](eval/report.md) · [Trace](traces/run-1.jsonl) |
+| Video | [Clip 30 giây phát lại Lượt 1](demo/medora-cp3-phat-lai.avi), dựng từ kết quả và trace của lần gọi Gemini đã lưu. Video quay trực tiếp và link YouTube Unlisted hoặc Drive công khai vẫn đang chờ. |
+
 ## Chạy web Medora trên máy local
 
 Từ thư mục gốc, chạy bằng Python 3.10+.

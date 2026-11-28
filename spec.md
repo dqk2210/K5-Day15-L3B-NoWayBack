@@ -17,7 +17,7 @@ Data BTC cấp đã dùng (không commit nguyên file): `data/100_Toa_NVM_2026_D
 - Việc họ cố làm xong: **Lập bản nháp đơn thuốc ngoại trú đúng phác đồ và an toàn tương tác/chống chỉ định cho từng bệnh nhân sau khi đã có chẩn đoán xác nhận.**
 - Hôm nay họ giải bằng gì, hỏng ở đâu, vì sao chưa bỏ: Tra cứu thủ công hoặc nhớ phác đồ/tương tác; dễ mất nhiều phút giờ cao điểm hoặc bỏ sót tương tác thuốc–thuốc (như `Clopidogrel + Omeprazole`, `Warfarin + NSAID`), thiếu thông tin dị ứng/cân nặng nhi khoa hoặc hiệu chỉnh liều suy thận; chưa bỏ được vì phần mềm HIS cũ chưa tích hợp kiểm tra quy tắc an toàn gắn phác đồ.
 - Pain (KHÔNG chữ AI): **Bác sĩ ngoại trú** — đang lập đơn thuốc cho ca bệnh có bệnh nền/đa thuốc — **vướng phải việc phải tra thủ công chồng chéo phác đồ, chống chỉ định và tương tác thuốc trong thời gian khám ngắn** — **hậu quả là kéo dài thời gian kê đơn hoặc tăng nguy cơ sai sót tương tác, chống chỉ định gây hại cho người bệnh.**
-- Bằng chứng — số chính + kết luận (chi tiết: `evidence/summary.md`): `[HUMAN_FILL: điền số ca/phút đo được từ phỏng vấn hoặc đào dữ liệu công khai trong evidence/summary.md]`.
+- Trong 52 ca ngoại trú đã làm sạch có nguồn gốc từ dữ liệu BTC, 46 ca có ít nhất hai nhóm chẩn đoán và năm dòng thuốc. Trong 364 dòng thuốc, 301 dòng có trường thời gian điều trị dạng số trống. Kết quả mô tả khối lượng đối chiếu trong tập dữ liệu. Thời gian thao tác thực tế chưa được đo. [Bằng chứng và năm trích đoạn](evidence/summary.md)
 
 ## §2. Impact & quyết định chọn *(guide 1.3)*
 
@@ -204,6 +204,7 @@ Data BTC cấp đã dùng (không commit nguyên file): `data/100_Toa_NVM_2026_D
 | 28/11/2026 | Cho web nhập nhiều tên chẩn đoán, tra đơn giả lập và gợi ý thuốc theo từng chẩn đoán | Dùng chẩn đoán để tra cứu, giữ các trường bệnh nhân để rà soát và in đơn |
 | 28/11/2026 | Hiển thị nội dung đơn thuốc mẫu trong kết quả tra cứu trên web | Bác sĩ nhìn thấy các dòng thuốc và cách dùng có sẵn trong ca giả lập |
 | 28/11/2026 | Mở sẵn một đơn mẫu ở màn hình tạo đơn và thêm nút Bổ sung thuốc | Có thể xem nội dung đơn mẫu ngay khi mở ứng dụng |
+| 28/11/2026 | Tổng hợp bằng chứng CP3 từ 52 ca có nguồn gốc dữ liệu BTC và đối chiếu báo cáo Lượt 1 | Kiểm lại bằng `python evidence/count.py` và `python run.py score eval/run-1.csv` |
 
 **Sau CP4 (đến 23:59 Thứ Bảy 28/11)**
 

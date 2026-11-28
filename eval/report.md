@@ -1,42 +1,22 @@
-# Báo cáo đánh giá — lượt 1 → một cải tiến → lượt 2
+# Báo cáo đánh giá
 
-> Điền ở guide bước 4.1. Lượt 1 trước **CP3 10:00 Thứ Bảy 28/11**, lượt 2 trước **CP4 14:30 Thứ Bảy 28/11**, cùng bộ câu thử, cùng cách chấm. Chấm ở rubric R5.
-> Số lấy từ `python run.py score eval/run-1.csv` (và `run-2.csv`) sau khi điền cột `pass`. **Kết quả thấp ghi thật vẫn đủ điểm.**
-> Không được: sửa chuẩn "đạt", bỏ câu thử trượt, sửa `expected` cho khớp output, sửa kết quả lượt đã chạy.
+## Lượt 1 · CP3
 
-## 1. Kết quả
+| Run ID | Model | Đạt / tổng | Thường | Khó | Từ chối | So với chuẩn §7 |
+|---|---|---:|---:|---:|---:|---|
+| `run-1@20261128-004906` | `gemini-3.5-flash-lite` | **16/20 (80%)** | 8/10 (80%) | 5/7 (71%) | 3/3 (100%) | Chưa đạt ngưỡng nhóm khó |
 
-| Lượt | Run ID | Đạt / tổng | % | thuong | kho | tu_choi | So với chuẩn "đạt" |
-|---|---|---|---|---|---|---|---|
-| 1 | | __/__ | | __/__ | __/__ | __/__ | đạt / chưa |
-| 2 | | __/__ | | __/__ | __/__ | __/__ | đạt / chưa |
+Điểm lấy từ `python run.py score eval/run-1.csv` trên cột `pass` đã lưu. Trace ghi 12 lần gọi model, tổng 52.610 token vào và 6.682 token ra. Các ca dừng ở cổng kiểm tra có thể kết thúc trước khi gọi model. [CSV](run-1.csv) · [Trace](../traces/run-1.jsonl) · [Spec](../spec.md)
 
-Kết quả từng câu: `eval/run-1.csv`, `eval/run-2.csv`. Trace: `traces/run-1.jsonl`, `traces/run-2.jsonl`.
+## Các câu trượt trong Lượt 1
 
-## 2. Lỗi lượt 1 — gom thành nhóm có tên
+| Câu | Quan sát từ kết quả đã lưu |
+|---|---|
+| T04 | Thiếu tuổi khiến hệ thống dừng trước khi lập bản nháp, trong khi tiêu chí ca thường yêu cầu đầu ra hợp lệ. |
+| T10 | Đầu vào ghi “không suy thận” nhưng kết quả cảnh báo suy thận mạn và chặn bản nháp. |
+| K01 | Cảnh báo ngoài phạm vi bỏ sót hai trường thiếu là cân nặng và dị ứng. |
+| K02 | Cảnh báo ngoài phạm vi bỏ sót cờ nguy cơ cao của thai kỳ ra huyết. |
 
-| Nhóm lỗi | Số câu | Câu |
-|---|---|---|
-| vd: bịa nguồn *(ví dụ)* | | |
-| vd: đoán khi thiếu thông tin *(ví dụ)* | | |
-| | | |
+## Lượt 2 · CP4
 
-**≥3 lỗi cụ thể:**
-
-| Câu | Input | Output | Vì sao sai |
-|---|---|---|---|
-| | | | |
-| | | | |
-| | | | |
-
-## 3. Một lần cải tiến
-
-- Nhắm vào nhóm lỗi: __ — vì sao là nhóm **đau nhất với người dùng**: __
-- Đã sửa gì (có thể vài thay đổi cùng nhắm nhóm lỗi đó): __
-- Kết quả: nhóm lỗi đó __/__ → __/__ · tổng __% → __%
-- Câu nào **tệ đi** sau khi sửa: __
-
-## 4. Còn lại
-
-- Lỗi chưa sửa + nguy hiểm thế nào: __
-- Nếu có thêm 1 tuần: __
+Chưa có kết quả Lượt 2. Khi thực hiện CP4, ghi cải tiến và đối chiếu hai lượt với cùng bộ câu thử và cùng tiêu chí chấm.
