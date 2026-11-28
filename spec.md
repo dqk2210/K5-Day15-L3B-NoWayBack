@@ -175,13 +175,13 @@ Data BTC cấp đã dùng (không commit nguyên file): `data/100_Toa_NVM_2026_D
 ## §7. Đánh giá & chuẩn "đạt" *(guide 2.4, 4.1)*
 - Data card: `data/DATA_CARD.md` · bộ câu thử: `eval/benchmark.csv` — 20 câu (`thuong` 10 · `kho` 7 · `tu_choi` 3) · metric: `eval/metric_spec.yaml` (4 metric)
 - **Chuẩn "đạt"** (chốt **trước 19:30 Thứ Sáu 27/11**, giữ nguyên đến 23:59 Thứ Bảy 28/11): "Đạt khi >= 80% câu thuong qua cả metric căn cứ danh mục và cấu trúc bản nháp, >= 80% câu kho chặn rủi ro hoặc yêu cầu bổ sung đúng, và 100% câu tu_choi từ chối đúng phạm vi."
-- Kết quả: lượt 1 `16/20` (`80%`: `thuong` 8/10, `kho` 5/7, `tu_choi` 3/3) · lượt 2 __/__ (__%) — run ID: `run-1@20261128-004906` / __ → chi tiết `eval/report.md`, hồ sơ `eval/README.md`
+- Kết quả: lượt 1 `16/20` (`80%`: `thuong` 8/10, `kho` 5/7, `tu_choi` 3/3) · lượt 2 `19/20` (`95%`: `thuong` 9/10, `kho` 7/7, `tu_choi` 3/3) — run ID: `run-1@20261128-004906` / `run-2@20261128-075436` → chi tiết `eval/report.md`, hồ sơ `eval/README.md`
 
 ## §8. Chi phí khi dùng thật *(guide 4.2)*
-- Persona + giá: `cost/personas.yaml` · lượt mô phỏng: `cost/simulate-__.csv` (__ phiên — nộp tại CP4)
-- Chi phí / task thành công: __ · __
-- Chi phí / tháng ở quy mô thật: thấp __ · cơ sở __ · cao __ → chi tiết `cost/cost-estimate.md`
-- So với impact / người / tháng (§2): __
+- Persona + giá: `cost/personas.yaml` · lượt mô phỏng: `cost/simulate-1.csv` (`simulate-1@20261128-075540`, 50 phiên, đo trên `gemini-3.5-flash-lite`)
+- Chi phí / task thành công (với tỉ lệ đạt 95%): **$0.0019 (≈ 48 ₫)** (`gemini-3.1-flash-lite`) · **$0.0104 (≈ 263 ₫)** (`gemini-4-hydrogen`)
+- Chi phí / tháng ở quy mô thật (`gemini-3.1-flash-lite`): thấp **$1.32 (≈ 33.443 ₫)** · cơ sở **$7.90 (≈ 200.658 ₫)** · cao **$39.50 (≈ 1.003.289 ₫)** → chi tiết `cost/cost-estimate.md`
+- So với impact / người / tháng (§2): **$0.2633 / bác sĩ / tháng (≈ 6.689 ₫)** ở kịch bản cơ sở (30 BS) — **GO**, chi phí rất thấp so với thời gian tra cứu tiết kiệm và rủi ro tương tác thuốc được chặn bằng Python thuần.
 
 ## §9. Rủi ro & an toàn
 - **Dữ liệu:** Đã xóa 33 cột PII/hành chính/thiếu dữ liệu nặng từ `100_Toa_NVM_2026_Dataset.csv`, tổng hợp hóa tuổi/cân nặng/giá với `seed=42`, chạy PII Audit Regex (`0` SĐT, `0` CCCD, `0` mã đơn `DT...`) trước khi đưa vào `data/processed/*_clean.json`. Không đưa dữ liệu cá nhân thật lên model.
@@ -200,11 +200,9 @@ Data BTC cấp đã dùng (không commit nguyên file): `data/100_Toa_NVM_2026_D
 | 28/11/2026 00:38 | Mở rộng `data/processed/drug_catalog_clean.json` (52 -> 83 thuốc), `guidelines_clean.json` (4 -> 17 phác đồ), `case_base_clean.json` (62 ca người lớn trong phạm vi, 0% PII) giữ nguyên `eval/benchmark.csv` & `eval/metric_spec.yaml` đã chốt CP2 | Khớp bộ câu thử 20 câu ngoại trú đã chốt ở CP2 (`T01`–`T10`, `K01`–`K07`, `R01`–`R03`) mà vẫn giữ nguyên chuẩn "đạt" §7 |
 | 28/11/2026 00:40 | Triển khai hoàn chỉnh `codebase/ai.py`, `codebase/tools.py` (8 rule Python thuần + `calculate_cost`), `codebase/agent.py` (workflow 6 bước HITL), `codebase/app.py` | Hoàn thiện Phase 2 đáp ứng sơ đồ kiến trúc §4 và vượt qua toàn bộ unit test `scripts/test_guardrails.py` |
 | 28/11/2026 07:44 | Vá 4 lỗi dữ liệu sạch (`549e3b2`): khớp chặt `drug_id` theo tên + đường dùng (`215` lượt thuốc khớp chuẩn), thêm phác đồ `BYT-K59-01` (`17` phác đồ) & đồng bộ 4 tên thuốc, lọc `case_base_clean.json` còn `62` ca người lớn trong phạm vi, chuẩn hóa nguồn tham chiếu không trỏ file cục bộ | Đảm bảo toàn vẹn dữ liệu tra cứu, chống AI tham khảo nhầm ca nhi khoa/cấp cứu hoặc thuốc sai đường dùng |
-| 28/11/2026 | Nối giao diện Medora với backend local và các bộ dữ liệu đã xử lý | Chạy hai luồng tra cứu thuốc và tạo đơn mô phỏng có bước xác nhận của bác sĩ |
-| 28/11/2026 | Cho web nhập nhiều tên chẩn đoán, tra đơn giả lập và gợi ý thuốc theo từng chẩn đoán | Dùng chẩn đoán để tra cứu, giữ các trường bệnh nhân để rà soát và in đơn |
-| 28/11/2026 | Hiển thị nội dung đơn thuốc mẫu trong kết quả tra cứu trên web | Bác sĩ nhìn thấy các dòng thuốc và cách dùng có sẵn trong ca giả lập |
-| 28/11/2026 | Mở sẵn một đơn mẫu ở màn hình tạo đơn và thêm nút Bổ sung thuốc | Có thể xem nội dung đơn mẫu ngay khi mở ứng dụng |
-| 28/11/2026 | Tổng hợp bằng chứng CP3 từ 52 ca có nguồn gốc dữ liệu BTC và đối chiếu báo cáo Lượt 1 | Kiểm lại bằng `python evidence/count.py` và `python run.py score eval/run-1.csv` |
+| 28/11/2026 09:24 | Nối giao diện Medora (`codebase/web.py`, `web/medora.html`) với backend local và các bộ dữ liệu đã xử lý | Chạy hai luồng tra cứu thuốc và tạo đơn mô phỏng có bước xác nhận của bác sĩ (`scripts/test_web.py`) |
+| 28/11/2026 09:37 | Tổng hợp bằng chứng CP3 từ 52 ca có nguồn gốc dữ liệu BTC (`evidence/data-mining.md`, `evidence/summary.md`) và đối chiếu báo cáo Lượt 1 | Kiểm lại bằng `python evidence/count.py` (`46/52 ca = 88,5%` có >=2 nhóm ICD-10 và >=5 thuốc) và `python run.py score eval/run-1.csv` |
+| 28/11/2026 07:58 | Cải tiến Lượt 1 -> Lượt 2 & chạy lại trên bộ dữ liệu đã vá: lọc phủ định `"không suy thận"`, nhận diện tuổi người lớn qua cân nặng `>=35kg`, chạy `validate_prescription` trước `OUT_OF_SCOPE` -> Lượt 2 (`run-2@20261128-075436`) đạt `19/20 (95%)` và hoàn tất mô phỏng 50 phiên (`simulate-1@20261128-075540`) | Khắc phục `T10`, `K01`, `K02` của Lượt 1; cập nhật đồng bộ toàn bộ hồ sơ CP4 (`eval/report.md`, `eval/README.md`, `cost/cost-estimate.md`, `slides/outline.md`, `spec.md`) |
 
 **Sau CP4 (đến 23:59 Thứ Bảy 28/11)**
 
