@@ -7,6 +7,7 @@ import json
 import logging
 from pathlib import Path
 import re
+import sys
 from urllib.parse import parse_qs, urlsplit
 
 from tools import (
@@ -20,6 +21,12 @@ from tools import (
     search_guidelines,
     validate_prescription,
 )
+
+
+# Windows consoles may default to a code page without Vietnamese characters.
+for _stream in (sys.stdout, sys.stderr):
+    if hasattr(_stream, "reconfigure"):
+        _stream.reconfigure(encoding="utf-8", errors="replace")
 
 
 PAGE = Path(__file__).resolve().parents[1] / "web" / "medora.html"
