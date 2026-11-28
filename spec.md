@@ -206,6 +206,8 @@ Data BTC cấp đã dùng (không commit nguyên file): `data/100_Toa_NVM_2026_D
 | 28/11/2026 | Mở sẵn một đơn mẫu ở màn hình tạo đơn và thêm nút Bổ sung thuốc | Có thể xem nội dung đơn mẫu ngay khi mở ứng dụng |
 | 28/11/2026 | Tổng hợp bằng chứng CP3 từ 52 ca có nguồn gốc dữ liệu BTC và đối chiếu báo cáo Lượt 1 | Kiểm lại bằng `python evidence/count.py` và `python run.py score eval/run-1.csv` |
 | 28/11/2026 09:34 | Tich hop UI Medora tu nhanh nhungvo vao main local bang fast-forward; va console web sang UTF-8 tren Windows | Khoi dong web truoc ban va bi UnicodeEncodeError voi cp1258; sau va server khoi dong thanh cong. Khong sua benchmark, metric hoac ket qua cu. |
+| 28/11/2026 | Noi web vao agent.answer() cua eval; hien model/token/trace, bao loi API, giu cong an toan va HITL | HTTP smoke test Gemini that: 1 model call, 7517 input / 319 output tokens; trace web-8e8e9bb12fb44332ba75ab3f812217e3. Khong sua benchmark/metric/ket qua eval cu. |
+| 28/11/2026 | Chuẩn hóa thẻ kết quả AI, tách cảnh báo an toàn, thu gọn token/trace và nguồn; giữ cỡ chữ ổn định, cuộn khi nội dung dài | Phản hồi giao diện khó đọc; giữ nguyên nội dung kiểm tra và logic AI |
 
 **Sau CP4 (đến 23:59 Thứ Bảy 28/11)**
 

@@ -60,8 +60,10 @@ class MedoraHTTPTests(unittest.TestCase):
         return {**fields, **changes}
 
     def test_page_and_catalog_use_real_data(self):
-        self.assertIn(b"prescriptions/suggest", self.request("/"))
-        self.assertEqual(self.api("health"), {"status": "ok", "ai_enabled": False})
+        self.assertIn(b"prescriptions/draft", self.request("/"))
+        self.assertEqual(self.api("health")["status"], "ok")
+        self.assertTrue(self.api("health")["ai_enabled"])
+        self.assertNotIn("api_key", self.api("health"))
         self.assertTrue(any(g["icd10_prefix"] == "J30" for g in self.api("guidelines")["guidelines"]))
         results = self.api("drugs?" + urlencode({"q": "Ámlodac 5", "unit": "Viên"}))
         self.assertEqual([drug["drug_id"] for drug in results["drugs"]], ["DRUG-001"])
@@ -134,7 +136,7 @@ class MedoraHTTPTests(unittest.TestCase):
     def test_review_allows_optional_doses_but_checks_known_allergy(self):
         body = {"diagnosis": "tang huyet ap\nviem mui di ung", "medications": [{"drug_id": "DRUG-001"}]}
         result = self.api("prescriptions/review", body)
-        self.assertEqual(result["guardrail"]["status"], "PASS_WITH_WARNINGS")
+        self.assertEqual(result["guardrail"]["status"], "BLOCKED")
         self.assertIsNone(result["estimated_cost"])
         result = self.api("prescriptions/review", {**body, "allergies": "Amlodipine"})
         self.assertEqual(result["guardrail"]["status"], "BLOCKED")
@@ -181,6 +183,49 @@ class MedoraHTTPTests(unittest.TestCase):
                 result = suggest(body, use_ai=True)
             self.assertEqual(result["mode"], "catalog_fallback")
             self.assertEqual(result["suggestions"], baseline)
+
+    def test_draft_uses_eval_agent_and_measured_usage(self):
+        import tracing
+        reply = {"text": json.dumps({"proposed_medications": [{"drug_id": "DRUG-001",
+                 "dose_per_intake": 1, "frequency_per_day": 1, "duration_days": 5,
+                 "quantity": 5, "rationale_source_id": "BYT-I10-01"}]}),
+                 "model": "test-model", "tokens_in": 123, "tokens_out": 45}
+        with patch("ai.MODEL_PROVIDER", "gemini"), patch("agent.call_model", tracing.model_call(lambda *a: reply)):
+            result = self.api("prescriptions/draft", self.patient())
+        self.assertEqual(result["mode"], "ai")
+        self.assertEqual(result["ai"]["status"], "real")
+        self.assertEqual(result["ai"]["tokens_in"], 123)
+        self.assertEqual(result["ai"]["tokens_out"], 45)
+        self.assertEqual(result["ai_draft"]["draft_medications"][0]["drug_id"], "DRUG-001")
+        trace = Path(__file__).resolve().parents[1] / result["ai"]["trace_file"]
+        self.addCleanup(trace.unlink, missing_ok=True)
+        self.assertIn('"kind": "model"', trace.read_text(encoding="utf-8"))
+
+    def test_draft_api_failure_never_returns_catalog_as_ai(self):
+        def fail(*args):
+            raise RuntimeError("provider failed")
+        with patch("ai.MODEL_PROVIDER", "gemini"), patch("agent.call_model", side_effect=fail):
+            result = self.api("prescriptions/draft", self.patient(), 502)
+        self.assertEqual(result["ai"]["status"], "error")
+        self.assertNotIn("suggestions", result)
+        trace = Path(__file__).resolve().parents[1] / result["ai"]["trace_file"]
+        self.addCleanup(trace.unlink, missing_ok=True)
+
+    def test_draft_missing_age_stops_before_model(self):
+        with patch("ai.MODEL_PROVIDER", "gemini"), patch("agent.call_model") as model:
+            result = self.api("prescriptions/draft", self.patient(age=None))
+        model.assert_not_called()
+        self.assertEqual(result["ai"]["status"], "not_called")
+        self.assertEqual(result["guardrail"]["status"], "BLOCKED")
+        trace = Path(__file__).resolve().parents[1] / result["ai"]["trace_file"]
+        self.addCleanup(trace.unlink, missing_ok=True)
+
+    def test_draft_refuses_fake_provider(self):
+        with patch("ai.MODEL_PROVIDER", "fake"), patch("agent.call_model") as model:
+            result = self.api("prescriptions/draft", self.patient(), 400)
+        model.assert_not_called()
+        self.assertIn("error", result)
+        self.assertNotIn("suggestions", result)
 
 
 if __name__ == "__main__":

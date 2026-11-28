@@ -8,6 +8,9 @@ import logging
 from pathlib import Path
 import re
 import sys
+import time
+import uuid
+from threading import RLock
 from urllib.parse import parse_qs, urlsplit
 
 from tools import (
@@ -37,6 +40,8 @@ EXTRA_DIAGNOSIS_ALIASES = {
 }
 MAX_BODY = 16_384
 LOG = logging.getLogger("medora")
+TRACE_LOCK = RLock()
+TRACE_DIR = PAGE.parents[1] / "traces"
 
 
 def text_field(data, key, limit=300):
@@ -262,6 +267,56 @@ def suggest(body, use_ai):
     }
 
 
+def ai_draft(body):
+    """Run the same agent as eval and preserve measured model usage for this request."""
+    from ai import MODEL_PROVIDER
+    from agent import answer
+    import tracing
+
+    if MODEL_PROVIDER == "fake":
+        raise ValueError("AI chua duoc cau hinh. Dien MODEL_PROVIDER, MODEL_NAME va API_KEY trong .env, roi khoi dong lai server.")
+    baseline = suggest(body, use_ai=False)
+    profile = patient_input(body)
+    if profile["age"] is not None and profile["age"] < 18:
+        raise ValueError("Ban web chi ho tro ho so gia lap nguoi lon.")
+    if baseline["guardrail"]["status"] == "BLOCKED":
+        return {**baseline, "mode": "ai_not_called", "ai": {"status": "not_called", "reason": "OUT_OF_SCOPE", "model_calls": 0}}
+    codes, _ = resolve_diagnoses(body)
+    text = json.dumps({"icd10_codes": codes, "diagnosis_text": text_field(body, "diagnosis", 500)
+                       if "diagnosis" in body else text_field(body, "icd10", 500),
+                       "patient_profile": profile}, ensure_ascii=False)
+    trace_id = "web-" + uuid.uuid4().hex
+    started = time.perf_counter()
+    payload = None
+    error_kind = None
+    # tracing.py has shared state. Serialize all web routes with TRACE_LOCK below.
+    tracing.begin(trace_id)
+    try:
+        output = answer(text)["output"]
+        payload = json.loads(output.rsplit("```json\n", 1)[1].split("```", 1)[0])
+    except Exception as exc:
+        error_kind = type(exc).__name__
+    finally:
+        summary, events = tracing.end()
+    real = bool(summary["model_calls"] and summary["tokens_in"] + summary["tokens_out"] > 0
+                and summary["models"] and not any(m.lower() in {"fake", "mock"} for m in summary["models"]))
+    if not error_kind and summary["model_calls"] and not real:
+        error_kind = "UnverifiedModelUsage"
+    info = {**summary, "errors": [], "status": "error" if error_kind else "real" if real else "not_called",
+            "trace_id": trace_id, "trace_file": "traces/" + trace_id + ".jsonl",
+            "latency_s": round(time.perf_counter() - started, 3)}
+    TRACE_DIR.mkdir(exist_ok=True)
+    with (TRACE_DIR / (trace_id + ".jsonl")).open("x", encoding="utf-8") as f:
+        for event in events:
+            f.write(json.dumps({"run_id": trace_id, **event}, ensure_ascii=False) + "\n")
+        f.write(json.dumps({"kind": "web_final", "ai": info, "payload": payload,
+                            "error_kind": error_kind}, ensure_ascii=False) + "\n")
+    if error_kind:
+        return {"error": "Khong tao duoc ban nhap AI (" + error_kind + "). Kiem tra cau hinh/model/API quota va trace. Khong dung ket qua offline thay the.", "ai": info}
+    return {**baseline, "mode": "ai", "guardrail": payload["guardrail_result"],
+            "ai_draft": payload, "ai": info}
+
+
 def review(body):
     guide, checks, _ = diagnosis_checks(body)
     profile = patient_input(body)
@@ -290,7 +345,7 @@ def review(body):
     ids = [med["drug_id"] for med in meds]
     if len(set(ids)) != len(ids):
         raise ValueError("Mỗi mã thuốc chỉ được xuất hiện một lần trong đơn.")
-    result = validate_prescription(meds, profile, guide["in_scope_codes"], require_patient_details=False)
+    result = validate_prescription(meds, profile, guide["in_scope_codes"], require_patient_details=True)
     result["warnings"].extend(checks["warnings"])
     if any(m["dose_per_intake"] is None or m["frequency_per_day"] is None for m in meds):
         result["warnings"].append({"code": "DOSE_NOT_CHECKED",
@@ -331,7 +386,8 @@ class Handler(BaseHTTPRequestHandler):
             self.send_json(HTTPStatus.FORBIDDEN, {"error": "Chỉ chấp nhận truy cập Medora từ địa chỉ local."})
             return
         try:
-            route()
+            with TRACE_LOCK:
+                route()
         except (BrokenPipeError, ConnectionResetError):
             return
         except ValueError as exc:
@@ -361,7 +417,10 @@ class Handler(BaseHTTPRequestHandler):
             units = sorted({drug["unit"] for drug in search_drug_catalog() if drug["unit"]})
             self.send_json(HTTPStatus.OK, {"drugs": drugs, "units": units})
         elif target.path == "/api/health":
-            self.send_json(HTTPStatus.OK, {"status": "ok", "ai_enabled": self.server.use_ai})
+            from ai import MODEL_PROVIDER, MODEL_NAME, API_KEY
+            self.send_json(HTTPStatus.OK, {"status": "ok", "ai_enabled": getattr(self.server, "draft_ai", True),
+                           "provider": MODEL_PROVIDER, "model": MODEL_NAME,
+                           "configured": MODEL_PROVIDER != "fake" and (bool(API_KEY) or MODEL_PROVIDER == "ollama")})
         else:
             self.send_json(HTTPStatus.NOT_FOUND, {"error": "Không tìm thấy đường dẫn."})
 
@@ -370,7 +429,7 @@ class Handler(BaseHTTPRequestHandler):
 
     def post_route(self):
         path = self.path
-        if path not in {"/api/prescriptions/suggest", "/api/prescriptions/review"}:
+        if path not in {"/api/prescriptions/suggest", "/api/prescriptions/review", "/api/prescriptions/draft"}:
             self.send_json(HTTPStatus.NOT_FOUND, {"error": "Không tìm thấy đường dẫn."})
             return
         if self.headers.get_content_type() != "application/json":
@@ -383,7 +442,13 @@ class Handler(BaseHTTPRequestHandler):
         body = json.loads(self.rfile.read(length))
         if not isinstance(body, dict):
             raise ValueError("Nội dung yêu cầu phải là một đối tượng JSON.")
-        result = suggest(body, self.server.use_ai) if path.endswith("/suggest") else review(body)
+        if path.endswith("/draft"):
+            result = ai_draft(body) if getattr(self.server, "draft_ai", True) else suggest(body, use_ai=False)
+        else:
+            result = suggest(body, self.server.use_ai) if path.endswith("/suggest") else review(body)
+        if result.get("error"):
+            self.send_json(HTTPStatus.BAD_GATEWAY, result)
+            return
         self.send_json(HTTPStatus.OK, result)
 
 
@@ -391,6 +456,7 @@ def main():
     parser = argparse.ArgumentParser(description="Chạy Medora trên máy local.")
     parser.add_argument("--port", type=int, default=8000)
     parser.add_argument("--ai", action="store_true", help="Bật sắp xếp thuốc tham khảo với Ollama.")
+    parser.add_argument("--offline", action="store_true", help="Catalog-only demo; no model calls.")
     args = parser.parse_args()
     if not 1 <= args.port <= 65535:
         parser.error("--port phải từ 1 đến 65535.")
@@ -408,6 +474,7 @@ def main():
     _load_json("case_base_clean.json")
     with ThreadingHTTPServer(("127.0.0.1", args.port), Handler) as server:
         server.use_ai = args.ai
+        server.draft_ai = not args.offline
         print(f"Medora đang chạy tại http://127.0.0.1:{args.port}", flush=True)
         try:
             server.serve_forever()

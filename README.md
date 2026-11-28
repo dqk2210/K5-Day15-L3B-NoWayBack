@@ -1,3 +1,15 @@
+## Web: AI API connection
+
+`python codebase/web.py` now calls the same `agent.answer()` as eval via `POST /api/prescriptions/draft`.
+Configure `MODEL_PROVIDER`, `MODEL_NAME`, `API_KEY` in `.env`, then restart the server.
+Use synthetic adult profiles only. Enter age and confirmed allergy history before requesting a draft.
+The result shows actual model, model calls, input/output tokens, elapsed time and `traces/web-*.jsonl`.
+API errors are shown explicitly; no offline result is silently substituted.
+`GET /api/health` shows provider/model/configuration status without exposing the API key.
+`python codebase/web.py --offline` explicitly selects catalog-only mode, labelled OFFLINE in the UI.
+A safety gate may stop a request before calling the model; it is labelled not_called rather than AI success.
+The final review also blocks missing mandatory patient details. Human review is still required.
+
 # NoWayBack — AI Hỗ trợ Bác sĩ Dự thảo Đơn thuốc Ngoại trú (Track B)
 
 **Thành viên, lớp, track:** xem [TEAMS.md](TEAMS.md).
@@ -23,7 +35,7 @@ Từ thư mục gốc, chạy bằng Python 3.10+.
 python codebase/web.py
 ```
 
-Mở [Medora](http://127.0.0.1:8000) và bấm **Vào bản mô phỏng**. Chế độ mặc định đọc trực tiếp dữ liệu trong `data/processed/` và chạy offline. Nếu cổng 8000 đang bận, dùng `python codebase/web.py --port 8001` rồi mở cổng tương ứng. Dừng server bằng `Ctrl+C`.
+Mở [Medora](http://127.0.0.1:8000) và bấm **Vào bản mô phỏng**. Chế độ mặc định đọc dữ liệu trong `data/processed/` và gọi AI theo cấu hình .env. Nếu cổng 8000 đang bận, dùng `python codebase/web.py --port 8001` rồi mở cổng tương ứng. Dừng server bằng `Ctrl+C`.
 
 - **Tra cứu thuốc** theo tên, hoạt chất hoặc biệt dược và lọc theo đơn vị. Chi tiết hiển thị chỉ định trong danh mục, đường dùng, chống chỉ định, tương tác và nguồn tham chiếu.
 - **Xem đơn mẫu và tìm đơn theo chẩn đoán.** Màn hình tạo đơn mở sẵn một đơn giả lập từ dữ liệu đã xử lý. Để tìm đơn khác, nhập tên chẩn đoán đã được bác sĩ xác nhận, ví dụ `viêm mũi dị ứng, tăng huyết áp`. Dùng dấu phẩy, chấm phẩy hoặc xuống dòng cho nhiều chẩn đoán. Chọn **Bổ sung thuốc** khi cần mở danh sách thuốc tham khảo để tạo bản nháp.
@@ -38,10 +50,10 @@ Sau khi khởi động Ollama và tải một mô hình, đặt các biến sau 
 $env:MODEL_PROVIDER = "ollama"
 $env:MODEL_NAME = "<tên mô hình đã tải>"
 $env:API_BASE_URL = "http://localhost:11434/api/chat"
-python codebase/web.py --ai
+python codebase/web.py
 ```
 
-Ollama sắp xếp các lựa chọn trong từng bậc phác đồ dựa trên ID thuốc và ca tổng hợp. Backend giữ thứ tự mặc định nếu Ollama lỗi hoặc trả sai danh sách ID. Liều và nội dung đơn do bác sĩ nhập.
+Ollama uses the same draft agent when MODEL_PROVIDER=ollama. API/model errors are shown explicitly; no silent offline fallback for AI drafts.
 
 | API local | Công dụng |
 |---|---|

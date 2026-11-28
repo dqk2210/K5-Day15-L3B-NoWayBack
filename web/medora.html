@@ -267,6 +267,44 @@ input[aria-invalid="true"]{border-color:#b4402e}
   body.rx-print #print-root{display:block}
   #print-root .sh-head,#print-root .sh-title,#print-root .sh-clinic,#print-root h2{-webkit-print-color-adjust:exact;print-color-adjust:exact}
 }
+
+/* Clinical result hierarchy: readable text, explicit safety, optional diagnostics. */
+#suggest-status{display:grid;gap:16px;margin:0 0 20px;min-width:0}
+.result-card{border:1px solid var(--line);border-radius:14px;background:#fff;padding:20px;min-width:0}
+.result-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.result-eyebrow{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);margin-bottom:5px}
+.result-card h3,.safety-card h3{font-size:18px!important;line-height:1.4;margin:0}
+.result-badge{display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border-radius:99px;background:var(--g1);color:var(--g7);font-size:12px;font-weight:600;white-space:nowrap}
+.result-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:currentColor}
+.result-badge.neutral{color:var(--mut);background:#edf1ef}
+.result-copy{font-size:14px;line-height:1.75;max-width:80ch;margin:14px 0 0;overflow-wrap:anywhere;white-space:pre-line}
+.safety-card{padding:18px 20px;border:1px solid #ecd8aa;border-left:4px solid #bd882b;border-radius:12px;background:#fffbf2;color:#664a20;min-width:0}
+.safety-card.blocked{border-color:#ebc7c0;border-left-color:#b4402e;background:#fff8f6;color:#893e30}
+.safety-card ul{margin:12px 0 0;padding-left:20px;font-size:14px;line-height:1.7}
+.safety-card li+li{margin-top:8px}
+.result-questions{margin-top:18px;padding-top:16px;border-top:1px solid var(--line)}
+.result-questions h4{font-size:14px;font-weight:600;margin:0 0 10px}
+.result-questions ol{padding-left:22px;font-size:14px;line-height:1.7;max-width:80ch}
+.result-questions li+li{margin-top:8px}
+.result-details{border-top:1px solid var(--line);margin-top:18px;padding-top:14px}
+.result-details summary{cursor:pointer;font-size:13px;font-weight:600;color:var(--g7);padding:2px 0}
+.result-details dl{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:16px 0 0}
+.result-details dl>div{min-width:0}
+.result-details dt{font-size:12px;color:var(--mut);margin-bottom:4px}
+.result-details dd{font-size:13px;line-height:1.6;overflow-wrap:anywhere;margin:0}
+.result-details .wide{grid-column:1/-1}
+.result-details code{font-size:12px;overflow-wrap:anywhere}
+.result-sources{display:grid;gap:10px;margin:14px 0 0;padding:0;list-style:none}
+.result-sources a{display:block;font-size:12px;color:var(--g7);overflow-wrap:anywhere;margin-top:3px}
+.result-caption{font-size:13px;line-height:1.6;color:var(--mut);margin-top:8px}
+#reference-cases{margin:20px 0;padding-top:16px;border-top:1px solid var(--line)}
+#reference-cases h3{font-size:15px}
+#drug-options{padding-top:4px}
+#picks{max-height:none}
+#rp .pick{padding:14px;margin-top:10px}
+#rp .pick small{line-height:1.6}
+@media(max-width:600px){.result-card,.safety-card{padding:16px}.result-details dl{grid-template-columns:1fr 1fr}}
+
 </style>
 </head>
 <body>
@@ -490,7 +528,8 @@ async function api(path, body){
  };
  const response=await fetch('/api/'+path,options);
  const data=await response.json();
- if(!response.ok)throw new Error(data.error||'Backend trả về lỗi.');
+ if(response.status===404&&path==='prescriptions/draft')throw new Error('Backend đang chạy bản cũ, chưa có API tạo bản nháp AI. Dừng server bằng Ctrl+C, chạy lại python codebase/web.py và tải lại trang.');
+ if(!response.ok)throw new Error((data.error||'Backend trả về lỗi.')+(data.ai?.trace_file?' | Trace: '+data.ai.trace_file:''));
  return data;
 }
 async function enter(){
@@ -528,7 +567,8 @@ function go(n){
  step=n;
  ['s1','s2','s3'].forEach((k,i)=>$('#'+k).classList.toggle('hidden',i+1!==n));
  $('#reference-cases').classList.toggle('hidden',n>2);
- if(n===1)renderInitialSample();
+ if(n===1){$('#rp').prepend($('#reference-cases'));renderInitialSample()}
+ if(n===2){$('#suggest-status').after($('#reference-cases'));$('#reference-cases').querySelectorAll('details').forEach(d=>d.open=false);}
  $('#rxgrid').classList.toggle('hidden',n===4);
  $('#s4').classList.toggle('hidden',n!==4);
  if(n!==4)$('#pv-err').classList.add('hidden');
@@ -653,10 +693,46 @@ function reviewChecks(){
   ['Liều và thời gian điều trị','Bác sĩ chịu trách nhiệm bổ sung và kiểm tra các dòng thuốc.']];
  if($('#sex').value!=='Nam')items.splice(1,0,['Thai kỳ / cho con bú','Bác sĩ đánh giá khi áp dụng cho hồ sơ này.']);
  return items}
-function renderChecks(el,checks){
- const messages=[...checks.blocking_violations,...checks.warnings];
- el.innerHTML=messages.length?`<div class="note"><b>${checks.status==='BLOCKED'?'Dừng kiểm tra':'Cảnh báo cần rà soát'}</b><ul>${messages.map(m=>`<li>${esc(m.message)}</li>`).join('')}</ul></div>`:'';
+function readableMessage(value){
+ return String(value??'')
+  .replace(/\s*\(allergies\s*=\s*["']unknown["']\)/gi,'')
+  .replace(/allergies\s*=\s*["']unknown["']/gi,'chưa rõ tiền sử dị ứng')
+  .replace(/\bunknown\b/gi,'chưa rõ')
+  .replace(/Vui lòng bác sĩ bổ sung thông tin: allergies/gi,'Vui lòng bổ sung tiền sử dị ứng thuốc.')
+  .replace(/^Chế độ HITL:\s*/i,'');
 }
+function renderChecks(el,checks){
+ const messages=[...new Set([...checks.blocking_violations,...checks.warnings].map(m=>readableMessage(m.message)))];
+ const blocked=checks.status==='BLOCKED';
+ el.innerHTML=messages.length?`<section class="safety-card ${blocked?'blocked':''}" aria-label="Rà soát an toàn">
+  <div class="result-eyebrow">Rà soát an toàn</div>
+  <h3>${blocked?'Cần bổ sung hoặc xử lý trước khi tiếp tục':'Có thông tin cần bác sĩ kiểm tra'}</h3>
+  <ul>${messages.map(message=>`<li>${esc(message)}</li>`).join('')}</ul></section>`:'';
+}
+function renderAIResult(data){
+ const a=data.ai,p=data.ai_draft||{},real=a?.status==='real';
+ const questions=[...new Set((p.missing_info_questions||[]).map(readableMessage))];
+ const sources=(data.guidelines||[]).map(g=>{
+  let link='';try{const url=new URL(g.official_source_url);if(url.protocol==='https:'||url.protocol==='http:')link=`<a href="${esc(url.href)}" target="_blank" rel="noopener noreferrer">${esc(url.hostname)} ↗</a>`}catch{}
+  return `<li><b>${esc(g.disease_name_vi)}</b><span class="result-caption"> · ${esc(g.guideline_id)}</span>${link}</li>`;
+ }).join('');
+ return `<section class="result-card" aria-label="Kết quả đề xuất AI">
+  <div class="result-head"><div><div class="result-eyebrow">Hỗ trợ quyết định</div><h3>${real?'Kết quả đề xuất từ AI':a?'Yêu cầu đã dừng trước bước AI':'Tra cứu danh mục thuốc'}</h3></div>
+   <span class="result-badge ${real?'':'neutral'}">${real?'Đã gọi AI thật':a?'Chưa gọi AI':'Chế độ offline'}</span></div>
+  <p class="result-caption">${real?'Bản nháp tham khảo · Bác sĩ rà soát và quyết định cuối cùng.':a?'Kiểm tra các yêu cầu an toàn ở trên trước khi tiếp tục.':'Kết quả lấy từ danh mục, không sử dụng model AI.'}</p>
+  ${p.summary?`<p class="result-copy">${esc(readableMessage(p.summary))}</p>`:''}
+  ${questions.length?`<div class="result-questions"><h4>Thông tin cần bổ sung</h4><ol>${questions.map(q=>`<li>${esc(q)}</li>`).join('')}</ol></div>`:''}
+  ${sources?`<details class="result-details"><summary>Căn cứ tham khảo · ${data.guidelines.length} phác đồ</summary><ul class="result-sources">${sources}</ul></details>`:''}
+  ${a?`<details class="result-details"><summary>Thông tin lần xử lý AI</summary><dl>
+   <div><dt>Mô hình</dt><dd>${esc((a.models||[]).join(', ')||'Chưa gọi')}</dd></div>
+   <div><dt>Thời gian</dt><dd>${a.latency_s==null?'—':esc(a.latency_s)+' giây'}</dd></div>
+   <div><dt>Số lần gọi</dt><dd>${esc(a.model_calls||0)}</dd></div>
+   <div><dt>Token đầu vào</dt><dd>${Number(a.tokens_in||0).toLocaleString('vi-VN')}</dd></div>
+   <div><dt>Token đầu ra</dt><dd>${Number(a.tokens_out||0).toLocaleString('vi-VN')}</dd></div>
+   <div class="wide"><dt>Tệp đối chiếu</dt><dd><code>${esc(a.trace_file||a.reason||'Không có lời gọi model')}</code></dd></div>
+  </dl></details>`:''}</section>`;
+}
+
 function medicationsInput(){
  return [...selected.keys()].map(drug_id=>({
   drug_id,...Object.fromEntries(doseFields.map(([key])=>{
@@ -799,19 +875,10 @@ function fitScreen(){
    const w=$('#hdet .paper-wrap');if(w)fitPaper(w);
   }else fitPaper($('#s4 .paper-wrap'));
   return}
- const availH=main.clientHeight-padY(main),availW=main.clientWidth-padX(main);
- let h=box.getBoundingClientRect().height;
- if(h<=availH)return;
- // Thu nhỏ rồi đo lại: khi thu nhỏ, bề ngang ảo rộng hơn nên nội dung xuống dòng ít hơn → lặp vài lần cho khớp.
- let z=1;
- for(let i=0;i<5;i++){
-  z=Math.min(1,Math.max(FIT_MIN,z*availH/h));
-  box.style.zoom=z;box.style.width=availW/z+'px';          // giữ nguyên bề ngang hiển thị
-  h=box.getBoundingClientRect().height;
-  if(h<=availH&&h>availH*0.97)break;
- }
- if(h>availH){z=Math.max(FIT_MIN,z*availH/h);box.style.zoom=z;box.style.width=availW/z+'px';h=box.getBoundingClientRect().height}
- if(h>availH+1)main.style.overflowY='auto';                  // màn hình quá thấp: cho cuộn để không mất nội dung
+ // Preserve readable text on editing/results screens instead of shrinking the whole form.
+ main.style.overflowY='auto';
+ return;
+
 }
 function fitPaper(wrap){
  const paper=wrap.querySelector('.paper');
@@ -968,14 +1035,19 @@ function validatePatientFields(){
 }
 async function startSuggest(restoreIds=[], openDrugs=false){
  const diagnosis=$('#dx').value.trim();
+ const profileSnapshot=JSON.stringify(patientInput());
+ if(!validatePatientFields())return;
  if(!diagnosis){setFieldError($('#dx'),'Nhập ít nhất một chẩn đoán đã được xác nhận.');$('#dx').focus();return}
  const button=$('#suggest'),formStatus=$('#form-status'),request=++rxRequest;
  button.disabled=true;
  $('#add-initial').disabled=true;
  formStatus.textContent='Đang đối chiếu dữ liệu…';
  try{
-  const data=await api('prescriptions/suggest',{diagnosis});
+  const data=await api('prescriptions/draft',{...patientInput(),diagnosis});
   const possible=data.suggestions;
+  const generated=data.ai_draft?.draft_medications||[];
+  const {drugs:catalog}=generated.length?await api('drugs'):{drugs:[]};
+  generated.forEach(m=>{if(!possible.some(d=>d.drug_id===m.drug_id)){const d=catalog.find(d=>d.drug_id===m.drug_id);if(d)possible.push(d)}});
   if(data.guardrail.status!=='BLOCKED'&&restoreIds.some(id=>!possible.some(d=>d.drug_id===id))){
    const {drugs}=await api('drugs');
    const codes=data.guidelines.map(g=>g.icd10_prefix);
@@ -983,21 +1055,24 @@ async function startSuggest(restoreIds=[], openDrugs=false){
     && codes.some(code=>d.verified_indications_icd10.includes(code))
     && !possible.some(item=>item.drug_id===d.drug_id)));
   }
-  if(request!==rxRequest||diagnosis!==$('#dx').value.trim())return;
+  if(request!==rxRequest||profileSnapshot!==JSON.stringify(patientInput())){formStatus.textContent='Hồ sơ đã thay đổi. Vui lòng gọi AI lại.';return;}
   matchedGuidelines=data.guidelines;
   picks=possible;
   selected.clear();
   picks.filter(d=>restoreIds.includes(d.drug_id)).forEach(d=>selected.set(d.drug_id,d));
+  if(data.mode==='ai'&&!restoreIds.length&&data.guardrail.status!=='BLOCKED'){
+   draftValues={};
+   generated.forEach(m=>{const drug=picks.find(d=>d.drug_id===m.drug_id);if(drug){selected.set(drug.drug_id,drug);draftValues[drug.drug_id]=Object.fromEntries(doseFields.map(([key])=>[key,m[key]??'']))}});
+   advice=data.ai_draft.summary||'';
+  }
   drugOptionsOpen=picks.length>0&&(openDrugs||selected.size>0);
   lastScreen=data.guardrail.status==='BLOCKED'?'':diagnosis;
   const result=$('#suggest-status');
   renderChecks(result,data.guardrail);
+  result.insertAdjacentHTML('beforeend',renderAIResult(data));
   renderReferenceCases(data.reference_prescriptions);
   $('#dx-options').replaceChildren();
   if(data.guardrail.status!=='BLOCKED'){
-   const mode={catalog:'Thứ tự theo phác đồ',ollama:'Ollama sắp xếp trong từng bậc phác đồ',catalog_fallback:'Ollama không phản hồi hợp lệ. Đang hiển thị thứ tự theo phác đồ.'};
-   result.insertAdjacentHTML('beforeend',`<p class="hint">${mode[data.mode]}</p><ul>${matchedGuidelines.map(g=>
-    `<li class="hint"><b>${esc(g.disease_name_vi)}</b> · ${esc(g.official_source_url)}</li>`).join('')}</ul>`);
    if(!picks.length)result.insertAdjacentHTML('beforeend','<p class="note">Chưa có lựa chọn phù hợp trong dữ liệu mô phỏng.</p>');
    if(restoreIds.length!==selected.size)result.insertAdjacentHTML('beforeend','<p class="note">Một số thuốc đã lưu cần chọn lại sau khi đối chiếu dữ liệu hiện tại.</p>');
   }
