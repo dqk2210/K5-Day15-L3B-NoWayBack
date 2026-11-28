@@ -197,8 +197,9 @@ Data BTC cấp đã dùng (không commit nguyên file): `data/100_Toa_NVM_2026_D
 
 | Thời điểm | Đổi gì | Vì sao (trỏ về câu thử / lỗi / bằng chứng nào) |
 |---|---|---|
-| 28/11/2026 00:38 | Mở rộng `data/processed/drug_catalog_clean.json` (52 -> 83 thuốc), `guidelines_clean.json` (4 -> 16 phác đồ), `case_base_clean.json` (52 -> 100 ca, 0% PII) giữ nguyên `eval/benchmark.csv` & `eval/metric_spec.yaml` đã chốt CP2 | Khớp bộ câu thử 20 câu ngoại trú đã chốt ở CP2 (`T01`–`T10`, `K01`–`K07`, `R01`–`R03`) mà vẫn giữ nguyên chuẩn "đạt" §7 |
+| 28/11/2026 00:38 | Mở rộng `data/processed/drug_catalog_clean.json` (52 -> 83 thuốc), `guidelines_clean.json` (4 -> 17 phác đồ), `case_base_clean.json` (62 ca người lớn trong phạm vi, 0% PII) giữ nguyên `eval/benchmark.csv` & `eval/metric_spec.yaml` đã chốt CP2 | Khớp bộ câu thử 20 câu ngoại trú đã chốt ở CP2 (`T01`–`T10`, `K01`–`K07`, `R01`–`R03`) mà vẫn giữ nguyên chuẩn "đạt" §7 |
 | 28/11/2026 00:40 | Triển khai hoàn chỉnh `codebase/ai.py`, `codebase/tools.py` (8 rule Python thuần + `calculate_cost`), `codebase/agent.py` (workflow 6 bước HITL), `codebase/app.py` | Hoàn thiện Phase 2 đáp ứng sơ đồ kiến trúc §4 và vượt qua toàn bộ unit test `scripts/test_guardrails.py` |
+| 28/11/2026 07:44 | Vá 4 lỗi dữ liệu sạch (`549e3b2`): khớp chặt `drug_id` theo tên + đường dùng (`215` lượt thuốc khớp chuẩn), thêm phác đồ `BYT-K59-01` (`17` phác đồ) & đồng bộ 4 tên thuốc, lọc `case_base_clean.json` còn `62` ca người lớn trong phạm vi, chuẩn hóa nguồn tham chiếu không trỏ file cục bộ | Đảm bảo toàn vẹn dữ liệu tra cứu, chống AI tham khảo nhầm ca nhi khoa/cấp cứu hoặc thuốc sai đường dùng |
 
 **Sau CP4 (đến 23:59 Thứ Bảy 28/11)**
 
