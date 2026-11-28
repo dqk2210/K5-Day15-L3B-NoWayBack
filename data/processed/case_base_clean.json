@@ -505,7 +505,7 @@
       "Sỏi túi mật"
     ],
     "total_meds": 6,
-    "verified_catalog_meds_count": 4,
+    "verified_catalog_meds_count": 3,
     "medications": [
       {
         "med_index": 1,
@@ -582,8 +582,8 @@
       },
       {
         "med_index": 5,
-        "drug_id": "DRUG-075",
-        "in_verified_catalog": true,
+        "drug_id": null,
+        "in_verified_catalog": false,
         "canonical_name": "Diosmin",
         "active_ingredient": "Diosmin",
         "strength_dosage": "600mg",
@@ -903,7 +903,7 @@
       "K21)"
     ],
     "total_meds": 6,
-    "verified_catalog_meds_count": 3,
+    "verified_catalog_meds_count": 2,
     "medications": [
       {
         "med_index": 1,
@@ -1001,8 +1001,8 @@
       },
       {
         "med_index": 6,
-        "drug_id": "DRUG-069",
-        "in_verified_catalog": true,
+        "drug_id": null,
+        "in_verified_catalog": false,
         "canonical_name": "Natri Clorid",
         "active_ingredient": "Natri Clorid",
         "strength_dosage": "0,9% 500ml",
@@ -1346,7 +1346,7 @@
       "Bệnh trào ngược dạ dày - thực quản/ Viêm dạ dày CLO-TEST(-)"
     ],
     "total_meds": 5,
-    "verified_catalog_meds_count": 5,
+    "verified_catalog_meds_count": 4,
     "medications": [
       {
         "med_index": 1,
@@ -1407,8 +1407,8 @@
       },
       {
         "med_index": 4,
-        "drug_id": "DRUG-049",
-        "in_verified_catalog": true,
+        "drug_id": null,
+        "in_verified_catalog": false,
         "canonical_name": "Simethicon",
         "active_ingredient": "Simethicon",
         "strength_dosage": "40 mg",
@@ -1858,7 +1858,7 @@
       "H81: Rối loạn chức năng tiền đình"
     ],
     "total_meds": 6,
-    "verified_catalog_meds_count": 4,
+    "verified_catalog_meds_count": 2,
     "medications": [
       {
         "med_index": 1,
@@ -1881,8 +1881,8 @@
       },
       {
         "med_index": 2,
-        "drug_id": "DRUG-049",
-        "in_verified_catalog": true,
+        "drug_id": null,
+        "in_verified_catalog": false,
         "canonical_name": "Simethicone",
         "active_ingredient": "Simethicone",
         "strength_dosage": "80mg",
@@ -1947,8 +1947,8 @@
       },
       {
         "med_index": 6,
-        "drug_id": "DRUG-068",
-        "in_verified_catalog": true,
+        "drug_id": null,
+        "in_verified_catalog": false,
         "canonical_name": "Bacillus subtilis + Zinc gluconat",
         "active_ingredient": "Bacillus subtilis + Zinc gluconat",
         "strength_dosage": "4 Tỉ lợi khuẩn",
@@ -2328,7 +2328,7 @@
       "K21.9-Bệnh trào ngược dạ dày - thực quản không có viêm thực quản"
     ],
     "total_meds": 7,
-    "verified_catalog_meds_count": 3,
+    "verified_catalog_meds_count": 1,
     "medications": [
       {
         "med_index": 1,
@@ -2370,8 +2370,8 @@
       },
       {
         "med_index": 3,
-        "drug_id": "DRUG-063",
-        "in_verified_catalog": true,
+        "drug_id": null,
+        "in_verified_catalog": false,
         "canonical_name": "Paracetamol + Tramadol",
         "active_ingredient": "Paracetamol + Tramadol",
         "strength_dosage": "325mg;37,5mg",
@@ -2407,8 +2407,8 @@
       },
       {
         "med_index": 5,
-        "drug_id": "DRUG-075",
-        "in_verified_catalog": true,
+        "drug_id": null,
+        "in_verified_catalog": false,
         "canonical_name": "Diosmin",
         "active_ingredient": "Diosmin",
         "strength_dosage": "600mg",
@@ -2497,7 +2497,7 @@
       "Dị ứng chưa xác định [T78.4]"
     ],
     "total_meds": 7,
-    "verified_catalog_meds_count": 5,
+    "verified_catalog_meds_count": 4,
     "medications": [
       {
         "med_index": 1,
@@ -2520,8 +2520,8 @@
       },
       {
         "med_index": 2,
-        "drug_id": "DRUG-083",
-        "in_verified_catalog": true,
+        "drug_id": null,
+        "in_verified_catalog": false,
         "canonical_name": "Glucosamin hydroclorid",
         "active_ingredient": "Glucosamin hydroclorid",
         "strength_dosage": "750mg",
@@ -2655,7 +2655,7 @@
       "Tăng lipid máu hỗn hợp"
     ],
     "total_meds": 7,
-    "verified_catalog_meds_count": 4,
+    "verified_catalog_meds_count": 3,
     "medications": [
       {
         "med_index": 1,
@@ -2769,8 +2769,8 @@
       },
       {
         "med_index": 7,
-        "drug_id": "DRUG-063",
-        "in_verified_catalog": true,
+        "drug_id": null,
+        "in_verified_catalog": false,
         "canonical_name": "Tramadol + Paracetamol",
         "active_ingredient": "Tramadol + Paracetamol",
         "strength_dosage": null,
@@ -3282,7 +3282,7 @@
       "RN cơn"
     ],
     "total_meds": 10,
-    "verified_catalog_meds_count": 4,
+    "verified_catalog_meds_count": 3,
     "medications": [
       {
         "med_index": 1,
@@ -3377,8 +3377,8 @@
       },
       {
         "med_index": 6,
-        "drug_id": "DRUG-031",
-        "in_verified_catalog": true,
+        "drug_id": null,
+        "in_verified_catalog": false,
         "canonical_name": "Metformin hydrochlorid",
         "active_ingredient": "Metformin hydrochlorid",
         "strength_dosage": "750mg",
@@ -3647,7 +3647,7 @@
       "Tăng huyết áp - Rối loạn lipid máu - Đái tháo đường - Gút"
     ],
     "total_meds": 7,
-    "verified_catalog_meds_count": 4,
+    "verified_catalog_meds_count": 2,
     "medications": [
       {
         "med_index": 1,
@@ -3667,8 +3667,8 @@
       },
       {
         "med_index": 2,
-        "drug_id": "DRUG-031",
-        "in_verified_catalog": true,
+        "drug_id": null,
+        "in_verified_catalog": false,
         "canonical_name": "Linagliptin + Metformin",
         "active_ingredient": "Linagliptin + Metformin",
         "strength_dosage": "2.5mg/1000mg",
@@ -3699,8 +3699,8 @@
       },
       {
         "med_index": 4,
-        "drug_id": "DRUG-024",
-        "in_verified_catalog": true,
+        "drug_id": null,
+        "in_verified_catalog": false,
         "canonical_name": "Rosuvastatin",
         "active_ingredient": "Rosuvastatin",
         "strength_dosage": null,
@@ -4121,7 +4121,7 @@
       "I50 - Đợt cấp suy tim EF 19% - HoHL nhiều - HoBL vừa - TAP vừa, nhiều - Giãn ĐMC lên - BTTMCB (chưa chụp ĐMV) gđ xin điều trị nội khoa - NMN cũ - THA - NNX - RLMM - Suy thận - Thiếu máu - HC GERD - TD động kinh"
     ],
     "total_meds": 12,
-    "verified_catalog_meds_count": 5,
+    "verified_catalog_meds_count": 4,
     "medications": [
       {
         "med_index": 1,
@@ -4254,8 +4254,8 @@
       },
       {
         "med_index": 8,
-        "drug_id": "DRUG-003",
-        "in_verified_catalog": true,
+        "drug_id": null,
+        "in_verified_catalog": false,
         "canonical_name": "Sacubitril + Valsartan",
         "active_ingredient": "Sacubitril + Valsartan",
         "strength_dosage": "50mg",
@@ -4380,7 +4380,7 @@
       "[I34.0] Hở (van) hai lá"
     ],
     "total_meds": 12,
-    "verified_catalog_meds_count": 7,
+    "verified_catalog_meds_count": 5,
     "medications": [
       {
         "med_index": 1,
@@ -4422,8 +4422,8 @@
       },
       {
         "med_index": 3,
-        "drug_id": "DRUG-062",
-        "in_verified_catalog": true,
+        "drug_id": null,
+        "in_verified_catalog": false,
         "canonical_name": "Ambroxol Hydroclorid",
         "active_ingredient": "Ambroxol Hydroclorid",
         "strength_dosage": "30mg/10ml",
@@ -4586,8 +4586,8 @@
       },
       {
         "med_index": 12,
-        "drug_id": "DRUG-057",
-        "in_verified_catalog": true,
+        "drug_id": null,
+        "in_verified_catalog": false,
         "canonical_name": "Budesonide + Formoterol",
         "active_ingredient": "Budesonide + Formoterol",
         "strength_dosage": "160mcg/4,5mcg",
@@ -4643,7 +4643,7 @@
       "I48.2-Rung nhĩ mãn tính"
     ],
     "total_meds": 8,
-    "verified_catalog_meds_count": 4,
+    "verified_catalog_meds_count": 3,
     "medications": [
       {
         "med_index": 1,
@@ -4754,8 +4754,8 @@
       },
       {
         "med_index": 7,
-        "drug_id": "DRUG-069",
-        "in_verified_catalog": true,
+        "drug_id": null,
+        "in_verified_catalog": false,
         "canonical_name": "Kali clorid",
         "active_ingredient": "Kali clorid",
         "strength_dosage": "500mg",
@@ -4816,7 +4816,7 @@
       "TĂNG HUYẾT ÁP (EGFR: 79) (I10) / BỆNH TIM THIẾU MÁU CỤC BỘ MẠN (I25), CUSHING DO THUỐC (E24.2), GERD (K21), RỐI LOẠN GIÁC NGỦ (G47)"
     ],
     "total_meds": 6,
-    "verified_catalog_meds_count": 5,
+    "verified_catalog_meds_count": 4,
     "medications": [
       {
         "med_index": 1,
@@ -4910,8 +4910,8 @@
       },
       {
         "med_index": 6,
-        "drug_id": "DRUG-060",
-        "in_verified_catalog": true,
+        "drug_id": null,
+        "in_verified_catalog": false,
         "canonical_name": "Prednisolon",
         "active_ingredient": "Prednisolon",
         "strength_dosage": "5mg",
@@ -5145,7 +5145,7 @@
       "tăng huyết áp, thiểu năng vành, gan nhiễm mỡ, tiểu đường type ii (6,4mmol/l), viêm đa xoang, hội chứng dạ dày, bệnh lý đĩa đệm cstl, loãng xương, dãn tĩnh mạch chi dưới, thiếu máu/TD bệnh thận mạn"
     ],
     "total_meds": 9,
-    "verified_catalog_meds_count": 6,
+    "verified_catalog_meds_count": 5,
     "medications": [
       {
         "med_index": 1,
@@ -5236,8 +5236,8 @@
       },
       {
         "med_index": 6,
-        "drug_id": "DRUG-083",
-        "in_verified_catalog": true,
+        "drug_id": null,
+        "in_verified_catalog": false,
         "canonical_name": "Glucosamin + Chondroitin",
         "active_ingredient": "Glucosamin + Chondroitin",
         "strength_dosage": "750mg + 250mg",
@@ -5615,7 +5615,7 @@
       "M47 - Thoái hóa cột sống cổ + RL mỡ máu + Nhiễm khuẩn tiết niệu"
     ],
     "total_meds": 7,
-    "verified_catalog_meds_count": 3,
+    "verified_catalog_meds_count": 2,
     "medications": [
       {
         "med_index": 1,
@@ -5653,8 +5653,8 @@
       },
       {
         "med_index": 3,
-        "drug_id": "DRUG-083",
-        "in_verified_catalog": true,
+        "drug_id": null,
+        "in_verified_catalog": false,
         "canonical_name": "Glucosamin HCl",
         "active_ingredient": "Glucosamin HCl",
         "strength_dosage": "1500mg/3g",
@@ -5773,7 +5773,7 @@
       "E11.7-Bệnh đái tháo đường không phụ thuộc insuline (Có đa biến chứng) / E27.3-Thiểu năng vỏ thượng thận do thuốc / K25-Loét dạ dày (loét hành tá tràng) / L03.0 - Viêm mô bào ở ngón tay và ngón chân (Nhiễm trùng ngón III chân phải do tụ cầu vàng) / M10-Gút (thống phong) / N17-Suy thận cấp (ổn định) / D64-Các thiếu máu khác"
     ],
     "total_meds": 8,
-    "verified_catalog_meds_count": 5,
+    "verified_catalog_meds_count": 4,
     "medications": [
       {
         "med_index": 1,
@@ -5796,8 +5796,8 @@
       },
       {
         "med_index": 2,
-        "drug_id": "DRUG-031",
-        "in_verified_catalog": true,
+        "drug_id": null,
+        "in_verified_catalog": false,
         "canonical_name": "Metformin",
         "active_ingredient": "Metformin",
         "strength_dosage": "750mg",
@@ -5952,7 +5952,7 @@
       "E27.3-Thiểu năng vỏ thượng thận do thuốc"
     ],
     "total_meds": 6,
-    "verified_catalog_meds_count": 3,
+    "verified_catalog_meds_count": 2,
     "medications": [
       {
         "med_index": 1,
@@ -5972,8 +5972,8 @@
       },
       {
         "med_index": 2,
-        "drug_id": "DRUG-037",
-        "in_verified_catalog": true,
+        "drug_id": null,
+        "in_verified_catalog": false,
         "canonical_name": "Sitagliptin + Metformin Hydrochloride",
         "active_ingredient": "Sitagliptin + Metformin Hydrochloride",
         "strength_dosage": "50mg/850mg",
@@ -6094,7 +6094,7 @@
       "M13 - Viêm khớp cổ chân 2 bên + Suy vỏ thượng thận + Tăng huyết áp + Viêm dạ dày + Theo dõi nấm thực quản"
     ],
     "total_meds": 8,
-    "verified_catalog_meds_count": 5,
+    "verified_catalog_meds_count": 4,
     "medications": [
       {
         "med_index": 1,
@@ -6134,8 +6134,8 @@
       },
       {
         "med_index": 3,
-        "drug_id": "DRUG-083",
-        "in_verified_catalog": true,
+        "drug_id": null,
+        "in_verified_catalog": false,
         "canonical_name": "Fish oil + Glucosamine sulfate + Chondroitin sulfate",
         "active_ingredient": "Fish oil + Glucosamine sulfate + Chondroitin sulfate",
         "strength_dosage": "500mg + 500mg + 11.1mg",
@@ -6271,7 +6271,7 @@
       "TD bệnh thận mạn gd III do VCTM, ĐTĐ type 2, Gout mạn - Rung nhĩ, Tăng acid uric, tăng huyết áp, tăng men gan, tăng mỡ máu"
     ],
     "total_meds": 7,
-    "verified_catalog_meds_count": 4,
+    "verified_catalog_meds_count": 3,
     "medications": [
       {
         "med_index": 1,
@@ -6327,8 +6327,8 @@
       },
       {
         "med_index": 4,
-        "drug_id": "DRUG-017",
-        "in_verified_catalog": true,
+        "drug_id": null,
+        "in_verified_catalog": false,
         "canonical_name": "Felodipine + Metoprolol succinat",
         "active_ingredient": "Felodipine + Metoprolol succinat",
         "strength_dosage": "5mg/47.5mg",
@@ -7008,7 +7008,7 @@
       "Bệnh suy nhược cơ thể (F48.0)"
     ],
     "total_meds": 7,
-    "verified_catalog_meds_count": 3,
+    "verified_catalog_meds_count": 2,
     "medications": [
       {
         "med_index": 1,
@@ -7104,8 +7104,8 @@
       },
       {
         "med_index": 6,
-        "drug_id": "DRUG-069",
-        "in_verified_catalog": true,
+        "drug_id": null,
+        "in_verified_catalog": false,
         "canonical_name": "Kali clorid",
         "active_ingredient": "Kali clorid",
         "strength_dosage": "600 mg",
@@ -7178,7 +7178,7 @@
       "Tăng natri máu (E87.0)"
     ],
     "total_meds": 8,
-    "verified_catalog_meds_count": 3,
+    "verified_catalog_meds_count": 1,
     "medications": [
       {
         "med_index": 1,
@@ -7255,8 +7255,8 @@
       },
       {
         "med_index": 5,
-        "drug_id": "DRUG-069",
-        "in_verified_catalog": true,
+        "drug_id": null,
+        "in_verified_catalog": false,
         "canonical_name": "Kali clorid",
         "active_ingredient": "Kali clorid",
         "strength_dosage": "500 mg",
@@ -7294,8 +7294,8 @@
       },
       {
         "med_index": 7,
-        "drug_id": "DRUG-057",
-        "in_verified_catalog": true,
+        "drug_id": null,
+        "in_verified_catalog": false,
         "canonical_name": "Budesonid",
         "active_ingredient": "Budesonid",
         "strength_dosage": "500 mcg/2 mL",
@@ -7868,7 +7868,7 @@
       "I10 Bệnh lý tăng huyết áp / N03 Hội chứng viêm cầu thận mạn / N18.3 Suy thận mạn, giai đoạn 3"
     ],
     "total_meds": 5,
-    "verified_catalog_meds_count": 3,
+    "verified_catalog_meds_count": 2,
     "medications": [
       {
         "med_index": 1,
@@ -7928,8 +7928,8 @@
       },
       {
         "med_index": 4,
-        "drug_id": "DRUG-060",
-        "in_verified_catalog": true,
+        "drug_id": null,
+        "in_verified_catalog": false,
         "canonical_name": "Prednisolon",
         "active_ingredient": "Prednisolon",
         "strength_dosage": "5mg",
@@ -7998,7 +7998,7 @@
       "E55 - Thiếu Vitamin D"
     ],
     "total_meds": 7,
-    "verified_catalog_meds_count": 5,
+    "verified_catalog_meds_count": 4,
     "medications": [
       {
         "med_index": 1,
@@ -8020,8 +8020,8 @@
       },
       {
         "med_index": 2,
-        "drug_id": "DRUG-063",
-        "in_verified_catalog": true,
+        "drug_id": null,
+        "in_verified_catalog": false,
         "canonical_name": "Paracetamol + methocarbamol",
         "active_ingredient": "Paracetamol + methocarbamol",
         "strength_dosage": "500mg+400mg",
@@ -8312,125 +8312,6 @@
     "is_synthetic": true,
     "seed": 42,
     "patient_profile": {
-      "age": 59,
-      "gender": "unknown",
-      "weight_kg": null,
-      "allergies": "unknown"
-    },
-    "icd10_codes": [],
-    "in_scope_icd10_prefixes": [],
-    "icd10_backfilled_from_diagnosis": false,
-    "diagnoses": [
-      "Viêm màng bồ đào"
-    ],
-    "total_meds": 6,
-    "verified_catalog_meds_count": 2,
-    "medications": [
-      {
-        "med_index": 1,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Levofloxacin",
-        "active_ingredient": "Levofloxacin",
-        "strength_dosage": null,
-        "route": "Uống",
-        "quantity": 7,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": 1,
-        "dosage_schedule": {
-          "morning": 1
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "Ngày uống 1 lần, mỗi lần 1 viên Sáng"
-      },
-      {
-        "med_index": 2,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Diclofenac",
-        "active_ingredient": "Diclofenac",
-        "strength_dosage": "50mg",
-        "route": "Uống",
-        "quantity": 28,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": 2,
-        "dosage_schedule": {},
-        "meal_timing": null,
-        "usage_instruction_full": "Ngày uống 2 lần, mỗi lần 1 viên"
-      },
-      {
-        "med_index": 3,
-        "drug_id": "DRUG-058",
-        "in_verified_catalog": true,
-        "canonical_name": "Fexofenadin",
-        "active_ingredient": "Fexofenadin",
-        "strength_dosage": "180mg",
-        "route": "Uống",
-        "quantity": 14,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": 2,
-        "dosage_schedule": {},
-        "meal_timing": null,
-        "usage_instruction_full": "Ngày uống 1 lần, mỗi lần 1 viên"
-      },
-      {
-        "med_index": 4,
-        "drug_id": "DRUG-043",
-        "in_verified_catalog": true,
-        "canonical_name": "Omeprazol",
-        "active_ingredient": "Omeprazol",
-        "strength_dosage": "20mg",
-        "route": "Uống",
-        "quantity": 28,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": 2,
-        "dosage_schedule": {},
-        "meal_timing": "trước ăn 30 phút",
-        "usage_instruction_full": "Ngày uống 2 lần, mỗi lần 1 viên trước ăn 30 phút"
-      },
-      {
-        "med_index": 5,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Tobramycin + Dexamethason",
-        "active_ingredient": "Tobramycin + Dexamethason",
-        "strength_dosage": "0.3%",
-        "route": "Nhỏ mắt",
-        "quantity": 1,
-        "unit": "Chai",
-        "duration_days": null,
-        "frequency_per_day": 2,
-        "dosage_schedule": {},
-        "meal_timing": null,
-        "usage_instruction_full": "Nhỏ thuốc: 4 lần/ ngày, mỗi lần 1 giọt"
-      },
-      {
-        "med_index": 6,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Nepafenac",
-        "active_ingredient": "Nepafenac",
-        "strength_dosage": "0.1%",
-        "route": "Nhỏ mắt",
-        "quantity": 1,
-        "unit": "Chai",
-        "duration_days": null,
-        "frequency_per_day": 4,
-        "dosage_schedule": {},
-        "meal_timing": null,
-        "usage_instruction_full": "Nhỏ thuốc: 4 lần/ ngày, mỗi lần 1 giọt"
-      }
-    ]
-  },
-  {
-    "case_id": "SYN-CASE-054",
-    "is_synthetic": true,
-    "seed": 42,
-    "patient_profile": {
       "age": null,
       "gender": "unknown",
       "weight_kg": 75.0,
@@ -8452,7 +8333,7 @@
       "ĐAU ĐẦU MẠCH MÁU (G44.1)/ ĐAU VÙNG CỔ GÁY (M54.2), CHÓNG MẶT KỊCH PHÁT LÀNH TÍNH (H81.1), HỘI CHỨNG ỐNG CỔ TAY (G56.0), SUY VAN TĨNH MẠCH CHI DƯỚI (I83)"
     ],
     "total_meds": 5,
-    "verified_catalog_meds_count": 1,
+    "verified_catalog_meds_count": 0,
     "medications": [
       {
         "med_index": 1,
@@ -8512,8 +8393,8 @@
       },
       {
         "med_index": 4,
-        "drug_id": "DRUG-075",
-        "in_verified_catalog": true,
+        "drug_id": null,
+        "in_verified_catalog": false,
         "canonical_name": "Diosmin",
         "active_ingredient": "Diosmin",
         "strength_dosage": "600mg",
@@ -8551,7 +8432,7 @@
     ]
   },
   {
-    "case_id": "SYN-CASE-055",
+    "case_id": "SYN-CASE-054",
     "is_synthetic": true,
     "seed": 42,
     "patient_profile": {
@@ -8674,770 +8555,13 @@
     ]
   },
   {
-    "case_id": "SYN-CASE-056",
+    "case_id": "SYN-CASE-055",
     "is_synthetic": true,
     "seed": 42,
     "patient_profile": {
-      "age": 2,
+      "age": 33,
       "gender": "Nam",
-      "weight_kg": 9.0,
-      "allergies": "unknown"
-    },
-    "icd10_codes": [
-      "J20"
-    ],
-    "in_scope_icd10_prefixes": [
-      "K59"
-    ],
-    "icd10_backfilled_from_diagnosis": false,
-    "diagnoses": [
-      "J20 - Viêm phế quản cấp",
-      "Biếng ăn, rối loạn tiêu hóa"
-    ],
-    "total_meds": 5,
-    "verified_catalog_meds_count": 2,
-    "medications": [
-      {
-        "med_index": 1,
-        "drug_id": "DRUG-056",
-        "in_verified_catalog": true,
-        "canonical_name": "Azithromycin",
-        "active_ingredient": "Azithromycin",
-        "strength_dosage": "200mg/5ml - 15ml",
-        "route": "Uống",
-        "quantity": 1,
-        "unit": "Chai",
-        "duration_days": null,
-        "frequency_per_day": 1,
-        "dosage_schedule": {},
-        "meal_timing": "Sau ăn",
-        "usage_instruction_full": "Cách pha: Lắc cho tơi bột. Cho 5ml nước vào chai thuốc, lắc đều sẽ được 15ml. Uống mỗi ngày 1 lần, mỗi lần 2.5 ml Sau ăn. Buổi: Sáng"
-      },
-      {
-        "med_index": 2,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Dill oil + Fennel oil + Simethicon",
-        "active_ingredient": "Dill oil + Fennel oil + Simethicon",
-        "strength_dosage": "(40mg+0,005ml+0,0007ml)/ml - 15ml",
-        "route": "Uống",
-        "quantity": 1,
-        "unit": "Chai",
-        "duration_days": null,
-        "frequency_per_day": 3,
-        "dosage_schedule": {},
-        "meal_timing": null,
-        "usage_instruction_full": "Uống mỗi ngày 3 lần, mỗi lần 15 giọt. Buổi: Sáng, trưa, chiều"
-      },
-      {
-        "med_index": 3,
-        "drug_id": "DRUG-068",
-        "in_verified_catalog": true,
-        "canonical_name": "Bacillus subtilis + Lactobacillus acidophilus",
-        "active_ingredient": "Bacillus subtilis + Lactobacillus acidophilus",
-        "strength_dosage": ">=10^8 CFU/g - 50g",
-        "route": "Uống",
-        "quantity": 1,
-        "unit": "Chai",
-        "duration_days": null,
-        "frequency_per_day": 2,
-        "dosage_schedule": {},
-        "meal_timing": null,
-        "usage_instruction_full": "Uống cách kháng sinh (nếu có) 1-2 giờ. Uống mỗi ngày 2 lần, mỗi lần 1 muỗng. Buổi: Sáng, chiều"
-      },
-      {
-        "med_index": 4,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Cao khô lá thường xuân",
-        "active_ingredient": "Cao khô lá thường xuân",
-        "strength_dosage": "0,035g/5ml - 100ml",
-        "route": "Uống",
-        "quantity": 1,
-        "unit": "Chai",
-        "duration_days": null,
-        "frequency_per_day": 3,
-        "dosage_schedule": {},
-        "meal_timing": null,
-        "usage_instruction_full": "Uống mỗi ngày 3 lần, mỗi lần 5 ml. Buổi: Sáng, trưa, chiều"
-      },
-      {
-        "med_index": 5,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "L-lysin HCL + Calci glycerophosphat + Vitamin A, C, E, B1, B2, B6, D3",
-        "active_ingredient": "L-lysin HCL + Calci glycerophosphat + Vitamin A, C, E, B1, B2, B6, D3",
-        "strength_dosage": "10 ml",
-        "route": "Uống",
-        "quantity": 30,
-        "unit": "Ống",
-        "duration_days": null,
-        "frequency_per_day": 1,
-        "dosage_schedule": {},
-        "meal_timing": null,
-        "usage_instruction_full": "Uống mỗi ngày 1 lần, mỗi lần 1 Ống. Buổi: Sáng"
-      }
-    ]
-  },
-  {
-    "case_id": "SYN-CASE-057",
-    "is_synthetic": true,
-    "seed": 42,
-    "patient_profile": {
-      "age": 12,
-      "gender": "Nam",
-      "weight_kg": null,
-      "allergies": "unknown"
-    },
-    "icd10_codes": [
-      "J45",
-      "J18.0",
-      "K30"
-    ],
-    "in_scope_icd10_prefixes": [],
-    "icd10_backfilled_from_diagnosis": false,
-    "diagnoses": [
-      "Hen suyễn (J45)",
-      "Viêm phế quản phổi, không phân loại (J18.0)",
-      "Khó tiêu chức năng (K30)"
-    ],
-    "total_meds": 6,
-    "verified_catalog_meds_count": 4,
-    "medications": [
-      {
-        "med_index": 1,
-        "drug_id": "DRUG-053",
-        "in_verified_catalog": true,
-        "canonical_name": "Amoxicilin + acid clavulanic",
-        "active_ingredient": "Amoxicilin + acid clavulanic",
-        "strength_dosage": "500mg/62.5mg",
-        "route": "Uống",
-        "quantity": 16,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": 2,
-        "dosage_schedule": {
-          "morning": 2,
-          "afternoon": 2
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "Uống ngày 2 lần, lần 2 Viên - Sáng, Chiều"
-      },
-      {
-        "med_index": 2,
-        "drug_id": "DRUG-068",
-        "in_verified_catalog": true,
-        "canonical_name": "Bacillus subtilis",
-        "active_ingredient": "Bacillus subtilis",
-        "strength_dosage": "2*10^9 CFU/5ml",
-        "route": "Uống",
-        "quantity": 8,
-        "unit": "Ống",
-        "duration_days": null,
-        "frequency_per_day": 2,
-        "dosage_schedule": {
-          "morning": 1,
-          "afternoon": 1
-        },
-        "meal_timing": "trước ăn",
-        "usage_instruction_full": "Uống ngày 2 lần, lần 1 Ống - Sáng, Chiều trước ăn"
-      },
-      {
-        "med_index": 3,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Natri montelukast",
-        "active_ingredient": "Natri montelukast",
-        "strength_dosage": "5mg",
-        "route": "Uống",
-        "quantity": 7,
-        "unit": "Gói/Túi",
-        "duration_days": null,
-        "frequency_per_day": 1,
-        "dosage_schedule": {
-          "evening": 1
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "ngày 1 lần, lần 1 Gói - tối"
-      },
-      {
-        "med_index": 4,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Salbutamol",
-        "active_ingredient": "Salbutamol",
-        "strength_dosage": "5mg/2,5ml",
-        "route": "Phun khí dung",
-        "quantity": 12,
-        "unit": "Ống",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {},
-        "meal_timing": null,
-        "usage_instruction_full": "pkd 1 type với 3 ml nước muối"
-      },
-      {
-        "med_index": 5,
-        "drug_id": "DRUG-057",
-        "in_verified_catalog": true,
-        "canonical_name": "Budesonid",
-        "active_ingredient": "Budesonid",
-        "strength_dosage": "500mcg/2ml",
-        "route": "Phun khí dung",
-        "quantity": 6,
-        "unit": "Ống",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {},
-        "meal_timing": null,
-        "usage_instruction_full": "PKD 1 ống pha zensalbu"
-      },
-      {
-        "med_index": 6,
-        "drug_id": "DRUG-069",
-        "in_verified_catalog": true,
-        "canonical_name": "Natri clorid",
-        "active_ingredient": "Natri clorid",
-        "strength_dosage": "0,9% 10ml",
-        "route": "Nhỏ mắt",
-        "quantity": 4,
-        "unit": "Lọ",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {},
-        "meal_timing": null,
-        "usage_instruction_full": "nhỏ mắt"
-      }
-    ]
-  },
-  {
-    "case_id": "SYN-CASE-058",
-    "is_synthetic": true,
-    "seed": 42,
-    "patient_profile": {
-      "age": 9,
-      "gender": "Nam",
-      "weight_kg": 23.5,
-      "allergies": "unknown"
-    },
-    "icd10_codes": [
-      "J03",
-      "J30",
-      "K30"
-    ],
-    "in_scope_icd10_prefixes": [
-      "J30"
-    ],
-    "icd10_backfilled_from_diagnosis": false,
-    "diagnoses": [
-      "Viêm amyđan cấp(J03) - Viêm mũi vận mạch và viêm mũi dị ứng(J30) - Khó tiêu chức năng(K30)"
-    ],
-    "total_meds": 6,
-    "verified_catalog_meds_count": 5,
-    "medications": [
-      {
-        "med_index": 1,
-        "drug_id": "DRUG-053",
-        "in_verified_catalog": true,
-        "canonical_name": "Amoxicilin + Acid Clavulanic",
-        "active_ingredient": "Amoxicilin + Acid Clavulanic",
-        "strength_dosage": "500mg/62,5mg",
-        "route": "Uống",
-        "quantity": 9,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": 3,
-        "dosage_schedule": {
-          "morning": 1,
-          "noon": 1,
-          "evening": 1
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "Sáng: 1 Viên, Trưa: 1 Viên, Tối: 1 Viên"
-      },
-      {
-        "med_index": 2,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Natri montelukast",
-        "active_ingredient": "Natri montelukast",
-        "strength_dosage": "5mg",
-        "route": "Uống",
-        "quantity": 3,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": 1,
-        "dosage_schedule": {
-          "evening": 1
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "Tối: 1 Viên"
-      },
-      {
-        "med_index": 3,
-        "drug_id": "DRUG-062",
-        "in_verified_catalog": true,
-        "canonical_name": "Ambroxol hydrochloride",
-        "active_ingredient": "Ambroxol hydrochloride",
-        "strength_dosage": "30mg",
-        "route": "Uống",
-        "quantity": 3,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": 2,
-        "dosage_schedule": {
-          "morning": 0.5,
-          "evening": 0.5
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "Sáng: 1/2 Viên, Tối: 1/2 Viên"
-      },
-      {
-        "med_index": 4,
-        "drug_id": "DRUG-068",
-        "in_verified_catalog": true,
-        "canonical_name": "Bacillus subtilis",
-        "active_ingredient": "Bacillus subtilis",
-        "strength_dosage": "2x10^9 CFU/5ml",
-        "route": "Uống",
-        "quantity": 6,
-        "unit": "Ống",
-        "duration_days": null,
-        "frequency_per_day": 2,
-        "dosage_schedule": {
-          "morning": 1,
-          "evening": 1
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "Sáng: 1 Ống, Tối: 1 Ống"
-      },
-      {
-        "med_index": 5,
-        "drug_id": "DRUG-063",
-        "in_verified_catalog": true,
-        "canonical_name": "Paracetamol",
-        "active_ingredient": "Paracetamol",
-        "strength_dosage": "250mg",
-        "route": "Uống",
-        "quantity": 18,
-        "unit": "Gói",
-        "duration_days": null,
-        "frequency_per_day": 3,
-        "dosage_schedule": {
-          "morning": 2,
-          "noon": 2,
-          "evening": 2
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "Sáng: 2 Gói, Trưa: 2 Gói, Tối: 2 Gói"
-      },
-      {
-        "med_index": 6,
-        "drug_id": "DRUG-060",
-        "in_verified_catalog": true,
-        "canonical_name": "Methylprednisolon",
-        "active_ingredient": "Methylprednisolon",
-        "strength_dosage": "16mg",
-        "route": "Uống",
-        "quantity": 3,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": 1,
-        "dosage_schedule": {
-          "morning": 1
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "Sáng: 1 Viên"
-      }
-    ]
-  },
-  {
-    "case_id": "SYN-CASE-059",
-    "is_synthetic": true,
-    "seed": 42,
-    "patient_profile": {
-      "age": null,
-      "gender": "Nam",
-      "weight_kg": null,
-      "allergies": "unknown"
-    },
-    "icd10_codes": [
-      "J44.1",
-      "K63.5",
-      "K29",
-      "K75"
-    ],
-    "in_scope_icd10_prefixes": [],
-    "icd10_backfilled_from_diagnosis": false,
-    "diagnoses": [
-      "Bệnh phổi tắc nghẽn mãn tính đợt cấp (J44.1)",
-      "Polyp đại tràng đã cắt (K63.5)",
-      "Viêm dạ dày HP dương dị ứng EBMT không rõ loại (K29)",
-      "Tăng men gan (K75)"
-    ],
-    "total_meds": 5,
-    "verified_catalog_meds_count": 2,
-    "medications": [
-      {
-        "med_index": 1,
-        "drug_id": "DRUG-053",
-        "in_verified_catalog": true,
-        "canonical_name": "Amoxicilin + acid clavulanic",
-        "active_ingredient": "Amoxicilin + acid clavulanic",
-        "strength_dosage": "(875+125) mg",
-        "route": "Uống",
-        "quantity": 14,
-        "unit": "Viên",
-        "duration_days": 7,
-        "frequency_per_day": 2,
-        "dosage_schedule": {
-          "morning": 1,
-          "evening": 1
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "7 ngày - Ngày 2 lần : Sáng: 1 Viên; Tối: 1 Viên"
-      },
-      {
-        "med_index": 2,
-        "drug_id": "DRUG-042",
-        "in_verified_catalog": true,
-        "canonical_name": "Esomeprazol",
-        "active_ingredient": "Esomeprazol",
-        "strength_dosage": "40 mg",
-        "route": "Uống",
-        "quantity": 14,
-        "unit": "Viên",
-        "duration_days": 7,
-        "frequency_per_day": 2,
-        "dosage_schedule": {
-          "morning": 1,
-          "evening": 1
-        },
-        "meal_timing": "trước ăn 30p",
-        "usage_instruction_full": "7 ngày - Ngày 2 lần : Sáng: 1 Viên; Tối: 1 Viên Ghi chú: trước ăn 30p"
-      },
-      {
-        "med_index": 3,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Silymarin",
-        "active_ingredient": "Silymarin",
-        "strength_dosage": "150 mg",
-        "route": "Uống",
-        "quantity": 14,
-        "unit": "Viên",
-        "duration_days": 7,
-        "frequency_per_day": 2,
-        "dosage_schedule": {
-          "morning": 1,
-          "evening": 1
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "7 ngày - Ngày 2 lần : Sáng: 1 Viên; Tối: 1 Viên"
-      },
-      {
-        "med_index": 4,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Salmeterol + fluticason propionat",
-        "active_ingredient": "Salmeterol + fluticason propionat",
-        "strength_dosage": "(25+250) mcg/liều x 120 liều",
-        "route": "Dạng hít",
-        "quantity": 1,
-        "unit": "Lọ",
-        "duration_days": 30,
-        "frequency_per_day": 2,
-        "dosage_schedule": {},
-        "meal_timing": null,
-        "usage_instruction_full": "30 ngày - xịt sáng 2 nhát, tối 2 nhát, súc họng sạch sau khi xịt"
-      },
-      {
-        "med_index": 5,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Bromhexin hydroclorid",
-        "active_ingredient": "Bromhexin hydroclorid",
-        "strength_dosage": "8mg",
-        "route": "Uống",
-        "quantity": 28,
-        "unit": "Viên",
-        "duration_days": 7,
-        "frequency_per_day": 2,
-        "dosage_schedule": {
-          "morning": 2,
-          "evening": 2
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "7 ngày - Ngày 2 lần : Sáng: 2 Viên; Tối: 2 Viên"
-      }
-    ]
-  },
-  {
-    "case_id": "SYN-CASE-060",
-    "is_synthetic": true,
-    "seed": 42,
-    "patient_profile": {
-      "age": null,
-      "gender": "unknown",
-      "weight_kg": null,
-      "allergies": "unknown"
-    },
-    "icd10_codes": [],
-    "in_scope_icd10_prefixes": [],
-    "icd10_backfilled_from_diagnosis": false,
-    "diagnoses": [
-      "Bệnh lý dạ dày"
-    ],
-    "total_meds": 5,
-    "verified_catalog_meds_count": 3,
-    "medications": [
-      {
-        "med_index": 1,
-        "drug_id": "DRUG-045",
-        "in_verified_catalog": true,
-        "canonical_name": "Rabeprazol",
-        "active_ingredient": "Rabeprazol",
-        "strength_dosage": "20mg",
-        "route": "Uống",
-        "quantity": 7,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": 1,
-        "dosage_schedule": {},
-        "meal_timing": "trước ăn sáng 30 phút",
-        "usage_instruction_full": "Ngày uống 1 lần, mỗi lần 1 viên trước ăn sáng 30 phút"
-      },
-      {
-        "med_index": 2,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Domperidon",
-        "active_ingredient": "Domperidon",
-        "strength_dosage": null,
-        "route": "Uống",
-        "quantity": 28,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": 2,
-        "dosage_schedule": {},
-        "meal_timing": null,
-        "usage_instruction_full": "Ngày uống 2 lần, mỗi lần 1 viên"
-      },
-      {
-        "med_index": 3,
-        "drug_id": "DRUG-049",
-        "in_verified_catalog": true,
-        "canonical_name": "Simethicon",
-        "active_ingredient": "Simethicon",
-        "strength_dosage": null,
-        "route": "Uống",
-        "quantity": 28,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": 2,
-        "dosage_schedule": {},
-        "meal_timing": null,
-        "usage_instruction_full": "Ngày uống 2 lần, mỗi lần 2 viên"
-      },
-      {
-        "med_index": 4,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Hỗ trợ tiêu hóa",
-        "active_ingredient": "Hỗ trợ tiêu hóa",
-        "strength_dosage": null,
-        "route": "Uống",
-        "quantity": 14,
-        "unit": "Ống",
-        "duration_days": null,
-        "frequency_per_day": 1,
-        "dosage_schedule": {},
-        "meal_timing": "Trước ăn 30 phút",
-        "usage_instruction_full": "Ngày uống 2 lần, mỗi lần 1 ống"
-      },
-      {
-        "med_index": 5,
-        "drug_id": "DRUG-048",
-        "in_verified_catalog": true,
-        "canonical_name": "Natri alginate + Natri bicarbonate + Calci carbonate",
-        "active_ingredient": "Natri alginate + Natri bicarbonate + Calci carbonate",
-        "strength_dosage": null,
-        "route": "Uống",
-        "quantity": 14,
-        "unit": "Gói",
-        "duration_days": null,
-        "frequency_per_day": 1,
-        "dosage_schedule": {},
-        "meal_timing": "sau ăn 1 giờ",
-        "usage_instruction_full": "Ngày uống 1 lần, mỗi lần 1 gói sau ăn 1 giờ"
-      }
-    ]
-  },
-  {
-    "case_id": "SYN-CASE-061",
-    "is_synthetic": true,
-    "seed": 42,
-    "patient_profile": {
-      "age": null,
-      "gender": "Nam",
-      "weight_kg": null,
-      "allergies": "unknown"
-    },
-    "icd10_codes": [],
-    "in_scope_icd10_prefixes": [
-      "A04"
-    ],
-    "icd10_backfilled_from_diagnosis": false,
-    "diagnoses": [
-      "Viêm ruột thừa cấp"
-    ],
-    "total_meds": 7,
-    "verified_catalog_meds_count": 3,
-    "medications": [
-      {
-        "med_index": 1,
-        "drug_id": "DRUG-063",
-        "in_verified_catalog": true,
-        "canonical_name": "Paracetamol",
-        "active_ingredient": "Paracetamol",
-        "strength_dosage": "10mg/1ml (1g/100ml)",
-        "route": "Tiêm truyền",
-        "quantity": 3,
-        "unit": "Túi",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 1,
-          "afternoon": 1,
-          "evening": 1
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "Sáng: 1, Chiều: 1, Tối: 1 - Đường dùng: Tiêm truyền; truyền tm 60g/ph"
-      },
-      {
-        "med_index": 2,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Ringer lactat",
-        "active_ingredient": "Ringer lactat",
-        "strength_dosage": "500ml",
-        "route": "Tiêm truyền",
-        "quantity": 2,
-        "unit": "Chai",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 1,
-          "evening": 1
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "Sáng: 1, Tối: 1 - Đường dùng: Tiêm truyền; truyền tm 60g/ph"
-      },
-      {
-        "med_index": 3,
-        "drug_id": "DRUG-069",
-        "in_verified_catalog": true,
-        "canonical_name": "Glucose",
-        "active_ingredient": "Glucose",
-        "strength_dosage": "5% x 500ml",
-        "route": "Tiêm truyền",
-        "quantity": 2,
-        "unit": "Chai",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 1,
-          "evening": 1
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "Sáng: 1, Tối: 1 - Đường dùng: Tiêm truyền; truyền tm 60g/ph"
-      },
-      {
-        "med_index": 4,
-        "drug_id": "DRUG-069",
-        "in_verified_catalog": true,
-        "canonical_name": "Natri clorid",
-        "active_ingredient": "Natri clorid",
-        "strength_dosage": "0,9% - 100ml",
-        "route": "Tiêm truyền",
-        "quantity": 2,
-        "unit": "Chai",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 1,
-          "evening": 1
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "Sáng: 1, Tối: 1 - Đường dùng: Tiêm truyền pha ks"
-      },
-      {
-        "med_index": 5,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Cefamandol",
-        "active_ingredient": "Cefamandol",
-        "strength_dosage": "2g",
-        "route": "Tiêm truyền",
-        "quantity": 2,
-        "unit": "Lọ",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 1,
-          "evening": 1
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "Sáng: 1, Tối: 1 - Đường dùng: Tiêm; truyền tm 60g/ph"
-      },
-      {
-        "med_index": 6,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Metronidazol",
-        "active_ingredient": "Metronidazol",
-        "strength_dosage": "5 mg/ml chai 100ml",
-        "route": "Tiêm truyền",
-        "quantity": 2,
-        "unit": "Chai",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 1,
-          "evening": 1
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "Sáng: 1, Tối: 1 - Đường dùng: Tiêm truyền; truyền tm 60g/ph"
-      },
-      {
-        "med_index": 7,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Drotaverin clohydrat",
-        "active_ingredient": "Drotaverin clohydrat",
-        "strength_dosage": "40 mg/2 ml",
-        "route": "Tiêm bắp",
-        "quantity": 2,
-        "unit": "Ống",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 1,
-          "evening": 1
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "Sáng: 1, Tối: 1 - Đường dùng: Tiêm; tiêm bắp"
-      }
-    ]
-  },
-  {
-    "case_id": "SYN-CASE-062",
-    "is_synthetic": true,
-    "seed": 42,
-    "patient_profile": {
-      "age": 32,
-      "gender": "Nam",
-      "weight_kg": 77.0,
+      "weight_kg": 77.5,
       "allergies": "unknown"
     },
     "icd10_codes": [
@@ -9553,13 +8677,13 @@
     ]
   },
   {
-    "case_id": "SYN-CASE-063",
+    "case_id": "SYN-CASE-056",
     "is_synthetic": true,
     "seed": 42,
     "patient_profile": {
       "age": null,
       "gender": "Nam",
-      "weight_kg": 66.0,
+      "weight_kg": 65.5,
       "allergies": "unknown"
     },
     "icd10_codes": [
@@ -9574,7 +8698,7 @@
       "Viêm ruột cấp (A09) Hội chứng đau đầu khác (G44)"
     ],
     "total_meds": 6,
-    "verified_catalog_meds_count": 3,
+    "verified_catalog_meds_count": 2,
     "medications": [
       {
         "med_index": 1,
@@ -9653,8 +8777,8 @@
       },
       {
         "med_index": 5,
-        "drug_id": "DRUG-063",
-        "in_verified_catalog": true,
+        "drug_id": null,
+        "in_verified_catalog": false,
         "canonical_name": "Cafein citrat + Paracetamol",
         "active_ingredient": "Cafein citrat + Paracetamol",
         "strength_dosage": "(500+65) mg",
@@ -9692,733 +8816,13 @@
     ]
   },
   {
-    "case_id": "SYN-CASE-064",
-    "is_synthetic": true,
-    "seed": 42,
-    "patient_profile": {
-      "age": 17,
-      "gender": "Nam",
-      "weight_kg": 47.5,
-      "allergies": "unknown"
-    },
-    "icd10_codes": [],
-    "in_scope_icd10_prefixes": [],
-    "icd10_backfilled_from_diagnosis": false,
-    "diagnoses": [
-      "Rối loạn ruột chức năng - Trĩ nội"
-    ],
-    "total_meds": 5,
-    "verified_catalog_meds_count": 2,
-    "medications": [
-      {
-        "med_index": 1,
-        "drug_id": "DRUG-051",
-        "in_verified_catalog": true,
-        "canonical_name": "Rebamipid",
-        "active_ingredient": "Rebamipid",
-        "strength_dosage": "100 mg",
-        "route": "Uống",
-        "quantity": 10,
-        "unit": "Viên",
-        "duration_days": 5,
-        "frequency_per_day": 2,
-        "dosage_schedule": {
-          "morning": 1,
-          "afternoon": 1
-        },
-        "meal_timing": "uống sau ăn",
-        "usage_instruction_full": "5 ngày - Ngày 2 lần : Sáng: 1 Viên; Chiều: 1 Viên; - Ghi chú: uống sau ăn"
-      },
-      {
-        "med_index": 2,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Trimebutin maleat",
-        "active_ingredient": "Trimebutin maleat",
-        "strength_dosage": "100 mg",
-        "route": "Uống",
-        "quantity": 15,
-        "unit": "Viên",
-        "duration_days": 5,
-        "frequency_per_day": 3,
-        "dosage_schedule": {
-          "morning": 1,
-          "noon": 1,
-          "afternoon": 1
-        },
-        "meal_timing": "uống sau ăn",
-        "usage_instruction_full": "5 ngày - Ngày 3 lần : Sáng: 1 Viên; Trưa: 1 Viên; Chiều: 1 Viên; - Ghi chú: uống sau ăn"
-      },
-      {
-        "med_index": 3,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Saccharomyces boulardii",
-        "active_ingredient": "Saccharomyces boulardii",
-        "strength_dosage": "200 mg",
-        "route": "Uống",
-        "quantity": 10,
-        "unit": "Viên",
-        "duration_days": 5,
-        "frequency_per_day": 2,
-        "dosage_schedule": {
-          "morning": 1,
-          "afternoon": 1
-        },
-        "meal_timing": "uống sau ăn",
-        "usage_instruction_full": "5 ngày - Ngày 2 lần : Sáng: 1 Viên; Chiều: 1 Viên; - Ghi chú: uống sau ăn"
-      },
-      {
-        "med_index": 4,
-        "drug_id": "DRUG-067",
-        "in_verified_catalog": true,
-        "canonical_name": "Diosmectit",
-        "active_ingredient": "Diosmectit",
-        "strength_dosage": "3g",
-        "route": "Uống",
-        "quantity": 10,
-        "unit": "Gói",
-        "duration_days": 5,
-        "frequency_per_day": 2,
-        "dosage_schedule": {
-          "noon": 1,
-          "evening": 1
-        },
-        "meal_timing": "uống lúc đói cách thuốc khác 2 giờ",
-        "usage_instruction_full": "5 ngày - Ngày 2 lần : Trưa: 1 Gói; Tối: 1 Gói - Ghi chú: uống lúc đói cách thuốc khác 2 giờ"
-      },
-      {
-        "med_index": 5,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Mebendazol",
-        "active_ingredient": "Mebendazol",
-        "strength_dosage": "500 mg",
-        "route": "Uống",
-        "quantity": 1,
-        "unit": "Viên",
-        "duration_days": 1,
-        "frequency_per_day": 1,
-        "dosage_schedule": {
-          "morning": 1
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "1 ngày - Ngày 1 lần : Sáng: 1 Viên; - Ghi chú: liều duy nhất"
-      }
-    ]
-  },
-  {
-    "case_id": "SYN-CASE-065",
-    "is_synthetic": true,
-    "seed": 42,
-    "patient_profile": {
-      "age": 63,
-      "gender": "Nam",
-      "weight_kg": 56.0,
-      "allergies": "unknown"
-    },
-    "icd10_codes": [],
-    "in_scope_icd10_prefixes": [],
-    "icd10_backfilled_from_diagnosis": false,
-    "diagnoses": [
-      "Thoái hoá khớp vai trái - Viêm bao gân cơ nhị đầu vai trái - Rối loạn chuyển hóa lipid - Gan nhiễm mỡ"
-    ],
-    "total_meds": 8,
-    "verified_catalog_meds_count": 3,
-    "medications": [
-      {
-        "med_index": 1,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Clonixin lysinat",
-        "active_ingredient": "Clonixin lysinat",
-        "strength_dosage": "250mg",
-        "route": "Uống",
-        "quantity": 45,
-        "unit": "Viên",
-        "duration_days": 15,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 1,
-          "afternoon": 1,
-          "evening": 1
-        },
-        "meal_timing": "sau ăn",
-        "usage_instruction_full": "Sáng: 1, Chiều: 1, Tối: 1 x 15 ngày = 45 Viên. Uống; sau ăn"
-      },
-      {
-        "med_index": 2,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Bromelain",
-        "active_ingredient": "Bromelain",
-        "strength_dosage": "100 F.I.P U",
-        "route": "Uống",
-        "quantity": 40,
-        "unit": "Viên",
-        "duration_days": 10,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 2,
-          "afternoon": 2
-        },
-        "meal_timing": "sau ăn",
-        "usage_instruction_full": "Sáng: 2, Chiều: 2 x 10 ngày = 40 Viên. Uống sau ăn"
-      },
-      {
-        "med_index": 3,
-        "drug_id": "DRUG-083",
-        "in_verified_catalog": true,
-        "canonical_name": "Glucosamine sulfate potassium complex + Chondroitin",
-        "active_ingredient": "Glucosamine sulfate potassium complex + Chondroitin",
-        "strength_dosage": "250mg + 200mg",
-        "route": "Uống",
-        "quantity": 30,
-        "unit": "Viên",
-        "duration_days": 15,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 1,
-          "afternoon": 1
-        },
-        "meal_timing": "sau ăn",
-        "usage_instruction_full": "Sáng: 1, Chiều: 1 x 15 ngày = 30 Viên. Uống; sau ăn"
-      },
-      {
-        "med_index": 4,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Aescin",
-        "active_ingredient": "Aescin",
-        "strength_dosage": "50mg",
-        "route": "Uống",
-        "quantity": 15,
-        "unit": "Viên",
-        "duration_days": 15,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 1
-        },
-        "meal_timing": "sau ăn",
-        "usage_instruction_full": "Sáng: 1 x 15 ngày = 15 Viên. Uống; sau ăn"
-      },
-      {
-        "med_index": 5,
-        "drug_id": "DRUG-060",
-        "in_verified_catalog": true,
-        "canonical_name": "Methylprednisolon",
-        "active_ingredient": "Methylprednisolon",
-        "strength_dosage": "16mg",
-        "route": "Uống",
-        "quantity": 7,
-        "unit": "Viên",
-        "duration_days": 7,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 1
-        },
-        "meal_timing": "sau ăn no",
-        "usage_instruction_full": "Sáng: 1 x 7 ngày = 7 Viên. Uống; sau ăn no"
-      },
-      {
-        "med_index": 6,
-        "drug_id": "DRUG-047",
-        "in_verified_catalog": true,
-        "canonical_name": "Dexlansoprazole",
-        "active_ingredient": "Dexlansoprazole",
-        "strength_dosage": "30mg",
-        "route": "Uống",
-        "quantity": 30,
-        "unit": "Viên",
-        "duration_days": 30,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 1
-        },
-        "meal_timing": "trước ăn 30 phút",
-        "usage_instruction_full": "Sáng: 1 x 30 ngày = 30 Viên. Uống; trước ăn 30 phút"
-      },
-      {
-        "med_index": 7,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Diclofenac",
-        "active_ingredient": "Diclofenac",
-        "strength_dosage": "1g/100g-60ml",
-        "route": "Xịt",
-        "quantity": 1,
-        "unit": "Chai",
-        "duration_days": 15,
-        "frequency_per_day": 2,
-        "dosage_schedule": {},
-        "meal_timing": null,
-        "usage_instruction_full": "Xịt; xịt tại chỗ đau ngày 2 lần x 15 ngày = 1 Chai"
-      },
-      {
-        "med_index": 8,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Ciprofibrat",
-        "active_ingredient": "Ciprofibrat",
-        "strength_dosage": "100mg",
-        "route": "Uống",
-        "quantity": 15,
-        "unit": "Viên",
-        "duration_days": 15,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "evening": 1
-        },
-        "meal_timing": "sau ăn",
-        "usage_instruction_full": "Tối: 1 x 15 ngày = 15 Viên. Uống sau ăn"
-      }
-    ]
-  },
-  {
-    "case_id": "SYN-CASE-066",
-    "is_synthetic": true,
-    "seed": 42,
-    "patient_profile": {
-      "age": 64,
-      "gender": "Nam",
-      "weight_kg": 54.0,
-      "allergies": "unknown"
-    },
-    "icd10_codes": [
-      "L40"
-    ],
-    "in_scope_icd10_prefixes": [],
-    "icd10_backfilled_from_diagnosis": false,
-    "diagnoses": [
-      "Vảy nến (L40)"
-    ],
-    "total_meds": 6,
-    "verified_catalog_meds_count": 0,
-    "medications": [
-      {
-        "med_index": 1,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Vitamin A",
-        "active_ingredient": "Vitamin A",
-        "strength_dosage": "5.000IU",
-        "route": "Uống",
-        "quantity": 30,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 1,
-          "afternoon": 1
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "Uống, sáng 1 viên, chiều 1 viên"
-      },
-      {
-        "med_index": 2,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Cetirizin dihydroclorid",
-        "active_ingredient": "Cetirizin dihydroclorid",
-        "strength_dosage": "10mg",
-        "route": "Uống",
-        "quantity": 30,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 1,
-          "afternoon": 1
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "Uống, sáng 1 viên, chiều 1 viên"
-      },
-      {
-        "med_index": 3,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Kẽm",
-        "active_ingredient": "Kẽm",
-        "strength_dosage": "20mg",
-        "route": "Uống",
-        "quantity": 30,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 1,
-          "afternoon": 1
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "Uống, sáng 1 viên, chiều 1 viên"
-      },
-      {
-        "med_index": 4,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Thymomodulin",
-        "active_ingredient": "Thymomodulin",
-        "strength_dosage": "80mg",
-        "route": "Uống",
-        "quantity": 30,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 1,
-          "afternoon": 1
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "Uống, sáng 1 viên, chiều 1 viên"
-      },
-      {
-        "med_index": 5,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Calcipotriol + Betamethason",
-        "active_ingredient": "Calcipotriol + Betamethason",
-        "strength_dosage": "15g",
-        "route": "Bôi",
-        "quantity": 1,
-        "unit": "TUÝP",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 1,
-          "evening": 1
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "Bôi, sáng 1 lần, tối 1 lần đầu"
-      },
-      {
-        "med_index": 6,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Calcipotriol + Betamethason",
-        "active_ingredient": "Calcipotriol + Betamethason",
-        "strength_dosage": "15g",
-        "route": "Bôi",
-        "quantity": 1,
-        "unit": "TUÝP",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 1,
-          "afternoon": 1
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "Bôi, sáng 1 lần, chiều 1 lần thoa thân"
-      }
-    ]
-  },
-  {
-    "case_id": "SYN-CASE-067",
-    "is_synthetic": true,
-    "seed": 42,
-    "patient_profile": {
-      "age": null,
-      "gender": "Nam",
-      "weight_kg": null,
-      "allergies": "unknown"
-    },
-    "icd10_codes": [
-      "L40.0",
-      "Z10"
-    ],
-    "in_scope_icd10_prefixes": [],
-    "icd10_backfilled_from_diagnosis": false,
-    "diagnoses": [
-      "[L40.0] Vảy nến thông thường",
-      "Z10/ Kiểm tra sức khỏe tổng quát thường quy cho nhóm dân cư xác định"
-    ],
-    "total_meds": 7,
-    "verified_catalog_meds_count": 2,
-    "medications": [
-      {
-        "med_index": 1,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Furosemide",
-        "active_ingredient": "Furosemide",
-        "strength_dosage": "40 mg",
-        "route": "Uống",
-        "quantity": 8,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 1
-        },
-        "meal_timing": "trước ăn 30 phút",
-        "usage_instruction_full": "Sáng 1 viên (thứ 2-thứ 6) trước ăn 30 phút"
-      },
-      {
-        "med_index": 2,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Isotretinoin",
-        "active_ingredient": "Isotretinoin",
-        "strength_dosage": "10mg",
-        "route": "Uống",
-        "quantity": 4,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {},
-        "meal_timing": null,
-        "usage_instruction_full": "Uống theo chỉ định"
-      },
-      {
-        "med_index": 3,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Methotrexat",
-        "active_ingredient": "Methotrexat",
-        "strength_dosage": "2,5mg",
-        "route": "Uống",
-        "quantity": 20,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {},
-        "meal_timing": null,
-        "usage_instruction_full": "Sáng uống 1 viên (thứ 4), Tối uống 4 viên (chủ nhật)"
-      },
-      {
-        "med_index": 4,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Colchicin",
-        "active_ingredient": "Colchicin",
-        "strength_dosage": "1mg",
-        "route": "Uống",
-        "quantity": 20,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "evening": 1
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "Tối uống 1 viên (thứ 2 - thứ 6)"
-      },
-      {
-        "med_index": 5,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Hydroxychloroquine sulfate",
-        "active_ingredient": "Hydroxychloroquine sulfate",
-        "strength_dosage": "200mg",
-        "route": "Uống",
-        "quantity": 28,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "evening": 1
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "Tối uống 1 viên"
-      },
-      {
-        "med_index": 6,
-        "drug_id": "DRUG-060",
-        "in_verified_catalog": true,
-        "canonical_name": "Prednisolon",
-        "active_ingredient": "Prednisolon",
-        "strength_dosage": "5mg",
-        "route": "Uống",
-        "quantity": 126,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {},
-        "meal_timing": "sau ăn",
-        "usage_instruction_full": "Sáng uống 5 viên (2 tuần đầu) sáng uống 4 viên (2 tuần tiếp theo) sau ăn"
-      },
-      {
-        "med_index": 7,
-        "drug_id": "DRUG-042",
-        "in_verified_catalog": true,
-        "canonical_name": "Esomeprazol",
-        "active_ingredient": "Esomeprazol",
-        "strength_dosage": "40mg",
-        "route": "Uống",
-        "quantity": 28,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 1
-        },
-        "meal_timing": "trước ăn 30 phút",
-        "usage_instruction_full": "Sáng uống 1 viên trước ăn 30 phút"
-      }
-    ]
-  },
-  {
-    "case_id": "SYN-CASE-068",
+    "case_id": "SYN-CASE-057",
     "is_synthetic": true,
     "seed": 42,
     "patient_profile": {
       "age": null,
       "gender": "Nữ",
-      "weight_kg": null,
-      "allergies": "unknown"
-    },
-    "icd10_codes": [
-      "M47",
-      "G55.2"
-    ],
-    "in_scope_icd10_prefixes": [],
-    "icd10_backfilled_from_diagnosis": false,
-    "diagnoses": [
-      "Chèn ép rễ và đám rối thần kinh trong thoái hoá đốt sống (M47.-) - G55.2*, thoái hoá cột sống - M47"
-    ],
-    "total_meds": 7,
-    "verified_catalog_meds_count": 4,
-    "medications": [
-      {
-        "med_index": 1,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Etoricoxib",
-        "active_ingredient": "Etoricoxib",
-        "strength_dosage": "60mg",
-        "route": "Uống",
-        "quantity": 14,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 1,
-          "afternoon": 1
-        },
-        "meal_timing": "uống sau ăn",
-        "usage_instruction_full": "Sáng: 1 Viên, Chiều: 1 Viên, uống sau ăn"
-      },
-      {
-        "med_index": 2,
-        "drug_id": "DRUG-073",
-        "in_verified_catalog": true,
-        "canonical_name": "Eperisone",
-        "active_ingredient": "Eperisone",
-        "strength_dosage": "50mg",
-        "route": "Uống",
-        "quantity": 14,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 1,
-          "afternoon": 1
-        },
-        "meal_timing": "uống sau ăn",
-        "usage_instruction_full": "Sáng: 1 Viên, Chiều: 1 Viên, uống sau ăn"
-      },
-      {
-        "med_index": 3,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Mecobalamin",
-        "active_ingredient": "Mecobalamin",
-        "strength_dosage": "500ug",
-        "route": "Uống",
-        "quantity": 14,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 1,
-          "afternoon": 1
-        },
-        "meal_timing": "uống sau ăn",
-        "usage_instruction_full": "Sáng: 1 Viên, Chiều: 1 Viên, uống sau ăn"
-      },
-      {
-        "med_index": 4,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Gabapentin",
-        "active_ingredient": "Gabapentin",
-        "strength_dosage": "300mg",
-        "route": "Uống",
-        "quantity": 7,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "afternoon": 1
-        },
-        "meal_timing": "uống sau ăn",
-        "usage_instruction_full": "Chiều: 1 Viên, uống sau ăn"
-      },
-      {
-        "med_index": 5,
-        "drug_id": "DRUG-044",
-        "in_verified_catalog": true,
-        "canonical_name": "Pantoprazole",
-        "active_ingredient": "Pantoprazole",
-        "strength_dosage": "40mg",
-        "route": "Uống",
-        "quantity": 7,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 1
-        },
-        "meal_timing": "uống trước ăn",
-        "usage_instruction_full": "Sáng: 1 Viên, uống trước ăn"
-      },
-      {
-        "med_index": 6,
-        "drug_id": "DRUG-063",
-        "in_verified_catalog": true,
-        "canonical_name": "Paracetamol + Cafein",
-        "active_ingredient": "Paracetamol + Cafein",
-        "strength_dosage": null,
-        "route": "Uống",
-        "quantity": 14,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 1,
-          "afternoon": 1
-        },
-        "meal_timing": "uống sau ăn",
-        "usage_instruction_full": "Sáng: 1 Viên, Chiều: 1 Viên, uống sau ăn"
-      },
-      {
-        "med_index": 7,
-        "drug_id": "DRUG-060",
-        "in_verified_catalog": true,
-        "canonical_name": "Methylprednisolone",
-        "active_ingredient": "Methylprednisolone",
-        "strength_dosage": "4mg",
-        "route": "Uống",
-        "quantity": 14,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 1,
-          "afternoon": 1
-        },
-        "meal_timing": "uống sau ăn",
-        "usage_instruction_full": "Sáng: 1 Viên, Chiều: 1 Viên, uống sau ăn"
-      }
-    ]
-  },
-  {
-    "case_id": "SYN-CASE-069",
-    "is_synthetic": true,
-    "seed": 42,
-    "patient_profile": {
-      "age": null,
-      "gender": "Nữ",
-      "weight_kg": 51.5,
+      "weight_kg": 50.5,
       "allergies": "unknown"
     },
     "icd10_codes": [
@@ -10535,2004 +8939,7 @@
     ]
   },
   {
-    "case_id": "SYN-CASE-070",
-    "is_synthetic": true,
-    "seed": 42,
-    "patient_profile": {
-      "age": null,
-      "gender": "unknown",
-      "weight_kg": null,
-      "allergies": "unknown"
-    },
-    "icd10_codes": [],
-    "in_scope_icd10_prefixes": [],
-    "icd10_backfilled_from_diagnosis": false,
-    "diagnoses": [],
-    "total_meds": 5,
-    "verified_catalog_meds_count": 4,
-    "medications": [
-      {
-        "med_index": 1,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Levocetirizin",
-        "active_ingredient": "Levocetirizin",
-        "strength_dosage": null,
-        "route": "Uống",
-        "quantity": 14,
-        "unit": "viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {},
-        "meal_timing": null,
-        "usage_instruction_full": "Uống sáng, tối"
-      },
-      {
-        "med_index": 2,
-        "drug_id": "DRUG-060",
-        "in_verified_catalog": true,
-        "canonical_name": "Methylprednisolon",
-        "active_ingredient": "Methylprednisolon",
-        "strength_dosage": "16mg",
-        "route": "Uống",
-        "quantity": 7,
-        "unit": "viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 1
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "Uống sáng"
-      },
-      {
-        "med_index": 3,
-        "drug_id": "DRUG-062",
-        "in_verified_catalog": true,
-        "canonical_name": "Ambroxol",
-        "active_ingredient": "Ambroxol",
-        "strength_dosage": "30mg",
-        "route": "Uống",
-        "quantity": 14,
-        "unit": "viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {},
-        "meal_timing": null,
-        "usage_instruction_full": "Uống sáng, tối"
-      },
-      {
-        "med_index": 4,
-        "drug_id": "DRUG-064",
-        "in_verified_catalog": true,
-        "canonical_name": "Paracetamol",
-        "active_ingredient": "Paracetamol",
-        "strength_dosage": "650mg",
-        "route": "Uống",
-        "quantity": 14,
-        "unit": "viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {},
-        "meal_timing": null,
-        "usage_instruction_full": "Uống sáng, tối"
-      },
-      {
-        "med_index": 5,
-        "drug_id": "DRUG-043",
-        "in_verified_catalog": true,
-        "canonical_name": "Omeprazol",
-        "active_ingredient": "Omeprazol",
-        "strength_dosage": "20mg",
-        "route": "Uống",
-        "quantity": 14,
-        "unit": "viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {},
-        "meal_timing": null,
-        "usage_instruction_full": "Uống sáng, tối"
-      }
-    ]
-  },
-  {
-    "case_id": "SYN-CASE-071",
-    "is_synthetic": true,
-    "seed": 42,
-    "patient_profile": {
-      "age": null,
-      "gender": "unknown",
-      "weight_kg": null,
-      "allergies": "unknown"
-    },
-    "icd10_codes": [],
-    "in_scope_icd10_prefixes": [],
-    "icd10_backfilled_from_diagnosis": false,
-    "diagnoses": [],
-    "total_meds": 5,
-    "verified_catalog_meds_count": 2,
-    "medications": [
-      {
-        "med_index": 1,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Amoxicillin + Acid clavulanic",
-        "active_ingredient": "Amoxicillin + Acid clavulanic",
-        "strength_dosage": "1g",
-        "route": "Uống",
-        "quantity": 10,
-        "unit": "viên",
-        "duration_days": null,
-        "frequency_per_day": 2,
-        "dosage_schedule": {},
-        "meal_timing": "sau ăn",
-        "usage_instruction_full": "Ngày uống 2 lần, mỗi lần 1 viên sau ăn"
-      },
-      {
-        "med_index": 2,
-        "drug_id": "DRUG-060",
-        "in_verified_catalog": true,
-        "canonical_name": "Methylprednisolon",
-        "active_ingredient": "Methylprednisolon",
-        "strength_dosage": "16mg",
-        "route": "Uống",
-        "quantity": 5,
-        "unit": "viên",
-        "duration_days": null,
-        "frequency_per_day": 1,
-        "dosage_schedule": {},
-        "meal_timing": "sau ăn",
-        "usage_instruction_full": "Ngày uống 1 lần, mỗi lần 1 viên sau ăn"
-      },
-      {
-        "med_index": 3,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Alphachymotrypsin",
-        "active_ingredient": "Alphachymotrypsin",
-        "strength_dosage": null,
-        "route": "Uống",
-        "quantity": 10,
-        "unit": "viên",
-        "duration_days": null,
-        "frequency_per_day": 2,
-        "dosage_schedule": {},
-        "meal_timing": "sau ăn",
-        "usage_instruction_full": "Ngày uống 2 lần, mỗi lần 1 viên sau ăn"
-      },
-      {
-        "med_index": 4,
-        "drug_id": "DRUG-063",
-        "in_verified_catalog": true,
-        "canonical_name": "Paracetamol",
-        "active_ingredient": "Paracetamol",
-        "strength_dosage": "500mg",
-        "route": "Uống",
-        "quantity": 10,
-        "unit": "viên",
-        "duration_days": null,
-        "frequency_per_day": 2,
-        "dosage_schedule": {},
-        "meal_timing": "sau ăn",
-        "usage_instruction_full": "Ngày uống 2 lần, mỗi lần 1 viên sau ăn"
-      },
-      {
-        "med_index": 5,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Acid ascorbic (Vitamin C)",
-        "active_ingredient": "Acid ascorbic (Vitamin C)",
-        "strength_dosage": null,
-        "route": "Uống",
-        "quantity": 10,
-        "unit": "viên",
-        "duration_days": null,
-        "frequency_per_day": 2,
-        "dosage_schedule": {},
-        "meal_timing": "sau ăn",
-        "usage_instruction_full": "Ngày uống 2 lần, mỗi lần 1 viên sau ăn"
-      }
-    ]
-  },
-  {
-    "case_id": "SYN-CASE-072",
-    "is_synthetic": true,
-    "seed": 42,
-    "patient_profile": {
-      "age": null,
-      "gender": "unknown",
-      "weight_kg": null,
-      "allergies": "unknown"
-    },
-    "icd10_codes": [],
-    "in_scope_icd10_prefixes": [],
-    "icd10_backfilled_from_diagnosis": false,
-    "diagnoses": [
-      "(M) : Đục thủy tinh thể đã mổ Phaco+IOL"
-    ],
-    "total_meds": 5,
-    "verified_catalog_meds_count": 2,
-    "medications": [
-      {
-        "med_index": 1,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Ciprofloxacin",
-        "active_ingredient": "Ciprofloxacin",
-        "strength_dosage": "500mg",
-        "route": "Uống",
-        "quantity": 5,
-        "unit": "viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 1
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "1 viên uống S"
-      },
-      {
-        "med_index": 2,
-        "drug_id": "DRUG-060",
-        "in_verified_catalog": true,
-        "canonical_name": "Methylprednisolon",
-        "active_ingredient": "Methylprednisolon",
-        "strength_dosage": "4mg",
-        "route": "Uống",
-        "quantity": 10,
-        "unit": "viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 1,
-          "afternoon": 1
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "1v x 2 uống S/C"
-      },
-      {
-        "med_index": 3,
-        "drug_id": "DRUG-044",
-        "in_verified_catalog": true,
-        "canonical_name": "Pantoprazol",
-        "active_ingredient": "Pantoprazol",
-        "strength_dosage": "40mg",
-        "route": "Uống",
-        "quantity": 5,
-        "unit": "viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 1
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "1v uống S"
-      },
-      {
-        "med_index": 4,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Nhôm phosphat",
-        "active_ingredient": "Nhôm phosphat",
-        "strength_dosage": "800mg",
-        "route": "Uống",
-        "quantity": 10,
-        "unit": "ống",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 1,
-          "afternoon": 1
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "1 ống x 2 uống S/C"
-      },
-      {
-        "med_index": 5,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Moxifloxacin",
-        "active_ingredient": "Moxifloxacin",
-        "strength_dosage": "0,5% 5ml",
-        "route": "Nhỏ mắt",
-        "quantity": 1,
-        "unit": "chai",
-        "duration_days": null,
-        "frequency_per_day": 6,
-        "dosage_schedule": {},
-        "meal_timing": null,
-        "usage_instruction_full": "Ngày nhỏ 6 lần x 1 giọt"
-      }
-    ]
-  },
-  {
-    "case_id": "SYN-CASE-073",
-    "is_synthetic": true,
-    "seed": 42,
-    "patient_profile": {
-      "age": 87,
-      "gender": "Nam",
-      "weight_kg": 44.0,
-      "allergies": "FRUIT, NUTS, WHEAT, ANIMAL DANDER, GRASS WEEDS TREE POLLEN"
-    },
-    "icd10_codes": [
-      "J45.9"
-    ],
-    "in_scope_icd10_prefixes": [],
-    "icd10_backfilled_from_diagnosis": false,
-    "diagnoses": [
-      "[J45.9] ASTHMA, UNSPECIFIED (HEN, KHÔNG PHÂN LOẠI)",
-      "acute bronchitis"
-    ],
-    "total_meds": 5,
-    "verified_catalog_meds_count": 3,
-    "medications": [
-      {
-        "med_index": 1,
-        "drug_id": "DRUG-060",
-        "in_verified_catalog": true,
-        "canonical_name": "Methylprednisolone",
-        "active_ingredient": "Methylprednisolone",
-        "strength_dosage": "16mg",
-        "route": "Uống",
-        "quantity": 5,
-        "unit": "TABLET",
-        "duration_days": null,
-        "frequency_per_day": 1,
-        "dosage_schedule": {
-          "morning": 1
-        },
-        "meal_timing": "after food (sau khi ăn)",
-        "usage_instruction_full": "Take 1 TABLET orally once a day in the morning after food for 5 days."
-      },
-      {
-        "med_index": 2,
-        "drug_id": "DRUG-061",
-        "in_verified_catalog": true,
-        "canonical_name": "Acetylcysteine",
-        "active_ingredient": "Acetylcysteine",
-        "strength_dosage": "200mg",
-        "route": "Uống",
-        "quantity": 42,
-        "unit": "sachet",
-        "duration_days": null,
-        "frequency_per_day": 3,
-        "dosage_schedule": {
-          "morning": 1,
-          "noon": 1,
-          "evening": 1
-        },
-        "meal_timing": "after food (sau khi ăn)",
-        "usage_instruction_full": "Take 1 sachet orally three times a day after food for 14 days."
-      },
-      {
-        "med_index": 3,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Umeclidinium + Vilanterol",
-        "active_ingredient": "Umeclidinium + Vilanterol",
-        "strength_dosage": "62.5mcg/25mcg inhalation 30 doses",
-        "route": "Dạng hít",
-        "quantity": 1,
-        "unit": "Lọ/Hộp hít",
-        "duration_days": null,
-        "frequency_per_day": 1,
-        "dosage_schedule": {
-          "morning": 1
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "Inhale 1 puff inhalation once a day in the morning for 1 month."
-      },
-      {
-        "med_index": 4,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Fenoterol + Ipratropium",
-        "active_ingredient": "Fenoterol + Ipratropium",
-        "strength_dosage": "50mcg/20mcg inhalation 200 doses",
-        "route": "Dạng hít",
-        "quantity": 1,
-        "unit": "Lọ/Bình xịt",
-        "duration_days": null,
-        "frequency_per_day": 3,
-        "dosage_schedule": {},
-        "meal_timing": null,
-        "usage_instruction_full": "Inhale 2 puff inhalation three times a day for 1 month. xịt 2 nhát khi mệt, khó thở"
-      },
-      {
-        "med_index": 5,
-        "drug_id": "DRUG-056",
-        "in_verified_catalog": true,
-        "canonical_name": "Azithromycin",
-        "active_ingredient": "Azithromycin",
-        "strength_dosage": "500mg",
-        "route": "Uống",
-        "quantity": 5,
-        "unit": "TABLET",
-        "duration_days": null,
-        "frequency_per_day": 1,
-        "dosage_schedule": {
-          "morning": 1
-        },
-        "meal_timing": "after food (sau khi ăn)",
-        "usage_instruction_full": "Take 1 TABLET orally once a day in the morning for 5 days."
-      }
-    ]
-  },
-  {
-    "case_id": "SYN-CASE-074",
-    "is_synthetic": true,
-    "seed": 42,
-    "patient_profile": {
-      "age": null,
-      "gender": "unknown",
-      "weight_kg": null,
-      "allergies": "unknown"
-    },
-    "icd10_codes": [],
-    "in_scope_icd10_prefixes": [],
-    "icd10_backfilled_from_diagnosis": false,
-    "diagnoses": [
-      "Viêm kết mạc / Khô mắt"
-    ],
-    "total_meds": 6,
-    "verified_catalog_meds_count": 4,
-    "medications": [
-      {
-        "med_index": 1,
-        "drug_id": "DRUG-055",
-        "in_verified_catalog": true,
-        "canonical_name": "Cefuroxim / Azithromycin",
-        "active_ingredient": "Cefuroxim / Azithromycin",
-        "strength_dosage": "0.5g",
-        "route": "Uống",
-        "quantity": null,
-        "unit": "viên",
-        "duration_days": null,
-        "frequency_per_day": 1,
-        "dosage_schedule": {},
-        "meal_timing": null,
-        "usage_instruction_full": "Uống lần 1 viên x 1 lần"
-      },
-      {
-        "med_index": 2,
-        "drug_id": "DRUG-060",
-        "in_verified_catalog": true,
-        "canonical_name": "Methylprednisolon",
-        "active_ingredient": "Methylprednisolon",
-        "strength_dosage": "4mg",
-        "route": "Uống",
-        "quantity": null,
-        "unit": "viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {},
-        "meal_timing": null,
-        "usage_instruction_full": "Uống theo chỉ định"
-      },
-      {
-        "med_index": 3,
-        "drug_id": "DRUG-059",
-        "in_verified_catalog": true,
-        "canonical_name": "Loratadin",
-        "active_ingredient": "Loratadin",
-        "strength_dosage": null,
-        "route": "Uống",
-        "quantity": 14,
-        "unit": "viên",
-        "duration_days": null,
-        "frequency_per_day": 2,
-        "dosage_schedule": {},
-        "meal_timing": null,
-        "usage_instruction_full": "Uống lần 1 viên x 2 lần"
-      },
-      {
-        "med_index": 4,
-        "drug_id": "DRUG-043",
-        "in_verified_catalog": true,
-        "canonical_name": "Omeprazol",
-        "active_ingredient": "Omeprazol",
-        "strength_dosage": null,
-        "route": "Uống",
-        "quantity": null,
-        "unit": "viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {},
-        "meal_timing": null,
-        "usage_instruction_full": "Uống theo chỉ định"
-      },
-      {
-        "med_index": 5,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Neomycin + Polymyxin B + Dexamethason",
-        "active_ingredient": "Neomycin + Polymyxin B + Dexamethason",
-        "strength_dosage": null,
-        "route": "Nhỏ mắt",
-        "quantity": null,
-        "unit": "lọ",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {},
-        "meal_timing": null,
-        "usage_instruction_full": "Nhỏ mắt (MP, MT)"
-      },
-      {
-        "med_index": 6,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Carboxymethylcellulose",
-        "active_ingredient": "Carboxymethylcellulose",
-        "strength_dosage": null,
-        "route": "Nhỏ mắt",
-        "quantity": null,
-        "unit": "lọ",
-        "duration_days": null,
-        "frequency_per_day": 6,
-        "dosage_schedule": {},
-        "meal_timing": null,
-        "usage_instruction_full": "Nhỏ 6 lần/ngày MP, MT"
-      }
-    ]
-  },
-  {
-    "case_id": "SYN-CASE-075",
-    "is_synthetic": true,
-    "seed": 42,
-    "patient_profile": {
-      "age": 69,
-      "gender": "Nữ",
-      "weight_kg": 64.5,
-      "allergies": "unknown"
-    },
-    "icd10_codes": [
-      "I06.0",
-      "I50"
-    ],
-    "in_scope_icd10_prefixes": [],
-    "icd10_backfilled_from_diagnosis": false,
-    "diagnoses": [
-      "HC khít - HoC nhiều - ST - có CĐ PT - NMN Bán cấp cách 2 tuần - TD Suy tim (I06.0",
-      "I50)"
-    ],
-    "total_meds": 6,
-    "verified_catalog_meds_count": 4,
-    "medications": [
-      {
-        "med_index": 1,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Acetylsalicylic acid",
-        "active_ingredient": "Acetylsalicylic acid",
-        "strength_dosage": "81mg",
-        "route": "Uống",
-        "quantity": 31,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": 1,
-        "dosage_schedule": {
-          "evening": 1
-        },
-        "meal_timing": "Sau ăn",
-        "usage_instruction_full": "Uống - Ngày 1 Viên vào buổi tối. Sau ăn"
-      },
-      {
-        "med_index": 2,
-        "drug_id": "DRUG-025",
-        "in_verified_catalog": true,
-        "canonical_name": "Rosuvastatin",
-        "active_ingredient": "Rosuvastatin",
-        "strength_dosage": "10mg",
-        "route": "Uống",
-        "quantity": 31,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": 1,
-        "dosage_schedule": {
-          "evening": 1
-        },
-        "meal_timing": "Sau ăn",
-        "usage_instruction_full": "Uống - Ngày 1 Viên vào buổi tối. Sau ăn"
-      },
-      {
-        "med_index": 3,
-        "drug_id": "DRUG-012",
-        "in_verified_catalog": true,
-        "canonical_name": "Perindopril + Amlodipine",
-        "active_ingredient": "Perindopril + Amlodipine",
-        "strength_dosage": "5 mg/5mg",
-        "route": "Uống",
-        "quantity": 31,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": 1,
-        "dosage_schedule": {
-          "morning": 1
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "Uống - Ngày 1 Viên vào buổi sáng."
-      },
-      {
-        "med_index": 4,
-        "drug_id": "DRUG-018",
-        "in_verified_catalog": true,
-        "canonical_name": "Metoprolol succinat",
-        "active_ingredient": "Metoprolol succinat",
-        "strength_dosage": "50mg",
-        "route": "Uống",
-        "quantity": 16,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": 1,
-        "dosage_schedule": {
-          "morning": 0.5
-        },
-        "meal_timing": "Sau ăn",
-        "usage_instruction_full": "Uống - Ngày 1/2 Viên vào buổi sáng. Sau ăn"
-      },
-      {
-        "med_index": 5,
-        "drug_id": "DRUG-033",
-        "in_verified_catalog": true,
-        "canonical_name": "Dapagliflozin",
-        "active_ingredient": "Dapagliflozin",
-        "strength_dosage": "10mg",
-        "route": "Uống",
-        "quantity": 31,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": 1,
-        "dosage_schedule": {
-          "morning": 1
-        },
-        "meal_timing": "Sau ăn",
-        "usage_instruction_full": "Uống - Ngày 1 Viên vào buổi sáng. Sau ăn"
-      },
-      {
-        "med_index": 6,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Cholin alfoscerat",
-        "active_ingredient": "Cholin alfoscerat",
-        "strength_dosage": "400mg",
-        "route": "Uống",
-        "quantity": 31,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": 1,
-        "dosage_schedule": {
-          "noon": 1
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "Uống - Ngày 1 Viên vào buổi trưa."
-      }
-    ]
-  },
-  {
-    "case_id": "SYN-CASE-076",
-    "is_synthetic": true,
-    "seed": 42,
-    "patient_profile": {
-      "age": 59,
-      "gender": "Nam",
-      "weight_kg": 49.5,
-      "allergies": "unknown"
-    },
-    "icd10_codes": [
-      "I69.3",
-      "H81"
-    ],
-    "in_scope_icd10_prefixes": [],
-    "icd10_backfilled_from_diagnosis": false,
-    "diagnoses": [
-      "I69.3: Di chứng nhồi máu não (I69.3)",
-      "Rối loạn chức năng tiền đình (H81) HBA1C 6.6, LDL-C 2.08"
-    ],
-    "total_meds": 7,
-    "verified_catalog_meds_count": 2,
-    "medications": [
-      {
-        "med_index": 1,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Clopidogrel",
-        "active_ingredient": "Clopidogrel",
-        "strength_dosage": "75 mg",
-        "route": "Uống",
-        "quantity": 14,
-        "unit": "viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 1
-        },
-        "meal_timing": "Uống lúc no",
-        "usage_instruction_full": "Sáng: 1.00 - Ghi chú: Uống lúc no"
-      },
-      {
-        "med_index": 2,
-        "drug_id": "DRUG-029",
-        "in_verified_catalog": true,
-        "canonical_name": "Atorvastatin + Ezetimibe",
-        "active_ingredient": "Atorvastatin + Ezetimibe",
-        "strength_dosage": "10mg+10mg",
-        "route": "Uống",
-        "quantity": 14,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "evening": 1
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "Tối: 1.00"
-      },
-      {
-        "med_index": 3,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Natri valproate + Acid valproic",
-        "active_ingredient": "Natri valproate + Acid valproic",
-        "strength_dosage": "500mg",
-        "route": "Uống",
-        "quantity": 7,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 0.5
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "Sáng: 0.50"
-      },
-      {
-        "med_index": 4,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Pregabalin",
-        "active_ingredient": "Pregabalin",
-        "strength_dosage": "50mg",
-        "route": "Uống",
-        "quantity": 14,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "evening": 1
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "Tối: 1.00 - Ghi chú: NGƯNG KHI CHÓNG MẠT"
-      },
-      {
-        "med_index": 5,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Ginkgo biloba",
-        "active_ingredient": "Ginkgo biloba",
-        "strength_dosage": "80mg",
-        "route": "Uống",
-        "quantity": 28,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 1,
-          "afternoon": 1
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "Sáng: 1.00, Chiều: 1.00"
-      },
-      {
-        "med_index": 6,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Betahistine dihydrochloride",
-        "active_ingredient": "Betahistine dihydrochloride",
-        "strength_dosage": "24mg",
-        "route": "Uống",
-        "quantity": 28,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 1,
-          "afternoon": 1
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "Sáng: 1.00, Chiều: 1.00"
-      },
-      {
-        "med_index": 7,
-        "drug_id": "DRUG-031",
-        "in_verified_catalog": true,
-        "canonical_name": "Metformin hydrochloride",
-        "active_ingredient": "Metformin hydrochloride",
-        "strength_dosage": "1g",
-        "route": "Uống",
-        "quantity": 7,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 0.5
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "Sáng: 0.50"
-      }
-    ]
-  },
-  {
-    "case_id": "SYN-CASE-077",
-    "is_synthetic": true,
-    "seed": 42,
-    "patient_profile": {
-      "age": 61,
-      "gender": "Nữ",
-      "weight_kg": 65.5,
-      "allergies": "unknown"
-    },
-    "icd10_codes": [],
-    "in_scope_icd10_prefixes": [],
-    "icd10_backfilled_from_diagnosis": false,
-    "diagnoses": [
-      "Suy tim EF bảo tồn - Cuồng nhĩ - Van hai lá sinh học - ĐTĐ 2 - RLLP - Gút"
-    ],
-    "total_meds": 8,
-    "verified_catalog_meds_count": 4,
-    "medications": [
-      {
-        "med_index": 1,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Digoxin",
-        "active_ingredient": "Digoxin",
-        "strength_dosage": "0,25mg",
-        "route": "Uống",
-        "quantity": 15,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 0.5
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "Ngày uống 0,5 viên buổi sáng"
-      },
-      {
-        "med_index": 2,
-        "drug_id": "DRUG-017",
-        "in_verified_catalog": true,
-        "canonical_name": "Metoprolol succinat",
-        "active_ingredient": "Metoprolol succinat",
-        "strength_dosage": "25mg",
-        "route": "Uống",
-        "quantity": 15,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 0.5
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "Ngày uống 0,5 viên buổi sáng"
-      },
-      {
-        "med_index": 3,
-        "drug_id": "DRUG-003",
-        "in_verified_catalog": true,
-        "canonical_name": "Valsartan",
-        "active_ingredient": "Valsartan",
-        "strength_dosage": "80mg",
-        "route": "Uống",
-        "quantity": 30,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 1
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "Ngày uống 1 viên buổi sáng"
-      },
-      {
-        "med_index": 4,
-        "drug_id": "DRUG-031",
-        "in_verified_catalog": true,
-        "canonical_name": "Empagliflozin + Metformin hydrochloride",
-        "active_ingredient": "Empagliflozin + Metformin hydrochloride",
-        "strength_dosage": "12,5mg/1000mg",
-        "route": "Uống",
-        "quantity": 30,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "evening": 1
-        },
-        "meal_timing": "sau ăn",
-        "usage_instruction_full": "Ngày uống 1 viên buổi tối sau ăn"
-      },
-      {
-        "med_index": 5,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Furosemid",
-        "active_ingredient": "Furosemid",
-        "strength_dosage": "40mg",
-        "route": "Uống",
-        "quantity": 40,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 1
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "Ngày uống 1 viên buổi sáng, Riêng 01 tuần đầu ngày uống 02 viên sáng- chiều, Sau đấy giảm còn 01 viên uống sáng"
-      },
-      {
-        "med_index": 6,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Febuxostat",
-        "active_ingredient": "Febuxostat",
-        "strength_dosage": "80mg",
-        "route": "Uống",
-        "quantity": 15,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 0.5
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "Ngày uống 0,5 viên buổi sáng"
-      },
-      {
-        "med_index": 7,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Spironolacton",
-        "active_ingredient": "Spironolacton",
-        "strength_dosage": "25 mg",
-        "route": "Uống",
-        "quantity": 30,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 1
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "Ngày uống 01 viên sáng"
-      },
-      {
-        "med_index": 8,
-        "drug_id": "DRUG-025",
-        "in_verified_catalog": true,
-        "canonical_name": "Rosuvastatin",
-        "active_ingredient": "Rosuvastatin",
-        "strength_dosage": "10mg",
-        "route": "Uống",
-        "quantity": 30,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "evening": 1
-        },
-        "meal_timing": "sau ăn",
-        "usage_instruction_full": "Ngày uống 1 viên buổi tối sau ăn"
-      }
-    ]
-  },
-  {
-    "case_id": "SYN-CASE-078",
-    "is_synthetic": true,
-    "seed": 42,
-    "patient_profile": {
-      "age": null,
-      "gender": "unknown",
-      "weight_kg": null,
-      "allergies": "unknown"
-    },
-    "icd10_codes": [],
-    "in_scope_icd10_prefixes": [],
-    "icd10_backfilled_from_diagnosis": false,
-    "diagnoses": [
-      "Viêm phổi ổn định - Suy tim - Suy tim EF bảo tồn - Xơ vữa động mạch chi dưới - THA"
-    ],
-    "total_meds": 7,
-    "verified_catalog_meds_count": 4,
-    "medications": [
-      {
-        "med_index": 1,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Amoxicillin + Acid clavulanic",
-        "active_ingredient": "Amoxicillin + Acid clavulanic",
-        "strength_dosage": "1g",
-        "route": "Uống",
-        "quantity": 15,
-        "unit": "viên",
-        "duration_days": null,
-        "frequency_per_day": 3,
-        "dosage_schedule": {
-          "morning": 1,
-          "afternoon": 1,
-          "evening": 1
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "Uống mỗi ngày 3 lần, mỗi lần 1 viên sáng chiều tối"
-      },
-      {
-        "med_index": 2,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Levofloxacin",
-        "active_ingredient": "Levofloxacin",
-        "strength_dosage": "500mg",
-        "route": "Uống",
-        "quantity": 10,
-        "unit": "viên",
-        "duration_days": null,
-        "frequency_per_day": 1,
-        "dosage_schedule": {},
-        "meal_timing": null,
-        "usage_instruction_full": "Uống mỗi ngày 1 lần 1 viên"
-      },
-      {
-        "med_index": 3,
-        "drug_id": "DRUG-062",
-        "in_verified_catalog": true,
-        "canonical_name": "Ambroxol",
-        "active_ingredient": "Ambroxol",
-        "strength_dosage": "30mg",
-        "route": "Uống",
-        "quantity": 20,
-        "unit": "viên",
-        "duration_days": null,
-        "frequency_per_day": 2,
-        "dosage_schedule": {
-          "morning": 1,
-          "afternoon": 1
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "Uống mỗi ngày 2 lần, mỗi lần 1 viên Sáng Chiều"
-      },
-      {
-        "med_index": 4,
-        "drug_id": "DRUG-033",
-        "in_verified_catalog": true,
-        "canonical_name": "Dapagliflozin",
-        "active_ingredient": "Dapagliflozin",
-        "strength_dosage": "10mg",
-        "route": "Uống",
-        "quantity": 30,
-        "unit": "viên",
-        "duration_days": null,
-        "frequency_per_day": 1,
-        "dosage_schedule": {
-          "morning": 1
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "Uống mỗi ngày 1 lần 1 viên sáng"
-      },
-      {
-        "med_index": 5,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Spironolacton",
-        "active_ingredient": "Spironolacton",
-        "strength_dosage": "25 mg",
-        "route": "Uống",
-        "quantity": 30,
-        "unit": "viên",
-        "duration_days": null,
-        "frequency_per_day": 1,
-        "dosage_schedule": {
-          "morning": 1
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "Uống mỗi ngày 1 lần 1 viên sáng"
-      },
-      {
-        "med_index": 6,
-        "drug_id": "DRUG-005",
-        "in_verified_catalog": true,
-        "canonical_name": "Enalapril / Perindopril",
-        "active_ingredient": "Enalapril / Perindopril",
-        "strength_dosage": "5mg",
-        "route": "Uống",
-        "quantity": 30,
-        "unit": "viên",
-        "duration_days": null,
-        "frequency_per_day": 1,
-        "dosage_schedule": {
-          "morning": 1
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "Uống mỗi ngày 1 lần, mỗi lần 1 viên sáng"
-      },
-      {
-        "med_index": 7,
-        "drug_id": "DRUG-021",
-        "in_verified_catalog": true,
-        "canonical_name": "Atorvastatin / Rosuvastatin",
-        "active_ingredient": "Atorvastatin / Rosuvastatin",
-        "strength_dosage": "10mg",
-        "route": "Uống",
-        "quantity": 30,
-        "unit": "viên",
-        "duration_days": null,
-        "frequency_per_day": 1,
-        "dosage_schedule": {},
-        "meal_timing": null,
-        "usage_instruction_full": "Uống mỗi ngày 1 lần 1 viên"
-      }
-    ]
-  },
-  {
-    "case_id": "SYN-CASE-079",
-    "is_synthetic": true,
-    "seed": 42,
-    "patient_profile": {
-      "age": 61,
-      "gender": "Nữ",
-      "weight_kg": null,
-      "allergies": "unknown"
-    },
-    "icd10_codes": [
-      "L93",
-      "M81",
-      "E24"
-    ],
-    "in_scope_icd10_prefixes": [],
-    "icd10_backfilled_from_diagnosis": false,
-    "diagnoses": [
-      "L93: Lupus ban đỏ (L93)",
-      "Loãng xương không kèm gãy xương bệnh lý (M81)",
-      "Hội chứng Cushing(E24) hc dd"
-    ],
-    "total_meds": 6,
-    "verified_catalog_meds_count": 3,
-    "medications": [
-      {
-        "med_index": 1,
-        "drug_id": "DRUG-060",
-        "in_verified_catalog": true,
-        "canonical_name": "Methylprednisolon",
-        "active_ingredient": "Methylprednisolon",
-        "strength_dosage": "16mg",
-        "route": "Uống",
-        "quantity": 12,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 0.25
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "Sáng: 0.25 - Ghi chú: cách ngày"
-      },
-      {
-        "med_index": 2,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Calci carbonat + Vitamin D3",
-        "active_ingredient": "Calci carbonat + Vitamin D3",
-        "strength_dosage": "1250mg + 250IU",
-        "route": "Uống",
-        "quantity": 180,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 1,
-          "afternoon": 1
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "Sáng: 1.00, Chiều: 1.00 - Ghi chú: Uống"
-      },
-      {
-        "med_index": 3,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Hydroxychloroquine sulfate",
-        "active_ingredient": "Hydroxychloroquine sulfate",
-        "strength_dosage": "200mg",
-        "route": "Uống",
-        "quantity": 90,
-        "unit": "viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 1
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "Sáng: 1.00"
-      },
-      {
-        "med_index": 4,
-        "drug_id": "DRUG-045",
-        "in_verified_catalog": true,
-        "canonical_name": "Rabeprazole",
-        "active_ingredient": "Rabeprazole",
-        "strength_dosage": "20 mg",
-        "route": "Uống",
-        "quantity": 90,
-        "unit": "viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 1
-        },
-        "meal_timing": "Uống trước ăn 15-30 phút",
-        "usage_instruction_full": "Sáng: 1.00 - Ghi chú: Uống trước ăn 15-30 phút, uống nguyên viên"
-      },
-      {
-        "med_index": 5,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Ibandronic acid",
-        "active_ingredient": "Ibandronic acid",
-        "strength_dosage": "150mg",
-        "route": "Uống",
-        "quantity": 3,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 1
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "Sáng: 1.00 - Ghi chú: 1 tháng / viên"
-      },
-      {
-        "med_index": 6,
-        "drug_id": "DRUG-063",
-        "in_verified_catalog": true,
-        "canonical_name": "Paracetamol + Cafein",
-        "active_ingredient": "Paracetamol + Cafein",
-        "strength_dosage": "650mg",
-        "route": "Uống",
-        "quantity": 30,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 1
-        },
-        "meal_timing": "khi đau",
-        "usage_instruction_full": "Sáng: 1.00 - Ghi chú: khi đau"
-      }
-    ]
-  },
-  {
-    "case_id": "SYN-CASE-080",
-    "is_synthetic": true,
-    "seed": 42,
-    "patient_profile": {
-      "age": null,
-      "gender": "Nữ",
-      "weight_kg": 50.5,
-      "allergies": "unknown"
-    },
-    "icd10_codes": [],
-    "in_scope_icd10_prefixes": [],
-    "icd10_backfilled_from_diagnosis": false,
-    "diagnoses": [
-      "Tràn dịch khớp"
-    ],
-    "total_meds": 5,
-    "verified_catalog_meds_count": 5,
-    "medications": [
-      {
-        "med_index": 1,
-        "drug_id": "DRUG-083",
-        "in_verified_catalog": true,
-        "canonical_name": "Glucosamine + Chondroitin + Omega-3",
-        "active_ingredient": "Glucosamine + Chondroitin + Omega-3",
-        "strength_dosage": null,
-        "route": "Uống",
-        "quantity": 30,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 1,
-          "noon": 1,
-          "afternoon": 1
-        },
-        "meal_timing": "Uống khi no",
-        "usage_instruction_full": "Sáng 1.00 Viên Trưa 1.00 Viên Chiều 1.00 Viên, Uống khi no"
-      },
-      {
-        "med_index": 2,
-        "drug_id": "DRUG-060",
-        "in_verified_catalog": true,
-        "canonical_name": "Methylprednisolon",
-        "active_ingredient": "Methylprednisolon",
-        "strength_dosage": "40mg/ml",
-        "route": "Tiêm truyền",
-        "quantity": 1,
-        "unit": "Lọ/Ống",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {},
-        "meal_timing": null,
-        "usage_instruction_full": "Tiêm truyền"
-      },
-      {
-        "med_index": 3,
-        "drug_id": "DRUG-071",
-        "in_verified_catalog": true,
-        "canonical_name": "Meloxicam",
-        "active_ingredient": "Meloxicam",
-        "strength_dosage": "7.5mg",
-        "route": "Uống",
-        "quantity": 20,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "noon": 2
-        },
-        "meal_timing": "Uống khi no",
-        "usage_instruction_full": "Trưa 2.00 Viên, Uống khi no"
-      },
-      {
-        "med_index": 4,
-        "drug_id": "DRUG-073",
-        "in_verified_catalog": true,
-        "canonical_name": "Eperison",
-        "active_ingredient": "Eperison",
-        "strength_dosage": "50mg",
-        "route": "Uống",
-        "quantity": 20,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 1,
-          "afternoon": 1
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "Sáng 1.00 Viên Chiều 1.00 Viên, Uống"
-      },
-      {
-        "med_index": 5,
-        "drug_id": "DRUG-044",
-        "in_verified_catalog": true,
-        "canonical_name": "Pantoprazol",
-        "active_ingredient": "Pantoprazol",
-        "strength_dosage": "40mg",
-        "route": "Uống",
-        "quantity": 10,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 1
-        },
-        "meal_timing": "Uống trước ăn 30 phút",
-        "usage_instruction_full": "Sáng 1.00 Viên 30 phút, Uống trước ăn"
-      }
-    ]
-  },
-  {
-    "case_id": "SYN-CASE-081",
-    "is_synthetic": true,
-    "seed": 42,
-    "patient_profile": {
-      "age": 48,
-      "gender": "Nữ",
-      "weight_kg": null,
-      "allergies": "unknown"
-    },
-    "icd10_codes": [],
-    "in_scope_icd10_prefixes": [],
-    "icd10_backfilled_from_diagnosis": false,
-    "diagnoses": [
-      "THOÁI HÓA THOÁT VỊ ĐĨA ĐỆM CSTL"
-    ],
-    "total_meds": 7,
-    "verified_catalog_meds_count": 4,
-    "medications": [
-      {
-        "med_index": 1,
-        "drug_id": "DRUG-071",
-        "in_verified_catalog": true,
-        "canonical_name": "Meloxicam",
-        "active_ingredient": "Meloxicam",
-        "strength_dosage": "7,5mg",
-        "route": "Uống",
-        "quantity": 10,
-        "unit": "viên",
-        "duration_days": null,
-        "frequency_per_day": 1,
-        "dosage_schedule": {
-          "morning": 1
-        },
-        "meal_timing": "SAU ĂN SÁNG",
-        "usage_instruction_full": "NGÀY UỐNG 1 VIÊN SAU ĂN SÁNG"
-      },
-      {
-        "med_index": 2,
-        "drug_id": "DRUG-083",
-        "in_verified_catalog": true,
-        "canonical_name": "Glucosamine",
-        "active_ingredient": "Glucosamine",
-        "strength_dosage": "1500mg",
-        "route": "Uống",
-        "quantity": 30,
-        "unit": "viên",
-        "duration_days": null,
-        "frequency_per_day": 1,
-        "dosage_schedule": {
-          "morning": 1
-        },
-        "meal_timing": "SAU ĂN SÁNG",
-        "usage_instruction_full": "NGÀY UỐNG 1 VIÊN SAU ĂN SÁNG"
-      },
-      {
-        "med_index": 3,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Tolperison",
-        "active_ingredient": "Tolperison",
-        "strength_dosage": "50mg",
-        "route": "Uống",
-        "quantity": 30,
-        "unit": "viên",
-        "duration_days": null,
-        "frequency_per_day": 2,
-        "dosage_schedule": {},
-        "meal_timing": "sau ăn",
-        "usage_instruction_full": "Ngày uống 2 viên, chia 2 lần, sau ăn."
-      },
-      {
-        "med_index": 4,
-        "drug_id": "DRUG-074",
-        "in_verified_catalog": true,
-        "canonical_name": "Vitamin B1 + B6 + B12",
-        "active_ingredient": "Vitamin B1 + B6 + B12",
-        "strength_dosage": null,
-        "route": "Uống",
-        "quantity": 30,
-        "unit": "viên",
-        "duration_days": null,
-        "frequency_per_day": 3,
-        "dosage_schedule": {},
-        "meal_timing": "sau ăn",
-        "usage_instruction_full": "Ngày uống 03 viên, chia 03 lần, sau ăn"
-      },
-      {
-        "med_index": 5,
-        "drug_id": "DRUG-041",
-        "in_verified_catalog": true,
-        "canonical_name": "Omeprazol / Esomeprazol",
-        "active_ingredient": "Omeprazol / Esomeprazol",
-        "strength_dosage": "20mg",
-        "route": "Uống",
-        "quantity": 20,
-        "unit": "viên",
-        "duration_days": null,
-        "frequency_per_day": 2,
-        "dosage_schedule": {},
-        "meal_timing": "Trước ăn 30 phút",
-        "usage_instruction_full": "Ngày uống 2 viên chia 2 lần. Trước ăn 30 phút"
-      },
-      {
-        "med_index": 6,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Gabapentin",
-        "active_ingredient": "Gabapentin",
-        "strength_dosage": "300mg",
-        "route": "Uống",
-        "quantity": 10,
-        "unit": "viên",
-        "duration_days": null,
-        "frequency_per_day": 1,
-        "dosage_schedule": {
-          "evening": 1
-        },
-        "meal_timing": "SAU ĂN TỐI",
-        "usage_instruction_full": "NGÀY UỐNG 1 VIÊN SAU ĂN TỐI"
-      },
-      {
-        "med_index": 7,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Diclofenac",
-        "active_ingredient": "Diclofenac",
-        "strength_dosage": null,
-        "route": "Bôi",
-        "quantity": 1,
-        "unit": "tuýp",
-        "duration_days": null,
-        "frequency_per_day": 3,
-        "dosage_schedule": {},
-        "meal_timing": null,
-        "usage_instruction_full": "BÔI CHỖ ĐAU NGÀY 03 LẦN"
-      }
-    ]
-  },
-  {
-    "case_id": "SYN-CASE-082",
-    "is_synthetic": true,
-    "seed": 42,
-    "patient_profile": {
-      "age": null,
-      "gender": "unknown",
-      "weight_kg": null,
-      "allergies": "unknown"
-    },
-    "icd10_codes": [],
-    "in_scope_icd10_prefixes": [],
-    "icd10_backfilled_from_diagnosis": false,
-    "diagnoses": [
-      "viêm gân dưới ngón tay"
-    ],
-    "total_meds": 5,
-    "verified_catalog_meds_count": 3,
-    "medications": [
-      {
-        "med_index": 1,
-        "drug_id": "DRUG-060",
-        "in_verified_catalog": true,
-        "canonical_name": "Medrol",
-        "active_ingredient": "Medrol",
-        "strength_dosage": "16mg",
-        "route": "Uống",
-        "quantity": 10,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {},
-        "meal_timing": null,
-        "usage_instruction_full": "Uống theo chỉ định"
-      },
-      {
-        "med_index": 2,
-        "drug_id": "DRUG-071",
-        "in_verified_catalog": true,
-        "canonical_name": "Mobic",
-        "active_ingredient": "Mobic",
-        "strength_dosage": "15 mg",
-        "route": "Uống",
-        "quantity": 10,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {},
-        "meal_timing": null,
-        "usage_instruction_full": "Uống theo chỉ định"
-      },
-      {
-        "med_index": 3,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Ultracet",
-        "active_ingredient": "Ultracet",
-        "strength_dosage": null,
-        "route": "Uống",
-        "quantity": 30,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {},
-        "meal_timing": null,
-        "usage_instruction_full": "Uống sáng, trưa, chiều"
-      },
-      {
-        "med_index": 4,
-        "drug_id": "DRUG-073",
-        "in_verified_catalog": true,
-        "canonical_name": "Myonal",
-        "active_ingredient": "Myonal",
-        "strength_dosage": null,
-        "route": "Uống",
-        "quantity": 30,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {},
-        "meal_timing": null,
-        "usage_instruction_full": "Uống sáng, trưa, chiều"
-      },
-      {
-        "med_index": 5,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Allopurinol",
-        "active_ingredient": "Allopurinol",
-        "strength_dosage": "300mg",
-        "route": "Uống",
-        "quantity": 10,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": 1,
-        "dosage_schedule": {},
-        "meal_timing": null,
-        "usage_instruction_full": "Ngày uống 1 lần, mỗi lần 1 viên"
-      }
-    ]
-  },
-  {
-    "case_id": "SYN-CASE-083",
-    "is_synthetic": true,
-    "seed": 42,
-    "patient_profile": {
-      "age": null,
-      "gender": "unknown",
-      "weight_kg": null,
-      "allergies": "unknown"
-    },
-    "icd10_codes": [],
-    "in_scope_icd10_prefixes": [],
-    "icd10_backfilled_from_diagnosis": false,
-    "diagnoses": [
-      "Nhiễm ấu trùng Giun đũa Chó Mèo"
-    ],
-    "total_meds": 5,
-    "verified_catalog_meds_count": 1,
-    "medications": [
-      {
-        "med_index": 1,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Ivermectin",
-        "active_ingredient": "Ivermectin",
-        "strength_dosage": "6mg",
-        "route": "Uống",
-        "quantity": 2,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {},
-        "meal_timing": "trước ăn 2 giờ ngày đầu",
-        "usage_instruction_full": "2 Viên/ 1 lần trước ăn 2 giờ ngày đầu"
-      },
-      {
-        "med_index": 2,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Albendazol",
-        "active_ingredient": "Albendazol",
-        "strength_dosage": "400mg",
-        "route": "Uống",
-        "quantity": 30,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": 2,
-        "dosage_schedule": {},
-        "meal_timing": "Sau ăn từ ngày thứ 2",
-        "usage_instruction_full": "Ngày 2 viên chia 2 lần. Sau ăn từ ngày thứ 2"
-      },
-      {
-        "med_index": 3,
-        "drug_id": "DRUG-059",
-        "in_verified_catalog": true,
-        "canonical_name": "Loratadin",
-        "active_ingredient": "Loratadin",
-        "strength_dosage": "10 mg",
-        "route": "Uống",
-        "quantity": 40,
-        "unit": "viên",
-        "duration_days": null,
-        "frequency_per_day": 2,
-        "dosage_schedule": {},
-        "meal_timing": "sau ăn",
-        "usage_instruction_full": "Ngày 2v chia 2 lần sau ăn"
-      },
-      {
-        "med_index": 4,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Bổ gan",
-        "active_ingredient": "Bổ gan",
-        "strength_dosage": null,
-        "route": "Uống",
-        "quantity": 40,
-        "unit": "viên",
-        "duration_days": null,
-        "frequency_per_day": 2,
-        "dosage_schedule": {},
-        "meal_timing": "Sau ăn",
-        "usage_instruction_full": "Ngày 2 viên / 2 lần Sau ăn"
-      },
-      {
-        "med_index": 5,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Bổ máu / Sắt + Acid folic",
-        "active_ingredient": "Bổ máu / Sắt + Acid folic",
-        "strength_dosage": null,
-        "route": "Uống",
-        "quantity": 40,
-        "unit": "viên",
-        "duration_days": null,
-        "frequency_per_day": 2,
-        "dosage_schedule": {},
-        "meal_timing": "Sau ăn",
-        "usage_instruction_full": "Ngày 2 v chia 2 lần Sau ăn"
-      }
-    ]
-  },
-  {
-    "case_id": "SYN-CASE-084",
-    "is_synthetic": true,
-    "seed": 42,
-    "patient_profile": {
-      "age": null,
-      "gender": "Nam",
-      "weight_kg": null,
-      "allergies": "unknown"
-    },
-    "icd10_codes": [],
-    "in_scope_icd10_prefixes": [],
-    "icd10_backfilled_from_diagnosis": false,
-    "diagnoses": [
-      "Nhiễm giun đũa chó Toxocara ĐT đợt 1 / Dị ứng"
-    ],
-    "total_meds": 5,
-    "verified_catalog_meds_count": 1,
-    "medications": [
-      {
-        "med_index": 1,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Albendazole",
-        "active_ingredient": "Albendazole",
-        "strength_dosage": "400mg",
-        "route": "Uống",
-        "quantity": 21,
-        "unit": "viên",
-        "duration_days": 14,
-        "frequency_per_day": 2,
-        "dosage_schedule": {},
-        "meal_timing": "sau ăn",
-        "usage_instruction_full": "Ngày uống 3/4 viên chia 2 lần sau ăn x 14 ngày"
-      },
-      {
-        "med_index": 2,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Arginine hydrochloride",
-        "active_ingredient": "Arginine hydrochloride",
-        "strength_dosage": "800mg/ml",
-        "route": "Uống",
-        "quantity": 80,
-        "unit": "ống",
-        "duration_days": null,
-        "frequency_per_day": 2,
-        "dosage_schedule": {},
-        "meal_timing": null,
-        "usage_instruction_full": "Ngày uống 02 ống chia 2 lần"
-      },
-      {
-        "med_index": 3,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Calci lactat + Vitamin B1, B2, B6, D3, E, PP, B5 + Lysin",
-        "active_ingredient": "Calci lactat + Vitamin B1, B2, B6, D3, E, PP, B5 + Lysin",
-        "strength_dosage": null,
-        "route": "Uống",
-        "quantity": 50,
-        "unit": "ống",
-        "duration_days": null,
-        "frequency_per_day": 2,
-        "dosage_schedule": {},
-        "meal_timing": null,
-        "usage_instruction_full": "Ngày uống 02 ống chia 2 lần"
-      },
-      {
-        "med_index": 4,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Kẽm Gluconate",
-        "active_ingredient": "Kẽm Gluconate",
-        "strength_dosage": "8 mg/5ml x 10ml",
-        "route": "Uống",
-        "quantity": 40,
-        "unit": "ống",
-        "duration_days": null,
-        "frequency_per_day": 2,
-        "dosage_schedule": {},
-        "meal_timing": null,
-        "usage_instruction_full": "Ngày uống 02 ống chia 2 lần"
-      },
-      {
-        "med_index": 5,
-        "drug_id": "DRUG-059",
-        "in_verified_catalog": true,
-        "canonical_name": "Desloratadine",
-        "active_ingredient": "Desloratadine",
-        "strength_dosage": "2.5mg/5ml",
-        "route": "Uống",
-        "quantity": 2,
-        "unit": "chai",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {},
-        "meal_timing": "khi ngứa nhất",
-        "usage_instruction_full": "Uống 05 ml khi ngứa nhất"
-      }
-    ]
-  },
-  {
-    "case_id": "SYN-CASE-085",
-    "is_synthetic": true,
-    "seed": 42,
-    "patient_profile": {
-      "age": null,
-      "gender": "Nữ",
-      "weight_kg": null,
-      "allergies": "unknown"
-    },
-    "icd10_codes": [],
-    "in_scope_icd10_prefixes": [],
-    "icd10_backfilled_from_diagnosis": false,
-    "diagnoses": [
-      "Nhiễm giun lươn Strongyloides / Nhiễm Giun đũa chó Toxocara / Nhiễm Sán máng Schistosoma Mansoni / Viêm da dị ứng cơ địa"
-    ],
-    "total_meds": 8,
-    "verified_catalog_meds_count": 1,
-    "medications": [
-      {
-        "med_index": 1,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Albendazole",
-        "active_ingredient": "Albendazole",
-        "strength_dosage": "400mg",
-        "route": "Uống",
-        "quantity": 20,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": 2,
-        "dosage_schedule": {
-          "morning": 1,
-          "afternoon": 1
-        },
-        "meal_timing": "sau ăn no",
-        "usage_instruction_full": "Uống ngày 2 lần, mỗi lần 1 viên sáng, chiều, sau ăn no"
-      },
-      {
-        "med_index": 2,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Cimetidine",
-        "active_ingredient": "Cimetidine",
-        "strength_dosage": "300mg",
-        "route": "Uống",
-        "quantity": 20,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": 2,
-        "dosage_schedule": {
-          "morning": 1,
-          "afternoon": 1
-        },
-        "meal_timing": "sau ăn no",
-        "usage_instruction_full": "Uống ngày 2 lần, mỗi lần 1 viên sáng, chiều, sau ăn no"
-      },
-      {
-        "med_index": 3,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Ivermectin",
-        "active_ingredient": "Ivermectin",
-        "strength_dosage": "6mg",
-        "route": "Uống",
-        "quantity": 4,
-        "unit": "Viên",
-        "duration_days": 14,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 2
-        },
-        "meal_timing": "trước ăn 2 giờ",
-        "usage_instruction_full": "Uống mỗi lần 2 viên vào buổi sáng trước ăn 2 giờ, hai liều cách nhau 14 ngày"
-      },
-      {
-        "med_index": 4,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Ebastin",
-        "active_ingredient": "Ebastin",
-        "strength_dosage": "10mg",
-        "route": "Uống",
-        "quantity": 40,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "evening": 1
-        },
-        "meal_timing": "sau ăn tối",
-        "usage_instruction_full": "Uống 1 viên sau ăn tối"
-      },
-      {
-        "med_index": 5,
-        "drug_id": "DRUG-060",
-        "in_verified_catalog": true,
-        "canonical_name": "Methylprednisolone",
-        "active_ingredient": "Methylprednisolone",
-        "strength_dosage": "16mg",
-        "route": "Uống",
-        "quantity": 5,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 1
-        },
-        "meal_timing": "sau ăn sáng",
-        "usage_instruction_full": "Uống 1 viên sau ăn sáng"
-      },
-      {
-        "med_index": 6,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Silymarin",
-        "active_ingredient": "Silymarin",
-        "strength_dosage": "140mg",
-        "route": "Uống",
-        "quantity": 60,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": 2,
-        "dosage_schedule": {
-          "morning": 1,
-          "afternoon": 1
-        },
-        "meal_timing": "sau ăn",
-        "usage_instruction_full": "Uống ngày 2 lần, mỗi lần 1 viên sáng, chiều sau ăn"
-      },
-      {
-        "med_index": 7,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Praziquantel",
-        "active_ingredient": "Praziquantel",
-        "strength_dosage": "600mg",
-        "route": "Uống",
-        "quantity": 6,
-        "unit": "Viên",
-        "duration_days": 2,
-        "frequency_per_day": 3,
-        "dosage_schedule": {
-          "morning": 1,
-          "noon": 1,
-          "afternoon": 1
-        },
-        "meal_timing": "sau ăn",
-        "usage_instruction_full": "Uống ngày 3 lần sáng trưa, chiều mỗi lần 1 viên sau ăn (chú ý thuốc này uống trước các thuốc khác 2 ngày)"
-      },
-      {
-        "med_index": 8,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Tacrolimus",
-        "active_ingredient": "Tacrolimus",
-        "strength_dosage": "0.1%",
-        "route": "Bôi",
-        "quantity": 1,
-        "unit": "Tube",
-        "duration_days": null,
-        "frequency_per_day": 2,
-        "dosage_schedule": {},
-        "meal_timing": null,
-        "usage_instruction_full": "bôi vùng da ngứa ngày 2 lần"
-      }
-    ]
-  },
-  {
-    "case_id": "SYN-CASE-086",
+    "case_id": "SYN-CASE-058",
     "is_synthetic": true,
     "seed": 42,
     "patient_profile": {
@@ -12553,7 +8960,7 @@
       "Mã bệnh (ICD-10): U00"
     ],
     "total_meds": 6,
-    "verified_catalog_meds_count": 2,
+    "verified_catalog_meds_count": 1,
     "medications": [
       {
         "med_index": 1,
@@ -12594,8 +9001,8 @@
       },
       {
         "med_index": 3,
-        "drug_id": "DRUG-077",
-        "in_verified_catalog": true,
+        "drug_id": null,
+        "in_verified_catalog": false,
         "canonical_name": "Clotrimazol + Betamethason dipropionat",
         "active_ingredient": "Clotrimazol + Betamethason dipropionat",
         "strength_dosage": "100mg + 6,4mg / 10g",
@@ -12668,173 +9075,11 @@
     ]
   },
   {
-    "case_id": "SYN-CASE-087",
+    "case_id": "SYN-CASE-059",
     "is_synthetic": true,
     "seed": 42,
     "patient_profile": {
-      "age": null,
-      "gender": "Nữ",
-      "weight_kg": null,
-      "allergies": "unknown"
-    },
-    "icd10_codes": [],
-    "in_scope_icd10_prefixes": [],
-    "icd10_backfilled_from_diagnosis": false,
-    "diagnoses": [
-      "Thai 5 tuần dọa sảy"
-    ],
-    "total_meds": 4,
-    "verified_catalog_meds_count": 1,
-    "medications": [
-      {
-        "med_index": 1,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Drotaverin",
-        "active_ingredient": "Drotaverin",
-        "strength_dosage": "80 mg",
-        "route": "Uống",
-        "quantity": 1,
-        "unit": "hộp",
-        "duration_days": null,
-        "frequency_per_day": 2,
-        "dosage_schedule": {},
-        "meal_timing": null,
-        "usage_instruction_full": "Ngày uống 02 viên, chia 2 lần"
-      },
-      {
-        "med_index": 2,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Dydrogesteron",
-        "active_ingredient": "Dydrogesteron",
-        "strength_dosage": "10mg",
-        "route": "Uống",
-        "quantity": 1,
-        "unit": "hộp",
-        "duration_days": null,
-        "frequency_per_day": 2,
-        "dosage_schedule": {},
-        "meal_timing": null,
-        "usage_instruction_full": "ngày uống 04 viên, chia 2 lần"
-      },
-      {
-        "med_index": 3,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Progesteron",
-        "active_ingredient": "Progesteron",
-        "strength_dosage": "200mg",
-        "route": "Đặt âm đạo",
-        "quantity": 1,
-        "unit": "hộp",
-        "duration_days": null,
-        "frequency_per_day": 2,
-        "dosage_schedule": {},
-        "meal_timing": null,
-        "usage_instruction_full": "Ngày đặt âm đạo 2 viên, chia 2 lần"
-      },
-      {
-        "med_index": 4,
-        "drug_id": "DRUG-066",
-        "in_verified_catalog": true,
-        "canonical_name": "Alverin citrat",
-        "active_ingredient": "Alverin citrat",
-        "strength_dosage": "40mg",
-        "route": "Uống",
-        "quantity": 1,
-        "unit": "hộp",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {},
-        "meal_timing": null,
-        "usage_instruction_full": "Ngày uống 04 viên chia 2 lần"
-      }
-    ]
-  },
-  {
-    "case_id": "SYN-CASE-088",
-    "is_synthetic": true,
-    "seed": 42,
-    "patient_profile": {
-      "age": null,
-      "gender": "Nữ",
-      "weight_kg": null,
-      "allergies": "unknown"
-    },
-    "icd10_codes": [],
-    "in_scope_icd10_prefixes": [],
-    "icd10_backfilled_from_diagnosis": false,
-    "diagnoses": [
-      "Thai 4 tuần ra huyết / dọa sảy"
-    ],
-    "total_meds": 3,
-    "verified_catalog_meds_count": 0,
-    "medications": [
-      {
-        "med_index": 1,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Dydrogesteron",
-        "active_ingredient": "Dydrogesteron",
-        "strength_dosage": "10mg",
-        "route": "Uống",
-        "quantity": 20,
-        "unit": "viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 1,
-          "afternoon": 1
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "Sáng 1, chiều 1"
-      },
-      {
-        "med_index": 2,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Progesteron",
-        "active_ingredient": "Progesteron",
-        "strength_dosage": "200 mg",
-        "route": "Đặt âm đạo",
-        "quantity": 20,
-        "unit": "viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 1,
-          "evening": 1
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "Đặt âm đạo sáng 1, tối 1"
-      },
-      {
-        "med_index": 3,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Acid folic",
-        "active_ingredient": "Acid folic",
-        "strength_dosage": "400mg",
-        "route": "Uống",
-        "quantity": 10,
-        "unit": "viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 1
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "Sáng 1 viên"
-      }
-    ]
-  },
-  {
-    "case_id": "SYN-CASE-089",
-    "is_synthetic": true,
-    "seed": 42,
-    "patient_profile": {
-      "age": 59,
+      "age": 56,
       "gender": "Nam",
       "weight_kg": null,
       "allergies": "unknown"
@@ -13004,388 +9249,13 @@
     ]
   },
   {
-    "case_id": "SYN-CASE-090",
-    "is_synthetic": true,
-    "seed": 42,
-    "patient_profile": {
-      "age": 38,
-      "gender": "Nữ",
-      "weight_kg": 49.0,
-      "allergies": "unknown"
-    },
-    "icd10_codes": [
-      "K29",
-      "K77"
-    ],
-    "in_scope_icd10_prefixes": [],
-    "icd10_backfilled_from_diagnosis": false,
-    "diagnoses": [
-      "Viêm dạ dày, HP dương tính (K29)",
-      "Rối loạn chức năng gan (K77)"
-    ],
-    "total_meds": 5,
-    "verified_catalog_meds_count": 0,
-    "medications": [
-      {
-        "med_index": 1,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Tinidazol",
-        "active_ingredient": "Tinidazol",
-        "strength_dosage": "500 mg",
-        "route": "Uống",
-        "quantity": 28,
-        "unit": "Viên",
-        "duration_days": 14,
-        "frequency_per_day": 2,
-        "dosage_schedule": {
-          "morning": 1,
-          "evening": 1
-        },
-        "meal_timing": "sau ăn",
-        "usage_instruction_full": "14 ngày - Ngày 2 lần : Sáng: 1 Viên; Tối: 1 Viên - Ghi chú: sau ăn"
-      },
-      {
-        "med_index": 2,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Tetracyclin hydroclorid",
-        "active_ingredient": "Tetracyclin hydroclorid",
-        "strength_dosage": "500 mg",
-        "route": "Uống",
-        "quantity": 56,
-        "unit": "Viên",
-        "duration_days": 14,
-        "frequency_per_day": 2,
-        "dosage_schedule": {
-          "morning": 2,
-          "evening": 2
-        },
-        "meal_timing": "sau ăn",
-        "usage_instruction_full": "14 ngày - Ngày 2 lần : Sáng: 2 Viên; Tối: 2 Viên - Ghi chú: sau ăn"
-      },
-      {
-        "med_index": 3,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Bismuth",
-        "active_ingredient": "Bismuth",
-        "strength_dosage": "120 mg",
-        "route": "Uống",
-        "quantity": 56,
-        "unit": "Viên",
-        "duration_days": 14,
-        "frequency_per_day": 2,
-        "dosage_schedule": {
-          "morning": 2,
-          "evening": 2
-        },
-        "meal_timing": "sau ăn 2 giờ",
-        "usage_instruction_full": "14 ngày - Ngày 2 lần : Sáng: 2 Viên; Tối: 2 Viên - Ghi chú: sau ăn 2 giờ"
-      },
-      {
-        "med_index": 4,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Saccharomyces boulardii",
-        "active_ingredient": "Saccharomyces boulardii",
-        "strength_dosage": "250 mg",
-        "route": "Uống",
-        "quantity": 28,
-        "unit": "Viên",
-        "duration_days": 14,
-        "frequency_per_day": 2,
-        "dosage_schedule": {
-          "morning": 1,
-          "evening": 1
-        },
-        "meal_timing": "sau ăn",
-        "usage_instruction_full": "14 ngày - Ngày 2 lần : Sáng: 1 Viên; Tối: 1 Viên - Ghi chú: sau ăn"
-      },
-      {
-        "med_index": 5,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Silymarin + Silybin + Vitamin B1, B2, B5, B6, PP",
-        "active_ingredient": "Silymarin + Silybin + Vitamin B1, B2, B5, B6, PP",
-        "strength_dosage": "(140+60+8+8+8+24+16) mg",
-        "route": "Uống",
-        "quantity": 28,
-        "unit": "Viên",
-        "duration_days": 14,
-        "frequency_per_day": 2,
-        "dosage_schedule": {
-          "morning": 1,
-          "evening": 1
-        },
-        "meal_timing": "sau ăn",
-        "usage_instruction_full": "14 ngày - Ngày 2 lần : Sáng: 1 Viên; Tối: 1 Viên - Ghi chú: sau ăn"
-      }
-    ]
-  },
-  {
-    "case_id": "SYN-CASE-091",
-    "is_synthetic": true,
-    "seed": 42,
-    "patient_profile": {
-      "age": 50,
-      "gender": "Nam",
-      "weight_kg": 49.5,
-      "allergies": "unknown"
-    },
-    "icd10_codes": [],
-    "in_scope_icd10_prefixes": [],
-    "icd10_backfilled_from_diagnosis": false,
-    "diagnoses": [
-      "Rối loạn chức năng tiền đình/ thiểu năng tuần hoàn não/ trĩ nội độ 2"
-    ],
-    "total_meds": 7,
-    "verified_catalog_meds_count": 1,
-    "medications": [
-      {
-        "med_index": 1,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Betahistin",
-        "active_ingredient": "Betahistin",
-        "strength_dosage": "24mg",
-        "route": "Uống",
-        "quantity": 30,
-        "unit": "Viên",
-        "duration_days": 15,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 1,
-          "afternoon": 1
-        },
-        "meal_timing": "sau ăn",
-        "usage_instruction_full": "Sáng: 1, Chiều: 1 x 15 ngày = 30 Viên. Uống; sau ăn"
-      },
-      {
-        "med_index": 2,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Acetyl leucin",
-        "active_ingredient": "Acetyl leucin",
-        "strength_dosage": "500mg",
-        "route": "Uống",
-        "quantity": 30,
-        "unit": "Viên",
-        "duration_days": 15,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 1,
-          "afternoon": 1
-        },
-        "meal_timing": "sau ăn",
-        "usage_instruction_full": "Sáng: 1, Chiều: 1 x 15 ngày = 30 Viên. Uống; sau ăn"
-      },
-      {
-        "med_index": 3,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Flunarizin",
-        "active_ingredient": "Flunarizin",
-        "strength_dosage": "5mg",
-        "route": "Uống",
-        "quantity": 60,
-        "unit": "Viên",
-        "duration_days": 30,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 1,
-          "afternoon": 1
-        },
-        "meal_timing": "sau ăn",
-        "usage_instruction_full": "Sáng: 1, Chiều: 1 x 30 ngày = 60 Viên. Uống; sau ăn"
-      },
-      {
-        "med_index": 4,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Ginkgo biloba + Magnesi lactat + Vitamin B6",
-        "active_ingredient": "Ginkgo biloba + Magnesi lactat + Vitamin B6",
-        "strength_dosage": "40mg+470mg+5mg",
-        "route": "Uống",
-        "quantity": 60,
-        "unit": "Viên",
-        "duration_days": 30,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 1,
-          "afternoon": 1
-        },
-        "meal_timing": "sau ăn",
-        "usage_instruction_full": "Sáng: 1, Chiều: 1 x 30 ngày = 60 Viên. Uống; sau ăn"
-      },
-      {
-        "med_index": 5,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Piracetam",
-        "active_ingredient": "Piracetam",
-        "strength_dosage": "1200mg",
-        "route": "Uống",
-        "quantity": 60,
-        "unit": "Ống",
-        "duration_days": 30,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 1,
-          "afternoon": 1
-        },
-        "meal_timing": "sau ăn",
-        "usage_instruction_full": "Sáng: 1, Chiều: 1 x 30 ngày = 60 Ống. Uống; sau ăn"
-      },
-      {
-        "med_index": 6,
-        "drug_id": "DRUG-075",
-        "in_verified_catalog": true,
-        "canonical_name": "Diosmin",
-        "active_ingredient": "Diosmin",
-        "strength_dosage": "600mg",
-        "route": "Uống",
-        "quantity": 60,
-        "unit": "Viên",
-        "duration_days": 30,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 1,
-          "afternoon": 1
-        },
-        "meal_timing": "sau ăn",
-        "usage_instruction_full": "Sáng: 1, Chiều: 1 x 30 ngày = 60 Viên. Uống; sau ăn"
-      },
-      {
-        "med_index": 7,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Vitamin C + Rutin",
-        "active_ingredient": "Vitamin C + Rutin",
-        "strength_dosage": "100mg+500mg",
-        "route": "Uống",
-        "quantity": 60,
-        "unit": "Viên",
-        "duration_days": 30,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 1,
-          "afternoon": 1
-        },
-        "meal_timing": "sau ăn",
-        "usage_instruction_full": "Sáng: 1, Chiều: 1 x 30 ngày = 60 Viên. Uống; sau ăn"
-      }
-    ]
-  },
-  {
-    "case_id": "SYN-CASE-092",
-    "is_synthetic": true,
-    "seed": 42,
-    "patient_profile": {
-      "age": null,
-      "gender": "unknown",
-      "weight_kg": null,
-      "allergies": "unknown"
-    },
-    "icd10_codes": [],
-    "in_scope_icd10_prefixes": [],
-    "icd10_backfilled_from_diagnosis": false,
-    "diagnoses": [
-      "Rối loạn tiền đình"
-    ],
-    "total_meds": 5,
-    "verified_catalog_meds_count": 1,
-    "medications": [
-      {
-        "med_index": 1,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Betahistin",
-        "active_ingredient": "Betahistin",
-        "strength_dosage": "24 mg",
-        "route": "Uống",
-        "quantity": 20,
-        "unit": "viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {},
-        "meal_timing": null,
-        "usage_instruction_full": "Uống sáng, tối"
-      },
-      {
-        "med_index": 2,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Cinnarizin",
-        "active_ingredient": "Cinnarizin",
-        "strength_dosage": "25mg",
-        "route": "Uống",
-        "quantity": 20,
-        "unit": "viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {},
-        "meal_timing": null,
-        "usage_instruction_full": "Uống sáng, tối"
-      },
-      {
-        "med_index": 3,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Acetyl leucin",
-        "active_ingredient": "Acetyl leucin",
-        "strength_dosage": "0.5g",
-        "route": "Uống",
-        "quantity": 20,
-        "unit": "viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {},
-        "meal_timing": null,
-        "usage_instruction_full": "Uống sáng, tối"
-      },
-      {
-        "med_index": 4,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Piracetam 0,8g",
-        "active_ingredient": "Piracetam 0,8g",
-        "strength_dosage": "0,5g",
-        "route": "Uống",
-        "quantity": 10,
-        "unit": "viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {},
-        "meal_timing": null,
-        "usage_instruction_full": "Uống sáng 1v, tối 1v"
-      },
-      {
-        "med_index": 5,
-        "drug_id": "DRUG-063",
-        "in_verified_catalog": true,
-        "canonical_name": "Paracetamol + Codein",
-        "active_ingredient": "Paracetamol + Codein",
-        "strength_dosage": "500mg/30mg",
-        "route": "Uống",
-        "quantity": 10,
-        "unit": "viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {},
-        "meal_timing": "khi đau đầu nhiều",
-        "usage_instruction_full": "Uống 1 viên khi đau đầu nhiều, cách mỗi 4-6 h"
-      }
-    ]
-  },
-  {
-    "case_id": "SYN-CASE-093",
+    "case_id": "SYN-CASE-060",
     "is_synthetic": true,
     "seed": 42,
     "patient_profile": {
       "age": null,
       "gender": "Nữ",
-      "weight_kg": 67.0,
+      "weight_kg": 65.5,
       "allergies": "unknown"
     },
     "icd10_codes": [
@@ -13490,116 +9360,13 @@
     ]
   },
   {
-    "case_id": "SYN-CASE-094",
-    "is_synthetic": true,
-    "seed": 42,
-    "patient_profile": {
-      "age": 3,
-      "gender": "Nam",
-      "weight_kg": null,
-      "allergies": "unknown"
-    },
-    "icd10_codes": [],
-    "in_scope_icd10_prefixes": [
-      "J09"
-    ],
-    "icd10_backfilled_from_diagnosis": false,
-    "diagnoses": [
-      "Viêm mũi họng cấp / Cúm A+"
-    ],
-    "total_meds": 5,
-    "verified_catalog_meds_count": 3,
-    "medications": [
-      {
-        "med_index": 1,
-        "drug_id": "DRUG-082",
-        "in_verified_catalog": true,
-        "canonical_name": "Oseltamivir",
-        "active_ingredient": "Oseltamivir",
-        "strength_dosage": "75mg",
-        "route": "Uống",
-        "quantity": 5,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": 2,
-        "dosage_schedule": {},
-        "meal_timing": "sau ăn",
-        "usage_instruction_full": "Pha 1 viên với 7,5ml nước nguội, ngày uống 2 lần, mỗi lần 3ml sau ăn"
-      },
-      {
-        "med_index": 2,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Cao lỏng sài hồ + Cao lỏng cát cánh",
-        "active_ingredient": "Cao lỏng sài hồ + Cao lỏng cát cánh",
-        "strength_dosage": "Chai 120ml",
-        "route": "Uống",
-        "quantity": 1,
-        "unit": "Chai",
-        "duration_days": null,
-        "frequency_per_day": 2,
-        "dosage_schedule": {},
-        "meal_timing": "sau ăn",
-        "usage_instruction_full": "Uống ngày 2 lần, mỗi lần 10ml sau ăn"
-      },
-      {
-        "med_index": 3,
-        "drug_id": "DRUG-059",
-        "in_verified_catalog": true,
-        "canonical_name": "Desloratadine",
-        "active_ingredient": "Desloratadine",
-        "strength_dosage": "0.5 mg/ml chai 60 ml",
-        "route": "Uống",
-        "quantity": 1,
-        "unit": "Lọ",
-        "duration_days": null,
-        "frequency_per_day": 1,
-        "dosage_schedule": {},
-        "meal_timing": "sau ăn",
-        "usage_instruction_full": "Uống ngày 1 lần, 2,5ml sau ăn"
-      },
-      {
-        "med_index": 4,
-        "drug_id": "DRUG-069",
-        "in_verified_catalog": true,
-        "canonical_name": "Oresol",
-        "active_ingredient": "Oresol",
-        "strength_dosage": null,
-        "route": "Uống",
-        "quantity": 10,
-        "unit": "Gói",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {},
-        "meal_timing": null,
-        "usage_instruction_full": "Pha uống theo hướng dẫn"
-      },
-      {
-        "med_index": 5,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Neomycin Sulfat + Polymyxin B + Dexamethasone",
-        "active_ingredient": "Neomycin Sulfat + Polymyxin B + Dexamethasone",
-        "strength_dosage": "lọ 10ml",
-        "route": "Nhỏ mũi",
-        "quantity": 1,
-        "unit": "Lọ",
-        "duration_days": null,
-        "frequency_per_day": 2,
-        "dosage_schedule": {},
-        "meal_timing": null,
-        "usage_instruction_full": "Nhỏ mũi ngày 2 lần, mỗi bên mũi 2 giọt sau vệ sinh mũi"
-      }
-    ]
-  },
-  {
-    "case_id": "SYN-CASE-095",
+    "case_id": "SYN-CASE-061",
     "is_synthetic": true,
     "seed": 42,
     "patient_profile": {
       "age": null,
       "gender": "Nam",
-      "weight_kg": 9.0,
+      "weight_kg": 10.5,
       "allergies": "unknown"
     },
     "icd10_codes": [
@@ -13617,7 +9384,7 @@
       "J00 - Viêm mũi họng cấp"
     ],
     "total_meds": 6,
-    "verified_catalog_meds_count": 3,
+    "verified_catalog_meds_count": 2,
     "medications": [
       {
         "med_index": 1,
@@ -13712,8 +9479,8 @@
       },
       {
         "med_index": 6,
-        "drug_id": "DRUG-063",
-        "in_verified_catalog": true,
+        "drug_id": null,
+        "in_verified_catalog": false,
         "canonical_name": "Paracetamol",
         "active_ingredient": "Paracetamol",
         "strength_dosage": "150mg",
@@ -13729,11 +9496,11 @@
     ]
   },
   {
-    "case_id": "SYN-CASE-096",
+    "case_id": "SYN-CASE-062",
     "is_synthetic": true,
     "seed": 42,
     "patient_profile": {
-      "age": 76,
+      "age": 75,
       "gender": "Nam",
       "weight_kg": null,
       "allergies": "unknown"
@@ -13846,471 +9613,6 @@
         },
         "meal_timing": "Sau ăn",
         "usage_instruction_full": "UỐNG: Sáng 1 – trưa 1. Sau ăn"
-      }
-    ]
-  },
-  {
-    "case_id": "SYN-CASE-097",
-    "is_synthetic": true,
-    "seed": 42,
-    "patient_profile": {
-      "age": null,
-      "gender": "Nam",
-      "weight_kg": 50.0,
-      "allergies": "unknown"
-    },
-    "icd10_codes": [],
-    "in_scope_icd10_prefixes": [],
-    "icd10_backfilled_from_diagnosis": false,
-    "diagnoses": [
-      "Các rối loạn tâm thần biệt định khác do tổn thương não, rối loạn chức năng não và bệnh lý cơ thể",
-      "Rối loạn giấc ngủ không thực tổn",
-      "Hội chứng ngoại tháp và rối loạn vận động khác",
-      "Thiếu các vitamin nhóm B khác"
-    ],
-    "total_meds": 5,
-    "verified_catalog_meds_count": 1,
-    "medications": [
-      {
-        "med_index": 1,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Trihexyphenidyl hydroclorid",
-        "active_ingredient": "Trihexyphenidyl hydroclorid",
-        "strength_dosage": "2mg",
-        "route": "Uống",
-        "quantity": 42,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 1,
-          "evening": 1
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "uống sáng 01 viên 8h; tối 01 viên 20h"
-      },
-      {
-        "med_index": 2,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Risperidon",
-        "active_ingredient": "Risperidon",
-        "strength_dosage": "2mg",
-        "route": "Uống",
-        "quantity": 42,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 1,
-          "evening": 1
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "uống sáng 01 viên 8h, tối 01 viên 20h"
-      },
-      {
-        "med_index": 3,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Alimemazin tartrat",
-        "active_ingredient": "Alimemazin tartrat",
-        "strength_dosage": "5mg",
-        "route": "Uống",
-        "quantity": 42,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "evening": 2
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "uống tối 02 viên 20h"
-      },
-      {
-        "med_index": 4,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Olanzapin",
-        "active_ingredient": "Olanzapin",
-        "strength_dosage": "5mg",
-        "route": "Uống",
-        "quantity": 21,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "evening": 1
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "uống tối 01 viên 20h"
-      },
-      {
-        "med_index": 5,
-        "drug_id": "DRUG-074",
-        "in_verified_catalog": true,
-        "canonical_name": "Vitamin B1 + B6 + B12",
-        "active_ingredient": "Vitamin B1 + B6 + B12",
-        "strength_dosage": null,
-        "route": "Uống",
-        "quantity": 42,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 1,
-          "evening": 1
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "uống sáng 01 viên 8h, tối 01 viên 20h"
-      }
-    ]
-  },
-  {
-    "case_id": "SYN-CASE-098",
-    "is_synthetic": true,
-    "seed": 42,
-    "patient_profile": {
-      "age": 44,
-      "gender": "Nữ",
-      "weight_kg": null,
-      "allergies": "unknown"
-    },
-    "icd10_codes": [],
-    "in_scope_icd10_prefixes": [],
-    "icd10_backfilled_from_diagnosis": false,
-    "diagnoses": [
-      "2M: Song thị",
-      "MT: Phì đại cơ trực trong"
-    ],
-    "total_meds": 6,
-    "verified_catalog_meds_count": 3,
-    "medications": [
-      {
-        "med_index": 1,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Neomycin + Polymyxin B + Dexamethason",
-        "active_ingredient": "Neomycin + Polymyxin B + Dexamethason",
-        "strength_dosage": null,
-        "route": "Tra mắt",
-        "quantity": 1,
-        "unit": "Tuýp",
-        "duration_days": null,
-        "frequency_per_day": 2,
-        "dosage_schedule": {},
-        "meal_timing": null,
-        "usage_instruction_full": "tra mắt 2 lần/ngày, mỗi lần 1 Cm, Tra mắt mổ"
-      },
-      {
-        "med_index": 2,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Neomycin + Polymyxin B + Dexamethason",
-        "active_ingredient": "Neomycin + Polymyxin B + Dexamethason",
-        "strength_dosage": null,
-        "route": "Nhỏ mắt",
-        "quantity": 1,
-        "unit": "Lọ",
-        "duration_days": null,
-        "frequency_per_day": 4,
-        "dosage_schedule": {},
-        "meal_timing": null,
-        "usage_instruction_full": "nhỏ mắt 4 lần/ngày, mỗi lần 1 Giọt, Nhỏ mắt mổ"
-      },
-      {
-        "med_index": 3,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Polyethylene glycol + Propylene glycol",
-        "active_ingredient": "Polyethylene glycol + Propylene glycol",
-        "strength_dosage": null,
-        "route": "Nhỏ mắt",
-        "quantity": 1,
-        "unit": "Lọ",
-        "duration_days": null,
-        "frequency_per_day": 4,
-        "dosage_schedule": {},
-        "meal_timing": null,
-        "usage_instruction_full": "nhỏ mắt 4 lần/ngày, mỗi lần 1 Giọt, Nhỏ mắt mổ"
-      },
-      {
-        "med_index": 4,
-        "drug_id": "DRUG-060",
-        "in_verified_catalog": true,
-        "canonical_name": "Methylprednisolon",
-        "active_ingredient": "Methylprednisolon",
-        "strength_dosage": "16 mg",
-        "route": "Uống",
-        "quantity": 7,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": 1,
-        "dosage_schedule": {
-          "morning": 1
-        },
-        "meal_timing": "sau ăn",
-        "usage_instruction_full": "uống 1 lần/ngày, mỗi lần 1 Viên, Sáng (sau ăn)"
-      },
-      {
-        "med_index": 5,
-        "drug_id": "DRUG-060",
-        "in_verified_catalog": true,
-        "canonical_name": "Methylprednisolon",
-        "active_ingredient": "Methylprednisolon",
-        "strength_dosage": "4 mg",
-        "route": "Uống",
-        "quantity": 21,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": 1,
-        "dosage_schedule": {
-          "morning": 3
-        },
-        "meal_timing": "sau ăn",
-        "usage_instruction_full": "uống 1 lần/ngày, mỗi lần 3 viên Sáng (sau ăn)"
-      },
-      {
-        "med_index": 6,
-        "drug_id": "DRUG-043",
-        "in_verified_catalog": true,
-        "canonical_name": "Omeprazole",
-        "active_ingredient": "Omeprazole",
-        "strength_dosage": "20mg",
-        "route": "Uống",
-        "quantity": 60,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": 2,
-        "dosage_schedule": {
-          "morning": 1,
-          "afternoon": 1
-        },
-        "meal_timing": "trước ăn 30 phút",
-        "usage_instruction_full": "uống 2 lần/ngày, mỗi lần 1 Viên, Sáng - chiều trước ăn 30 phút"
-      }
-    ]
-  },
-  {
-    "case_id": "SYN-CASE-099",
-    "is_synthetic": true,
-    "seed": 42,
-    "patient_profile": {
-      "age": 77,
-      "gender": "Nữ",
-      "weight_kg": null,
-      "allergies": "unknown"
-    },
-    "icd10_codes": [
-      "H10.1",
-      "L23"
-    ],
-    "in_scope_icd10_prefixes": [],
-    "icd10_backfilled_from_diagnosis": false,
-    "diagnoses": [
-      "H10.1-Viêm kết mạc dị ứng cấp (MT)",
-      "L23-Viêm da tiếp xúc dị ứng (quanh mắt trái)",
-      "MP Đục TT"
-    ],
-    "total_meds": 5,
-    "verified_catalog_meds_count": 2,
-    "medications": [
-      {
-        "med_index": 1,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Ofloxacin",
-        "active_ingredient": "Ofloxacin",
-        "strength_dosage": "3,5g",
-        "route": "Tra mắt",
-        "quantity": 1,
-        "unit": "Lọ",
-        "duration_days": null,
-        "frequency_per_day": 4,
-        "dosage_schedule": {},
-        "meal_timing": null,
-        "usage_instruction_full": "Tra mắt trái ngày 04 lần, mỗi lần 01 giọt"
-      },
-      {
-        "med_index": 2,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Tobramycin + Dexamethasone",
-        "active_ingredient": "Tobramycin + Dexamethasone",
-        "strength_dosage": "5ml",
-        "route": "Tra mắt / Bôi da mi",
-        "quantity": 1,
-        "unit": "Lọ",
-        "duration_days": null,
-        "frequency_per_day": 2,
-        "dosage_schedule": {
-          "noon": 1,
-          "evening": 1
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "Tra mắt trái ngày 02 lần: trưa - tối, mỗi lần 1 cm. Bôi da mi quanh mắt trái 2 lần/ ngày."
-      },
-      {
-        "med_index": 3,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Sodium Hyaluronate",
-        "active_ingredient": "Sodium Hyaluronate",
-        "strength_dosage": null,
-        "route": "Tra mắt",
-        "quantity": 1,
-        "unit": "Lọ",
-        "duration_days": null,
-        "frequency_per_day": 4,
-        "dosage_schedule": {},
-        "meal_timing": null,
-        "usage_instruction_full": "Tra 2 mắt ngày 04 lần, mỗi lần 01 giọt"
-      },
-      {
-        "med_index": 4,
-        "drug_id": "DRUG-069",
-        "in_verified_catalog": true,
-        "canonical_name": "Natri clorid",
-        "active_ingredient": "Natri clorid",
-        "strength_dosage": "0,9%",
-        "route": "Tra mắt",
-        "quantity": 1,
-        "unit": "Lọ",
-        "duration_days": null,
-        "frequency_per_day": 3,
-        "dosage_schedule": {},
-        "meal_timing": null,
-        "usage_instruction_full": "Tra 2 mắt ngày 03 lần, mỗi lần 01 giọt"
-      },
-      {
-        "med_index": 5,
-        "drug_id": "DRUG-059",
-        "in_verified_catalog": true,
-        "canonical_name": "Loratadin",
-        "active_ingredient": "Loratadin",
-        "strength_dosage": "10mg",
-        "route": "Uống",
-        "quantity": 20,
-        "unit": "viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 1,
-          "evening": 1
-        },
-        "meal_timing": "sau ăn",
-        "usage_instruction_full": "Uống sáng 1 viên - tối 1 viên, sau ăn"
-      }
-    ]
-  },
-  {
-    "case_id": "SYN-CASE-100",
-    "is_synthetic": true,
-    "seed": 42,
-    "patient_profile": {
-      "age": null,
-      "gender": "unknown",
-      "weight_kg": null,
-      "allergies": "unknown"
-    },
-    "icd10_codes": [
-      "L80"
-    ],
-    "in_scope_icd10_prefixes": [],
-    "icd10_backfilled_from_diagnosis": false,
-    "diagnoses": [
-      "L80 - Bạch biến"
-    ],
-    "total_meds": 5,
-    "verified_catalog_meds_count": 1,
-    "medications": [
-      {
-        "med_index": 1,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Dexamethason",
-        "active_ingredient": "Dexamethason",
-        "strength_dosage": "2mg/5ml",
-        "route": "Uống",
-        "quantity": 20,
-        "unit": "Ống",
-        "duration_days": 2,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 2
-        },
-        "meal_timing": "sau ăn no",
-        "usage_instruction_full": "Tuần uống vào 2 ngày liên tiếp: thứ 5, thứ 6: Uống sáng 2 ống sau ăn no"
-      },
-      {
-        "med_index": 2,
-        "drug_id": "DRUG-046",
-        "in_verified_catalog": true,
-        "canonical_name": "Lansoprazol",
-        "active_ingredient": "Lansoprazol",
-        "strength_dosage": "30mg",
-        "route": "Uống",
-        "quantity": 30,
-        "unit": "Viên",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "morning": 1
-        },
-        "meal_timing": "trước ăn 30 phút",
-        "usage_instruction_full": "Uống sáng 1 viên trước ăn 30 phút"
-      },
-      {
-        "med_index": 3,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Fusidic Acid + Betamethasone",
-        "active_ingredient": "Fusidic Acid + Betamethasone",
-        "strength_dosage": "20mg/g + 1mg/g",
-        "route": "Bôi",
-        "quantity": 1,
-        "unit": "Tube",
-        "duration_days": 5,
-        "frequency_per_day": null,
-        "dosage_schedule": {},
-        "meal_timing": null,
-        "usage_instruction_full": "Bôi dát trắng tay chân buổi sáng, tối trong 5 ngày sau đó bôi ngày 1 lần buổi sáng trong 7 ngày tiếp theo rồi bôi cách ngày. Dừng sau tổng cộng 3 tuần bôi thuốc"
-      },
-      {
-        "med_index": 4,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Tacrolimus",
-        "active_ingredient": "Tacrolimus",
-        "strength_dosage": "0.1%",
-        "route": "Bôi",
-        "quantity": 1,
-        "unit": "Tube",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "evening": 1
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "Bôi từ ngày thứ 6 trở đi: Bôi dát trắng tay chân buổi tối"
-      },
-      {
-        "med_index": 5,
-        "drug_id": null,
-        "in_verified_catalog": false,
-        "canonical_name": "Tacrolimus",
-        "active_ingredient": "Tacrolimus",
-        "strength_dosage": "0.03%",
-        "route": "Bôi",
-        "quantity": 1,
-        "unit": "Tube",
-        "duration_days": null,
-        "frequency_per_day": null,
-        "dosage_schedule": {
-          "evening": 1
-        },
-        "meal_timing": null,
-        "usage_instruction_full": "Bôi mỏng vùng dát trắng ở mặt buổi tối, sau ceradan 5-10 phút"
       }
     ]
   }

@@ -2972,7 +2972,7 @@
     "unit_price_vnd_synthetic": 3500,
     "price_is_synthetic": true,
     "verification_status": "VERIFIED_FOR_SIMULATION",
-    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Data thường gặp.xlsx"
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
   },
   {
     "drug_id": "DRUG-054",
@@ -3025,7 +3025,7 @@
     "unit_price_vnd_synthetic": 20000,
     "price_is_synthetic": true,
     "verification_status": "VERIFIED_FOR_SIMULATION",
-    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Data thường gặp.xlsx"
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
   },
   {
     "drug_id": "DRUG-055",
@@ -3075,7 +3075,7 @@
     "unit_price_vnd_synthetic": 17000,
     "price_is_synthetic": true,
     "verification_status": "VERIFIED_FOR_SIMULATION",
-    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Data thường gặp.xlsx"
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
   },
   {
     "drug_id": "DRUG-056",
@@ -3126,11 +3126,11 @@
     "unit_price_vnd_synthetic": 12000,
     "price_is_synthetic": true,
     "verification_status": "VERIFIED_FOR_SIMULATION",
-    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Data thường gặp.xlsx"
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
   },
   {
     "drug_id": "DRUG-057",
-    "canonical_name": "Budesonide (xịt mũi)",
+    "canonical_name": "Budesonide",
     "active_ingredient": "Budesonide",
     "aliases": [
       "Budesonid",
@@ -3168,7 +3168,7 @@
     "unit_price_vnd_synthetic": 11500,
     "price_is_synthetic": true,
     "verification_status": "VERIFIED_FOR_SIMULATION",
-    "source_reference": "Dược thư Quốc gia Việt Nam (2022)"
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
   },
   {
     "drug_id": "DRUG-058",
@@ -3217,7 +3217,7 @@
     "unit_price_vnd_synthetic": 22000,
     "price_is_synthetic": true,
     "verification_status": "VERIFIED_FOR_SIMULATION",
-    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Data thường gặp.xlsx"
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
   },
   {
     "drug_id": "DRUG-059",
@@ -3258,7 +3258,7 @@
     "unit_price_vnd_synthetic": 3500,
     "price_is_synthetic": true,
     "verification_status": "VERIFIED_FOR_SIMULATION",
-    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Data thường gặp.xlsx"
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
   },
   {
     "drug_id": "DRUG-060",
@@ -3317,7 +3317,7 @@
     "unit_price_vnd_synthetic": 18000,
     "price_is_synthetic": true,
     "verification_status": "VERIFIED_FOR_SIMULATION",
-    "source_reference": "Dược thư Quốc gia Việt Nam (2022)"
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
   },
   {
     "drug_id": "DRUG-061",
@@ -3369,7 +3369,7 @@
     "unit_price_vnd_synthetic": 6000,
     "price_is_synthetic": true,
     "verification_status": "VERIFIED_FOR_SIMULATION",
-    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Data thường gặp.xlsx"
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
   },
   {
     "drug_id": "DRUG-062",
@@ -3377,6 +3377,7 @@
     "active_ingredient": "Ambroxol HCl",
     "aliases": [
       "Ambroxol",
+      "Ambroxol HCl",
       "Mucosolvan"
     ],
     "component_ingredients": [
@@ -3412,7 +3413,7 @@
     "unit_price_vnd_synthetic": 3500,
     "price_is_synthetic": true,
     "verification_status": "VERIFIED_FOR_SIMULATION",
-    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Data thường gặp.xlsx"
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
   },
   {
     "drug_id": "DRUG-063",
@@ -3474,7 +3475,7 @@
     "unit_price_vnd_synthetic": 14000,
     "price_is_synthetic": true,
     "verification_status": "VERIFIED_FOR_SIMULATION",
-    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Data thường gặp.xlsx"
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
   },
   {
     "drug_id": "DRUG-064",
@@ -3530,7 +3531,7 @@
     "unit_price_vnd_synthetic": 24500,
     "price_is_synthetic": true,
     "verification_status": "VERIFIED_FOR_SIMULATION",
-    "source_reference": "Dược thư Quốc gia Việt Nam (2022)"
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
   },
   {
     "drug_id": "DRUG-065",
@@ -3580,7 +3581,7 @@
     "unit_price_vnd_synthetic": 19000,
     "price_is_synthetic": true,
     "verification_status": "VERIFIED_FOR_SIMULATION",
-    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Data thường gặp.xlsx"
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
   },
   {
     "drug_id": "DRUG-066",
@@ -3624,7 +3625,7 @@
     "unit_price_vnd_synthetic": 19500,
     "price_is_synthetic": true,
     "verification_status": "VERIFIED_FOR_SIMULATION",
-    "source_reference": "Dược thư Quốc gia Việt Nam (2022)"
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
   },
   {
     "drug_id": "DRUG-067",
@@ -3673,14 +3674,14 @@
     "unit_price_vnd_synthetic": 18500,
     "price_is_synthetic": true,
     "verification_status": "VERIFIED_FOR_SIMULATION",
-    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Data thường gặp.xlsx"
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
   },
   {
     "drug_id": "DRUG-068",
     "canonical_name": "Bacillus subtilis",
     "active_ingredient": "Bacillus subtilis",
     "aliases": [
-      "Men vi sinh",
+      "Bacillus subtilis",
       "Biolactovin"
     ],
     "component_ingredients": [
@@ -3713,7 +3714,7 @@
     "unit_price_vnd_synthetic": 20000,
     "price_is_synthetic": true,
     "verification_status": "VERIFIED_FOR_SIMULATION",
-    "source_reference": "Data thường gặp.xlsx & Tờ HDSD chế phẩm Probiotic"
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
   },
   {
     "drug_id": "DRUG-069",
@@ -3754,7 +3755,7 @@
     "unit_price_vnd_synthetic": 13500,
     "price_is_synthetic": true,
     "verification_status": "VERIFIED_FOR_SIMULATION",
-    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Bộ Y tế"
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
   },
   {
     "drug_id": "DRUG-070",
@@ -3824,7 +3825,7 @@
     "unit_price_vnd_synthetic": 4500,
     "price_is_synthetic": true,
     "verification_status": "VERIFIED_FOR_SIMULATION",
-    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Data thường gặp.xlsx"
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
   },
   {
     "drug_id": "DRUG-071",
@@ -3887,15 +3888,16 @@
     "unit_price_vnd_synthetic": 21500,
     "price_is_synthetic": true,
     "verification_status": "VERIFIED_FOR_SIMULATION",
-    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Data thường gặp.xlsx"
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
   },
   {
     "drug_id": "DRUG-072",
-    "canonical_name": "Ketoprofen (gel bôi ngoài)",
+    "canonical_name": "Ketoprofen",
     "active_ingredient": "Ketoprofen",
     "aliases": [
       "Fastum gel",
-      "Ketoprofen 2.5%"
+      "Ketoprofen 2.5%",
+      "Ketoprofen"
     ],
     "component_ingredients": [
       "Ketoprofen"
@@ -3939,7 +3941,7 @@
     "unit_price_vnd_synthetic": 12000,
     "price_is_synthetic": true,
     "verification_status": "VERIFIED_FOR_SIMULATION",
-    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Data thường gặp.xlsx"
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
   },
   {
     "drug_id": "DRUG-073",
@@ -3947,6 +3949,7 @@
     "active_ingredient": "Eperisone HCl",
     "aliases": [
       "Eperison",
+      "Eperison hydroclorid",
       "Myonal"
     ],
     "component_ingredients": [
@@ -3989,7 +3992,7 @@
     "unit_price_vnd_synthetic": 13500,
     "price_is_synthetic": true,
     "verification_status": "VERIFIED_FOR_SIMULATION",
-    "source_reference": "Tờ HDSD Eperisone 50mg & Data thường gặp.xlsx"
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
   },
   {
     "drug_id": "DRUG-074",
@@ -4034,7 +4037,7 @@
     "unit_price_vnd_synthetic": 10000,
     "price_is_synthetic": true,
     "verification_status": "VERIFIED_FOR_SIMULATION",
-    "source_reference": "Dược thư Quốc gia Việt Nam (2022)"
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
   },
   {
     "drug_id": "DRUG-075",
@@ -4042,7 +4045,7 @@
     "active_ingredient": "Diosmin + Hesperidin",
     "aliases": [
       "Daflon 500mg",
-      "Diosmin"
+      "Diosmin + hesperidin"
     ],
     "component_ingredients": [
       "Diosmin",
@@ -4077,7 +4080,7 @@
     "unit_price_vnd_synthetic": 5500,
     "price_is_synthetic": true,
     "verification_status": "VERIFIED_FOR_SIMULATION",
-    "source_reference": "Data thường gặp.xlsx & Tờ HDSD Daflon 500mg"
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
   },
   {
     "drug_id": "DRUG-076",
@@ -4117,11 +4120,11 @@
     "unit_price_vnd_synthetic": 23500,
     "price_is_synthetic": true,
     "verification_status": "VERIFIED_FOR_SIMULATION",
-    "source_reference": "Data thường gặp.xlsx & Dược thư Quốc gia Việt Nam (2022)"
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
   },
   {
     "drug_id": "DRUG-077",
-    "canonical_name": "Clotrimazole (kem bôi)",
+    "canonical_name": "Clotrimazole",
     "active_ingredient": "Clotrimazole",
     "aliases": [
       "Clotrimazol",
@@ -4158,15 +4161,16 @@
     "unit_price_vnd_synthetic": 20000,
     "price_is_synthetic": true,
     "verification_status": "VERIFIED_FOR_SIMULATION",
-    "source_reference": "Bài LL 5. Thuốc kháng nấm virus lao sốt rét.pdf & Dược thư Quốc gia Việt Nam (2022)"
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Tài liệu chuyên môn Dược lý học (Bài LL 5 - Kháng nấm, Virus)"
   },
   {
     "drug_id": "DRUG-078",
-    "canonical_name": "Terbinafine (kem bôi)",
+    "canonical_name": "Terbinafine",
     "active_ingredient": "Terbinafine HCl",
     "aliases": [
       "Lamisil",
-      "Terbinafin"
+      "Terbinafin",
+      "Terbinafine hydroclorid"
     ],
     "component_ingredients": [
       "Terbinafine"
@@ -4197,7 +4201,7 @@
     "unit_price_vnd_synthetic": 16500,
     "price_is_synthetic": true,
     "verification_status": "VERIFIED_FOR_SIMULATION",
-    "source_reference": "Bài LL 5. Thuốc kháng nấm virus lao sốt rét.pdf & Dược thư Quốc gia Việt Nam (2022)"
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Tài liệu chuyên môn Dược lý học (Bài LL 5 - Kháng nấm, Virus)"
   },
   {
     "drug_id": "DRUG-079",
@@ -4256,7 +4260,7 @@
     "unit_price_vnd_synthetic": 11000,
     "price_is_synthetic": true,
     "verification_status": "VERIFIED_FOR_SIMULATION",
-    "source_reference": "Bài LL 5. Thuốc kháng nấm virus lao sốt rét.pdf & Dược thư Quốc gia Việt Nam (2022)"
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Tài liệu chuyên môn Dược lý học (Bài LL 5 - Kháng nấm, Virus)"
   },
   {
     "drug_id": "DRUG-080",
@@ -4305,7 +4309,7 @@
     "unit_price_vnd_synthetic": 21000,
     "price_is_synthetic": true,
     "verification_status": "VERIFIED_FOR_SIMULATION",
-    "source_reference": "Bài LL 5. Thuốc kháng nấm virus lao sốt rét.pdf & Data thường gặp.xlsx"
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Tài liệu chuyên môn Dược lý học (Bài LL 5 - Kháng nấm, Virus)"
   },
   {
     "drug_id": "DRUG-081",
@@ -4347,7 +4351,7 @@
     "unit_price_vnd_synthetic": 14500,
     "price_is_synthetic": true,
     "verification_status": "VERIFIED_FOR_SIMULATION",
-    "source_reference": "Bài LL 5. Thuốc kháng nấm virus lao sốt rét.pdf & Dược thư Quốc gia Việt Nam (2022)"
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Tài liệu chuyên môn Dược lý học (Bài LL 5 - Kháng nấm, Virus)"
   },
   {
     "drug_id": "DRUG-082",
@@ -4389,7 +4393,7 @@
     "unit_price_vnd_synthetic": 12000,
     "price_is_synthetic": true,
     "verification_status": "VERIFIED_FOR_SIMULATION",
-    "source_reference": "Bài LL 5. Thuốc kháng nấm virus lao sốt rét.pdf & Hướng dẫn chẩn đoán điều trị Cúm - Bộ Y tế"
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Tài liệu chuyên môn Dược lý học (Bài LL 5 - Kháng nấm, Virus)"
   },
   {
     "drug_id": "DRUG-083",
@@ -4439,6 +4443,6 @@
     "unit_price_vnd_synthetic": 12000,
     "price_is_synthetic": true,
     "verification_status": "VERIFIED_FOR_SIMULATION",
-    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn Cơ xương khớp Bộ Y tế"
+    "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
   }
 ]

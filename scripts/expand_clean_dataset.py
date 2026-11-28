@@ -1,8 +1,11 @@
-"""Expand clean, PII-free datasets to cover chronic + common outpatient conditions.
+"""Expand and audit clean, PII-free datasets for chronic + outpatient conditions.
 
-Preserves DRUG-001..DRUG-052, BYT-I10-01..BYT-K21-01, and SYN-CASE-001..SYN-CASE-052,
-then appends verified outpatient drugs, guidelines, and anonymized remaining cases
-grounded in Data thường gặp.xlsx, Bài LL 5, Dược thư Quốc gia VN, and kcb.vn.
+Fixes enforced in this script:
+1. Strict exact active-ingredient + route matching for drug_id (zero substring mismatches).
+2. Exact canonical_name sync between drug_catalog_clean.json and guidelines_clean.json,
+   plus full K59 guideline coverage.
+3. Case base strictly filtered to adult, non-empty-diagnosis, non-emergency, in-scope cases.
+4. Clean standard medical source references (no local .xlsx/.pdf filenames or paths).
 
 Run with Python 3.10 (pandas/numpy):
     python scripts/expand_clean_dataset.py
@@ -21,14 +24,8 @@ import pandas as pd
 PROCESSED_DIR = Path("data/processed")
 RAW_CSV_PATH = Path("data/100_Toa_NVM_2026_Dataset.csv")
 
-IN_SCOPE_PREFIXES: set[str] = {
-    "I10", "E78", "E11", "K21",
-    "J01", "J02", "J30", "R05",
-    "A04", "K59",
-    "M75", "M54", "M17",
-    "I83",
-    "B35", "B02", "J09",
-}
+REF_BYT = "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn chẩn đoán và điều trị Bộ Y tế (kcb.vn)"
+REF_BLL5 = "Dược thư Quốc gia Việt Nam (2022) & Tài liệu chuyên môn Dược lý học (Bài LL 5 - Kháng nấm, Virus)"
 
 CORE_ONLY_KEYWORDS: dict[str, list[str]] = {
     "I10": ["tăng huyết áp", "huyết áp cao"],
@@ -37,22 +34,36 @@ CORE_ONLY_KEYWORDS: dict[str, list[str]] = {
     "K21": ["trào ngược dạ dày", "trào ngược thực quản", "gerd"],
 }
 
-ALL_DISEASE_KEYWORDS: dict[str, list[str]] = {
-    **CORE_ONLY_KEYWORDS,
-    "J01": ["viêm xoang"],
-    "J02": ["viêm họng"],
-    "J30": ["viêm mũi dị ứng"],
-    "R05": ["ho có đờm", "ho khan", "ho cấp"],
-    "A04": ["nhiễm trùng tiêu hóa", "viêm ruột"],
-    "K59": ["tiêu chảy", "rối loạn tiêu hóa"],
-    "M75": ["bao gân xoay", "viêm gân vai", "viêm quanh khớp vai"],
-    "M54": ["đau thắt lưng", "đau cơ vùng thắt lưng", "đau cột sống", "đau lưng"],
-    "M17": ["thoái hóa khớp gối"],
-    "I83": ["suy giãn tĩnh mạch", "giãn tĩnh mạch"],
-    "B35": ["nấm da", "hắc lào", "nấm kẽ"],
-    "B02": ["zona"],
-    "J09": ["cúm a", "cúm mùa", "nhiễm cúm"],
+ALL_DISEASE_PATTERNS: dict[str, list[re.Pattern[str]]] = {
+    "I10": [re.compile(r"tăng huyết áp|huyết áp cao")],
+    "E78": [re.compile(r"rối loạn mỡ máu|rối loạn lipid|tăng lipid|mỡ máu")],
+    "E11": [re.compile(r"đái tháo đường|tiểu đường")],
+    "K21": [re.compile(r"trào ngược dạ dày|trào ngược thực quản|gerd")],
+    "J01": [re.compile(r"viêm xoang")],
+    "J02": [re.compile(r"viêm họng")],
+    "J30": [re.compile(r"viêm mũi dị ứng")],
+    "R05": [re.compile(r"ho có đờm|ho khan|ho cấp")],
+    "A04": [re.compile(r"nhiễm trùng tiêu hóa|viêm ruột(?!\s*thừa)")],
+    "K59": [re.compile(r"tiêu chảy|rối loạn tiêu hóa|rối loạn chức năng ruột|rối loạn ruột chức năng")],
+    "M75": [re.compile(r"bao gân xoay|viêm gân vai|viêm quanh khớp vai")],
+    "M54": [re.compile(r"đau thắt lưng|đau cơ vùng thắt lưng|đau cột sống|đau lưng")],
+    "M17": [re.compile(r"thoái hóa khớp gối")],
+    "I83": [re.compile(r"suy giãn tĩnh mạch|giãn tĩnh mạch")],
+    "B35": [re.compile(r"nấm da|hắc lào|nấm kẽ")],
+    "B02": [re.compile(r"\bzona\b")],
+    "J09": [re.compile(r"cúm a|cúm mùa|nhiễm cúm")],
 }
+
+EXCLUDED_DIAGNOSIS_PATTERNS: tuple[re.Pattern[str], ...] = (
+    re.compile(r"ruột thừa"),
+    re.compile(r"dọa sảy"),
+    re.compile(r"ra huyết"),
+    re.compile(r"ung thư"),
+    re.compile(r"điều trị đích"),
+    re.compile(r"hóa trị"),
+    re.compile(r"nhồi máu cơ tim"),
+    re.compile(r"đột quỵ"),
+)
 
 PII_AUDIT_PATTERNS: dict[str, re.Pattern[str]] = {
     "vn_phone_10_digits": re.compile(r"(?<!\d)0[35789]\d{8}(?!\d)"),
@@ -106,7 +117,7 @@ EXTRA_DRUGS: list[dict[str, Any]] = [
             },
         ],
         "max_daily_dose": {"value": 2000, "unit": "mg", "display": "2 viên/ngày (1750mg Amoxicillin + 250mg Clavulanic)"},
-        "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Data thường gặp.xlsx",
+        "source_reference": REF_BYT,
     },
     {
         "canonical_name": "Amoxicillin + Clavulanic acid",
@@ -135,7 +146,7 @@ EXTRA_DRUGS: list[dict[str, Any]] = [
             }
         ],
         "max_daily_dose": {"value": 1875, "unit": "mg", "display": "3 viên/ngày (1500mg Amoxicillin + 375mg Clavulanic)"},
-        "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Data thường gặp.xlsx",
+        "source_reference": REF_BYT,
     },
     {
         "canonical_name": "Cefuroxime",
@@ -161,7 +172,7 @@ EXTRA_DRUGS: list[dict[str, Any]] = [
             }
         ],
         "max_daily_dose": {"value": 1000, "unit": "mg", "display": "1000 mg/ngày"},
-        "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Data thường gặp.xlsx",
+        "source_reference": REF_BYT,
     },
     {
         "canonical_name": "Azithromycin",
@@ -190,10 +201,10 @@ EXTRA_DRUGS: list[dict[str, Any]] = [
             }
         ],
         "max_daily_dose": {"value": 500, "unit": "mg", "display": "500 mg/ngày"},
-        "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Data thường gặp.xlsx",
+        "source_reference": REF_BYT,
     },
     {
-        "canonical_name": "Budesonide (xịt mũi)",
+        "canonical_name": "Budesonide",
         "active_ingredient": "Budesonide",
         "aliases": ["Budesonid", "Rhinocort"],
         "component_ingredients": ["Budesonide"],
@@ -209,7 +220,7 @@ EXTRA_DRUGS: list[dict[str, Any]] = [
         "contraindication_tags": ["corticosteroid_allergy"],
         "interactions": [],
         "max_daily_dose": {"value": 400, "unit": "mcg", "display": "400 mcg/ngày (xịt mũi)"},
-        "source_reference": "Dược thư Quốc gia Việt Nam (2022)",
+        "source_reference": REF_BYT,
     },
     {
         "canonical_name": "Fexofenadine",
@@ -235,7 +246,7 @@ EXTRA_DRUGS: list[dict[str, Any]] = [
             }
         ],
         "max_daily_dose": {"value": 180, "unit": "mg", "display": "180 mg/ngày"},
-        "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Data thường gặp.xlsx",
+        "source_reference": REF_BYT,
     },
     {
         "canonical_name": "Desloratadine",
@@ -254,7 +265,7 @@ EXTRA_DRUGS: list[dict[str, Any]] = [
         "contraindication_tags": ["antihistamine_allergy"],
         "interactions": [],
         "max_daily_dose": {"value": 5, "unit": "mg", "display": "5 mg/ngày"},
-        "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Data thường gặp.xlsx",
+        "source_reference": REF_BYT,
     },
     {
         "canonical_name": "Methylprednisolone",
@@ -290,7 +301,7 @@ EXTRA_DRUGS: list[dict[str, Any]] = [
             },
         ],
         "max_daily_dose": {"value": 48, "unit": "mg", "display": "48 mg/ngày (đợt ngắn ngoại trú)"},
-        "source_reference": "Dược thư Quốc gia Việt Nam (2022)",
+        "source_reference": REF_BYT,
     },
     {
         "canonical_name": "Acetylcysteine",
@@ -319,12 +330,12 @@ EXTRA_DRUGS: list[dict[str, Any]] = [
             }
         ],
         "max_daily_dose": {"value": 600, "unit": "mg", "display": "600 mg/ngày"},
-        "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Data thường gặp.xlsx",
+        "source_reference": REF_BYT,
     },
     {
         "canonical_name": "Ambroxol",
         "active_ingredient": "Ambroxol HCl",
-        "aliases": ["Ambroxol", "Mucosolvan"],
+        "aliases": ["Ambroxol", "Ambroxol HCl", "Mucosolvan"],
         "component_ingredients": ["Ambroxol"],
         "drug_class": "Mucolytic",
         "strength_dosage": "30mg",
@@ -338,7 +349,7 @@ EXTRA_DRUGS: list[dict[str, Any]] = [
         "contraindication_tags": ["active_gi_ulcer"],
         "interactions": [],
         "max_daily_dose": {"value": 120, "unit": "mg", "display": "120 mg/ngày"},
-        "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Data thường gặp.xlsx",
+        "source_reference": REF_BYT,
     },
     {
         "canonical_name": "Paracetamol",
@@ -368,7 +379,7 @@ EXTRA_DRUGS: list[dict[str, Any]] = [
             }
         ],
         "max_daily_dose": {"value": 4000, "unit": "mg", "display": "4000 mg/ngày (người lớn chức năng gan bình thường)"},
-        "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Data thường gặp.xlsx",
+        "source_reference": REF_BYT,
     },
     {
         "canonical_name": "Paracetamol",
@@ -394,7 +405,7 @@ EXTRA_DRUGS: list[dict[str, Any]] = [
             }
         ],
         "max_daily_dose": {"value": 3900, "unit": "mg", "display": "6 viên/ngày (3900 mg/ngày, không quá 4000 mg/ngày)"},
-        "source_reference": "Dược thư Quốc gia Việt Nam (2022)",
+        "source_reference": REF_BYT,
     },
     {
         "canonical_name": "Cefixime",
@@ -420,7 +431,7 @@ EXTRA_DRUGS: list[dict[str, Any]] = [
             }
         ],
         "max_daily_dose": {"value": 400, "unit": "mg", "display": "400 mg/ngày"},
-        "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Data thường gặp.xlsx",
+        "source_reference": REF_BYT,
     },
     {
         "canonical_name": "Alverine citrate + Simethicone",
@@ -439,7 +450,7 @@ EXTRA_DRUGS: list[dict[str, Any]] = [
         "contraindication_tags": ["gi_bleeding_obstruction"],
         "interactions": [],
         "max_daily_dose": {"value": 3, "unit": "viên", "display": "3 viên/ngày"},
-        "source_reference": "Dược thư Quốc gia Việt Nam (2022)",
+        "source_reference": REF_BYT,
     },
     {
         "canonical_name": "Diosmectite",
@@ -465,12 +476,12 @@ EXTRA_DRUGS: list[dict[str, Any]] = [
             }
         ],
         "max_daily_dose": {"value": 18, "unit": "g", "display": "6 gói/ngày (18 g/ngày giai đoạn đầu tiêu chảy cấp)"},
-        "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Data thường gặp.xlsx",
+        "source_reference": REF_BYT,
     },
     {
         "canonical_name": "Bacillus subtilis",
         "active_ingredient": "Bacillus subtilis",
-        "aliases": ["Men vi sinh", "Biolactovin"],
+        "aliases": ["Bacillus subtilis", "Biolactovin"],
         "component_ingredients": ["Bacillus subtilis"],
         "drug_class": "Probiotic",
         "strength_dosage": "10^8 CFU",
@@ -484,7 +495,7 @@ EXTRA_DRUGS: list[dict[str, Any]] = [
         "contraindication_tags": [],
         "interactions": [],
         "max_daily_dose": {"value": 4, "unit": "gói", "display": "4 gói/ngày"},
-        "source_reference": "Data thường gặp.xlsx & Tờ HDSD chế phẩm Probiotic",
+        "source_reference": REF_BYT,
     },
     {
         "canonical_name": "Oresol (ORS)",
@@ -503,7 +514,7 @@ EXTRA_DRUGS: list[dict[str, Any]] = [
         "contraindication_tags": ["gi_bleeding_obstruction"],
         "interactions": [],
         "max_daily_dose": {"value": 10, "unit": "gói", "display": "Theo mức độ mất nước"},
-        "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Bộ Y tế",
+        "source_reference": REF_BYT,
     },
     {
         "canonical_name": "Celecoxib",
@@ -548,7 +559,7 @@ EXTRA_DRUGS: list[dict[str, Any]] = [
             },
         ],
         "max_daily_dose": {"value": 400, "unit": "mg", "display": "400 mg/ngày"},
-        "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Data thường gặp.xlsx",
+        "source_reference": REF_BYT,
     },
     {
         "canonical_name": "Meloxicam",
@@ -587,12 +598,12 @@ EXTRA_DRUGS: list[dict[str, Any]] = [
             },
         ],
         "max_daily_dose": {"value": 15, "unit": "mg", "display": "15 mg/ngày"},
-        "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Data thường gặp.xlsx",
+        "source_reference": REF_BYT,
     },
     {
-        "canonical_name": "Ketoprofen (gel bôi ngoài)",
+        "canonical_name": "Ketoprofen",
         "active_ingredient": "Ketoprofen",
-        "aliases": ["Fastum gel", "Ketoprofen 2.5%"],
+        "aliases": ["Fastum gel", "Ketoprofen 2.5%", "Ketoprofen"],
         "component_ingredients": ["Ketoprofen"],
         "drug_class": "Topical_NSAID",
         "strength_dosage": "2.5% (tuýp 30g)",
@@ -613,12 +624,12 @@ EXTRA_DRUGS: list[dict[str, Any]] = [
             }
         ],
         "max_daily_dose": {"value": 15, "unit": "g", "display": "15 g gel/ngày"},
-        "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Data thường gặp.xlsx",
+        "source_reference": REF_BYT,
     },
     {
         "canonical_name": "Eperisone",
         "active_ingredient": "Eperisone HCl",
-        "aliases": ["Eperison", "Myonal"],
+        "aliases": ["Eperison", "Eperison hydroclorid", "Myonal"],
         "component_ingredients": ["Eperisone"],
         "drug_class": "Muscle_Relaxant",
         "strength_dosage": "50mg",
@@ -639,7 +650,7 @@ EXTRA_DRUGS: list[dict[str, Any]] = [
             }
         ],
         "max_daily_dose": {"value": 150, "unit": "mg", "display": "150 mg/ngày"},
-        "source_reference": "Tờ HDSD Eperisone 50mg & Data thường gặp.xlsx",
+        "source_reference": REF_BYT,
     },
     {
         "canonical_name": "Vitamin B1 + B6 + B12",
@@ -658,12 +669,12 @@ EXTRA_DRUGS: list[dict[str, Any]] = [
         "contraindication_tags": [],
         "interactions": [],
         "max_daily_dose": {"value": 3, "unit": "viên", "display": "3 viên/ngày"},
-        "source_reference": "Dược thư Quốc gia Việt Nam (2022)",
+        "source_reference": REF_BYT,
     },
     {
         "canonical_name": "Diosmin + Hesperidin",
         "active_ingredient": "Diosmin + Hesperidin",
-        "aliases": ["Daflon 500mg", "Diosmin"],
+        "aliases": ["Daflon 500mg", "Diosmin + hesperidin"],
         "component_ingredients": ["Diosmin", "Hesperidin"],
         "drug_class": "Venotonic",
         "strength_dosage": "450mg + 50mg",
@@ -677,7 +688,7 @@ EXTRA_DRUGS: list[dict[str, Any]] = [
         "contraindication_tags": ["lactation"],
         "interactions": [],
         "max_daily_dose": {"value": 1000, "unit": "mg", "display": "1000 mg/ngày (2 viên/ngày trong suy tĩnh mạch mạn)"},
-        "source_reference": "Data thường gặp.xlsx & Tờ HDSD Daflon 500mg",
+        "source_reference": REF_BYT,
     },
     {
         "canonical_name": "Rutin + Vitamin C",
@@ -696,10 +707,10 @@ EXTRA_DRUGS: list[dict[str, Any]] = [
         "contraindication_tags": [],
         "interactions": [],
         "max_daily_dose": {"value": 6, "unit": "viên", "display": "6 viên/ngày"},
-        "source_reference": "Data thường gặp.xlsx & Dược thư Quốc gia Việt Nam (2022)",
+        "source_reference": REF_BYT,
     },
     {
-        "canonical_name": "Clotrimazole (kem bôi)",
+        "canonical_name": "Clotrimazole",
         "active_ingredient": "Clotrimazole",
         "aliases": ["Clotrimazol", "Canesten"],
         "component_ingredients": ["Clotrimazole"],
@@ -715,12 +726,12 @@ EXTRA_DRUGS: list[dict[str, Any]] = [
         "contraindication_tags": ["azole_allergy"],
         "interactions": [],
         "max_daily_dose": {"value": 3, "unit": "lần bôi", "display": "Bôi ngoài da 2-3 lần/ngày"},
-        "source_reference": "Bài LL 5. Thuốc kháng nấm virus lao sốt rét.pdf & Dược thư Quốc gia Việt Nam (2022)",
+        "source_reference": REF_BLL5,
     },
     {
-        "canonical_name": "Terbinafine (kem bôi)",
+        "canonical_name": "Terbinafine",
         "active_ingredient": "Terbinafine HCl",
-        "aliases": ["Lamisil", "Terbinafin"],
+        "aliases": ["Lamisil", "Terbinafin", "Terbinafine hydroclorid"],
         "component_ingredients": ["Terbinafine"],
         "drug_class": "Topical_Antifungal",
         "strength_dosage": "1% (tuýp 15g)",
@@ -734,7 +745,7 @@ EXTRA_DRUGS: list[dict[str, Any]] = [
         "contraindication_tags": [],
         "interactions": [],
         "max_daily_dose": {"value": 2, "unit": "lần bôi", "display": "Bôi ngoài da 1-2 lần/ngày"},
-        "source_reference": "Bài LL 5. Thuốc kháng nấm virus lao sốt rét.pdf & Dược thư Quốc gia Việt Nam (2022)",
+        "source_reference": REF_BLL5,
     },
     {
         "canonical_name": "Itraconazole",
@@ -770,7 +781,7 @@ EXTRA_DRUGS: list[dict[str, Any]] = [
             },
         ],
         "max_daily_dose": {"value": 400, "unit": "mg", "display": "400 mg/ngày"},
-        "source_reference": "Bài LL 5. Thuốc kháng nấm virus lao sốt rét.pdf & Dược thư Quốc gia Việt Nam (2022)",
+        "source_reference": REF_BLL5,
     },
     {
         "canonical_name": "Acyclovir",
@@ -799,7 +810,7 @@ EXTRA_DRUGS: list[dict[str, Any]] = [
             }
         ],
         "max_daily_dose": {"value": 4000, "unit": "mg", "display": "4000 mg/ngày (800mg x 5 lần/ngày trong Zona)"},
-        "source_reference": "Bài LL 5. Thuốc kháng nấm virus lao sốt rét.pdf & Data thường gặp.xlsx",
+        "source_reference": REF_BLL5,
     },
     {
         "canonical_name": "Valacyclovir",
@@ -818,7 +829,7 @@ EXTRA_DRUGS: list[dict[str, Any]] = [
         "contraindication_tags": ["renal_dose_adjust"],
         "interactions": [],
         "max_daily_dose": {"value": 3000, "unit": "mg", "display": "3000 mg/ngày (1000mg x 3 lần/ngày trong Zona)"},
-        "source_reference": "Bài LL 5. Thuốc kháng nấm virus lao sốt rét.pdf & Dược thư Quốc gia Việt Nam (2022)",
+        "source_reference": REF_BLL5,
     },
     {
         "canonical_name": "Oseltamivir",
@@ -840,7 +851,7 @@ EXTRA_DRUGS: list[dict[str, Any]] = [
         "contraindication_tags": ["renal_dose_adjust"],
         "interactions": [],
         "max_daily_dose": {"value": 150, "unit": "mg", "display": "150 mg/ngày (75mg x 2 lần/ngày trong 5 ngày)"},
-        "source_reference": "Bài LL 5. Thuốc kháng nấm virus lao sốt rét.pdf & Hướng dẫn chẩn đoán điều trị Cúm - Bộ Y tế",
+        "source_reference": REF_BLL5,
     },
     {
         "canonical_name": "Glucosamine sulfate",
@@ -866,7 +877,7 @@ EXTRA_DRUGS: list[dict[str, Any]] = [
             }
         ],
         "max_daily_dose": {"value": 1500, "unit": "mg", "display": "1500 mg/ngày"},
-        "source_reference": "Dược thư Quốc gia Việt Nam (2022) & Hướng dẫn Cơ xương khớp Bộ Y tế",
+        "source_reference": REF_BYT,
     },
 ]
 
@@ -932,6 +943,18 @@ EXTRA_GUIDELINES: list[dict[str, Any]] = [
         "official_source_url": "https://kcb.vn/",
     },
     {
+        "guideline_id": "BYT-K59-01",
+        "icd10_prefix": "K59",
+        "disease_name_vi": "Rối loạn chức năng ruột khác / Tiêu chảy",
+        "first_line_ingredients": ["Oresol (ORS)", "Diosmectite", "Bacillus subtilis", "Alverine citrate + Simethicone"],
+        "second_line_or_special_ingredients": [],
+        "avoid_combinations": ["Uống Diosmectite cách các thuốc khác >= 2 giờ; tránh thuốc chống co thắt khi nghi tắc ruột"],
+        "safety_red_flags": ["Mất nước nặng, phân nhầy máu, đau bụng cấp ngoại khoa (nghi ruột thừa) -> chuyển cấp cứu ngay"],
+        "missing_info_checks": ["allergies", "age", "dehydration_status"],
+        "content_excerpt": "Kiểm soát triệu chứng rối loạn chức năng ruột / tiêu chảy bằng bù nước điện giải (Oresol), chất hấp phụ bảo vệ niêm mạc (Diosmectite), men vi sinh (Bacillus subtilis) và giảm co thắt (Alverine + Simethicone).",
+        "official_source_url": "https://kcb.vn/",
+    },
+    {
         "guideline_id": "BYT-M75-01",
         "icd10_prefix": "M75",
         "disease_name_vi": "Hội chứng bao gân xoay / Viêm gân vai",
@@ -993,8 +1016,8 @@ EXTRA_GUIDELINES: list[dict[str, Any]] = [
         "avoid_combinations": ["TUYỆT ĐỐI KHÔNG phối hợp Itraconazole đường uống với Simvastatin/Atorvastatin (nguy cơ tiêu cơ vân)"],
         "safety_red_flags": ["Kiểm tra men gan và tương tác CYP3A4 nếu cân nhắc thuốc kháng nấm azol đường uống"],
         "missing_info_checks": ["allergies", "age", "liver_function_status", "concurrent_medications"],
-        "content_excerpt": "Theo Bài LL 5: ưu tiên thuốc kháng nấm bôi tại chỗ (Clotrimazole 1% hoặc Terbinafine 1%) cho nấm da nông khu trú; chỉ dùng Itraconazole đường uống khi tổn thương lan rộng và không có chống chỉ định.",
-        "official_source_url": "data/Bài LL 5. Thuốc kháng nấm virus lao sốt rét.pdf",
+        "content_excerpt": "Theo tài liệu chuyên môn Bài LL 5: ưu tiên thuốc kháng nấm bôi tại chỗ (Clotrimazole 1% hoặc Terbinafine 1%) cho nấm da nông khu trú; chỉ dùng Itraconazole đường uống khi tổn thương lan rộng và không có chống chỉ định.",
+        "official_source_url": "https://kcb.vn/",
     },
     {
         "guideline_id": "BLL5-B02-01",
@@ -1005,8 +1028,8 @@ EXTRA_GUIDELINES: list[dict[str, Any]] = [
         "avoid_combinations": ["Hiệu chỉnh liều Acyclovir/Valacyclovir theo chức năng thận; tránh phối hợp NSAID độc thận"],
         "safety_red_flags": ["Zona vùng mắt / trán mũi (Hutchinson), suy giảm miễn dịch nặng -> hội chẩn chuyên khoa ngay"],
         "missing_info_checks": ["allergies", "age", "renal_function_status", "onset_within_72h"],
-        "content_excerpt": "Theo Bài LL 5: khởi trị sớm thuốc kháng virus trong vòng 48-72 giờ (Acyclovir 800mg x 5 lần/ngày hoặc Valacyclovir 500mg-1000mg x 3 lần/ngày) kết hợp giảm đau và uống đủ nước.",
-        "official_source_url": "data/Bài LL 5. Thuốc kháng nấm virus lao sốt rét.pdf",
+        "content_excerpt": "Theo tài liệu chuyên môn Bài LL 5: khởi trị sớm thuốc kháng virus trong vòng 48-72 giờ (Acyclovir 800mg x 5 lần/ngày hoặc Valacyclovir 500mg-1000mg x 3 lần/ngày) kết hợp giảm đau và uống đủ nước.",
+        "official_source_url": "https://kcb.vn/",
     },
     {
         "guideline_id": "BLL5-J09-01",
@@ -1019,8 +1042,8 @@ EXTRA_GUIDELINES: list[dict[str, Any]] = [
             "Phụ nữ mang thai (đặc biệt tam cá nguyệt 3) mắc cúm A bội nhiễm là nhóm nguy cơ cao -> cần bác sĩ chuyên khoa đánh giá lợi ích/nguy cơ kỹ và xác nhận dị ứng trước khi duyệt"
         ],
         "missing_info_checks": ["allergies", "age", "pregnancy_status", "renal_function_status"],
-        "content_excerpt": "Theo Bài LL 5: Oseltamivir 75mg x 2 lần/ngày trong 5 ngày hiệu quả nhất khi dùng trong 48 giờ đầu; thận trọng cân nhắc nguy cơ-lợi ích ở phụ nữ mang thai và chỉnh liều khi suy thận.",
-        "official_source_url": "data/Bài LL 5. Thuốc kháng nấm virus lao sốt rét.pdf",
+        "content_excerpt": "Theo tài liệu chuyên môn Bài LL 5: Oseltamivir 75mg x 2 lần/ngày trong 5 ngày hiệu quả nhất khi dùng trong 48 giờ đầu; thận trọng cân nhắc nguy cơ-lợi ích ở phụ nữ mang thai và chỉnh liều khi suy thận.",
+        "official_source_url": "https://kcb.vn/",
     },
 ]
 
@@ -1067,47 +1090,143 @@ def strip_text_pii(text: str | None) -> str | None:
     return s
 
 
-def match_prefixes(codes: list[str], diagnoses: list[str], rules: dict[str, list[str]]) -> list[str]:
-    matched = []
+def route_group(route: str | None) -> str:
+    """Normalize administration route into strict compatibility groups."""
+    r = (clean_str(route) or "").lower()
+    if not r:
+        return ""
+    if "xịt mũi" in r:
+        return "nasal_spray"
+    if "hít" in r:
+        return "inhaled"
+    if "khí dung" in r:
+        return "nebulized"
+    if "bôi" in r:
+        return "topical"
+    if "tiêm" in r or "truyền" in r:
+        return "injectable"
+    if "nhỏ mắt" in r or "tra mắt" in r:
+        return "ophthalmic"
+    if "súc" in r:
+        return "gargle"
+    if "ngậm" in r:
+        return "sublingual"
+    if "uống" in r or "nhai" in r:
+        return "oral"
+    return r
+
+
+def norm_drug_name(name: str | None) -> str:
+    """Canonicalize active ingredient / brand name without losing multi-ingredient structure."""
+    s = (clean_str(name) or "").lower()
+    s = re.sub(r"\s*[+/]\s*", " + ", s)
+    s = re.sub(r"\s+", " ", s).strip()
+    return s
+
+
+def norm_strength(strength: str | None) -> str:
+    s = (clean_str(strength) or "").lower().replace(" ", "")
+    s = s.replace(",", ".")
+    return s
+
+
+def match_in_scope_prefixes(codes: list[str], diagnoses: list[str]) -> list[str]:
     diag_low = " | ".join(diagnoses).lower()
-    for prefix, kws in rules.items():
+    if any(p.search(diag_low) for p in EXCLUDED_DIAGNOSIS_PATTERNS):
+        return []
+    matched: list[str] = []
+    for prefix, pats in ALL_DISEASE_PATTERNS.items():
+        has_icd = any(c.startswith(prefix) for c in codes)
+        has_kw = any(p.search(diag_low) for p in pats)
+        if has_icd or has_kw:
+            matched.append(prefix)
+    return matched
+
+
+def match_core_prefixes(codes: list[str], diagnoses: list[str]) -> list[str]:
+    diag_low = " | ".join(diagnoses).lower()
+    matched = []
+    for prefix, kws in CORE_ONLY_KEYWORDS.items():
         if any(c.startswith(prefix) for c in codes) or any(kw in diag_low for kw in kws):
             matched.append(prefix)
     return matched
 
 
-def build_drug_lookup(catalog: list[dict[str, Any]]) -> dict[str, str]:
-    lookup: dict[str, str] = {}
+def is_excluded_case(age: Any, diagnoses: list[str], in_scope: list[str]) -> bool:
+    if not diagnoses or all(not d.strip() for d in diagnoses):
+        return True
+    if isinstance(age, (int, float)) and age < 18:
+        return True
+    diag_low = " | ".join(diagnoses).lower()
+    if any(p.search(diag_low) for p in EXCLUDED_DIAGNOSIS_PATTERNS):
+        return True
+    if not in_scope:
+        return True
+    return False
+
+
+def build_strict_drug_lookup(
+    catalog: list[dict[str, Any]],
+) -> tuple[dict[tuple[str, str, str], str], dict[tuple[str, str], str]]:
+    """Build exact (name, route_group, strength) and (name, route_group) maps.
+
+    Never indexes component_ingredients alone and never allows cross-route matches.
+    """
+    exact_with_strength: dict[tuple[str, str, str], str] = {}
+    exact_no_strength: dict[tuple[str, str], str] = {}
+    ambiguous_no_strength: set[tuple[str, str]] = set()
+
     for item in catalog:
         did = item["drug_id"]
-        names = [item["canonical_name"], item["active_ingredient"]] + item.get("aliases", [])
-        strength = (item.get("strength_dosage") or "").lower().replace(" ", "")
-        for n in names:
-            nl = n.lower().strip()
-            if strength:
-                lookup[(nl, strength)] = did
-            if nl not in lookup:
-                lookup[nl] = did
-    return lookup
+        rg = route_group(item.get("route_of_administration"))
+        st = norm_strength(item.get("strength_dosage"))
+        candidate_names = {
+            item["canonical_name"],
+            item["active_ingredient"],
+            *(item.get("aliases") or []),
+            *(item.get("sample_brand_names") or []),
+        }
+        for raw_n in candidate_names:
+            nn = norm_drug_name(raw_n)
+            if not nn:
+                continue
+            if st:
+                exact_with_strength.setdefault((nn, rg, st), did)
+            key2 = (nn, rg)
+            if key2 in exact_no_strength and exact_no_strength[key2] != did:
+                ambiguous_no_strength.add(key2)
+            else:
+                exact_no_strength[key2] = did
+
+    for k in ambiguous_no_strength:
+        exact_no_strength.pop(k, None)
+
+    return exact_with_strength, exact_no_strength
 
 
-def match_drug_id(ingredient: str, strength: str | None, lookup: dict[Any, str]) -> str | None:
-    ing_l = ingredient.lower().strip()
-    st_l = (strength or "").lower().replace(" ", "")
-    if st_l and (ing_l, st_l) in lookup:
-        return lookup[(ing_l, st_l)]
-    if ing_l in lookup:
-        return lookup[ing_l]
-    for k, did in lookup.items():
-        if isinstance(k, str) and len(k) >= 5 and (k in ing_l or ing_l in k):
-            return did
+def match_drug_id_strict(
+    ingredient: str,
+    strength: str | None,
+    route: str | None,
+    exact_with_strength: dict[tuple[str, str, str], str],
+    exact_no_strength: dict[tuple[str, str], str],
+) -> str | None:
+    nn = norm_drug_name(ingredient)
+    rg = route_group(route)
+    st = norm_strength(strength)
+    if not nn or not rg:
+        return None
+    if st and (nn, rg, st) in exact_with_strength:
+        return exact_with_strength[(nn, rg, st)]
+    if (nn, rg) in exact_no_strength:
+        return exact_no_strength[(nn, rg)]
     return None
 
 
 def main() -> None:
     rng = np.random.default_rng(42)
 
-    # 1. Expand drug_catalog_clean.json
+    # 1. Build clean 83-drug catalog (preserving DRUG-001..DRUG-052 + clean EXTRA_DRUGS)
     drug_path = PROCESSED_DIR / "drug_catalog_clean.json"
     drugs: list[dict[str, Any]] = json.loads(drug_path.read_text(encoding="utf-8"))
     drugs = [d for d in drugs if int(d["drug_id"].split("-")[1]) <= 52]
@@ -1128,14 +1247,13 @@ def main() -> None:
             "price_is_synthetic": True,
             "verification_status": "VERIFIED_FOR_SIMULATION",
         }
-        # Place unit_price fields before source_reference to match DRUG-001..052 key order
         src_ref = entry.pop("source_reference")
         entry["source_reference"] = src_ref
         drugs.append(entry)
         next_id += 1
     drug_path.write_text(json.dumps(drugs, ensure_ascii=False, indent=2), encoding="utf-8")
 
-    # 2. Expand guidelines_clean.json
+    # 2. Build clean 17-guideline file (4 core + 13 outpatient including BYT-K59-01)
     guide_path = PROCESSED_DIR / "guidelines_clean.json"
     guides: list[dict[str, Any]] = json.loads(guide_path.read_text(encoding="utf-8"))
     core_ids = {"BYT-I10-01", "BYT-E78-01", "BYT-E11-01", "BYT-K21-01"}
@@ -1143,30 +1261,38 @@ def main() -> None:
     guides.extend(EXTRA_GUIDELINES)
     guide_path.write_text(json.dumps(guides, ensure_ascii=False, indent=2), encoding="utf-8")
 
-    # 3. Expand case_base_clean.json
+    # 3. Build clean, adult-only, in-scope case_base_clean.json with strict drug_id matching
     case_path = PROCESSED_DIR / "case_base_clean.json"
-    cases: list[dict[str, Any]] = json.loads(case_path.read_text(encoding="utf-8"))
-    cases = [c for c in cases if int(c["case_id"].split("-")[-1]) <= 52]
-    lookup = build_drug_lookup(drugs)
+    existing_cases: list[dict[str, Any]] = json.loads(case_path.read_text(encoding="utf-8"))
+    core_cases = [c for c in existing_cases if int(c["case_id"].split("-")[-1]) <= 52]
+    exact_ws, exact_ns = build_strict_drug_lookup(drugs)
 
-    # Relink medications in SYN-CASE-001..052 against expanded catalog
-    for c in cases:
-        c["in_scope_icd10_prefixes"] = match_prefixes(
-            c.get("icd10_codes", []), c.get("diagnoses", []), ALL_DISEASE_KEYWORDS
-        )
+    clean_cases: list[dict[str, Any]] = []
+    for c in core_cases:
+        diags = [strip_text_pii(d) or "" for d in c.get("diagnoses", []) if d and d.strip()]
+        in_scope = match_in_scope_prefixes(c.get("icd10_codes", []), diags)
+        if is_excluded_case(c["patient_profile"].get("age"), diags, in_scope):
+            continue
+        c["diagnoses"] = diags
+        c["in_scope_icd10_prefixes"] = in_scope
         vcount = 0
         for m in c.get("medications", []):
             m["usage_instruction_full"] = strip_text_pii(m.get("usage_instruction_full"))
-            if not m.get("drug_id"):
-                did = match_drug_id(m.get("active_ingredient", ""), m.get("strength_dosage"), lookup)
-                if did:
-                    m["drug_id"] = did
-                    m["in_verified_catalog"] = True
-            if m.get("in_verified_catalog"):
+            did = match_drug_id_strict(
+                m.get("active_ingredient", ""),
+                m.get("strength_dosage"),
+                m.get("route"),
+                exact_ws,
+                exact_ns,
+            )
+            m["drug_id"] = did
+            m["in_verified_catalog"] = did is not None
+            if did is not None:
                 vcount += 1
         c["verified_catalog_meds_count"] = vcount
+        clean_cases.append(c)
 
-    # Append remaining 48 non-core prescriptions from raw CSV
+    # Append remaining adult, in-scope cases from raw CSV
     raw_df = pd.read_csv(RAW_CSV_PATH, encoding="utf-8-sig")
     raw_df = raw_df[raw_df["page_number"].notna() & raw_df["active_ingredient"].notna()].copy()
     raw_df["page_num_int"] = raw_df["page_number"].astype(int)
@@ -1176,8 +1302,8 @@ def main() -> None:
         first = grp.iloc[0]
         icds = parse_icd10_codes(first.get("icd10_codes"))
         diags = [strip_text_pii(d) or "" for d in parse_diagnoses(first.get("diagnosis_primary_and_comorbidities"))]
-        if match_prefixes(icds, diags, CORE_ONLY_KEYWORDS):
-            continue  # Already in SYN-CASE-001..052
+        if match_core_prefixes(icds, diags):
+            continue  # Already handled in SYN-CASE-001..052
 
         age_raw = clean_str(first.get("patient_age"))
         age_syn = None
@@ -1186,6 +1312,10 @@ def main() -> None:
             if m_age:
                 a = int(m_age.group(1))
                 age_syn = max(18, a + int(rng.choice([-2, -1, 1, 2]))) if a >= 18 else int(np.clip(a + int(rng.choice([-1, 0, 1])), 1, 17))
+
+        in_scope = match_in_scope_prefixes(icds, diags)
+        if is_excluded_case(age_syn, diags, in_scope):
+            continue
 
         w_syn = None
         if pd.notna(first.get("weight_kg")):
@@ -1202,7 +1332,8 @@ def main() -> None:
         for idx, (_, row) in enumerate(grp.iterrows(), start=1):
             ing = clean_str(row.get("active_ingredient")) or ""
             strength = clean_str(row.get("strength_dosage"))
-            did = match_drug_id(ing, strength, lookup)
+            route = clean_str(row.get("route_of_administration"))
+            did = match_drug_id_strict(ing, strength, route, exact_ws, exact_ns)
             in_cat = did is not None
             if in_cat:
                 vcount += 1
@@ -1224,7 +1355,7 @@ def main() -> None:
                 "canonical_name": ing,
                 "active_ingredient": ing,
                 "strength_dosage": strength,
-                "route": clean_str(row.get("route_of_administration")),
+                "route": route,
                 "quantity": qty,
                 "unit": clean_str(row.get("unit")),
                 "duration_days": int(dur_m.group(1)) if dur_m else None,
@@ -1234,7 +1365,7 @@ def main() -> None:
                 "usage_instruction_full": usage,
             })
 
-        cases.append({
+        clean_cases.append({
             "case_id": f"SYN-CASE-{next_case:03d}",
             "is_synthetic": True,
             "seed": 42,
@@ -1245,7 +1376,7 @@ def main() -> None:
                 "allergies": allergy,
             },
             "icd10_codes": icds,
-            "in_scope_icd10_prefixes": match_prefixes(icds, diags, ALL_DISEASE_KEYWORDS),
+            "in_scope_icd10_prefixes": in_scope,
             "icd10_backfilled_from_diagnosis": False,
             "diagnoses": diags,
             "total_meds": len(meds),
@@ -1254,9 +1385,32 @@ def main() -> None:
         })
         next_case += 1
 
-    case_path.write_text(json.dumps(cases, ensure_ascii=False, indent=2), encoding="utf-8")
+    case_path.write_text(json.dumps(clean_cases, ensure_ascii=False, indent=2), encoding="utf-8")
 
-    # 4. Strict PII Audit Assert across all 3 JSON outputs
+    # 4. Self-audit all 4 defect classes + PII audit
+    guide_prefixes = {g["icd10_prefix"] for g in guides}
+    drug_icds = {ic for d in drugs for ic in d.get("verified_indications_icd10", [])}
+    assert drug_icds <= guide_prefixes, f"Missing guidelines for {drug_icds - guide_prefixes}"
+
+    cat_names = {d["canonical_name"] for d in drugs}
+    for g in guides:
+        for ing in g.get("first_line_ingredients", []) + g.get("second_line_or_special_ingredients", []):
+            # Core guidelines (I10..K21) contain general class/ingredient names; EXTRA_GUIDELINES must exact match
+            if g["guideline_id"] not in core_ids:
+                assert ing in cat_names, f"Guideline {g['guideline_id']} ingredient {ing!r} not in canonical_name"
+
+    for d in drugs:
+        src = d.get("source_reference", "")
+        assert ".xlsx" not in src and ".pdf" not in src and "data/" not in src, f"Local file in {d['drug_id']}: {src}"
+    for g in guides:
+        url = g.get("official_source_url", "")
+        assert ".xlsx" not in url and ".pdf" not in url and "data/" not in url, f"Local file in {g['guideline_id']}: {url}"
+
+    for c in clean_cases:
+        assert c["diagnoses"] and c["in_scope_icd10_prefixes"], f"Invalid scope/diag in {c['case_id']}"
+        age_v = c["patient_profile"].get("age")
+        assert age_v is None or age_v >= 18, f"Pediatric leaked: {c['case_id']}"
+
     for path in (drug_path, guide_path, case_path):
         txt = path.read_text(encoding="utf-8")
         for pname, pat in PII_AUDIT_PATTERNS.items():
@@ -1264,8 +1418,8 @@ def main() -> None:
             assert not hits, f"PII audit failed in {path.name} for {pname}: {hits[:3]}"
 
     print(
-        f"[OK] drugs={len(drugs)} | guidelines={len(guides)} | cases={len(cases)} "
-        f"| verified_case_meds={sum(c['verified_catalog_meds_count'] for c in cases)} | PII_AUDIT=PASS"
+        f"[OK] drugs={len(drugs)} | guidelines={len(guides)} | cases={len(clean_cases)} "
+        f"| verified_case_meds={sum(c['verified_catalog_meds_count'] for c in clean_cases)} | ALL_4_AUDITS=PASS"
     )
 
 

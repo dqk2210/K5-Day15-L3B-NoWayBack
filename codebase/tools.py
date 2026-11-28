@@ -28,8 +28,8 @@ DIAGNOSIS_KEYWORDS: dict[str, list[str]] = {
     "J02": ["viêm họng"],
     "J30": ["viêm mũi dị ứng"],
     "R05": ["ho có đờm", "ho cấp"],
-    "A04": ["nhiễm trùng tiêu hóa", "viêm ruột"],
-    "K59": ["tiêu chảy", "rối loạn tiêu hóa"],
+    "A04": ["nhiễm trùng tiêu hóa", "viêm ruột cấp", "viêm dạ dày ruột"],
+    "K59": ["tiêu chảy", "rối loạn tiêu hóa", "rối loạn chức năng ruột"],
     "M75": ["bao gân xoay", "viêm gân", "viêm quanh khớp vai"],
     "M54": ["đau cơ vùng thắt lưng", "đau thắt lưng", "đau cột sống thắt lưng", "đau lưng"],
     "M17": ["thoái hóa khớp gối"],
@@ -40,6 +40,7 @@ DIAGNOSIS_KEYWORDS: dict[str, list[str]] = {
 }
 
 OUT_OF_SCOPE_KEYWORDS: list[tuple[str, str]] = [
+    ("ruột thừa", "Viêm ruột thừa cấp — bệnh ngoại khoa cấp cứu (ngoài phạm vi)"),
     ("ung thư", "Bệnh lý ung thư (ngoài phạm vi kê đơn ngoại trú cơ bản)"),
     ("điều trị đích", "Phác đồ điều trị đích phân tử chuyên sâu (ngoài phạm vi)"),
     ("hóa trị", "Phác đồ hóa trị chuyên khoa ung bướu (ngoài phạm vi)"),
@@ -138,10 +139,10 @@ def search_guidelines(icd10_codes: list[str], diagnosis_text: str = "") -> dict[
 
     # Oncology ICD-10 C00-C97 or obstetric hemorrhage O20 -> out of scope stop
     has_prohibited_icd = any(
-        c.startswith("C") or c.startswith("O20") for c in out_of_scope
+        c.startswith("C") or c.startswith("O20") or c.startswith("K35") for c in out_of_scope
     )
     has_oncology_or_severe_oob = any(
-        kw in diag_low for kw in ("ung thư", "điều trị đích", "hóa trị")
+        kw in diag_low for kw in ("ung thư", "điều trị đích", "hóa trị", "ruột thừa")
     )
 
     matched_guidelines = [guide_by_prefix[p] for p in in_scope if p in guide_by_prefix]

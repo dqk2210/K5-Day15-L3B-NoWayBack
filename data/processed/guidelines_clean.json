@@ -282,6 +282,31 @@
     "official_source_url": "https://kcb.vn/"
   },
   {
+    "guideline_id": "BYT-K59-01",
+    "icd10_prefix": "K59",
+    "disease_name_vi": "Rối loạn chức năng ruột khác / Tiêu chảy",
+    "first_line_ingredients": [
+      "Oresol (ORS)",
+      "Diosmectite",
+      "Bacillus subtilis",
+      "Alverine citrate + Simethicone"
+    ],
+    "second_line_or_special_ingredients": [],
+    "avoid_combinations": [
+      "Uống Diosmectite cách các thuốc khác >= 2 giờ; tránh thuốc chống co thắt khi nghi tắc ruột"
+    ],
+    "safety_red_flags": [
+      "Mất nước nặng, phân nhầy máu, đau bụng cấp ngoại khoa (nghi ruột thừa) -> chuyển cấp cứu ngay"
+    ],
+    "missing_info_checks": [
+      "allergies",
+      "age",
+      "dehydration_status"
+    ],
+    "content_excerpt": "Kiểm soát triệu chứng rối loạn chức năng ruột / tiêu chảy bằng bù nước điện giải (Oresol), chất hấp phụ bảo vệ niêm mạc (Diosmectite), men vi sinh (Bacillus subtilis) và giảm co thắt (Alverine + Simethicone).",
+    "official_source_url": "https://kcb.vn/"
+  },
+  {
     "guideline_id": "BYT-M75-01",
     "icd10_prefix": "M75",
     "disease_name_vi": "Hội chứng bao gân xoay / Viêm gân vai",
@@ -416,8 +441,8 @@
       "liver_function_status",
       "concurrent_medications"
     ],
-    "content_excerpt": "Theo Bài LL 5: ưu tiên thuốc kháng nấm bôi tại chỗ (Clotrimazole 1% hoặc Terbinafine 1%) cho nấm da nông khu trú; chỉ dùng Itraconazole đường uống khi tổn thương lan rộng và không có chống chỉ định.",
-    "official_source_url": "data/Bài LL 5. Thuốc kháng nấm virus lao sốt rét.pdf"
+    "content_excerpt": "Theo tài liệu chuyên môn Bài LL 5: ưu tiên thuốc kháng nấm bôi tại chỗ (Clotrimazole 1% hoặc Terbinafine 1%) cho nấm da nông khu trú; chỉ dùng Itraconazole đường uống khi tổn thương lan rộng và không có chống chỉ định.",
+    "official_source_url": "https://kcb.vn/"
   },
   {
     "guideline_id": "BLL5-B02-01",
@@ -443,8 +468,8 @@
       "renal_function_status",
       "onset_within_72h"
     ],
-    "content_excerpt": "Theo Bài LL 5: khởi trị sớm thuốc kháng virus trong vòng 48-72 giờ (Acyclovir 800mg x 5 lần/ngày hoặc Valacyclovir 500mg-1000mg x 3 lần/ngày) kết hợp giảm đau và uống đủ nước.",
-    "official_source_url": "data/Bài LL 5. Thuốc kháng nấm virus lao sốt rét.pdf"
+    "content_excerpt": "Theo tài liệu chuyên môn Bài LL 5: khởi trị sớm thuốc kháng virus trong vòng 48-72 giờ (Acyclovir 800mg x 5 lần/ngày hoặc Valacyclovir 500mg-1000mg x 3 lần/ngày) kết hợp giảm đau và uống đủ nước.",
+    "official_source_url": "https://kcb.vn/"
   },
   {
     "guideline_id": "BLL5-J09-01",
@@ -470,7 +495,7 @@
       "pregnancy_status",
       "renal_function_status"
     ],
-    "content_excerpt": "Theo Bài LL 5: Oseltamivir 75mg x 2 lần/ngày trong 5 ngày hiệu quả nhất khi dùng trong 48 giờ đầu; thận trọng cân nhắc nguy cơ-lợi ích ở phụ nữ mang thai và chỉnh liều khi suy thận.",
-    "official_source_url": "data/Bài LL 5. Thuốc kháng nấm virus lao sốt rét.pdf"
+    "content_excerpt": "Theo tài liệu chuyên môn Bài LL 5: Oseltamivir 75mg x 2 lần/ngày trong 5 ngày hiệu quả nhất khi dùng trong 48 giờ đầu; thận trọng cân nhắc nguy cơ-lợi ích ở phụ nữ mang thai và chỉnh liều khi suy thận.",
+    "official_source_url": "https://kcb.vn/"
   }
 ]
