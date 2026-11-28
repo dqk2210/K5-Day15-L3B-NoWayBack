@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import json
 import re
+import unicodedata
 from pathlib import Path
 from typing import Any
 
@@ -207,7 +208,7 @@ def search_drug_catalog(
     """Tên: search_drug_catalog · Input: danh sách mã ICD-10 hoặc từ khóa tìm kiếm · Output: các thuốc xác minh phù hợp · Không tác động ra ngoài."""
     drugs = _load_json("drug_catalog_clean.json")
     prefixes = {_normalize_icd_prefix(c) for c in (icd10_codes or []) if c}
-    q = (query or "").strip().lower()
+    q = _search_key(query or "")
 
     matched: list[dict[str, Any]] = []
     for d in drugs:
@@ -222,16 +223,21 @@ def search_drug_catalog(
                     d.get("canonical_name", ""),
                     d.get("active_ingredient", ""),
                     d.get("drug_class", ""),
+                    f"{d.get('canonical_name', '')} {d.get('strength_dosage') or ''}",
                     " ".join(d.get("aliases") or []),
                     " ".join(d.get("sample_brand_names") or []),
                 ]
-            ).lower()
+            )
+            haystack = _search_key(haystack)
             if q not in haystack:
                 continue
         matched.append(
             {
                 "drug_id": d["drug_id"],
                 "canonical_name": d["canonical_name"],
+                "active_ingredient": d.get("active_ingredient"),
+                "aliases": d.get("aliases", []),
+                "sample_brand_names": d.get("sample_brand_names", []),
                 "strength_dosage": d.get("strength_dosage"),
                 "route_of_administration": d.get("route_of_administration"),
                 "unit": d.get("unit"),
@@ -246,6 +252,12 @@ def search_drug_catalog(
             }
         )
     return matched
+
+
+def _search_key(text: str) -> str:
+    decomposed = unicodedata.normalize("NFD", text.casefold().replace("đ", "d"))
+    unaccented = "".join(char for char in decomposed if not unicodedata.combining(char))
+    return re.sub(r"\s+", "", unaccented)
 
 
 def _parse_single_dose_amount(strength_dosage: str | None, max_unit: str) -> float | None:
@@ -277,6 +289,8 @@ def validate_prescription(
     draft_meds: list[dict[str, Any]],
     patient_profile: dict[str, Any],
     in_scope_codes: list[str],
+    *,
+    require_patient_details: bool = True,
 ) -> dict[str, Any]:
     """Tên: validate_prescription · Input: bản nháp thuốc, hồ sơ bệnh nhân, mã ICD-10 · Output: status (PASS/PASS_WITH_WARNINGS/BLOCKED), vi phạm, cảnh báo · Không tác động ra ngoài."""
     catalog = _drugs_by_id()
@@ -324,14 +338,15 @@ def validate_prescription(
     egfr = patient_profile.get("egfr")
 
     # ── Rule 1: Missing required safety info & high-risk groups ──
+    report_missing = add_block if require_patient_details else add_warn
     if age is None and not is_adult:
         missing_fields.append("age")
-        add_block("MISSING_INFO", "PATIENT", "Thiếu thông tin tuổi bệnh nhân — không đủ căn cứ kiểm tra liều an toàn.")
+        report_missing("MISSING_INFO", "PATIENT", "Thiếu thông tin tuổi bệnh nhân — không đủ căn cứ kiểm tra liều an toàn.")
 
     if age is not None and isinstance(age, (int, float)) and age < 18:
         if weight_kg is None:
             missing_fields.append("weight_kg")
-            add_block(
+            report_missing(
                 "MISSING_INFO",
                 "PATIENT",
                 f"Bệnh nhi ({age} tuổi) thiếu cân nặng (kg) — dừng đề xuất liều nhi khoa, yêu cầu bổ sung cân nặng.",
@@ -341,10 +356,11 @@ def validate_prescription(
 
     if not allergies_raw or allergies_low in {"unknown", "chưa rõ", "chưa ghi", "chưa có thông tin", "missing"}:
         missing_fields.append("allergies")
-        add_block(
+        report_missing(
             "MISSING_INFO",
             "PATIENT",
-            "Thiếu tiền sử dị ứng thuốc (allergies='unknown') — bắt buộc bác sĩ hỏi và xác nhận dị ứng trước khi hoàn tất.",
+            "Thiếu tiền sử dị ứng thuốc (allergies='unknown') — bắt buộc bác sĩ hỏi và xác nhận dị ứng trước khi hoàn tất."
+            if require_patient_details else "Chưa nhập tiền sử dị ứng. Bác sĩ cần tự đối chiếu trước khi sử dụng thông tin từ bản nháp.",
         )
 
     if high_risk_pregnancy:

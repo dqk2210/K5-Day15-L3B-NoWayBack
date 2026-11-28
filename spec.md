@@ -150,7 +150,7 @@ Data BTC cấp đã dùng (không commit nguyên file): `data/100_Toa_NVM_2026_D
 - **Phần nào còn giả:**
   - Hồ sơ bệnh nhân và 100 ca tham khảo sử dụng dữ liệu tổng hợp (`synthetic`, `seed=42`, 0% PII).
   - Giá thuốc (`unit_price_vnd_synthetic`) là giá giả lập có `seed=42`, không phải giá thanh toán thật.
-  - Bản chạy thử chạy qua CLI (`python run.py`), chưa kết nối HIS/nhà thuốc thật và không phát hành đơn thật.
+  - Bản mô phỏng chạy qua CLI (`python run.py`) hoặc web local Medora (`python codebase/web.py`). Trên web, bác sĩ nhập một hoặc nhiều chẩn đoán đã xác nhận để tìm ca giả lập và thuốc có căn cứ theo từng chẩn đoán. Các thông tin bệnh nhân và liều là tùy chọn trong bản nháp web. Backend báo các kiểm tra thiếu dữ liệu, chặn các rủi ro đã xác định và giữ bước bác sĩ rà soát. Ollama là tùy chọn để sắp xếp thuốc tham khảo từ dữ liệu giả lập.
 
 ## §5. Chỗ khó — 4 lớp + 7 kịch bản + 2 tấn công *(guide 2.3)*
 
@@ -200,6 +200,10 @@ Data BTC cấp đã dùng (không commit nguyên file): `data/100_Toa_NVM_2026_D
 | 28/11/2026 00:38 | Mở rộng `data/processed/drug_catalog_clean.json` (52 -> 83 thuốc), `guidelines_clean.json` (4 -> 17 phác đồ), `case_base_clean.json` (62 ca người lớn trong phạm vi, 0% PII) giữ nguyên `eval/benchmark.csv` & `eval/metric_spec.yaml` đã chốt CP2 | Khớp bộ câu thử 20 câu ngoại trú đã chốt ở CP2 (`T01`–`T10`, `K01`–`K07`, `R01`–`R03`) mà vẫn giữ nguyên chuẩn "đạt" §7 |
 | 28/11/2026 00:40 | Triển khai hoàn chỉnh `codebase/ai.py`, `codebase/tools.py` (8 rule Python thuần + `calculate_cost`), `codebase/agent.py` (workflow 6 bước HITL), `codebase/app.py` | Hoàn thiện Phase 2 đáp ứng sơ đồ kiến trúc §4 và vượt qua toàn bộ unit test `scripts/test_guardrails.py` |
 | 28/11/2026 07:44 | Vá 4 lỗi dữ liệu sạch (`549e3b2`): khớp chặt `drug_id` theo tên + đường dùng (`215` lượt thuốc khớp chuẩn), thêm phác đồ `BYT-K59-01` (`17` phác đồ) & đồng bộ 4 tên thuốc, lọc `case_base_clean.json` còn `62` ca người lớn trong phạm vi, chuẩn hóa nguồn tham chiếu không trỏ file cục bộ | Đảm bảo toàn vẹn dữ liệu tra cứu, chống AI tham khảo nhầm ca nhi khoa/cấp cứu hoặc thuốc sai đường dùng |
+| 28/11/2026 | Nối giao diện Medora với backend local và các bộ dữ liệu đã xử lý | Chạy hai luồng tra cứu thuốc và tạo đơn mô phỏng có bước xác nhận của bác sĩ |
+| 28/11/2026 | Cho web nhập nhiều tên chẩn đoán, tra đơn giả lập và gợi ý thuốc theo từng chẩn đoán | Dùng chẩn đoán để tra cứu, giữ các trường bệnh nhân để rà soát và in đơn |
+| 28/11/2026 | Hiển thị nội dung đơn thuốc mẫu trong kết quả tra cứu trên web | Bác sĩ nhìn thấy các dòng thuốc và cách dùng có sẵn trong ca giả lập |
+| 28/11/2026 | Mở sẵn một đơn mẫu ở màn hình tạo đơn và thêm nút Bổ sung thuốc | Có thể xem nội dung đơn mẫu ngay khi mở ứng dụng |
 
 **Sau CP4 (đến 23:59 Thứ Bảy 28/11)**
 
