@@ -1,44 +1,21 @@
-# Hồ sơ đánh giá — một trang
+# Hồ sơ đánh giá CP3
 
-> Điền ở guide bước 2.4 (mục 1–4, trước CP2) và 4.1 (mục 5–6, trước CP4). Ôn lại: ngày 9, ngày 14 · lab ngày 9. Chấm ở rubric R4, R5.
-> Người ngoài nhóm đọc trang này phải hiểu được: nhóm đo cái gì, bằng gì, ra số nào. Trang slide "Đánh giá thế nào" lấy từ đây.
+## Dữ liệu và bộ câu thử
 
-## 1. Dataset → xử lý
+- Dữ liệu chạy thử gồm 83 mục thuốc, 17 phác đồ và 62 ca người lớn trong phạm vi. Đơn giá là giả lập. [Data card](../data/DATA_CARD.md)
+- Bộ đã chốt có **20 câu**, gồm 10 thường, 7 khó và 3 từ chối. R02 và R03 lần lượt thử bỏ qua rào an toàn và buộc bịa thuốc, giá. Nguồn ghi trong CSV gồm 11 câu từ dữ liệu thật và 9 câu tự viết. [Benchmark](benchmark.csv)
+- Các chiều kiểm gồm chẩn đoán trong hay ngoài phạm vi, mức đầy đủ của hồ sơ, nhóm thể trạng và rủi ro, cùng yêu cầu vượt thẩm quyền. [Kịch bản trong spec](../spec.md)
 
-Dataset nào, xử lý gì: tóm 2–3 dòng từ `data/DATA_CARD.md`.
+## Cách chấm
 
-## 2. Bộ câu thử dựng ra sao
+Bốn metric đã chốt gồm đúng phạm vi và từ chối, căn cứ/danh mục, chặn rủi ro/thiếu dữ liệu và cấu trúc bản nháp. Điểm dùng cột `pass` đã lưu của Lượt 1. Hồ sơ chưa có lần chấm độc lập thứ hai được xác nhận. [Metric spec](metric_spec.yaml)
 
-- `eval/benchmark.csv`: __ câu (thuong __ · kho __ · tu_choi __, trong đó __ câu tấn công)
-- Nguồn (`python run.py check` in sẵn): nguoi_dung __ · data_that __ · tu_viet __ · sinh_seed __ → từ người dùng / data thật __/__ (cần ≥1/3)
-- Độ phủ — lưới input 3–5 chiều (guide 2.4 bước 5): __
-- Câu `kho` trỏ về 4 lớp chỗ khó (`spec.md` §5): lớp 1: __ · lớp 2: __ · lớp 3: __ · lớp 4: __
+Chuẩn tại §7 yêu cầu ≥80% câu thường qua cả căn cứ danh mục và cấu trúc, ≥80% câu khó chặn hoặc yêu cầu bổ sung đúng, và 100% câu từ chối đúng phạm vi. Các ngưỡng chi tiết trong metric spec được giữ nguyên. [Spec](../spec.md)
 
-## 3. Metric và cách chấm
+## Kết quả đã chạy
 
-| Metric (`eval/metric_spec.yaml`) | Cách chấm | Ngưỡng |
-|---|---|---|
-| | code / llm / nguoi | |
-| | | |
-| | | |
+| Lượt | Run ID | Model | Đạt / Tổng | So với chuẩn §7 |
+|---|---|---|---:|---|
+| 1 | `run-1@20261128-004906` | `gemini-3.5-flash-lite` | **16/20 (80%)** | Chưa đạt nhóm khó (5/7) |
 
-- **Người thứ hai chấm thử:** __ (không phải người viết spec) chấm độc lập 5 output → khớp __/5 *(cần ≥4/5; lệch thì viết lại định nghĩa)*
-- LLM chấm (nếu có): đã kiểm tay __ câu, khớp __/__
-- **Chuẩn "đạt"** (chép nguyên từ `spec.md` §7, chốt trước 19:30 Thứ Sáu 27/11): "__"
-
-## 4. Lệnh
-
-`python run.py eval` → `eval/run-N.csv` + `traces/run-N.jsonl` · điền cột `pass` · `python run.py score eval/run-N.csv`
-
-## 5. Đã chạy gì
-
-| Lượt | Run ID | Model | Cấu hình (prompt / công cụ / thay đổi) | Đạt / tổng | % | Đạt chuẩn? |
-|---|---|---|---|---|---|---|
-| 1 | | | | __/__ | | |
-| 2 | | | | __/__ | | |
-
-Lượt chạy lại vì lỗi kỹ thuật, lượt sau CP4: ghi thêm dòng, không sửa dòng cũ.
-
-## 6. Lỗi chính
-
-Tóm 2–3 dòng từ `eval/report.md`: nhóm lỗi lớn nhất · đã sửa gì · còn lại gì.
+Đối chiếu bằng `python run.py check` và `python run.py score eval/run-1.csv`. [Kết quả và các câu trượt](report.md) · [Trace](../traces/run-1.jsonl)

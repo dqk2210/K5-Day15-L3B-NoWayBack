@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Medora – Trợ lý cho bác sĩ</title>
+<style>
+:root{--g9:#173f30;--g7:#1f5c45;--g1:#e6f1ea;--g0:#f1f7f3;--bg:#f5f7f5;--card:#fff;--ink:#17231d;--mut:#5d6b63;--line:#dfe6e1;--warn-bg:#fdf5e1;--warn-ink:#7a5a10;--warn-line:#efdca6}
+*{box-sizing:border-box;margin:0}
+body{font-family:'Be Vietnam Pro',system-ui,sans-serif;background:var(--bg);color:var(--ink);font-size:14px;line-height:1.5}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:2px solid var(--g7);outline-offset:2px}
+.hidden{display:none!important}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:20px;color:#fff}
+.logo i{width:28px;height:28px;border-radius:8px;background:#fff;color:var(--g9);display:grid;place-items:center;font-style:normal;font-size:20px;line-height:1}
+.btn{background:var(--g7);color:#fff;border:0;border-radius:8px;padding:10px 18px;font-weight:600}
+.btn:hover{background:var(--g9)}
+.btn.sec{background:#fff;color:var(--g7);border:1px solid var(--line)}
+.btn.sec:hover{background:var(--g0)}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.tag{display:inline-block;font-size:11.5px;padding:2px 9px;border-radius:99px;background:var(--g1);color:var(--g7);font-weight:500}
+.tag.warn{background:var(--warn-bg);color:var(--warn-ink)}
+.note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn-ink);border-radius:10px;padding:10px 14px;font-size:13px}
+.note b{display:block}
+label{display:block;font-size:12.5px;color:var(--mut);margin:12px 0 4px;font-weight:500}
+input,select,textarea{width:100%;padding:9px 12px;border:1px solid var(--line);border-radius:8px;background:#fff}
+textarea{resize:vertical;min-height:64px}
+/* login */
+#login{display:grid;grid-template-columns:1fr 1fr;min-height:100vh}
+.lhero{background:var(--g9);color:#fff;padding:48px 56px;display:flex;flex-direction:column;justify-content:space-between;gap:32px}
+.lhero h1{font-size:40px;line-height:1.2;font-weight:600;margin:12px 0}
+.lhero p{color:#b9d3c6;max-width:420px}
+.feat{border:1px solid #ffffff2e;border-radius:12px;padding:16px;margin-top:12px;max-width:440px;background:#ffffff0a}
+.feat b{display:block}.feat span{color:#b9d3c6;font-size:13px}
+.lform{padding:48px 56px;display:flex;flex-direction:column;justify-content:center;max-width:520px;width:100%;margin:auto}
+.lform h2{font-size:28px;font-weight:600}
+.lform .btn{width:100%;margin-top:18px}
+.row{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.pw{position:relative}.pw button{position:absolute;right:8px;top:6px;border:0;background:none;color:var(--g7);font-weight:600}
+.shared{background:var(--g0);border-radius:10px;padding:12px 14px;margin-top:20px;font-size:13px;color:var(--mut)}
+/* app */
+#app{display:grid;grid-template-columns:236px 1fr;min-height:100vh}
+aside{background:var(--g9);color:#fff;padding:20px 14px;display:flex;flex-direction:column;gap:6px;position:sticky;top:0;height:100vh}
+aside small{color:#8fb3a1;font-size:11px;margin:6px 8px 16px}
+.nav{display:flex;gap:10px;align-items:center;width:100%;text-align:left;background:none;border:0;color:#cfe3d8;padding:10px 12px;border-radius:8px}
+.nav:hover{background:#ffffff14}.nav.on{background:var(--g7);color:#fff;font-weight:600}
+.decide{margin-top:auto;background:#ffffff12;border-radius:12px;padding:14px;font-size:12.5px;color:#cfe3d8}
+.decide b{display:block;color:#fff;font-size:14px;margin-bottom:4px}
+.out{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;margin-top:10px;padding:11px 14px;border:1px solid #ffffff38;border-radius:10px;background:#ffffff10;color:#fff;font-size:14.5px;font-weight:600}
+.out:hover{background:#ffffff22;border-color:#ffffff66}
+.out .ico{width:18px;height:18px}
+header{display:flex;justify-content:space-between;align-items:center;padding:12px 32px;background:#fff;border-bottom:1px solid var(--line);color:var(--mut);font-size:13px}
+header b{color:var(--ink)}
+main{padding:28px 32px 48px;max-width:1180px}
+main h2{font-size:26px;font-weight:600}
+.sub{color:var(--mut);margin:2px 0 18px}
+.steps{display:flex;gap:10px;margin-bottom:22px;flex-wrap:wrap}
+.step{display:flex;gap:8px;align-items:center;padding:7px 14px;border:1px solid var(--line);border-radius:99px;background:#fff;color:var(--mut);font-size:13px}
+.step span{width:20px;height:20px;border-radius:50%;background:var(--line);display:grid;place-items:center;font-size:11px;font-weight:700}
+.step.on{border-color:var(--g7);color:var(--g7);font-weight:600}.step.on span{background:var(--g7);color:#fff}
+.step.done span{background:var(--g1);color:var(--g7)}
+.grid{display:grid;grid-template-columns:minmax(300px,380px) 1fr;gap:20px;align-items:start}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+.card h3{font-size:17px;font-weight:600}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.two>.full{grid-column:1/-1}
+.dx{background:var(--g0);border:1px solid var(--g1);border-radius:8px;padding:9px 12px;display:flex;justify-content:space-between}
+.hint{font-size:12px;color:var(--mut);margin-top:6px}
+.verify{background:var(--g0);border-radius:10px;padding:10px 14px;font-size:12.5px;margin-top:14px;color:var(--mut)}
+.verify b{color:var(--ink);display:block}
+.empty{text-align:center;color:var(--mut);padding:60px 20px}
+.empty b{display:block;color:var(--ink);font-size:16px;margin-bottom:4px}
+.pick{display:flex;gap:12px;align-items:center;width:100%;text-align:left;padding:12px 14px;border:1px solid var(--line);background:#fff;border-radius:10px;margin-top:10px}
+.pick:hover{border-color:var(--g7)}
+.pick.on{border-color:var(--g7);background:var(--g0)}
+.chk{width:20px;height:20px;border:1.5px solid #b7c4bc;border-radius:5px;display:grid;place-items:center;flex:none;color:#fff;font-size:13px}
+.pick.on .chk{background:var(--g7);border-color:var(--g7)}
+.pick div{flex:1}.pick small{color:var(--mut);display:block}
+.foot{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:20px;flex-wrap:wrap}
+.rx{border:1px dashed #b7c4bc;border-radius:12px;padding:18px;margin:14px 0}
+.rx h4{font-size:15px;letter-spacing:.04em}
+.rx .meta{color:var(--mut);font-size:13px;margin-bottom:10px}
+.item{border-top:1px solid var(--line);padding:12px 0}
+.item .dose{color:var(--g7);font-weight:500}
+.count{font-size:18px;font-weight:700;color:var(--g7)}
+.rx-fields{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;width:100%}
+#items .item{display:block}
+#res{max-height:62vh;overflow:auto}
+#dx,#suggest-status,#review-result{margin-top:8px}
+#dx-options{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0}
+#dx-options:empty,#reference-cases:empty{display:none}
+#reference-cases{margin:12px 0}
+.reference-rx{margin-top:8px;border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.reference-rx summary{cursor:pointer;color:var(--g7);font-weight:600}
+.reference-rx ol{margin:8px 0 0;padding-left:20px;max-height:32vh;overflow:auto}
+.reference-rx li{padding:7px 0;border-top:1px solid var(--line)}
+#picks{max-height:48vh;overflow:auto}
+@media(max-width:600px){.rx-fields{grid-template-columns:1fr 1fr}}
+/* lookup */
+.search{display:flex;gap:10px}
+.search input{flex:1}
+.chips{display:flex;gap:6px;margin:14px 0;align-items:center;flex-wrap:wrap}
+.chip{border:1px solid var(--line);background:#fff;border-radius:99px;padding:3px 13px;font-size:13px}
+.chip.on{background:var(--g7);color:#fff;border-color:var(--g7)}
+.look{display:grid;grid-template-columns:1fr minmax(300px,380px);gap:20px;align-items:start}
+.res{display:block;width:100%;text-align:left;background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin-bottom:10px}
+.res.on{border-color:var(--g7);background:var(--g0)}
+.res small{display:block;color:var(--mut)}
+.res .row{align-items:flex-start}
+dl{display:grid;grid-template-columns:110px 1fr;gap:6px 10px;margin:12px 0;font-size:13px}dt{color:var(--mut)}
+.disc{margin-top:22px;font-size:12px;color:var(--mut)}
+.ico{width:16px;height:16px;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.btn .ico{vertical-align:-3px;margin-right:6px}
+/* rà soát an toàn (dialog) */
+#review,#ask{margin:auto;border:0;border-radius:14px;padding:0;width:min(540px,calc(100vw - 32px));max-height:calc(100vh - 32px);color:var(--ink);box-shadow:0 24px 60px -20px #173f3066}
+#review::backdrop,#ask::backdrop{background:#173f3073}
+#ask{width:min(440px,calc(100vw - 32px))}
+.newrx{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;margin:0 0 10px;padding:10px 14px;border:0;border-radius:10px;background:#fff;color:var(--g9);font-weight:600}
+.newrx:hover{background:var(--g1)}
+.link{border:0;background:none;padding:0;color:var(--g7);font-weight:600;text-decoration:underline;text-underline-offset:2px}
+.link:hover{color:var(--g9)}
+.link.mut{color:var(--mut);font-weight:500;font-size:12.5px}
+.ferr{color:#b4402e;font-size:12px;margin-top:3px}
+input[aria-invalid="true"]{border-color:#b4402e}
+/* lịch sử kê đơn */
+.hist{display:grid;grid-template-columns:minmax(330px,440px) minmax(0,1fr);gap:16px;align-items:start}
+.hist .card{padding:18px}
+.hist-tools{display:flex;gap:8px 10px;align-items:center;flex-wrap:wrap;margin-bottom:12px}
+.hist-tools input{flex:1 1 100%}
+.hist-tools .chips{margin:0;flex:1}
+.hrow{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 12px;align-content:center;width:100%;height:64px;margin-bottom:8px;padding:0 14px;text-align:left;background:#fff;border:1px solid var(--line);border-radius:10px}
+.hrow:hover{border-color:#b7c4bc}
+.hrow.on{border-color:var(--g7);background:var(--g0)}
+.hrow b,.hrow small{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hrow small{color:var(--mut);font-size:12.5px}
+.hrow .when{text-align:right;color:var(--mut);font-size:12.5px}
+.hist-foot{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:4px;flex-wrap:wrap}
+.pager{display:flex;align-items:center;gap:8px}
+.pager .btn{padding:6px 12px;font-size:13px}
+.hd-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.hd-head>div:first-child{flex:1 1 220px;min-width:0}
+.hd-head>div:first-child .hint{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hd-head .pv-actions{flex-wrap:nowrap}
+.hdetail .paper-wrap{margin-top:12px}
+.rv{padding:22px}
+.rv .x{border:0;background:none;color:var(--mut);width:32px;height:32px;border-radius:8px;display:grid;place-items:center}
+.rv .x:hover{background:var(--g0);color:var(--ink)}
+.rv-list{display:grid;gap:8px;margin-top:14px}
+.rv-list label{display:flex;gap:12px;align-items:flex-start;margin:0;padding:12px 14px;border:1px solid var(--line);border-radius:10px;color:var(--ink);font-size:13.5px;font-weight:400;cursor:pointer}
+.rv-list label:hover{border-color:#b7c4bc}
+.rv-list label:has(input:checked){border-color:var(--g7);background:var(--g0)}
+.rv-list input{width:18px;height:18px;flex:none;margin-top:2px;accent-color:var(--g7);cursor:pointer}
+.rv-list b{display:block;font-weight:600}
+.rv-list small{color:var(--mut);font-size:12.5px}
+/* xem trước đơn */
+.pv-bar{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 22px}
+.pv-bar h3{font-size:17px;font-weight:600}
+.pv-title{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.pv-actions{display:flex;gap:8px;flex-wrap:wrap}
+.paper-wrap{background:#e9eeea;border-radius:14px;padding:32px 20px;margin-top:16px;display:flex;justify-content:center}
+.paper{width:100%;max-width:640px;background:#fff;border-radius:4px;box-shadow:0 1px 2px #17231d14,0 12px 32px -16px #17231d40}
+.sheet{padding:36px 40px;color:#17231d;font-size:13px;line-height:1.55}
+.sh-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;padding:0 0 14px;background:none;color:inherit;font-size:inherit;border-bottom:1.5px solid var(--g9)}
+.sh-head span{display:block;color:var(--mut);font-size:12px}
+.sh-clinic{display:block;font-size:14px;letter-spacing:.02em;text-transform:uppercase;color:var(--g9)}
+.sh-code{text-align:right;white-space:nowrap}
+.sh-code b{font-size:13px}
+.sh-title{text-align:center;font-size:22px;font-weight:700;letter-spacing:.12em;margin:22px 0 16px;color:var(--g9)}
+.sh-pt{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px 16px;margin:0;font-size:inherit}
+.sh-pt div{display:flex;gap:6px;min-width:0}
+.sh-pt .w{grid-column:1/-1}
+.sh-pt dt{color:var(--mut);white-space:nowrap}
+.sh-pt dt::after{content:':'}
+.sh-pt dd{margin:0;font-weight:500;min-width:0}
+.sh-pt .up{text-transform:uppercase;font-weight:600}
+.sheet h2{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--g9);margin:20px 0 8px}
+.sh-items{border-top:1px solid var(--line);margin-top:16px}
+.sh-items ol{margin:0;padding:0;list-style:none;counter-reset:rx}
+.pv-item{counter-increment:rx;display:grid;grid-template-columns:28px 1fr auto;gap:2px 8px;padding:10px 0;border-bottom:1px dashed var(--line);break-inside:avoid}
+.pv-item::before{content:counter(rx) '.';font-weight:700;color:var(--g9)}
+.pv-item p{grid-column:2/-1;margin:0;color:var(--mut);font-size:12.5px}
+.pv-item .use{color:#17231d}
+.pv-form{display:block;color:var(--mut);font-size:12.5px}
+.pv-qty{white-space:nowrap;text-align:right}
+.sh-total{text-align:right;font-weight:600;margin-top:8px}
+.sh-advice p{margin:0}
+.sh-sign{display:flex;justify-content:flex-end;margin-top:24px;break-inside:avoid}
+.sh-sign .sig{text-align:center;min-width:220px}
+.sh-sign .sig p{font-style:italic;color:var(--mut)}
+.sh-sign .sig span{display:block;color:var(--mut);font-size:12px;margin-bottom:56px}
+.sh-foot{margin-top:24px;padding-top:10px;border-top:1px solid var(--line);font-size:11px;color:var(--mut);text-align:center}
+#print-root{display:none}
+/* Bản gọn khổ A5 — dùng chung cho In và Tải PDF */
+.sheet.compact{padding:0;font-size:11px;line-height:1.45}
+.sheet.compact .sh-head{padding-bottom:10px}
+.sheet.compact .sh-head span{font-size:10.5px}
+.sheet.compact .sh-clinic{font-size:12.5px}
+.sheet.compact .sh-title{font-size:18px;margin:12px 0 10px}
+.sheet.compact .sh-pt{gap:3px 12px}
+.sheet.compact h2{font-size:11px;margin:12px 0 4px}
+.sheet.compact .sh-items{margin-top:10px}
+.sheet.compact .pv-item{padding:6px 0}
+.sheet.compact .pv-item p{font-size:10.5px}
+.sheet.compact .pv-form{display:inline;font-size:10.5px}
+.sheet.compact .pv-form::before{content:' · '}
+.sheet.compact .sh-total{margin-top:4px}
+.sheet.compact .sh-sign{margin-top:12px}
+.sheet.compact .sh-sign .sig span{font-size:10.5px;margin-bottom:36px}
+.sheet.compact .sh-foot{margin-top:12px;padding-top:6px;font-size:9.5px}
+@media(max-width:900px){#login,#app,.grid,.look{grid-template-columns:1fr}aside{position:static;height:auto;flex-direction:row;flex-wrap:wrap}.decide{display:none}.lhero,.lform{padding:28px 22px}main,header{padding-left:16px;padding-right:16px}}
+@media(max-width:900px){.out{width:auto;margin-top:0;padding:9px 14px}.newrx{width:auto;margin:0}.hist{grid-template-columns:1fr}}
+/* ===== Màn hình máy tính: vừa 1 màn hình, không cuộn ===== */
+@media(min-width:901px){
+  #app{height:100vh;height:100dvh;overflow:hidden}
+  #app>div{display:flex;flex-direction:column;min-width:0;min-height:0}
+  header{padding:10px 28px}
+  main{flex:1;min-height:0;overflow:hidden;padding:16px 28px;max-width:none}
+  main h2{font-size:24px;line-height:1.25}
+  .pagehead{display:flex;justify-content:space-between;align-items:flex-end;gap:10px 24px;flex-wrap:wrap;margin-bottom:14px}
+  .pagehead .sub{margin:2px 0 0}
+  .pagehead .steps{margin:0}
+  .step{padding:5px 12px;font-size:12.5px}
+  .grid{grid-template-columns:minmax(340px,420px) minmax(0,1fr);gap:16px}
+  .two{grid-template-columns:repeat(6,minmax(0,1fr));gap:0 10px}
+  .two>div{grid-column:span 2}
+  .two>div:nth-child(n+4){grid-column:span 3}
+  #v-rx .card{padding:18px 20px}
+  #v-rx .card label{margin:9px 0 3px}
+  #v-rx .card input,#v-rx .card select{padding:7px 11px}
+  #v-rx .card textarea{min-height:40px}
+  .dx{padding:7px 12px}
+  #v-rx .verify{margin-top:10px;padding:8px 12px}
+  .pick{padding:9px 12px;margin-top:8px}
+  .rx{padding:12px 16px;margin:10px 0}
+  .item{padding:8px 0}
+  #items .item{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:16px;align-items:baseline}
+  #items .item>.row{justify-content:flex-start;gap:8px}
+  #items .item>.hint{text-align:right}
+  .rx .meta{margin-bottom:6px}
+  .foot{margin-top:14px}
+  .chips{margin:10px 0}
+  .res{padding:10px 14px;margin-bottom:8px}
+  .disc{margin-top:12px}
+  /* Bước 4: tờ đơn khổ A5 (đúng như bản in) bên trái, thao tác bên phải */
+  body.fill #fit,body.fill #v-rx,body.fill #v-hist{height:100%;display:flex;flex-direction:column}
+  body.fill .hist{flex:1;min-height:0;align-items:stretch}
+  body.fill .hist>.card{min-height:0;display:flex;flex-direction:column}
+  body.fill #hrows{flex:1;min-height:0;overflow:hidden}
+  body.fill #hdet .paper-wrap{flex:1;min-height:0;padding:12px;align-items:center;overflow:hidden}
+  body.fill #s4{flex:1;min-height:0;display:grid;grid-template-columns:minmax(0,1fr) 300px;grid-template-rows:auto auto 1fr;grid-template-areas:"paper bar" "paper err" "paper hint";column-gap:16px}
+  #s4 .pv-bar{grid-area:bar;flex-direction:column;align-items:stretch;padding:18px}
+  #s4 .pv-actions{flex-direction:column}
+  #s4 .pv-actions .btn{width:100%;padding:11px 16px}
+  #s4 .pv-actions .btn:nth-child(3){order:-2}
+  #s4 .pv-actions .btn:nth-child(2){order:-1}
+  #pv-err{grid-area:err}
+  #s4 .paper-wrap{grid-area:paper;margin:0;min-height:0;height:100%;align-items:center;padding:16px;overflow:hidden}
+  #s4>.hint{grid-area:hint;text-align:left!important}
+  .paper{width:559px;max-width:none;min-height:794px;padding:38px;flex:none}
+}
+@media(max-width:640px){.pv-actions,.pv-actions .btn{width:100%}.paper-wrap{padding:12px;border-radius:10px}.sheet{padding:22px 18px}.sh-head{flex-direction:column}.sh-code{text-align:left}.sh-pt{grid-template-columns:1fr 1fr}.sh-sign{justify-content:center}}
+@media print{
+  @page{size:A5 portrait;margin:10mm}
+  body.rx-print{background:#fff}
+  body.rx-print>*:not(#print-root){display:none!important}
+  body.rx-print #print-root{display:block}
+  #print-root .sh-head,#print-root .sh-title,#print-root .sh-clinic,#print-root h2{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+</head>
+<body>
+
+<!-- ĐĂNG NHẬP -->
+<section id="login">
+  <div class="lhero">
+    <div>
+      <div class="logo"><i>+</i>medora</div>
+    </div>
+    <div>
+      <small style="color:#8fb3a1">Trợ lý lâm sàng cho bác sĩ</small>
+      <h1>Vững chuyên môn.<br>Trọn tâm chăm sóc.</h1>
+      <p>Một không gian để tạo đơn thuốc và tra cứu thông tin, giúp bác sĩ tập trung hơn vào người bệnh.</p>
+      <div class="feat"><b>Hỗ trợ tạo đơn thuốc</b><span>Từ chẩn đoán đến đơn nháp, luôn có bước bác sĩ rà soát.</span></div>
+      <div class="feat"><b>Tra cứu thuốc</b><span>Tìm theo tên, xem chỉ định và đơn vị thuốc.</span></div>
+    </div>
+    <div style="color:#b9d3c6;font-size:13px">✓ Bác sĩ luôn là người quyết định. Medora hỗ trợ tham khảo, không thay thế đánh giá và trách nhiệm chuyên môn của bác sĩ.</div>
+  </div>
+  <div class="lform">
+    <p class="hint" style="margin-bottom:28px">Dành cho bác sĩ</p>
+    <h2>Mở bản mô phỏng Medora</h2>
+    <p class="sub">Bản chạy local dành cho dữ liệu bệnh nhân giả lập.</p>
+    <button class="btn" onclick="enter()">Vào bản mô phỏng</button>
+  </div>
+</section>
+
+<!-- ỨNG DỤNG -->
+<div id="app" class="hidden">
+  <aside>
+    <div class="logo" style="padding:4px 8px"><i>+</i>medora</div>
+    <small>TRỢ LÝ CHO BÁC SĨ</small>
+    <button class="newrx" onclick="newRx()"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg>Tạo đơn mới</button>
+    <button class="nav on" data-v="rx" onclick="view('rx')">▣ Tạo đơn thuốc</button>
+    <button class="nav" data-v="look" onclick="view('look')">⌕ Tra cứu thuốc</button>
+    <button class="nav" data-v="hist" onclick="view('hist')">◷ Lịch sử kê đơn</button>
+    <div class="decide"><b>Bạn là người quyết định cuối cùng.</b>Medora hỗ trợ tham khảo, không thay thế đánh giá lâm sàng.</div>
+    <button class="out" onclick="leave()"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m16 17 5-5-5-5"/><path d="M21 12H9"/><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/></svg>Thoát mô phỏng</button>
+  </aside>
+  <div>
+    <header><span>Không gian bác sĩ › <b id="crumb">Tạo đơn thuốc</b></span><span><span class="tag warn">Bản mẫu · dữ liệu minh họa</span> &nbsp; <b>Bác sĩ mô phỏng</b> · Bác sĩ điều trị</span></header>
+    <main>
+    <div id="fit">
+
+    <!-- TẠO ĐƠN -->
+    <div id="v-rx">
+      <div class="pagehead">
+        <div><h2>Hỗ trợ tạo đơn thuốc</h2>
+        <p class="sub">Từ chẩn đoán đến đơn thuốc — có cơ sở, luôn trong tầm kiểm soát.</p></div>
+        <div class="steps" id="steps"></div>
+      </div>
+      <div class="grid" id="rxgrid">
+        <div class="card">
+          <h3>Thông tin khám bệnh</h3>
+          <label for="dx">Chẩn đoán bác sĩ đã xác nhận *</label>
+          <textarea id="dx" rows="2" maxlength="500" required placeholder="Ví dụ: viêm mũi dị ứng, tăng huyết áp" aria-describedby="dx-hint"></textarea>
+          <p class="hint" id="dx-hint">Phân cách các tên chẩn đoán bằng dấu phẩy, chấm phẩy hoặc xuống dòng.</p>
+          <div id="dx-options" aria-label="Chẩn đoán trong danh mục"></div>
+          <p class="hint">Thông tin bệnh nhân dùng để rà soát và in đơn. Có thể điền sau khi tìm thuốc.</p>
+          <label for="name">Họ và tên bệnh nhân</label><input id="name" maxlength="100">
+          <div class="two">
+            <div><label for="age">Tuổi</label><input id="age" type="number" min="0" max="150"></div>
+            <div><label for="sex">Giới tính</label><select id="sex"><option>Chưa rõ</option><option>Nữ</option><option>Nam</option></select></div>
+            <div><label for="wt">Cân nặng (kg)</label><input id="wt" type="number" min="0.01" max="500" step="0.01"></div>
+            <div><label for="bn">Bệnh nền</label><input id="bn" maxlength="600" placeholder="Chưa ghi nhận"></div>
+            <div class="full"><label for="al">Tiền sử dị ứng thuốc</label><input id="al" maxlength="300" placeholder="Nhập rõ dị ứng hoặc “Không” sau khi hỏi"></div>
+          </div>
+          <label for="meds">Thuốc đang sử dụng</label>
+          <input id="meds" maxlength="600" placeholder="Nhập hoạt chất, cách nhau bằng dấu phẩy">
+          <details>
+            <summary>Thông tin thai kỳ, gan và thận</summary>
+            <div class="two">
+              <div><label for="pregnancy">Thai kỳ</label><select id="pregnancy"></select></div>
+              <div><label for="pregnancy_weeks">Tuần thai</label><input id="pregnancy_weeks" type="number" min="1" max="45" disabled></div>
+              <div><label for="renal">Bệnh thận</label><select id="renal"></select></div>
+              <div><label for="egfr">eGFR</label><input id="egfr" type="number" min="0" max="250" step="any"></div>
+              <div><label for="liver">Bệnh gan</label><select id="liver"></select></div>
+            </div>
+          </details>
+          <button class="btn" id="suggest" style="width:100%;margin-top:14px" onclick="startSuggest()">Tìm đơn theo chẩn đoán</button>
+          <button class="link hidden" id="restore" onclick="restoreDraft()">Mở bản nháp đã lưu trong phiên</button>
+          <p class="hint" id="form-status" role="status"></p>
+        </div>
+
+        <div class="card" id="rp">
+          <div id="reference-cases" aria-live="polite"></div>
+          <div id="s1">
+            <button class="btn sec" id="add-initial" onclick="startSuggest([],true)">Bổ sung thuốc</button>
+          </div>
+
+          <div id="s2" class="hidden">
+            <div id="suggest-status" role="status"></div>
+            <button class="btn sec hidden" id="add-drugs" onclick="revealDrugOptions()" aria-controls="drug-options" aria-expanded="false">Bổ sung thuốc</button>
+            <div id="drug-options" class="hidden">
+              <div class="row"><h3>Thuốc tham khảo</h3><span class="tag warn">Danh mục mô phỏng</span></div>
+              <div id="picks"></div>
+              <div class="foot"><span id="pc" class="hint">Chưa chọn thuốc</span><button class="btn" id="mk" onclick="go(3)" disabled>Tạo bản nháp từ thuốc đã chọn</button></div>
+            </div>
+          </div>
+
+          <div id="s3" class="hidden">
+            <div class="row"><h3>Đơn thuốc đề xuất</h3><span class="tag warn">Bản nháp</span></div>
+            <p class="hint">Bác sĩ có thể nhập liều theo đơn vị của từng thuốc hoặc để trống khi soạn bản nháp.</p>
+            <div class="rx">
+              <h4>ĐƠN THUỐC MÔ PHỎNG</h4>
+              <div class="meta" id="pm"></div>
+              <div id="items"></div>
+              <div class="item"><b>Lời dặn của bác sĩ</b><br><textarea id="adv" maxlength="500" placeholder="Nhập lời dặn nếu cần"></textarea></div>
+            </div>
+            <div id="review-result" role="status"></div>
+            <div class="note" style="margin-top:12px"><b>Cần hoàn tất rà soát an toàn</b>Xác minh dị ứng, thai kỳ / cho con bú, chức năng thận và tương tác với các thuốc đang dùng trước khi xác nhận.</div>
+            <div class="foot"><div><div class="count" id="qty"></div><span class="hint" id="draft-status" role="status"></span></div>
+              <div><button class="btn sec" onclick="go(2)">← Thêm thuốc / chỉnh sửa</button> <button class="btn sec" onclick="draft(this)">Lưu bản nháp</button> <button class="btn" id="cf" onclick="confirmRx()">Kiểm tra & rà soát</button></div></div>
+            <p class="hint">Chỉ xuất đơn sau khi bác sĩ kiểm tra và xác nhận.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- BƯỚC 4: XEM TRƯỚC & XUẤT ĐƠN -->
+      <section id="s4" class="hidden" aria-labelledby="pv-h">
+        <div class="pv-bar">
+          <div>
+            <div class="pv-title"><h3 id="pv-h">Xem trước đơn thuốc</h3><span class="tag">✓ Đã rà soát & xác nhận</span></div>
+            <p class="hint" id="pv-meta"></p>
+            <p class="hint">Đã lưu vào <button type="button" class="link" onclick="openHist(rxDoc&&rxDoc.code)">Lịch sử kê đơn</button>.</p>
+          </div>
+          <div class="pv-actions">
+            <button class="btn sec" onclick="go(3)">← Quay lại chỉnh sửa</button>
+            <button class="btn sec" id="pv-dl" onclick="downloadRx(this)"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg><span>Lưu PDF qua hộp thoại in</span></button>
+            <button class="btn" onclick="printRx()"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 9V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6"/><rect x="6" y="14" width="12" height="8" rx="1"/></svg>In đơn</button>
+            <button class="btn sec pv-new" onclick="newRx()"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg>Tạo đơn mới</button>
+          </div>
+        </div>
+        <div class="note hidden" id="pv-err" role="alert" style="margin-top:12px"></div>
+        <div class="paper-wrap"><div class="paper"><article class="sheet" id="sheet" aria-label="Bản xem trước đơn thuốc"></article></div></div>
+        <p class="hint" style="text-align:center;margin-top:12px">Kiểm tra lại toàn bộ thông tin trước khi in. Bản in phục vụ mô phỏng.</p>
+      </section>
+    </div>
+
+    <!-- LỊCH SỬ KÊ ĐƠN -->
+    <div id="v-hist" class="hidden">
+      <div class="pagehead">
+        <div><h2>Lịch sử kê đơn</h2>
+        <p class="sub">Các đơn đã được bác sĩ rà soát và xác nhận · lưu trên trình duyệt của máy này.</p></div>
+        <button class="btn" onclick="newRx()"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg>Tạo đơn mới</button>
+      </div>
+      <div class="hist">
+        <div class="card hlist">
+          <div class="hist-tools">
+            <input id="hq" type="search" placeholder="Tìm theo bệnh nhân, mã đơn hoặc chẩn đoán" aria-label="Tìm đơn thuốc" oninput="histPage=1;renderHistory()">
+            <div class="chips" id="hchips" role="group" aria-label="Khoảng thời gian"></div>
+            <span class="tag" id="hcount"></span>
+          </div>
+          <div id="hrows"></div>
+          <div class="hist-foot"><button type="button" class="link mut" id="hclear" onclick="clearHist()">Xóa lịch sử trên máy này</button><div class="pager" id="hpager"></div></div>
+        </div>
+        <div class="card hdetail" id="hdet"></div>
+      </div>
+    </div>
+
+    <!-- TRA CỨU -->
+    <div id="v-look" class="hidden">
+      <h2>Tra cứu thuốc</h2>
+      <p class="sub">Thông tin cần thiết về thuốc, ngay trong một không gian.</p>
+      <div class="search"><input id="q" placeholder="Tìm theo tên thuốc hoặc hoạt chất" maxlength="150" oninput="queueLook()" aria-label="Tìm kiếm thuốc"><button class="btn" onclick="renderLook()">Tìm kiếm thuốc</button></div>
+      <div class="chips" id="chips"></div>
+      <div class="look">
+        <div><div class="row" style="margin-bottom:10px"><b>Kết quả tìm kiếm</b><span class="tag" id="rc"></span></div><div id="res"></div></div>
+        <div class="card" id="det"></div>
+      </div>
+      <p class="disc">Nguồn tham chiếu theo từng thuốc trong danh mục dữ liệu mô phỏng.</p>
+    </div>
+
+    </div>
+    </main>
+  </div>
+</div>
+
+<!-- RÀ SOÁT AN TOÀN TRƯỚC KHI XÁC NHẬN -->
+<dialog id="review" aria-labelledby="rv-h">
+  <form method="dialog" class="rv" onsubmit="approveRx(event)">
+    <div class="row">
+      <h3 id="rv-h" style="font-size:17px;font-weight:600">Rà soát an toàn trước khi xác nhận</h3>
+      <button type="button" class="x" onclick="closeReview()" aria-label="Đóng"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+    </div>
+    <p class="hint">Đánh dấu các mục để xác nhận bác sĩ chịu trách nhiệm rà soát bản nháp. <b id="rv-pt" style="color:var(--ink)"></b></p>
+    <div class="rv-list" id="rv-list" onchange="updateReview()"></div>
+    <div class="foot">
+      <span class="hint" id="rv-count" aria-live="polite"></span>
+      <div><button type="button" class="btn sec" onclick="closeReview()">Hủy</button> <button type="submit" class="btn" id="rv-ok" disabled>Xác nhận & xem trước đơn →</button></div>
+    </div>
+  </form>
+</dialog>
+
+<!-- HỘP THOẠI XÁC NHẬN DÙNG CHUNG -->
+<dialog id="ask" aria-labelledby="ask-h" aria-describedby="ask-msg">
+  <form method="dialog" class="rv">
+    <h3 id="ask-h" style="font-size:17px;font-weight:600"></h3>
+    <p class="hint" id="ask-msg" style="margin-top:6px"></p>
+    <div class="foot"><span></span><div><button value="cancel" class="btn sec">Hủy</button> <button value="ok" class="btn" id="ask-ok"></button></div></div>
+  </form>
+</dialog>
+
+<!-- Bản sao đơn dùng khi in (chỉ hiện trong chế độ in) -->
+<div id="print-root" aria-hidden="true"></div>
+
+<script>
+const $=s=>document.querySelector(s);
+const draftKey='medora.web.draft';
+const statuses=['pregnancy','renal','liver'];
+statuses.forEach(id=>{
+ $('#'+id).innerHTML='<option value="unknown">Chưa rõ</option><option value="no">Không</option><option value="yes">Có</option>';
+});
+let guidelines=[], matchedGuidelines=[], picks=[], selected=new Map(), draftValues={}, lastScreen='', reviewed=null, advice='';
+let sampleCases=null, sampleLoadError=false, drugOptionsOpen=false;
+let step=1, unit='', cur='', lookTimer, lookRequest=0, rxRequest=0;
+
+async function api(path, body){
+ const options=body===undefined?{}:{
+  method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)
+ };
+ const response=await fetch('/api/'+path,options);
+ const data=await response.json();
+ if(!response.ok)throw new Error(data.error||'Backend trả về lỗi.');
+ return data;
+}
+async function enter(){
+ $('#login').classList.add('hidden');
+ $('#app').classList.remove('hidden');
+ view('rx');
+ go(1);
+ $('#suggest').disabled=true;
+ $('#add-initial').disabled=true;
+ const [guideResult,sampleResult]=await Promise.allSettled([api('guidelines'),api('reference-prescriptions')]);
+ if(guideResult.status==='fulfilled')guidelines=guideResult.value.guidelines;
+ else $('#form-status').textContent='Không tải được danh sách chẩn đoán. '+guideResult.reason.message;
+ sampleLoadError=sampleResult.status==='rejected';
+ if(!sampleLoadError)sampleCases=sampleResult.value.reference_prescriptions;
+ if(step===1)renderInitialSample();
+ $('#suggest').disabled=false;
+ $('#add-initial').disabled=false;
+ fitScreen();
+ try{$('#restore').classList.toggle('hidden',!sessionStorage.getItem(draftKey))}catch{}
+}
+function leave(){
+ resetWork();
+ PATIENT_FIELDS.forEach(id=>$('#'+id).value='');
+ statuses.forEach(id=>$('#'+id).value='unknown');
+ $('#pregnancy_weeks').disabled=true;
+ $('#app').classList.add('hidden');
+ $('#login').classList.remove('hidden');
+}
+const CRUMB={rx:'Tạo đơn thuốc',look:'Tra cứu thuốc',hist:'Lịch sử kê đơn'};
+function view(v){Object.keys(CRUMB).forEach(k=>{$('#v-'+k).classList.toggle('hidden',k!==v)});
+ document.querySelectorAll('.nav').forEach(n=>n.classList.toggle('on',n.dataset.v===v));
+ $('#crumb').textContent=CRUMB[v];if(v==='look')renderLook();if(v==='hist')renderHistory();
+ fitScreen()}
+function go(n){
+ step=n;
+ ['s1','s2','s3'].forEach((k,i)=>$('#'+k).classList.toggle('hidden',i+1!==n));
+ $('#reference-cases').classList.toggle('hidden',n>2);
+ if(n===1)renderInitialSample();
+ $('#rxgrid').classList.toggle('hidden',n===4);
+ $('#s4').classList.toggle('hidden',n!==4);
+ if(n!==4)$('#pv-err').classList.add('hidden');
+ const L=['Đơn mẫu & chẩn đoán','Kết quả tra cứu','Rà soát & xác nhận','Xem trước & xuất đơn'];
+ $('#steps').innerHTML=L.map((t,i)=>`<div class="step ${i+1===n?'on':i+1<n?'done':''}"><span>${i+1<n?'✓':i+1}</span>${t}</div>`).join('');
+ if(n===2)renderPicks();if(n===3)renderRx();if(n===4)renderPreview();
+ fitScreen()}
+function renderPicks(){
+ $('#drug-options').classList.toggle('hidden',!drugOptionsOpen);
+ $('#add-drugs').classList.toggle('hidden',drugOptionsOpen||!picks.length);
+ $('#add-drugs').setAttribute('aria-expanded',String(drugOptionsOpen));
+ $('#picks').innerHTML=picks.map((drug,index)=>{
+  const active=selected.has(drug.drug_id);
+  return `<button class="pick ${active?'on':''}" aria-pressed="${active}" onclick="togglePick(${index})"><span class="chk">${active?'✓':''}</span><div><b>${esc(drugLabel(drug))}</b><small>${esc(drug.drug_class)} · ${esc(drug.route_of_administration)}</small><small>${esc(drugSources(drug))}</small></div><small>${esc(drug.unit)}</small></button>`;
+ }).join('');
+ $('#pc').textContent=selected.size?`Đã chọn ${selected.size} thuốc`:'Chưa chọn thuốc';
+ $('#mk').disabled=!selected.size;
+ fitScreen();
+}
+function revealDrugOptions(){
+ drugOptionsOpen=true;
+ renderPicks();
+ $('#picks button')?.focus();
+}
+function togglePick(index){
+ const drug=picks[index];
+ if(selected.has(drug.drug_id))selected.delete(drug.drug_id);
+ else selected.set(drug.drug_id,drug);
+ renderPicks();
+}
+const drugLabel=d=>[d.canonical_name,d.strength_dosage].filter(Boolean).join(' · ');
+const doseFields=[
+ ['dose_per_intake','Đơn vị/lần',0.001,1000,'any'],
+ ['frequency_per_day','Lần/ngày',1,24,1],
+ ['duration_days','Số ngày',1,365,1],
+ ['quantity','Tổng số lượng',1,10000,1]
+];
+function drugMatches(drug){
+ return matchedGuidelines.filter(g=>drug.verified_indications_icd10.includes(g.icd10_prefix));
+}
+function drugSources(drug){
+ if(drug.matches?.length)return drug.matches.map(m=>`${diagnosisName(m.icd10)} (${m.tier===1?'đầu tay':'phương án khác'})`).join(' | ');
+ return drugMatches(drug).map(g=>g.disease_name_vi).join(', ');
+}
+function diagnosisName(code){return guidelines.find(g=>g.icd10_prefix===code)?.disease_name_vi||''}
+function rxItems(){
+ return [...selected.values()].map((drug,index)=>{
+  const v=draftValues[drug.drug_id]||{};
+  return {
+   no:pad2(index+1),name:drugLabel(drug),unit:drug.unit||'',form:drug.strength_dosage||'',
+   route:drug.route_of_administration||'',qty:v.quantity?Number(v.quantity):null,
+   dose:[v.dose_per_intake&&`${v.dose_per_intake} ${drug.unit}/lần`,
+         v.frequency_per_day&&`${v.frequency_per_day} lần/ngày`,
+         v.duration_days&&`${v.duration_days} ngày`].filter(Boolean).join(' · ')
+  };
+ });
+}
+function renderRxSummary(){
+ $('#pm').textContent=[$('#name').value.trim(),$('#age').value&&`${$('#age').value} tuổi`,$('#dx').value.trim()].filter(Boolean).join(' · ');
+}
+function renderRx(){
+ renderRxSummary();
+ $('#items').innerHTML=[...selected.values()].map((drug,index)=>{
+  const fields=doseFields.map(([key,label,min,max,increment])=>{
+   const id=`dose-${index}-${key}`;
+   return `<div><label for="${id}">${label}</label><input id="${id}" data-index="${index}" data-key="${key}" type="number" min="${min}" max="${max}" step="${increment}" value="${esc(draftValues[drug.drug_id]?.[key]||'')}"></div>`;
+  }).join('');
+  return `<div class="item"><b>${esc(drugLabel(drug))}</b><p class="hint">${esc(drug.route_of_administration)} · Đơn vị ${esc(drug.unit)} · ${esc(drugSources(drug))} · ${esc(drug.source_reference)}</p><div class="rx-fields">${fields}</div></div>`;
+ }).join('');
+ $('#adv').value=advice;
+ $('#qty').textContent=`${selected.size} dòng thuốc`;
+ $('#review-result').textContent='';
+ $('#draft-status').textContent='';
+ $('#cf').disabled=!selected.size;
+}
+$('#items').addEventListener('input',e=>{
+ const drug=[...selected.values()][Number(e.target.dataset.index)];
+ if(!drug)return;
+ (draftValues[drug.drug_id]??={})[e.target.dataset.key]=e.target.value;
+ $('#review-result').textContent='';
+});
+$('#adv').addEventListener('input',e=>advice=e.target.value);
+function draft(){
+ const fields=Object.fromEntries([...PATIENT_FIELDS,...statuses,'sex'].map(id=>[id,$('#'+id).value]));
+ try{
+  sessionStorage.setItem(draftKey,JSON.stringify({fields,drugIds:[...selected.keys()],draftValues,advice}));
+  $('#restore').classList.remove('hidden');
+  $('#draft-status').textContent='Đã lưu bản nháp trong phiên trình duyệt.';
+ }catch{$('#draft-status').textContent='Trình duyệt không lưu được bản nháp.'}
+}
+async function restoreDraft(){
+ let saved;
+ try{saved=JSON.parse(sessionStorage.getItem(draftKey))}catch{}
+ if(!saved)return;
+ resetWork();
+ for(const [id,value] of Object.entries(saved.fields)){
+  if([...PATIENT_FIELDS,...statuses,'sex'].includes(id))$('#'+id).value=value;
+ }
+ $('#pregnancy_weeks').disabled=$('#pregnancy').value!=='yes';
+ draftValues=saved.draftValues;
+ advice=saved.advice;
+ await startSuggest(saved.drugIds);
+}
+
+/* ===== RÀ SOÁT AN TOÀN → XEM TRƯỚC → IN / TẢI ĐƠN ===== */
+// Thông tin cơ sở & bác sĩ in trên đơn — thay bằng dữ liệu thật của cơ sở y tế.
+const CLINIC={name:'Cơ sở y tế (bản mẫu)',address:'Địa chỉ cơ sở khám chữa bệnh',phone:'—'};
+const DOCTOR={name:'Bác sĩ mô phỏng',role:'Bác sĩ rà soát'};
+let rxDoc=null,currentCode=null;
+
+const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const pad2=n=>String(n).padStart(2,'0');
+const fmtTime=d=>`${pad2(d.getHours())}:${pad2(d.getMinutes())}`;
+const fmtDate=d=>`${pad2(d.getDate())}/${pad2(d.getMonth()+1)}/${d.getFullYear()}`;
+const orNone=v=>v.trim()||'Chưa ghi nhận';
+
+function reviewChecks(){
+ const items=[
+  ['Tiền sử dị ứng thuốc',`Bác sĩ tự đối chiếu tiền sử dị ứng. Dữ liệu đã nhập: ${orNone($('#al').value)}.`],
+  ['Chức năng gan, thận',`Bác sĩ đánh giá chức năng gan, thận. Bệnh nền đã nhập: ${orNone($('#bn').value)}.`],
+  ['Tương tác thuốc','Bác sĩ tự đối chiếu các thuốc đang sử dụng.'],
+  ['Liều và thời gian điều trị','Bác sĩ chịu trách nhiệm bổ sung và kiểm tra các dòng thuốc.']];
+ if($('#sex').value!=='Nam')items.splice(1,0,['Thai kỳ / cho con bú','Bác sĩ đánh giá khi áp dụng cho hồ sơ này.']);
+ return items}
+function renderChecks(el,checks){
+ const messages=[...checks.blocking_violations,...checks.warnings];
+ el.innerHTML=messages.length?`<div class="note"><b>${checks.status==='BLOCKED'?'Dừng kiểm tra':'Cảnh báo cần rà soát'}</b><ul>${messages.map(m=>`<li>${esc(m.message)}</li>`).join('')}</ul></div>`:'';
+}
+function medicationsInput(){
+ return [...selected.keys()].map(drug_id=>({
+  drug_id,...Object.fromEntries(doseFields.map(([key])=>{
+   const value=draftValues[drug_id]?.[key];
+   return [key,value?Number(value):null];
+  }))
+ }));
+}
+async function confirmRx(){
+ if(!selected.size||!validatePatientFields())return;
+ const invalid=[...$('#items').querySelectorAll('input')].find(input=>!input.checkValidity());
+ if(invalid){invalid.reportValidity();return}
+ const button=$('#cf'),result=$('#review-result');
+ const body={...patientInput(),medications:medicationsInput()}, fingerprint=JSON.stringify(body);
+ const request=++rxRequest;
+ button.disabled=true;
+ result.textContent='Đang kiểm tra an toàn…';
+ try{
+  const data=await api('prescriptions/review',body);
+  if(request!==rxRequest||step!==3||fingerprint!==JSON.stringify({...patientInput(),medications:medicationsInput()})){
+   if(step===3)result.textContent='Dữ liệu đã thay đổi. Bấm kiểm tra lại.';
+   return;
+  }
+  renderChecks(result,data.guardrail);
+  if(data.guardrail.status==='BLOCKED')return;
+  if(data.estimated_cost)result.insertAdjacentHTML('beforeend',
+   `<p>Chi phí giả lập <b>${data.estimated_cost.total_cost_vnd.toLocaleString('vi-VN')} ₫</b></p>`);
+  reviewed=fingerprint;
+  $('#rv-pt').textContent=$('#name').value.trim();
+  const checks=reviewChecks();
+  data.guardrail.warnings.forEach(w=>checks.push(['Cảnh báo từ dữ liệu',w.message]));
+  $('#rv-list').innerHTML=checks.map(([t,d],i)=>`<label for="rv${i}"><input type="checkbox" id="rv${i}"><span><b>${esc(t)}</b><small>${esc(d)}</small></span></label>`).join('');
+  updateReview();
+  $('#review').showModal();
+ }catch(e){if(request===rxRequest)result.textContent=e.message}
+ finally{button.disabled=false;fitScreen()}
+}
+function updateReview(){
+ const boxes=[...document.querySelectorAll('#rv-list input')],done=boxes.filter(b=>b.checked).length;
+ $('#rv-count').textContent=`Đã kiểm tra ${done}/${boxes.length} mục`;
+ $('#rv-ok').disabled=!boxes.length||done!==boxes.length;
+}
+function closeReview(){$('#review').close()}
+function approveRx(e){
+ e.preventDefault();
+ if($('#rv-ok').disabled||!reviewed||reviewed!==JSON.stringify({...patientInput(),medications:medicationsInput()}))return;
+ const now=new Date();
+ currentCode??=`MD-${now.getFullYear()}${pad2(now.getMonth()+1)}${pad2(now.getDate())}-${crypto.randomUUID().slice(0,8).toUpperCase()}`;
+ rxDoc={
+  code:currentCode,at:now,
+  pt:{name:$('#name').value.trim(),age:$('#age').value,sex:$('#sex').value,wt:$('#wt').value,
+      bn:orNone($('#bn').value),al:orNone($('#al').value),meds:$('#meds').value.trim(),
+      diagnosis_input:$('#dx').value.trim(),dx:$('#dx').value.trim(),
+      diagnoses:matchedGuidelines.map(g=>g.disease_name_vi),
+      icd:matchedGuidelines.map(g=>g.icd10_prefix).join(', ')},
+  items:rxItems(),advice
+ };
+ saveToHistory(rxDoc);
+ try{sessionStorage.removeItem(draftKey)}catch{}
+ $('#restore').classList.add('hidden');
+ closeReview();
+ go(4);
+}
+
+function renderPreview(){
+ if(!rxDoc){go(3);return}
+ $('#pv-meta').textContent=`Mã đơn ${rxDoc.code} · Xác nhận lúc ${fmtTime(rxDoc.at)} ${fmtDate(rxDoc.at)} bởi ${DOCTOR.name}`;
+ $('#sheet').innerHTML=sheetHTML(rxDoc)}
+/* Nội dung tờ đơn — dùng chung cho Xem trước (bước 4) và Lịch sử kê đơn */
+function sheetHTML({code,at,pt,items,advice}){
+ return `
+  <header class="sh-head">
+   <div><b class="sh-clinic">${esc(CLINIC.name)}</b><span>${esc(CLINIC.address)}</span><span>Điện thoại: ${esc(CLINIC.phone)}</span></div>
+   <div class="sh-code"><span>Mã đơn</span><b>${code}</b></div>
+  </header>
+  <h1 class="sh-title">ĐƠN THUỐC MÔ PHỎNG</h1>
+  <dl class="sh-pt">
+   <div class="w"><dt>Họ và tên</dt><dd class="up">${esc(pt.name)||'—'}</dd></div>
+   <div><dt>Tuổi</dt><dd>${esc(pt.age)||'—'}</dd></div>
+   <div><dt>Giới tính</dt><dd>${esc(pt.sex)}</dd></div>
+   <div><dt>Cân nặng</dt><dd>${pt.wt?esc(pt.wt)+' kg':'—'}</dd></div>
+   <div class="w"><dt>Bệnh nền</dt><dd>${esc(pt.bn)}</dd></div>
+   <div class="w"><dt>Tiền sử dị ứng thuốc</dt><dd>${esc(pt.al)}</dd></div>
+   ${pt.meds?`<div class="w"><dt>Thuốc đang dùng</dt><dd>${esc(pt.meds)}</dd></div>`:''}
+   <div class="w"><dt>Chẩn đoán</dt><dd>${esc(pt.dx)}</dd></div>
+  </dl>
+  <section class="sh-items">
+   <h2>Thuốc điều trị</h2>
+   <ol>${items.map(it=>`<li class="pv-item"><div><b>${esc(it.name)}</b><span class="pv-form">${esc(it.form)} · ${esc(it.route)}</span></div><span class="pv-qty">SL: <b>${it.qty==null?'—':pad2(it.qty)+' '+esc(it.unit.toLowerCase())}</b></span><p class="use">Cách dùng: ${esc(it.dose)||'—'}</p></li>`).join('')}</ol>
+   <p class="sh-total">Cộng khoản: ${pad2(items.length)}</p>
+  </section>
+  <section class="sh-advice"><h2>Lời dặn của bác sĩ</h2><p>${esc(advice)}</p></section>
+  <footer class="sh-sign"><div class="sig">
+   <p>Ngày ${pad2(at.getDate())} tháng ${pad2(at.getMonth()+1)} năm ${at.getFullYear()}</p>
+   <b>${esc(DOCTOR.role)}</b><span>(Ký, ghi rõ họ tên)</span><b>${esc(DOCTOR.name)}</b>
+  </div></footer>
+  <p class="sh-foot">Đơn lập với hỗ trợ của Medora · Bác sĩ đã rà soát an toàn lúc ${fmtTime(at)} ${fmtDate(at)} · Bản mẫu – dữ liệu minh họa</p>`}
+
+/* In: chép bản xem trước vào #print-root; CSS @media print chỉ hiện vùng này (khổ A5). */
+const previewVisible=()=>!$('#s4').classList.contains('hidden')&&!$('#v-rx').classList.contains('hidden');
+let prevTitle=document.title;
+const histVisible=()=>!$('#v-hist').classList.contains('hidden')&&!$('#app').classList.contains('hidden');
+/* Đơn đang hiển thị để In / Tải: bản xem trước (bước 4) hoặc đơn đang chọn trong Lịch sử */
+function activeCtx(){
+ if(previewVisible()&&rxDoc)return {doc:rxDoc,sheet:$('#sheet'),err:$('#pv-err')};
+ const r=histVisible()&&findRec(histSel);
+ return r?{doc:r,sheet:$('#hsheet'),err:$('#h-err')}:null}
+window.addEventListener('beforeprint',()=>{
+ const ctx=activeCtx();
+ if(!ctx||document.body.classList.contains('rx-print'))return;
+ $('#print-root').replaceChildren(compactCopy(ctx.sheet));
+ document.body.classList.add('rx-print');
+ prevTitle=document.title;document.title=`Don-thuoc-${ctx.doc.code}`; // tên file gợi ý khi "Lưu dưới dạng PDF"
+});
+window.addEventListener('afterprint',()=>{
+ if(!document.body.classList.contains('rx-print'))return;
+ document.body.classList.remove('rx-print');$('#print-root').replaceChildren();document.title=prevTitle});
+function printRx(){window.print()}
+
+/* ===== VỪA 1 MÀN HÌNH (máy tính > 900px) =====
+   Bước 1–3, Tra cứu: nếu nội dung cao hơn màn hình → thu nhỏ đồng đều (tối thiểu 70%).
+   Bước 4: tờ đơn A5 tự co/giãn theo chiều cao còn lại. */
+const FIT_MIN=0.7,PAPER_MIN=0.45,PAPER_MAX=1.3;
+const isDesktop=()=>innerWidth>900;
+const padY=el=>{const c=getComputedStyle(el);return parseFloat(c.paddingTop)+parseFloat(c.paddingBottom)};
+const padX=el=>{const c=getComputedStyle(el);return parseFloat(c.paddingLeft)+parseFloat(c.paddingRight)};
+function fitScreen(){
+ const main=$('main'),box=$('#fit'),desktop=isDesktop(),fill=desktop&&(previewVisible()||histVisible());
+ box.style.zoom='';box.style.width='';main.style.overflowY='';
+ document.querySelectorAll('.paper').forEach(p=>p.style.zoom='');
+ document.body.classList.toggle('fill',fill);
+ document.querySelectorAll('.paper .sheet').forEach(sh=>sh.classList.toggle('compact',desktop));
+ if(!desktop){if(histPageSize!==HIST_MOBILE_ROWS){histPageSize=HIST_MOBILE_ROWS;if(histVisible())renderHistList()}return}
+ if($('#app').classList.contains('hidden'))return;
+ if(fill){
+  if(histVisible()){
+   // số dòng/trang theo chiều cao còn trống → danh sách không bao giờ cần cuộn
+   const rows=Math.max(3,Math.floor(($('#hrows').clientHeight+8)/HIST_ROW_H));
+   if(rows!==histPageSize){histPageSize=rows;renderHistList()}
+   const w=$('#hdet .paper-wrap');if(w)fitPaper(w);
+  }else fitPaper($('#s4 .paper-wrap'));
+  return}
+ const availH=main.clientHeight-padY(main),availW=main.clientWidth-padX(main);
+ let h=box.getBoundingClientRect().height;
+ if(h<=availH)return;
+ // Thu nhỏ rồi đo lại: khi thu nhỏ, bề ngang ảo rộng hơn nên nội dung xuống dòng ít hơn → lặp vài lần cho khớp.
+ let z=1;
+ for(let i=0;i<5;i++){
+  z=Math.min(1,Math.max(FIT_MIN,z*availH/h));
+  box.style.zoom=z;box.style.width=availW/z+'px';          // giữ nguyên bề ngang hiển thị
+  h=box.getBoundingClientRect().height;
+  if(h<=availH&&h>availH*0.97)break;
+ }
+ if(h>availH){z=Math.max(FIT_MIN,z*availH/h);box.style.zoom=z;box.style.width=availW/z+'px';h=box.getBoundingClientRect().height}
+ if(h>availH+1)main.style.overflowY='auto';                  // màn hình quá thấp: cho cuộn để không mất nội dung
+}
+function fitPaper(wrap){
+ const paper=wrap.querySelector('.paper');
+ const z=Math.min(PAPER_MAX,(wrap.clientHeight-padY(wrap))/paper.offsetHeight,(wrap.clientWidth-padX(wrap))/paper.offsetWidth);
+ paper.style.zoom=Math.max(PAPER_MIN,z);
+}
+let fitFrame=0;
+window.addEventListener('resize',()=>{cancelAnimationFrame(fitFrame);fitFrame=requestAnimationFrame(fitScreen)});
+document.fonts?.ready.then(fitScreen);
+function compactCopy(sheet){const c=sheet.cloneNode(true);c.removeAttribute('id');c.classList.add('compact');return c}
+
+function downloadRx(){printRx()}
+
+/* ===== ĐƠN MỚI · KÊ LẠI · KIỂM TRA BƯỚC 1 ===== */
+const PATIENT_FIELDS=['name','age','wt','bn','al','dx','meds','egfr','pregnancy_weeks'];
+/* Có thông tin đang soạn chưa xác nhận? (bước 2–3, hoặc bước 1 đã nhập dữ liệu) */
+const isDirty=()=>step===2||step===3||(step===1&&PATIENT_FIELDS.some(id=>$('#'+id).value.trim()));
+function ask(title,message,okLabel){
+ return new Promise(resolve=>{const d=$('#ask');
+  $('#ask-h').textContent=title;$('#ask-msg').textContent=message;$('#ask-ok').textContent=okLabel;
+  d.returnValue='';d.onclose=()=>resolve(d.returnValue==='ok');d.showModal()})}
+function resetWork(){
+ ++rxRequest;
+ matchedGuidelines=[];
+ $('#dx-options').replaceChildren();
+ picks=[];
+ drugOptionsOpen=false;
+ selected.clear();
+ draftValues={};
+ advice='';
+ lastScreen='';
+ reviewed=null;
+ rxDoc=null;
+ currentCode=null;
+ $('#form-status').textContent='';
+ $('#suggest').disabled=false;
+ $('#add-initial').disabled=false;
+}
+async function newRx(){
+ if(isDirty()&&!await ask('Tạo đơn mới?','Thông tin đang soạn sẽ bị xóa khỏi màn hình.','Tạo đơn mới'))return;
+ resetWork();
+ PATIENT_FIELDS.forEach(id=>{$('#'+id).value='';setFieldError($('#'+id),'')});
+ statuses.forEach(id=>$('#'+id).value='unknown');
+ $('#pregnancy_weeks').disabled=true;
+ $('#sex').selectedIndex=0;
+ view('rx');
+ go(1);
+ $('#name').focus();
+}
+async function reRx(code){
+ const r=findRec(code);
+ if(!r)return;
+ if(isDirty()&&!await ask('Tạo đơn mới từ lịch sử?',`Thông tin đang soạn sẽ được thay bằng thông tin khám từ đơn ${code}.`,'Tiếp tục'))return;
+ resetWork();
+ const p=r.pt;
+ $('#name').value=p.name;
+ $('#age').value=p.age;
+ $('#sex').value=p.sex;
+ $('#wt').value=p.wt;
+ $('#bn').value=p.bn==='Chưa ghi nhận'?'':p.bn;
+ $('#al').value='';
+ $('#dx').value=p.diagnosis_input||p.dx||p.icd;
+ ['meds','egfr','pregnancy_weeks'].forEach(id=>$('#'+id).value='');
+ statuses.forEach(id=>$('#'+id).value='unknown');
+ $('#pregnancy_weeks').disabled=true;
+ view('rx');
+ go(1);
+ $('#al').focus();
+}
+function setFieldError(el,msg){
+ let e=$('#err-'+el.id);
+ if(!e){if(!msg)return;e=document.createElement('p');e.className='ferr';e.id='err-'+el.id;el.after(e)}
+ e.textContent=msg;e.hidden=!msg;
+ el.setAttribute('aria-invalid',msg?'true':'false');
+ const description=[el.id==='dx'?'dx-hint':'',msg?e.id:''].filter(Boolean).join(' ');
+ description?el.setAttribute('aria-describedby',description):el.removeAttribute('aria-describedby')}
+function renderDiagnosisOptions(){
+ const input=$('#dx');
+ const start=Math.max(input.value.lastIndexOf(','),input.value.lastIndexOf(';'),input.value.lastIndexOf('\n'))+1;
+ const query=norm(input.value.slice(start).trim());
+ const matches=query?guidelines.filter(g=>[g.disease_name_vi,...g.search_aliases]
+  .some(name=>norm(name).includes(query))).slice(0,6):[];
+ $('#dx-options').replaceChildren(...matches.map(g=>{
+  const button=document.createElement('button');
+  button.type='button';
+  button.className='chip';
+  button.textContent=g.disease_name_vi;
+  button.onclick=()=>{
+   input.value=input.value.slice(0,start)+(start&&input.value[start-1]!=='\n'?' ':'')+g.disease_name_vi;
+   input.dispatchEvent(new Event('input',{bubbles:true}));
+   $('#dx-options').replaceChildren();
+   input.focus();
+  };
+  return button;
+ }));
+}
+function renderInitialSample(){
+ if(sampleCases!==null&&!sampleLoadError){renderReferenceCases(sampleCases);return}
+ const message=sampleLoadError?'Không tải được đơn mẫu. Thử tải lại trang.':'Đang tải đơn mẫu…';
+ $('#reference-cases').innerHTML=`<h3>Đơn thuốc mẫu</h3><p class="hint">${message}</p>`;
+}
+function renderReferenceCases(cases){
+ const section=$('#reference-cases');
+ if(!cases.length){
+  section.innerHTML='<h3>Đơn thuốc mẫu</h3><p class="hint">Chưa có đơn mẫu phù hợp trong dữ liệu.</p>';
+  return;
+ }
+ section.innerHTML=`<h3>Đơn thuốc mẫu (${cases.length})</h3>
+  <p class="hint">Ca giả lập, chỉ để tham khảo. Hiển thị các dòng thuốc khớp danh mục.</p>
+  ${cases.map((item,index)=>{
+   const p=item.patient_profile;
+   const profile=[p.age==null?'':p.age+' tuổi',p.gender,p.weight_kg==null?'':p.weight_kg+' kg'].filter(Boolean).join(' · ');
+   const matched=item.matched_icd10.map(diagnosisName).filter(Boolean).join(', ');
+   const rows=item.medications.map(m=>{
+    const quantity=m.quantity==null?'':`Số lượng ${m.quantity} ${m.unit||''}`.trim();
+    const metadata=[m.strength_dosage,m.route,quantity].filter(Boolean).join(' · ');
+    const usage=m.usage_instruction_full||[
+     m.frequency_per_day==null?'':m.frequency_per_day+' lần/ngày',
+     m.duration_days==null?'':m.duration_days+' ngày'
+    ].filter(Boolean).join(' · ');
+    return `<li><b>${esc(m.canonical_name)}</b><p class="hint">${esc(metadata)}</p>
+     <p>${esc(usage||'Chưa có hướng dẫn dùng trong dữ liệu mẫu')}</p></li>`;
+   }).join('');
+   return `<details class="reference-rx" name="sample-prescriptions"${index===0?' open':''}>
+    <summary>${esc(item.case_id)}${matched?' · '+esc(matched):''}</summary>
+    ${profile?`<p class="hint">Hồ sơ mẫu · ${esc(profile)}</p>`:''}
+    <p class="hint">Chẩn đoán trong đơn · ${esc(item.diagnoses.join('; ')||matched)}</p>
+    ${rows?`<ol>${rows}</ol>`:'<p class="hint">Chưa có dòng thuốc khớp danh mục.</p>'}
+   </details>`;
+  }).join('')}`;
+}
+const nullableNumber=id=>$('#'+id).value===''?null:Number($('#'+id).value);
+function patientInput(){
+ return {
+  diagnosis:$('#dx').value.trim(),age:nullableNumber('age'),weight_kg:nullableNumber('wt'),
+  gender:$('#sex').value,allergies:$('#al').value,comorbidities:$('#bn').value,
+  current_medications:$('#meds').value,pregnancy:$('#pregnancy').value,
+  pregnancy_weeks:nullableNumber('pregnancy_weeks'),renal:$('#renal').value,
+  liver:$('#liver').value,egfr:nullableNumber('egfr')
+ };
+}
+function validatePatientFields(){
+ for(const id of PATIENT_FIELDS){
+  const input=$('#'+id);
+  if(!input.checkValidity()){
+   for(let parent=input.parentElement;parent;parent=parent.parentElement){
+    if(parent.tagName==='DETAILS')parent.open=true;
+   }
+   input.reportValidity();
+   return false;
+  }
+ }
+ return true;
+}
+async function startSuggest(restoreIds=[], openDrugs=false){
+ const diagnosis=$('#dx').value.trim();
+ if(!diagnosis){setFieldError($('#dx'),'Nhập ít nhất một chẩn đoán đã được xác nhận.');$('#dx').focus();return}
+ const button=$('#suggest'),formStatus=$('#form-status'),request=++rxRequest;
+ button.disabled=true;
+ $('#add-initial').disabled=true;
+ formStatus.textContent='Đang đối chiếu dữ liệu…';
+ try{
+  const data=await api('prescriptions/suggest',{diagnosis});
+  const possible=data.suggestions;
+  if(data.guardrail.status!=='BLOCKED'&&restoreIds.some(id=>!possible.some(d=>d.drug_id===id))){
+   const {drugs}=await api('drugs');
+   const codes=data.guidelines.map(g=>g.icd10_prefix);
+   possible.push(...drugs.filter(d=>restoreIds.includes(d.drug_id)
+    && codes.some(code=>d.verified_indications_icd10.includes(code))
+    && !possible.some(item=>item.drug_id===d.drug_id)));
+  }
+  if(request!==rxRequest||diagnosis!==$('#dx').value.trim())return;
+  matchedGuidelines=data.guidelines;
+  picks=possible;
+  selected.clear();
+  picks.filter(d=>restoreIds.includes(d.drug_id)).forEach(d=>selected.set(d.drug_id,d));
+  drugOptionsOpen=picks.length>0&&(openDrugs||selected.size>0);
+  lastScreen=data.guardrail.status==='BLOCKED'?'':diagnosis;
+  const result=$('#suggest-status');
+  renderChecks(result,data.guardrail);
+  renderReferenceCases(data.reference_prescriptions);
+  $('#dx-options').replaceChildren();
+  if(data.guardrail.status!=='BLOCKED'){
+   const mode={catalog:'Thứ tự theo phác đồ',ollama:'Ollama sắp xếp trong từng bậc phác đồ',catalog_fallback:'Ollama không phản hồi hợp lệ. Đang hiển thị thứ tự theo phác đồ.'};
+   result.insertAdjacentHTML('beforeend',`<p class="hint">${mode[data.mode]}</p><ul>${matchedGuidelines.map(g=>
+    `<li class="hint"><b>${esc(g.disease_name_vi)}</b> · ${esc(g.official_source_url)}</li>`).join('')}</ul>`);
+   if(!picks.length)result.insertAdjacentHTML('beforeend','<p class="note">Chưa có lựa chọn phù hợp trong dữ liệu mô phỏng.</p>');
+   if(restoreIds.length!==selected.size)result.insertAdjacentHTML('beforeend','<p class="note">Một số thuốc đã lưu cần chọn lại sau khi đối chiếu dữ liệu hiện tại.</p>');
+  }
+  go(2);
+ }catch(e){if(request===rxRequest)formStatus.textContent=e.message}
+ finally{
+  if(request===rxRequest){
+   button.disabled=false;
+   $('#add-initial').disabled=false;
+   if(formStatus.textContent==='Đang đối chiếu dữ liệu…')formStatus.textContent='';
+  }
+  fitScreen();
+ }
+}
+function fieldChanged(e){
+ const id=e.target.id;
+ if(!PATIENT_FIELDS.includes(id)&&!statuses.includes(id)&&id!=='sex')return;
+ if(e.target.getAttribute('aria-invalid')==='true')setFieldError(e.target,'');
+ if(id==='dx')renderDiagnosisOptions();
+ if(id==='pregnancy')$('#pregnancy_weeks').disabled=$('#pregnancy').value!=='yes';
+ if(id!=='dx'){
+  if(step===3){
+   reviewed=null;
+   renderRxSummary();
+   $('#review-result').textContent='';
+  }
+  fitScreen();
+  return;
+ }
+ if(step===2||step===3){
+  selected.clear();
+  lastScreen='';
+  reviewed=null;
+  $('#form-status').textContent='Chẩn đoán đã đổi. Bấm tìm đơn để xem kết quả mới.';
+  go(1);
+ }
+}
+$('#rxgrid').addEventListener('input',fieldChanged);
+
+/* ===== LỊCH SỬ KÊ ĐƠN (lưu localStorage của trình duyệt) ===== */
+const HIST_KEY='medora.web.rxHistory',HIST_MAX=200,HIST_ROW_H=72,HIST_MOBILE_ROWS=6;
+const RANGES=[['all','Tất cả'],['today','Hôm nay'],['7d','7 ngày qua']];
+function loadHist(){try{return (JSON.parse(localStorage.getItem(HIST_KEY))||[]).map(r=>({...r,at:new Date(r.at)}))}catch{return []}}
+function saveHist(){try{localStorage.setItem(HIST_KEY,JSON.stringify(hist))}catch{/* bị chặn lưu → chỉ giữ trong phiên */}}
+let hist=loadHist(),histSel=null,histPage=1,histPageSize=HIST_MOBILE_ROWS,histRange='all',histFocus=null;
+const findRec=code=>hist.find(r=>r.code===code);
+const norm=v=>String(v).normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/đ/g,'d').replace(/Đ/g,'D').toLowerCase();
+function saveToHistory(doc){
+ hist=[doc,...hist.filter(r=>r.code!==doc.code)].slice(0,HIST_MAX);   // cùng mã (sửa sau xác nhận) → thay bản cũ
+ saveHist()}
+function filteredHist(){
+ const q=norm($('#hq').value.trim()),now=new Date(),today=new Date(now.getFullYear(),now.getMonth(),now.getDate());
+ const from=histRange==='today'?today:histRange==='7d'?new Date(today.getTime()-6*864e5):null;
+ return hist.filter(r=>(!from||r.at>=from)&&(!q||[r.pt.name,r.code,r.pt.dx,r.pt.icd,...(r.pt.diagnoses||[])]
+  .some(value=>norm(value??'').includes(q))))}
+function renderHistory(){
+ $('#hchips').innerHTML=RANGES.map(([k,t])=>`<button class="chip ${k===histRange?'on':''}" aria-pressed="${k===histRange}" onclick="setRange('${k}')">${t}</button>`).join('');
+ $('#hclear').hidden=!hist.length;
+ renderHistList();fitScreen()}
+function renderHistList(){
+ const list=filteredHist(),pages=Math.max(1,Math.ceil(list.length/histPageSize));
+ if(histFocus){const i=list.findIndex(r=>r.code===histFocus);if(i>=0){histSel=histFocus;histPage=Math.floor(i/histPageSize)+1}histFocus=null}
+ histPage=Math.min(Math.max(1,histPage),pages);
+ const pageRows=list.slice((histPage-1)*histPageSize,histPage*histPageSize);
+ if(!pageRows.some(r=>r.code===histSel))histSel=pageRows[0]?.code??null;
+ $('#hcount').textContent=`${list.length} đơn`;
+ $('#hrows').innerHTML=pageRows.length?pageRows.map(r=>`<button class="hrow ${r.code===histSel?'on':''}" aria-pressed="${r.code===histSel}" onclick="selectHist('${r.code}')">
+   <b>${esc(r.pt.name)||'—'}</b><span class="when">${fmtDate(r.at)}</span>
+   <small>${r.code} · ${esc(r.pt.dx)} · ${r.items.length} thuốc</small><span class="when">${fmtTime(r.at)}</span></button>`).join('')
+  :hist.length?'<div class="empty"><b>Không tìm thấy đơn phù hợp</b>Thử tên hoặc mã đơn khác, hoặc chọn “Tất cả”.</div>'
+  :'<div class="empty"><b>Chưa có đơn nào</b>Đơn thuốc sẽ xuất hiện ở đây sau khi bác sĩ rà soát và xác nhận.</div>';
+ $('#hpager').innerHTML=pages>1?`<button class="btn sec" onclick="histGo(-1)" ${histPage<=1?'disabled':''} aria-label="Trang trước">‹ Trước</button><span class="hint" style="margin:0">Trang ${histPage}/${pages}</span><button class="btn sec" onclick="histGo(1)" ${histPage>=pages?'disabled':''} aria-label="Trang sau">Sau ›</button>`:'';
+ renderHistDetail()}
+function renderHistDetail(){
+ const r=findRec(histSel);
+ $('#hdet').innerHTML=r?`
+  <div class="hd-head">
+   <div><div class="pv-title"><h3>${r.code}</h3><span class="tag">✓ Đã xác nhận</span></div>
+   <p class="hint">${esc(r.pt.name)||'—'} · Xác nhận lúc ${fmtTime(r.at)} ${fmtDate(r.at)} bởi ${esc(DOCTOR.name)}</p></div>
+   <div class="pv-actions">
+    <button class="btn sec" onclick="reRx('${r.code}')">Dùng lại thông tin khám</button>
+    <button class="btn sec" onclick="downloadRx(this)">${DL_ICON}<span>Lưu PDF qua hộp thoại in</span></button>
+    <button class="btn" onclick="printRx()">${PRINT_ICON}In lại</button>
+   </div>
+  </div>
+  <div class="note hidden" id="h-err" role="alert" style="margin-top:12px"></div>
+  <div class="paper-wrap"><div class="paper"><article class="sheet${isDesktop()?' compact':''}" id="hsheet" aria-label="Đơn thuốc ${r.code}">${sheetHTML(r)}</article></div></div>`
+  :`<div class="empty"><b>Chọn một đơn để xem</b>${hist.length?'Bấm vào một đơn trong danh sách.':'Tạo đơn đầu tiên để bắt đầu lưu lịch sử.'}</div>
+    ${hist.length?'':`<div style="text-align:center"><button class="btn" onclick="newRx()">${PLUS_ICON}Tạo đơn mới</button></div>`}`}
+function selectHist(code){histSel=code;renderHistList();fitScreen()}
+function histGo(d){histPage+=d;histSel=null;renderHistList();fitScreen()}
+function setRange(k){histRange=k;histPage=1;renderHistory()}
+function openHist(code){$('#hq').value='';histRange='all';histFocus=code||null;view('hist')}
+async function clearHist(){
+ if(!await ask('Xóa lịch sử kê đơn?',`Toàn bộ ${hist.length} đơn đã lưu trên trình duyệt này sẽ bị xóa. Không thể hoàn tác.`,'Xóa lịch sử'))return;
+ hist=[];histSel=null;saveHist();renderHistory()}
+const PLUS_ICON='<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg>',DL_ICON='<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg>',PRINT_ICON='<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 9V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6"/><rect x="6" y="14" width="12" height="8" rx="1"/></svg>';
+
+function queueLook(){
+ ++lookRequest;
+ clearTimeout(lookTimer);
+ lookTimer=setTimeout(renderLook,200);
+}
+async function renderLook(){
+ clearTimeout(lookTimer);
+ const request=++lookRequest;
+ const params=new URLSearchParams({q:$('#q').value.trim(),unit});
+ $('#rc').textContent='Đang tìm…';
+ $('#res').replaceChildren();
+ $('#det').replaceChildren();
+ try{
+  const {drugs,units}=await api('drugs?'+params);
+  if(request!==lookRequest)return;
+  const filters=['',...units].map(value=>{
+   const button=document.createElement('button');
+   button.className='chip'+(unit===value?' on':'');
+   button.textContent=value||'Tất cả';
+   button.setAttribute('aria-pressed',String(unit===value));
+   button.onclick=()=>{unit=value;renderLook()};
+   return button;
+  });
+  $('#chips').replaceChildren(...filters);
+  $('#rc').textContent=drugs.length+' kết quả';
+  if(!drugs.length){
+   $('#res').innerHTML='<div class="empty"><b>Không tìm thấy thuốc</b>Thử tên hoạt chất, biệt dược hoặc đổi đơn vị lọc.</div>';
+   return;
+  }
+  const rows=drugs.map(drug=>{
+   const button=document.createElement('button');
+   button.className='res';
+   button.innerHTML=`<div class="row"><div><b>${esc(drugLabel(drug))}</b><small>${esc(drug.drug_class)} · ${esc(drug.route_of_administration)}</small><small>${esc(drug.active_ingredient)}</small></div><span class="tag">${esc(drug.unit)}</span></div>`;
+   button.onclick=()=>show(drug,button);
+   return button;
+  });
+  function show(drug,button){
+   cur=drug.drug_id;
+   rows.forEach(row=>row.classList.toggle('on',row===button));
+   showDrug(drug);
+   fitScreen();
+  }
+  const index=Math.max(0,drugs.findIndex(drug=>drug.drug_id===cur));
+  $('#res').replaceChildren(...rows);
+  show(drugs[index],rows[index]);
+ }catch(e){
+  if(request!==lookRequest)return;
+  $('#rc').textContent='';
+  $('#res').textContent='Không tải được danh mục thuốc. '+e.message;
+ }
+ fitScreen();
+}
+function showDrug(drug){
+ const values=(list)=>list.length?list.map(v=>`<li>${esc(v)}</li>`).join(''):'<li>Chưa có dữ liệu trong danh mục</li>';
+ const indications=drug.verified_indications_icd10.map(code=>{
+  const guideline=guidelines.find(g=>g.icd10_prefix===code);
+  return guideline?`${code} · ${guideline.disease_name_vi}`:code;
+ });
+ $('#det').innerHTML=`<h3>${esc(drugLabel(drug))}</h3>
+  <dl><dt>Hoạt chất</dt><dd>${esc(drug.active_ingredient||'—')}</dd><dt>Hàm lượng</dt><dd>${esc(drug.strength_dosage||'—')}</dd>
+  <dt>Đơn vị</dt><dd>${esc(drug.unit||'—')}</dd><dt>Đường dùng</dt><dd>${esc(drug.route_of_administration||'—')}</dd>
+  <dt>Biệt dược mẫu</dt><dd>${esc(drug.sample_brand_names.join(', ')||'—')}</dd></dl>
+  <b>Chỉ định trong dữ liệu</b><ul>${values(indications)}</ul>
+  <b>Chống chỉ định</b><ul>${values(drug.contraindications)}</ul>
+  <b>Tương tác trong dữ liệu</b><ul>${values(drug.interactions.map(i=>`${i.with_ingredient_or_class} · ${i.mechanism_and_risk}`))}</ul>
+  <p class="hint">Nguồn: ${esc(drug.source_reference||'Chưa có thông tin')}</p>`;
+ if(lastScreen===$('#dx').value.trim()&&drugMatches(drug).length){
+  const button=document.createElement('button');
+  button.className='btn';
+  button.textContent='Thêm vào đơn nháp';
+  button.onclick=()=>{
+   if(!picks.some(d=>d.drug_id===drug.drug_id))picks.push(drug);
+   selected.set(drug.drug_id,drug);
+   drugOptionsOpen=true;
+   view('rx');
+   go(2);
+  };
+  $('#det').append(button);
+ }
+}
+</script>
+</body>
+</html>
