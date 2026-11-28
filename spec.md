@@ -205,6 +205,7 @@ Data BTC cấp đã dùng (không commit nguyên file): `data/100_Toa_NVM_2026_D
 | 28/11/2026 | Hiển thị nội dung đơn thuốc mẫu trong kết quả tra cứu trên web | Bác sĩ nhìn thấy các dòng thuốc và cách dùng có sẵn trong ca giả lập |
 | 28/11/2026 | Mở sẵn một đơn mẫu ở màn hình tạo đơn và thêm nút Bổ sung thuốc | Có thể xem nội dung đơn mẫu ngay khi mở ứng dụng |
 | 28/11/2026 | Tổng hợp bằng chứng CP3 từ 52 ca có nguồn gốc dữ liệu BTC và đối chiếu báo cáo Lượt 1 | Kiểm lại bằng `python evidence/count.py` và `python run.py score eval/run-1.csv` |
+| 28/11/2026 09:34 | Tich hop UI Medora tu nhanh nhungvo vao main local bang fast-forward; va console web sang UTF-8 tren Windows | Khoi dong web truoc ban va bi UnicodeEncodeError voi cp1258; sau va server khoi dong thanh cong. Khong sua benchmark, metric hoac ket qua cu. |
 
 **Sau CP4 (đến 23:59 Thứ Bảy 28/11)**
 
